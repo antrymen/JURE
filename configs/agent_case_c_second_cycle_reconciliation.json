@@ -1,0 +1,90 @@
+{
+  "model_config": "configs/agent_runtime_glm53_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 0,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 12,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 1200000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 1
+  },
+  "critic_rechecks_per_round": 2,
+  "registry_budgets": {
+    "total": 12,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "protocol_v3": true,
+  "protocol_id": "jure_case_c_critic_semantic_reconciliation",
+  "case_order": [
+    "C"
+  ],
+  "case_execution_policy": "user_guided_case_c_second_cycle",
+  "user_authorization": "用户要求 Case C 第二轮：Critic gaps → literature/GRN、可测 conditional predictions、EIF2B-family response → Critic；不代替 Agent 指定科学结论。",
+  "initial_case_sources": {
+    "C": {
+      "path": "outputs/case_c_eif2b5_single_cycle_20260929/initial_case/case_file.json",
+      "sha256": "805e5037dcdd8c965108e504108e7371ebf22a0bb2c00c24557a335503c42cb4"
+    }
+  },
+  "schema_retries": 0,
+  "failed_stage_retries": 0,
+  "provider_retry_delays_seconds": [],
+  "max_transitions": 5,
+  "provider_max_calls_per_case": 56,
+  "policy": "One additional Investigator -> Critic cycle only; retain 26 historical model calls and 6 tools; no second Explorer generation and no third investigation cycle; human guidance explicitly disclosed.",
+  "resume_sources": {
+    "C": {
+      "directory": "outputs/case_c_second_cycle_20260929/critic_reconciliation/C",
+      "case_sha256": "ad4e2a5be35104ace428aab74015f726697c98190720df279b5bd9a8686ddec9"
+    }
+  },
+  "continuation_anchor": {
+    "directory": "outputs/case_c_eif2b5_single_cycle_20260929/run_006/C",
+    "case_sha256": "17aec9f32a06284d00c591bed0a12724467714697f8aa0c79142fddb48c8965c"
+  },
+  "continuation_context": {
+    "path": "outputs/case_c_second_cycle_20260929/HUMAN_ROUND_GUIDANCE.json",
+    "sha256": "06827d0860485ed17594de81ae99eddcbe9133fad82e0935aa9e542943007e0a"
+  },
+  "saved_investigator_prefix": {
+    "responses": [
+      {
+        "path": "outputs/case_c_second_cycle_20260929/critic_reconciliation/audit_hypotheses_patched_response.json",
+        "sha256": "8a89b614706213fb236a6fac77f37df9eca58af108a9293b7e289f724959e9e6",
+        "role": "critic",
+        "method": "audit_hypotheses"
+      }
+    ],
+    "tools": [],
+    "envelopes": []
+  },
+  "engineering_recovery": {
+    "reason": "Critic-authored local patch reconciles its C1 verdict and failure attribution; no host verdict substitution.",
+    "inherited_model_calls": 39,
+    "original_outputs_preserved": true,
+    "scientific_patch_author": "critic",
+    "patch_manifest": "outputs/case_c_second_cycle_20260929/critic_reconciliation/patch.json",
+    "same_logical_transition": 5,
+    "new_scientific_revision_allowance": 0
+  }
+}

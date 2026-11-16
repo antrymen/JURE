@@ -1,0 +1,41 @@
+dataset_id: replogle_k562_day6
+adapter: replogle_frozen
+control_labels:
+- non-targeting
+condition_field: scan_target
+cell_id_field: cell_id
+batch_field: batch
+replicate_field: null
+condition_type: gene_perturbation
+gene_mapping: {}
+binarization_rule: count_gt_zero
+modality: RNA_detection
+cell_context: K562
+timepoint: Day6
+min_cells:
+  condition: 100
+  control_per_batch: 20
+  effective_control: 100
+  directional_support: 10
+matching_strategy: within_batch_control
+candidate_budget:
+  max_order: 3
+  hvg_pool_size: 1000
+  fingerprint_bands: 64
+  n_null_simulations: 1999
+bootstrap_config:
+  reference_repetitions: 1000
+  landscape_repetitions: 50
+multiple_testing_config:
+  reference: validation_family_holm_025_per_direction
+  association: selected_family_holm_exploratory
+  alpha: 0.05
+  min_abs_delta: 0.1
+landscape_config: {}
+seed: 20260927
+paths:
+  reference_catalogue: ../../outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json
+  scan_root: ../../outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan
+  broad_root: ../../outputs/broad_screening_v01
+expected_conditions: []
+reference_fold_field: null

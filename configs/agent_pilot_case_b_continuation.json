@@ -1,0 +1,69 @@
+{
+  "model_config": "configs/agent_runtime_glm53_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 5,
+    "max_retries": 1,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 18,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 1
+  },
+  "critic_rechecks_per_round": 2,
+  "registry_budgets": {
+    "total": 18,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "provider_max_calls_per_case": 80,
+  "protocol_id": "jure_case_b_authorized_one_revision_continuation",
+  "case_order": [
+    "B"
+  ],
+  "protocol_v3": true,
+  "schema_retries": 0,
+  "failed_stage_retries": 0,
+  "max_transitions": 12,
+  "provider_retry_delays_seconds": [],
+  "resume_execution_policy": "independent_existing_checkpoints",
+  "resume_sources": {
+    "B": {
+      "directory": "outputs/agent_pilot_v1_20260928/case_b_continuation_preparation_20260929/B",
+      "case_sha256": "5afca0bebb29a949c857a5dfe92504a182df74ea18c0744a8d7e267b830c7e92"
+    }
+  },
+  "policy": "User-authorized B continuation only. Exactly one additional Explorer submission after legacy transition9, followed by Investigator then Critic. All hypotheses, predictions, evidence choices, acceptance and C1/C2 decisions remain JURE Agent-authored. Preserve historical STOP and all paid calls. No Mechanism Resolution Framework implementation; A/C/D paused.",
+  "continuation_authorization": {
+    "user_reply": "允许",
+    "source_case_sha256": "5f89dedb2e72794a8ddeab80f14a5fc6fd69b5b75fa1d081edc5e9c75bd9be65",
+    "legacy_completed_reframes": 1,
+    "additional_reframe_submissions": 1,
+    "max_total_completed_reframes_including_legacy": 2,
+    "current_protocol_accepted_revision_cap": 1,
+    "hypothesis_bound_reason": "Existing Critic explicitly requested an additional standalone hypothesis alongside H1-H4; allow up to five without authoring its content.",
+    "inherited_model_calls": 49,
+    "remaining_model_calls": 31,
+    "inherited_tool_calls": 9,
+    "remaining_tool_calls": 9,
+    "max_completed_investigator_rounds": 3,
+    "max_completed_critic_rounds": 3
+  }
+}

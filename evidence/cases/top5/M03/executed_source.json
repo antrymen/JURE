@@ -1,0 +1,87 @@
+{
+  "schema": "codex_investigator_followup_v1",
+  "module": "M03",
+  "case_id": "perturbation_scan_day6_v01_20260927:C31e0019a1026d2519463",
+  "target": "INTS2",
+  "signed_pattern": "CCAR1+ CCNB1+ CDC20+",
+  "parent_investigator_file": "outputs/module_top5_codex_agents_20261004/investigator/M03.json",
+  "parent_investigator_sha256": "9687fd4fc1732a495612c28f4a5d8187546dcd307e2918b2321bc7da21bbfb30",
+  "bounded_followup_round": 1,
+  "glm_api_calls": 0,
+  "new_registry_calls": 0,
+  "conditional_negative_background": null,
+  "metadata_check": {
+    "scope": "Existing allowed Day6 metadata and store manifest only; no original h5ad/Day8 loading",
+    "manifest_path": "data/day6_tool_store/manifest.json",
+    "manifest_sha256": "677a41b2dd935d43ba5a635706b10ef9a38125412d288a079fd01403ef1bb3e6",
+    "cells_path": "data/day6_tool_store/cells.csv.gz",
+    "cells_sha256": "d7fedffe5d950d00cc164dbfb0eae8f71e1366300a596eed7f530bc8ae129658",
+    "columns": [
+      "cell_id",
+      "source_row",
+      "scan_target",
+      "batch",
+      "guide_id",
+      "nperts",
+      "group_index",
+      "ncounts",
+      "ngenes",
+      "UMI_count",
+      "percent_mito"
+    ],
+    "independent_state_labels": {
+      "available": false,
+      "conclusion": "Allowed metadata has no cell-cycle phase / independent lineage / pre-treatment state label. ncounts/ngenes are not independent state labels; does not assert such labels cannot exist elsewhere."
+    },
+    "guide_identity": {
+      "available": true,
+      "conclusion": "guide_id is recorded, including paired-guide identifiers. Identity/coordinate strings permit grouping but do not verify on-target efficacy or specificity."
+    },
+    "measured_knockdown": {
+      "available_as_metadata": false,
+      "conclusion": "No efficacy/knockdown/protein measurement field in inspected metadata. Presence of a target transcript among genes is not measured target-specific knockdown."
+    },
+    "smn_specificity": {
+      "SMN1_in_gene_store": true,
+      "SMN2_in_gene_store": false,
+      "available": false,
+      "conclusion": "Guide target label and positional identifiers do not establish SMN2-versus-SMN1 specificity. No sequence/off-target validation, rescue or SMN protein data in these inspected sources."
+    },
+    "builder_source": {
+      "path": "perturbation_scan/data.py",
+      "location": "metadata_tables keep columns",
+      "sha256": "95c3459cb334d5af90e5610bb444aa45245174ff3f439dda7fc03e5486759d80"
+    }
+  },
+  "target_guide_records": {
+    "n_cells": 354,
+    "missing_guide_cells": 0,
+    "distinct_guide_id_count": 1,
+    "guide_id_cell_counts": {
+      "INTS2_-_60004971.23-P1P2|INTS2_-_60005353.23-P1P2": 354
+    }
+  },
+  "literature_context_addenda": [
+    {
+      "source_id": "PMID:40233738",
+      "artifact": "outputs/module_top5_codex_agents_20261004/investigator/raw/primary3.json",
+      "sha256": "20cc47f53aa8b2eb986b57bb21f327be2132397cb7926277da447836c41b7b39",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40233738/",
+      "locator": "PubMed abstract in saved web response",
+      "verified_context": "Abstract refers to Integrator loss in human cells and patient cells with Integrator mutations.",
+      "correction": "Initial description “主要操纵其他Integrator亚基” is not established by the linked abstract alone. Downgrade to “复合体层面的摘要证据，未证明INTS2特异效应”.",
+      "not_verified": [
+        "Specific subunit perturbations under this cited abstract",
+        "INTS2-specific CCAR1/CCNB1/CDC20 response",
+        "Matched K562 context"
+      ]
+    }
+  ],
+  "interpretation": "文献亚基特异性降级；没有独立周期/状态标签，H1/H2仍不可分。",
+  "remaining_gaps": [
+    "Independent state composition",
+    "Independent RNA measurement",
+    "Day8/biological replication"
+  ],
+  "status": "PARTIAL_EVIDENCE_NO_MECHANISTIC_WINNER"
+}

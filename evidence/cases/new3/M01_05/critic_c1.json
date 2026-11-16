@@ -1,0 +1,21 @@
+{
+  "case_id": "M01_05",
+  "role": "Critic_C1",
+  "source_file": "explorer/M01_05.json",
+  "source_sha256": "7480dde4c39dc73a27d6fcf56390d10eee569c5fe062d53ac7f5e1f0416a223a",
+  "verdict": "pass",
+  "audit": {
+    "endpoint_targeting": "pass",
+    "distinct_mechanisms": "pass",
+    "testability": "pass",
+    "unverified_intermediates_explicit": true,
+    "joint_rna_endpoint_handled": true,
+    "specific_issues": []
+  },
+  "hypothesis_notes": {
+    "M01_05_H1": "以SAM/MICOS、嵴和膜功能到ISR的候选顺序解释联合RNA检出，并明确结构到ISR及到各目标基因的中介未证；时间序列、ISR/ATF4阻断和救援可检验。",
+    "M01_05_H2": "与结构-ISR路径区分为质量控制/胞质核酸感知路径，直接预测mitophagy或胞质mtDNA先于目标RNA及交叉阻断结果；静态标志物通量限制已写明。",
+    "M01_05_H3": "直接覆盖组成、线粒体含量、检测深度和dropout对联合RNA状态的替代解释，并提出分层重算及独立扰动/救援。"
+  },
+  "next_action": "进入 Investigator；逐基因报告RNA和蛋白读出，优先验证时间顺序、通量与交叉阻断，保持cGAS-STING等为候选中介。"
+}

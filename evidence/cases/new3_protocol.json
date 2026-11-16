@@ -1,0 +1,11 @@
+{
+  "requested_model": "gpt-5.6-luna",
+  "flow": "Explorer -> Critic C1 -> Investigator -> Critic C2 -> bounded followup only if requested -> final",
+  "limits": {
+    "max_hypothesis_revision_rounds": 1,
+    "max_evidence_followup_rounds": 1
+  },
+  "source": "outputs/m01_new3_luna_20261021/RUN_PROTOCOL.json",
+  "source_sha256": "b836a59009fd273973c7692e4043666eea97ff01135dec8a7b4b328bdb965806",
+  "archive_scope": "Selected protocol fields; not a full runtime transcript."
+}

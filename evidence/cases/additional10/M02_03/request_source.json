@@ -1,0 +1,13 @@
+{
+  "schema": "critic_bounded_followup_request_v1",
+  "round": 1,
+  "status": "requested",
+  "scope": "One bounded Investigator follow-up for all ten cases; no case reselection and no repeated Day6 effect query.",
+  "requests": [
+    "Inventory allowed metadata/manifest for independent state or cell-cycle labels, measured target knockdown/guide efficacy, guide sequence identity, off-target annotations, and any orthogonal RNA measurement. Report unavailable fields as capability gaps, not biological negatives.",
+    "For M02_02 and M02_03, recompute full other-two joint PHGDH-SESN2 within DDIT3+ using target-DDIT3+ weights, batch-matched NT conditional denominators, exact coverage and batch support; do not use products of conditional marginals or pooled NT denominators as weighted rates. For M05_02, discard the current self-conditioned extraction that omitted the required other-two joint, verify BTG2 sign coding, then recompute BTG2- KLF6- within DDIT3+ with target-DDIT3+ weights, batch-matched NT conditional denominators, exact coverage and batch support. For M05_03, add the analogous BBC3- JUN- within DDIT3+ joint conditional table and weighted summary. Preserve all numerators/denominators and state that conditional frequencies change the population and are not higher-order interaction tests.",
+    "Correct literature context records to match the verified source table: EIF2S1 deletion versus phosphorylation framing; RPL24 mouse/A549 p53 context and no K562 TP53 transfer; INTS2 source actually depletes INTS11/INTS9/INTS4; RIOK1 source includes human RPE-1 mAID-RIOK1 as well as yeast, while remaining indirect for K562.",
+    "Return a file-level audit with hashes and source locators. Do not acquire new independent experiment, Day8 data, or claim mechanism confirmation."
+  ],
+  "reason": "The requested items are concrete and obtainable from the existing allowed artifacts/source records; they can correct provenance and boundary errors but are unlikely to resolve missing independent state/efficacy evidence."
+}

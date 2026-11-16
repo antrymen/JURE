@@ -1,0 +1,307 @@
+{
+  "case_identity": {
+    "slot": "M01_05",
+    "module": "M01",
+    "target": "SAMM50",
+    "case_id": "perturbation_scan_day6_v01_20260927:C75fa15b9230b6a315e3e",
+    "clue_id": "C75fa15b9230b6a315e3e",
+    "joint_state": "DDIT4+ PHGDH+ TRIB3+",
+    "input_hash": "ea8c3bc8609d38f60b67b88f6873655c750c3ea224ab4a212fb0be70023075dc",
+    "observed_fact": {
+      "target": "SAMM50",
+      "genes": [
+        "DDIT4",
+        "PHGDH",
+        "TRIB3"
+      ],
+      "states": [
+        1,
+        1,
+        1
+      ],
+      "delta": 0.4883250986684635,
+      "delta_pp": 48.83250986684635,
+      "matched_NT_prevalence_pct": 6.069450917467376,
+      "perturbation_prevalence_pct": 54.90196078431373,
+      "perturbed_cells": 102,
+      "state_positive_perturbed_cells": 56,
+      "holm_p": 1.5589398542145976e-33
+    },
+    "interpretation_limit": "+表示联合RNA检测状态，不等于SAMM50表达方向、MICOS功能或已建立因果链。"
+  },
+  "c1": {
+    "case_id": "M01_05",
+    "role": "Critic_C1",
+    "source_file": "explorer/M01_05.json",
+    "source_sha256": "7480dde4c39dc73a27d6fcf56390d10eee569c5fe062d53ac7f5e1f0416a223a",
+    "verdict": "pass",
+    "audit": {
+      "endpoint_targeting": "pass",
+      "distinct_mechanisms": "pass",
+      "testability": "pass",
+      "unverified_intermediates_explicit": true,
+      "joint_rna_endpoint_handled": true,
+      "specific_issues": []
+    },
+    "hypothesis_notes": {
+      "M01_05_H1": "以SAM/MICOS、嵴和膜功能到ISR的候选顺序解释联合RNA检出，并明确结构到ISR及到各目标基因的中介未证；时间序列、ISR/ATF4阻断和救援可检验。",
+      "M01_05_H2": "与结构-ISR路径区分为质量控制/胞质核酸感知路径，直接预测mitophagy或胞质mtDNA先于目标RNA及交叉阻断结果；静态标志物通量限制已写明。",
+      "M01_05_H3": "直接覆盖组成、线粒体含量、检测深度和dropout对联合RNA状态的替代解释，并提出分层重算及独立扰动/救援。"
+    },
+    "next_action": "进入 Investigator；逐基因报告RNA和蛋白读出，优先验证时间顺序、通量与交叉阻断，保持cGAS-STING等为候选中介。"
+  },
+  "status": "evidence_acquired_initial_round",
+  "evidence_records": [
+    {
+      "evidence_id": "ER-M01_05-joint-v1",
+      "slot": "M01_05",
+      "target": "SAMM50",
+      "record_type": "tool_envelope",
+      "question_ids": [
+        "M01_05_H1_Q1"
+      ],
+      "hypothesis_ids": [],
+      "source_kind": "current_day6_k562",
+      "tool_name": "data_experiment",
+      "query_id": "TQ_18c6767380c744f0a84a04f56f18a9cb",
+      "status": "OK",
+      "source_record_ids": [
+        "dataset:replogle_k562_essential_day6"
+      ],
+      "source_hash": "49d860b9a1dc5c86d05e2502a81a096557a0cd6d907dbdbf63e465098e695075",
+      "supports": "Observed data or retrieved source content only; interpretation remains bounded by the envelope limitations.",
+      "does_not_support": [
+        "causal mechanism",
+        "target expression direction",
+        "protein activity",
+        "independent replication"
+      ],
+      "raw_file": "raw/M01_05_joint.json",
+      "timestamp": "2026-10-21T05:35:12.046104+00:00"
+    },
+    {
+      "evidence_id": "ER-M01_05-pair_12-v1",
+      "slot": "M01_05",
+      "target": "SAMM50",
+      "record_type": "tool_envelope",
+      "question_ids": [
+        "M01_05_H1_Q2"
+      ],
+      "hypothesis_ids": [],
+      "source_kind": "current_day6_k562",
+      "tool_name": "data_experiment",
+      "query_id": "TQ_b8dd2d520f694d6ebca28932d9bbb5e8",
+      "status": "OK",
+      "source_record_ids": [
+        "dataset:replogle_k562_essential_day6"
+      ],
+      "source_hash": "82fcaafbdd26da5bd3330a2877602316340d818245867d8c612ee833b4bd0ec5",
+      "supports": "Observed data or retrieved source content only; interpretation remains bounded by the envelope limitations.",
+      "does_not_support": [
+        "causal mechanism",
+        "target expression direction",
+        "protein activity",
+        "independent replication"
+      ],
+      "raw_file": "raw/M01_05_pair_12.json",
+      "timestamp": "2026-10-21T05:35:18.491127+00:00"
+    },
+    {
+      "evidence_id": "ER-M01_05-pair_23-v1",
+      "slot": "M01_05",
+      "target": "SAMM50",
+      "record_type": "tool_envelope",
+      "question_ids": [
+        "M01_05_H2_Q1"
+      ],
+      "hypothesis_ids": [],
+      "source_kind": "current_day6_k562",
+      "tool_name": "data_experiment",
+      "query_id": "TQ_208ed96ebe3544b2b80215640e5cf27f",
+      "status": "OK",
+      "source_record_ids": [
+        "dataset:replogle_k562_essential_day6"
+      ],
+      "source_hash": "479aa17964348962dc354b3c33fd4d03731a79a712d435b3228cbfe2ce5747aa",
+      "supports": "Observed data or retrieved source content only; interpretation remains bounded by the envelope limitations.",
+      "does_not_support": [
+        "causal mechanism",
+        "target expression direction",
+        "protein activity",
+        "independent replication"
+      ],
+      "raw_file": "raw/M01_05_pair_23.json",
+      "timestamp": "2026-10-21T05:35:24.930297+00:00"
+    },
+    {
+      "evidence_id": "ER-M01_05-marginal_DDIT4-v1",
+      "slot": "M01_05",
+      "target": "SAMM50",
+      "record_type": "tool_envelope",
+      "question_ids": [
+        "M01_05_H3_DDIT4"
+      ],
+      "hypothesis_ids": [],
+      "source_kind": "current_day6_k562",
+      "tool_name": "data_experiment",
+      "query_id": "TQ_195450750c6643c1ba9ba6ec649d4957",
+      "status": "OK",
+      "source_record_ids": [
+        "dataset:replogle_k562_essential_day6"
+      ],
+      "source_hash": "dcc4096060b2e71b575eb640b15e001041d0ec65dcd3ddf8dc6737ec9a6e0aaf",
+      "supports": "Observed data or retrieved source content only; interpretation remains bounded by the envelope limitations.",
+      "does_not_support": [
+        "causal mechanism",
+        "target expression direction",
+        "protein activity",
+        "independent replication"
+      ],
+      "raw_file": "raw/M01_05_marginal_DDIT4.json",
+      "timestamp": "2026-10-21T05:35:26.224708+00:00"
+    },
+    {
+      "evidence_id": "ER-M01_05-marginal_PHGDH-v1",
+      "slot": "M01_05",
+      "target": "SAMM50",
+      "record_type": "tool_envelope",
+      "question_ids": [
+        "M01_05_H3_PHGDH"
+      ],
+      "hypothesis_ids": [],
+      "source_kind": "current_day6_k562",
+      "tool_name": "data_experiment",
+      "query_id": "TQ_f48a1333ed194d01b4aa852f9ad21a2e",
+      "status": "OK",
+      "source_record_ids": [
+        "dataset:replogle_k562_essential_day6"
+      ],
+      "source_hash": "7c5cca277be10f8e41f5200c477c681b8ab0475a150a406a38861a5ba3b14991",
+      "supports": "Observed data or retrieved source content only; interpretation remains bounded by the envelope limitations.",
+      "does_not_support": [
+        "causal mechanism",
+        "target expression direction",
+        "protein activity",
+        "independent replication"
+      ],
+      "raw_file": "raw/M01_05_marginal_PHGDH.json",
+      "timestamp": "2026-10-21T05:35:27.523776+00:00"
+    },
+    {
+      "evidence_id": "ER-M01_05-marginal_TRIB3-v1",
+      "slot": "M01_05",
+      "target": "SAMM50",
+      "record_type": "tool_envelope",
+      "question_ids": [
+        "M01_05_H3_TRIB3"
+      ],
+      "hypothesis_ids": [],
+      "source_kind": "current_day6_k562",
+      "tool_name": "data_experiment",
+      "query_id": "TQ_c836b1e7ea4f439882c324893eb3949a",
+      "status": "OK",
+      "source_record_ids": [
+        "dataset:replogle_k562_essential_day6"
+      ],
+      "source_hash": "185347639bda4e250c61e2446b2150868d771d691e89d8a18b01b3a986811a38",
+      "supports": "Observed data or retrieved source content only; interpretation remains bounded by the envelope limitations.",
+      "does_not_support": [
+        "causal mechanism",
+        "target expression direction",
+        "protein activity",
+        "independent replication"
+      ],
+      "raw_file": "raw/M01_05_marginal_TRIB3.json",
+      "timestamp": "2026-10-21T05:35:28.818220+00:00"
+    },
+    {
+      "evidence_id": "ER-M01_05-gene_info-v1",
+      "slot": "M01_05",
+      "target": "SAMM50",
+      "record_type": "tool_envelope",
+      "question_ids": [
+        "M01_05_IDENTITY_Q1"
+      ],
+      "hypothesis_ids": [],
+      "source_kind": "curated_gene_context",
+      "tool_name": "gene_knowledge",
+      "query_id": "TQ_afc7d440217e4cef858525372f3e333f",
+      "status": "SOURCE_ERROR",
+      "source_record_ids": [],
+      "source_hash": "9ab7356338205bf17ad22f0d80175a36a5b10f9dc8a0cd107509748ab8862edf",
+      "supports": "Observed data or retrieved source content only; interpretation remains bounded by the envelope limitations.",
+      "does_not_support": [
+        "causal mechanism",
+        "target expression direction",
+        "protein activity",
+        "independent replication"
+      ],
+      "raw_file": "raw/M01_05_gene_info.json",
+      "timestamp": "2026-10-21T05:35:29.826471+00:00"
+    },
+    {
+      "evidence_id": "ER-M01_05-lit_micos-v1",
+      "slot": "M01_05",
+      "target": "SAMM50",
+      "record_type": "tool_envelope",
+      "question_ids": [
+        "M01_05_H1_L1"
+      ],
+      "hypothesis_ids": [],
+      "source_kind": "external_literature_search",
+      "tool_name": "literature",
+      "query_id": "TQ_db23aae7b5db4904bcaeb56159fcb76d",
+      "status": "SOURCE_ERROR",
+      "source_record_ids": [],
+      "source_hash": "1fb22846a1a46c5a0c34ec5e097befc5fc055578202511296752cf6ab75d4be8",
+      "supports": "Observed data or retrieved source content only; interpretation remains bounded by the envelope limitations.",
+      "does_not_support": [
+        "causal mechanism",
+        "target expression direction",
+        "protein activity",
+        "independent replication"
+      ],
+      "raw_file": "raw/M01_05_lit_micos.json",
+      "timestamp": "2026-10-21T05:35:30.834049+00:00"
+    },
+    {
+      "evidence_id": "ER-M01_05-lit_quality-v1",
+      "slot": "M01_05",
+      "target": "SAMM50",
+      "record_type": "tool_envelope",
+      "question_ids": [
+        "M01_05_H2_L1"
+      ],
+      "hypothesis_ids": [],
+      "source_kind": "external_literature_search",
+      "tool_name": "literature",
+      "query_id": "TQ_f7a3288e337b43b1bda9a624761506f9",
+      "status": "SOURCE_ERROR",
+      "source_record_ids": [],
+      "source_hash": "2dca28d3f601a7d2835f6f31cd4748583dcebfe79d2f7a42c9dc9decaf777111",
+      "supports": "Observed data or retrieved source content only; interpretation remains bounded by the envelope limitations.",
+      "does_not_support": [
+        "causal mechanism",
+        "target expression direction",
+        "protein activity",
+        "independent replication"
+      ],
+      "raw_file": "raw/M01_05_lit_quality.json",
+      "timestamp": "2026-10-21T05:35:32.207823+00:00"
+    }
+  ],
+  "limitations": [
+    "Day6 is the current K562 dataset and is not independent replication.",
+    "Literature search results are not automatically claim support; primary paper passages require manual source review.",
+    "Null or unavailable tool results are not biological absence.",
+    "TIMM23B-specific evidence is kept separate from TIMM23-family context."
+  ],
+  "source_hashes": {
+    "explorer": "7480dde4c39dc73a27d6fcf56390d10eee569c5fe062d53ac7f5e1f0416a223a",
+    "c1": "172cb27c0566ca211ff5c352e2f322758844f34871ecbca16aa71eab376c122c"
+  },
+  "reproducibility": {
+    "script": "research://outputs/m01_new3_luna_20261021/investigator/run_investigation.py",
+    "registry_run_id": "m01-new3-luna-investigator-20261021"
+  }
+}

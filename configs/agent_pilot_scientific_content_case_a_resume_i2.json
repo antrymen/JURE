@@ -1,0 +1,164 @@
+{
+  "protocol_id": "jure_scientific_content_case_a_resume_investigator",
+  "case_order": [
+    "A"
+  ],
+  "model_config": "configs/agent_runtime_glm53_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 1,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 18,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 2
+  },
+  "critic_rechecks_per_round": 2,
+  "schema_retries": 0,
+  "failed_stage_retries": 1,
+  "max_transitions": 15,
+  "provider_max_calls_per_case": 80,
+  "registry_budgets": {
+    "total": 18,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "policy": "Continue the same logical Investigator stage14 with 10 saved paid responses and3 real results. Scope expansion is Agent-authored, logged for Critic; software checks active hypothesis existence. Cumulative63/80 model calls,13/18 tools, controller15 preserved.",
+  "provider_retry_delays_seconds": [],
+  "protocol_v3": true,
+  "case_execution_policy": "scientific_content_investigator_recovery",
+  "acceptance_criterion": {
+    "primary": "At least one A/B case commits nonempty claim-level evidence audits after passing C1. A winning mechanism is not required.",
+    "secondary": [
+      "capability IDs on all new evidence questions",
+      "Critic acceptance records for every submitted revision",
+      "Investigator predeclared comparison outcomes and advisory information updates",
+      "distinct terminal reason codes",
+      "all evidence sources REAL and initial facts unchanged"
+    ],
+    "failure_policy": "Stop at amended controller limit 15 and all unchanged scientific/model/tool limits. No further budget escalation, C1 weakening, case substitution or selective omission."
+  },
+  "technical_continuation": "preserve_all_calls_and_committed_v3_state",
+  "resume_sources": {
+    "A": {
+      "directory": "outputs/agent_pilot_v1_20260928/run_025_saved_prefix_case_a/A",
+      "case_sha256": "7340637ef5e9d9cce68b8d2c083f0cc23582c6a6254c5d4f5e12998b80534df1"
+    }
+  },
+  "per_case_retry_caps": {
+    "A": {
+      "explorer_max_retries": 1,
+      "failed_stage_retries": 0
+    }
+  },
+  "transition_amendment": {
+    "user_authorization": "可以",
+    "authorized_scope": "Only three additional controller transitions, preserve cumulative model/tool usage and scientific round limits; B/C/D paused.",
+    "previous_limit": 12,
+    "additional_transitions": 3,
+    "source_sha256": "5106892368b91f504d5c7fb5a325315ac78abd9a69b68a1f58a05ba05de203e9"
+  },
+  "saved_investigator_prefix": {
+    "responses": [
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_024_scientific_content_case_a/A/model_calls/call_0001_investigator/response.json",
+        "sha256": "2ab8d8a03a3bdfe89ac450f83d9189fbf02a308e34d4903667f7358ec9e96683",
+        "method": "prioritize_questions"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_024_scientific_content_case_a/A/model_calls/call_0002_investigator/response.json",
+        "sha256": "f26406c4d6d941088f78ec45068a36fb4e255374cb59635f1b0ae785db87af4b",
+        "method": "operationalize_question"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_024_scientific_content_case_a/A/model_calls/call_0003_investigator/response.json",
+        "sha256": "58f3dbbc9431f00def42a5562c69e598a428e3f69bf2b530c1090de560bb4141",
+        "method": "select_tool"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_024_scientific_content_case_a/A/model_calls/call_0004_investigator/response.json",
+        "sha256": "2fe0833006a19c7eca3731dc0b8f49d63d8228272f579702ff263fc11a7cd007",
+        "method": "interpret_tool_result"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_024_scientific_content_case_a/A/model_calls/call_0005_investigator/response.json",
+        "sha256": "e32a4c4445277d46e4334fbff5df9cd7f54c3bb8141aeb69fba05cd2d509cb43",
+        "method": "select_tool"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_024_scientific_content_case_a/A/model_calls/call_0006_investigator/response.json",
+        "sha256": "beb453ef4a8175a12796ffae680807f572122eb2218be709fcaf3647fff86608",
+        "method": "interpret_tool_result"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_024_scientific_content_case_a/A/model_calls/call_0007_investigator/response.json",
+        "sha256": "6f902b01e29f31838348cb8e13a8d01575617a46c8fbdbed07cbfbf7b9fe4ff0",
+        "method": "select_tool"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_024_scientific_content_case_a/A/model_calls/call_0008_investigator/response.json",
+        "sha256": "1e566940f6bb7e57e609f4ae32a0f70e12c8ac3ba272c0c917b87de2143debbc",
+        "method": "interpret_tool_result"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_024_scientific_content_case_a/A/model_calls/call_0009_investigator/response.json",
+        "sha256": "64710e4190e620a0b668b220dbd1950b5b35ad599921d4d6b22a6e73aa565e1e",
+        "method": "prioritize_questions"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_025_saved_prefix_case_a/A/model_calls/call_0001_investigator/response.json",
+        "sha256": "573a34de9e5cc8b253d001a41af9dc55889f96b2f9fb382fc424018f29555238",
+        "method": "operationalize_question"
+      }
+    ],
+    "tools": [
+      {
+        "path": "/Users/mac/Documents/ChatGPT/JURE/outputs/agent_pilot_v1_20260928/run_024_scientific_content_case_a/A/14_investigator_attempt1/raw_evidence/2ed729abec7646ab3f3a72728dd805b4c1219eeed17ae235bdc92a66f1d63ae5.json",
+        "sha256": "2ed729abec7646ab3f3a72728dd805b4c1219eeed17ae235bdc92a66f1d63ae5",
+        "question_id": "Q4.1_artifact_vs_coordinated"
+      },
+      {
+        "path": "/Users/mac/Documents/ChatGPT/JURE/outputs/agent_pilot_v1_20260928/run_024_scientific_content_case_a/A/14_investigator_attempt1/raw_evidence/cde2994d3de82f3404cde2a04ed7229239b95d4fd97558d00cee393b761f65dc.json",
+        "sha256": "cde2994d3de82f3404cde2a04ed7229239b95d4fd97558d00cee393b761f65dc",
+        "question_id": "Q4.1_artifact_vs_coordinated"
+      },
+      {
+        "path": "/Users/mac/Documents/ChatGPT/JURE/outputs/agent_pilot_v1_20260928/run_024_scientific_content_case_a/A/14_investigator_attempt1/raw_evidence/8b6af8339447e0a20a3ef07419d2ab6877381e1f5f3323b75e764b02c4aec72c.json",
+        "sha256": "8b6af8339447e0a20a3ef07419d2ab6877381e1f5f3323b75e764b02c4aec72c",
+        "question_id": "Q4.1_artifact_vs_coordinated"
+      }
+    ],
+    "envelopes": [
+      {
+        "path": "/Users/mac/Documents/ChatGPT/JURE/outputs/agent_pilot_v1_20260928/run_024_scientific_content_case_a/A/tools/artifacts/d5f1566c6b5e1bd87271a50b9853b8c45b128cae52ac0bb26e1f217d8f35da04.json",
+        "sha256": "d5f1566c6b5e1bd87271a50b9853b8c45b128cae52ac0bb26e1f217d8f35da04"
+      },
+      {
+        "path": "/Users/mac/Documents/ChatGPT/JURE/outputs/agent_pilot_v1_20260928/run_024_scientific_content_case_a/A/tools/artifacts/76f0126288e3ef3f6b506f95d2742242915c9fb93d3d491a4ff4735d6846af13.json",
+        "sha256": "76f0126288e3ef3f6b506f95d2742242915c9fb93d3d491a4ff4735d6846af13"
+      },
+      {
+        "path": "/Users/mac/Documents/ChatGPT/JURE/outputs/agent_pilot_v1_20260928/run_024_scientific_content_case_a/A/tools/artifacts/928cdd69cf07bff4d55f0d983d40637df4b9b9e1fee712ca0793f2168d2f5a77.json",
+        "sha256": "928cdd69cf07bff4d55f0d983d40637df4b9b9e1fee712ca0793f2168d2f5a77"
+      }
+    ]
+  }
+}

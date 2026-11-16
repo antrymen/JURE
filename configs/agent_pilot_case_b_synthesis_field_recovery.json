@@ -1,0 +1,149 @@
+{
+  "model_config": "configs/agent_runtime_glm53_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 5,
+    "max_retries": 1,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 18,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 1
+  },
+  "critic_rechecks_per_round": 2,
+  "registry_budgets": {
+    "total": 18,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "provider_max_calls_per_case": 80,
+  "protocol_id": "jure_case_b_synthesis_field_recovery",
+  "case_order": [
+    "B"
+  ],
+  "protocol_v3": true,
+  "schema_retries": 0,
+  "failed_stage_retries": 0,
+  "max_transitions": 12,
+  "provider_retry_delays_seconds": [],
+  "resume_execution_policy": "independent_existing_checkpoints",
+  "resume_sources": {
+    "B": {
+      "directory": "outputs/agent_pilot_v1_20260928/run_039_case_b_completion/B",
+      "case_sha256": "0e7ab2eaad3df7e56d12859be2ed4898f34b028d158272d5785741ed2459fdeb"
+    }
+  },
+  "policy": "User-authorized B continuation only. Exactly one additional Explorer submission after legacy transition9, followed by Investigator then Critic. All hypotheses, predictions, evidence choices, acceptance and C1/C2 decisions remain JURE Agent-authored. Preserve historical STOP and all paid calls. No Mechanism Resolution Framework implementation; A/C/D paused.",
+  "continuation_authorization": {
+    "user_reply": "允许",
+    "source_case_sha256": "5f89dedb2e72794a8ddeab80f14a5fc6fd69b5b75fa1d081edc5e9c75bd9be65",
+    "legacy_completed_reframes": 1,
+    "additional_reframe_submissions": 1,
+    "max_total_completed_reframes_including_legacy": 2,
+    "current_protocol_accepted_revision_cap": 1,
+    "hypothesis_bound_reason": "Existing Critic explicitly requested an additional standalone hypothesis alongside H1-H4; allow up to five without authoring its content.",
+    "inherited_model_calls": 49,
+    "remaining_model_calls": 31,
+    "inherited_tool_calls": 9,
+    "remaining_tool_calls": 9,
+    "max_completed_investigator_rounds": 3,
+    "max_completed_critic_rounds": 3
+  },
+  "saved_investigator_prefix": {
+    "responses": [
+      {
+        "path": "outputs/agent_pilot_v1_20260928/case_b_review_reconciliation_20260929/audit_hypotheses_patched_response.json",
+        "sha256": "3744d08b29be87fc7940db8a85d93a863e504527f8e74dd0b58b22ebcc529b54",
+        "role": "critic",
+        "method": "audit_hypotheses"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/case_b_claim_reference_patch_20260929/decompose_claims_patched_response.json",
+        "sha256": "95cf553216f9fb2acaaaf05abebc1a2e649925b2c2302416bef34de6053bd6a8",
+        "role": "critic",
+        "method": "decompose_claims"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_039_case_b_completion/B/model_calls/call_0001_critic/response.json",
+        "sha256": "38ea7096527e39d81caec143ab10f54f76795b60dcebd7bc0dd879c5b7b0a9bb",
+        "role": "critic",
+        "method": "plan_rechecks"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_039_case_b_completion/B/model_calls/call_0002_critic/response.json",
+        "sha256": "d046986daca51353eb834d69d5a659b19149bf2b75c3b10019157b311c709cb4",
+        "role": "critic",
+        "method": "audit_evidence"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_039_case_b_completion/B/model_calls/call_0003_critic/response.json",
+        "sha256": "e212c5650499a440e66b15e5c4dde8283220113848cf1e91745e99a4603cd9d1",
+        "role": "critic",
+        "method": "synthesize_hypothesis"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_039_case_b_completion/B/model_calls/call_0004_critic/response.json",
+        "sha256": "e40674b0840054c36cf0751ba75e00633d1ccba5649995b6cf6d20af3e3e0cd0",
+        "role": "critic",
+        "method": "synthesize_hypothesis"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_039_case_b_completion/B/model_calls/call_0005_critic/response.json",
+        "sha256": "e5ee491e94b804e2dc6259e9124da17faea92673c9af30c892456bac48f99c52",
+        "role": "critic",
+        "method": "synthesize_hypothesis"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_039_case_b_completion/B/model_calls/call_0006_critic/response.json",
+        "sha256": "1b6afe5df50a814dc845eec7a47f44e105cf0fe38563e0a6ee3e323de5a41c7e",
+        "role": "critic",
+        "method": "synthesize_hypothesis"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/case_b_synthesis_field_recovery_20260929/synthesis_response.json",
+        "sha256": "53e9b0fc29fb758a177fc5af881f3338d8ac73481836afc1ab00eab8fd5f5b2f",
+        "role": "critic",
+        "method": "synthesize_hypothesis"
+      }
+    ],
+    "tools": [],
+    "envelopes": []
+  },
+  "engineering_recovery": {
+    "reason": "Extract surplus stop_assessment into a preserved sidecar; replay all paid C1/C2/syntheses and two real rechecks. Existing claim-index normalization retained. No scientific text or verdict changed.",
+    "inherited_model_calls": 75,
+    "inherited_tool_calls": 15,
+    "same_logical_transition": 12,
+    "new_scientific_revision_allowance": 0,
+    "new_model_calls_for_extraction": 0
+  },
+  "saved_critic_rechecks": [
+    {
+      "path": "/Users/mac/Documents/ChatGPT/JURE/outputs/agent_pilot_v1_20260928/run_039_case_b_completion/B/tools/artifacts/1256c28f09eb6bc9e0148cbe980fb8cd8d309542a5529424cf0be55617dc8400.json",
+      "sha256": "1256c28f09eb6bc9e0148cbe980fb8cd8d309542a5529424cf0be55617dc8400",
+      "parent_question_id": "Q_8eb6300aff4648b43d2d"
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/JURE/outputs/agent_pilot_v1_20260928/run_039_case_b_completion/B/tools/artifacts/ca4595a0b92936131f86d62211432a5e8c9b23eef00554bba03958353a7ee712.json",
+      "sha256": "ca4595a0b92936131f86d62211432a5e8c9b23eef00554bba03958353a7ee712",
+      "parent_question_id": "Q_27415d8a99ad3b31340a"
+    }
+  ]
+}

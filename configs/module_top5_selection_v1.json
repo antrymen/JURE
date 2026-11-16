@@ -1,0 +1,43 @@
+{
+  "protocol_id": "jure_day6_top5_modules_one_case_each_v1",
+  "dataset_id": "replogle_k562_day6",
+  "source_run": "outputs/integration_tests/adapter_smoke/replogle_frozen",
+  "expected_candidate_count": 6129,
+  "modules": [
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05"
+  ],
+  "eligibility": {
+    "min_condition_cells": 300,
+    "min_abs_matched_effect": 0.2,
+    "min_nt_cells_per_occupied_batch": 20,
+    "min_effective_matched_nt": 100,
+    "min_directional_support": 10,
+    "max_selected_family_holm_exploratory": 0.05,
+    "evidence_level": "EXPLORATORY_ASSOCIATION",
+    "external_validation_status": "NOT_PERFORMED"
+  },
+  "membership": "stable_core",
+  "ranking": [
+    "abs(matched_effect)_descending",
+    "condition_cells_descending",
+    "directional_support_descending",
+    "condition_id_ascending",
+    "reference_id_ascending",
+    "case_id_ascending"
+  ],
+  "deduplication": [
+    "condition_id",
+    "reference_id",
+    "sampling_block_id"
+  ],
+  "empty_module_policy": "FAIL_CLOSED; do not relax gates",
+  "companion_policy": "Preserve all other original selected candidates for the same target and module, with their individual signed identities, effects and eligibility flags; companions are context, not extra independent cases.",
+  "literature_used_in_selection": false,
+  "scope": "Select five new initial cases, one per requested module; do not invent investigation content. Existing results were known before this rule was fixed. This is not preregistration of discovery.",
+  "user_request": "一个module选一个，先选5个；此前已指定M01–M05。",
+  "frozen_at": "2026-10-04T11:42:02.155298+00:00"
+}

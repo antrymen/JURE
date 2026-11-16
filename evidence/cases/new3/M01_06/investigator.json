@@ -1,0 +1,405 @@
+{
+  "case_identity": {
+    "slot": "M01_06",
+    "module": "M01",
+    "target": "EIF2B3",
+    "case_id": "perturbation_scan_day6_v01_20260927:C069fe06945fbd12ea4b7",
+    "clue_id": "C069fe06945fbd12ea4b7",
+    "joint_state": "PCK2+ PHGDH+ SESN2+",
+    "input_hash": "ace21d8108215daafdbb79883641544823bdee9201e37eeea1df21bf7c306c91",
+    "observed_fact": {
+      "target": "EIF2B3",
+      "genes": [
+        "PCK2",
+        "PHGDH",
+        "SESN2"
+      ],
+      "states": [
+        1,
+        1,
+        1
+      ],
+      "delta": 0.4301597735739461,
+      "delta_pp": 43.01597735739461,
+      "matched_NT_prevalence_pct": 5.060945719528473,
+      "perturbation_prevalence_pct": 48.07692307692308,
+      "perturbed_cells": 104,
+      "state_positive_perturbed_cells": 50,
+      "holm_p": 2.881710180559116e-29
+    },
+    "interpretation_limit": "+表示联合RNA检测状态，不等于EIF2B3表达方向、eIF2B活性或已建立ISR机制。"
+  },
+  "revision": {
+    "revision_id": "M01_06_explorer_revised_v1",
+    "case_id": "M01_06",
+    "reason": "C1指出原H2主要解释蛋白终点，未闭合当前PCK2+ PHGDH+ SESN2+联合RNA检出终点；本轮仅将H2改为直接针对RNA稳定性/加工与RNA积累的竞争机制，并保留蛋白读出作为区分性验证。",
+    "critic_request_sha256": "9cd082701dd13a739dc89ca5880057d90d225e26ea7d82f0a870f43f86ffa511",
+    "original_version_sha256": "932941196ac38d10b93b80a5b03c223492e1969012f79c774f212ea2e7125387",
+    "bounded_revision": true,
+    "changed_hypothesis_ids": [
+      "M01_06_H2"
+    ]
+  },
+  "c1_recheck": {
+    "case_id": "M01_06",
+    "role": "Critic_C1_recheck",
+    "source_file": "explorer/revised_v1/M01_06.json",
+    "source_sha256": "92b0055be703e16f7614dd1db45bd60721736e2bba22263616179652fac55b21",
+    "revision_note_file": "explorer/revised_v1/REVISION_NOTE.md",
+    "revision_note_sha256": "aaa863731ddb60a2e0aaa6b82b51c28900b39487225d1f39e696186f59f7506f",
+    "original_c1_source_sha256": "932941196ac38d10b93b80a5b03c223492e1969012f79c774f212ea2e7125387",
+    "verdict": "pass",
+    "recheck_scope": "仅复核原C1关于M01_06_H2未直接解释联合RNA终点的意见",
+    "original_issue": "原H2以选择性翻译或蛋白稳定性解释蛋白输出，未闭合PCK2+ PHGDH+ SESN2+联合RNA检出终点。",
+    "revision_audit": {
+      "endpoint_alignment": "resolved",
+      "mechanism_specificity": "adequate_candidate",
+      "testability": "pass",
+      "protein_as_surrogate_avoided": true,
+      "unverified_intermediates_marked": true,
+      "specific_findings": [
+        "H2已改为成熟/未成熟RNA加工、稳定性、降解或核质分布改变，直接提出联合RNA检出增加的机制。",
+        "RNA半衰期、转录抑制衰减曲线、加工/定位读出和逐基因检验构成可区分预测。",
+        "蛋白、翻译效率和蛋白半衰期被明确限定为区分性验证，不再替代RNA终点。",
+        "EIF2B3到RNA处理的分子中介明确标为未确定，未将假说写成既定联系。"
+      ],
+      "remaining_limits": [
+        "RNA稳定性/加工机制仍为候选，需 Investigator 真实证据；本复核不提供机制支持。",
+        "H1/H2/H3可能并存，复核不指定机制赢家。"
+      ]
+    },
+    "next_action": "通过C1复审，进入 Investigator；优先获取三基因成熟/未成熟RNA、半衰期/衰减曲线、加工与核质分布，并与p-eIF2α/ATF4及组成校正并行。"
+  },
+  "status": "evidence_acquired_initial_round",
+  "evidence_records": [
+    {
+      "evidence_id": "ER-M01_06-joint-v1",
+      "slot": "M01_06",
+      "target": "EIF2B3",
+      "question_ids": [
+        "M01_06_H1_Q1"
+      ],
+      "hypothesis_ids": [],
+      "record_type": "tool_envelope",
+      "source_kind": "current_day6_k562",
+      "tool_name": "data_experiment",
+      "query_id": "TQ_f89740e0314d4974bbee4cc9ad596fea",
+      "status": "OK",
+      "source_record_ids": [
+        "dataset:replogle_k562_essential_day6"
+      ],
+      "source_hash": "f40342f8560317339fa94c59b8a543f6e42e6925649a0da0472d6bf2fdb44fa9",
+      "raw_file": "raw/M01_06_joint.json",
+      "timestamp": "2026-10-21T08:31:53.839397+00:00",
+      "supports": "Observed current-dataset result or retrieved source content within tool scope.",
+      "does_not_support": [
+        "causal EIF2B3 mechanism",
+        "RNA stability change without direct assay",
+        "independent replication",
+        "protein activity from RNA detection"
+      ]
+    },
+    {
+      "evidence_id": "ER-M01_06-pair_12-v1",
+      "slot": "M01_06",
+      "target": "EIF2B3",
+      "question_ids": [
+        "M01_06_H1_Q2"
+      ],
+      "hypothesis_ids": [],
+      "record_type": "tool_envelope",
+      "source_kind": "current_day6_k562",
+      "tool_name": "data_experiment",
+      "query_id": "TQ_0d1cefb484ee4e4ca401bf1b2077a691",
+      "status": "OK",
+      "source_record_ids": [
+        "dataset:replogle_k562_essential_day6"
+      ],
+      "source_hash": "03ee4622999e604df6a9398bbf342e8575d7a4bc58c77d35e9565e073374438e",
+      "raw_file": "raw/M01_06_pair_12.json",
+      "timestamp": "2026-10-21T08:32:01.774983+00:00",
+      "supports": "Observed current-dataset result or retrieved source content within tool scope.",
+      "does_not_support": [
+        "causal EIF2B3 mechanism",
+        "RNA stability change without direct assay",
+        "independent replication",
+        "protein activity from RNA detection"
+      ]
+    },
+    {
+      "evidence_id": "ER-M01_06-pair_23-v1",
+      "slot": "M01_06",
+      "target": "EIF2B3",
+      "question_ids": [
+        "M01_06_H2_Q1"
+      ],
+      "hypothesis_ids": [],
+      "record_type": "tool_envelope",
+      "source_kind": "current_day6_k562",
+      "tool_name": "data_experiment",
+      "query_id": "TQ_107ee10149b44600932fddc910ce42e7",
+      "status": "OK",
+      "source_record_ids": [
+        "dataset:replogle_k562_essential_day6"
+      ],
+      "source_hash": "8531bf065124ea159802b7a65c2d1c082013806a1add3c817279f10d9ec4d96e",
+      "raw_file": "raw/M01_06_pair_23.json",
+      "timestamp": "2026-10-21T08:32:09.814914+00:00",
+      "supports": "Observed current-dataset result or retrieved source content within tool scope.",
+      "does_not_support": [
+        "causal EIF2B3 mechanism",
+        "RNA stability change without direct assay",
+        "independent replication",
+        "protein activity from RNA detection"
+      ]
+    },
+    {
+      "evidence_id": "ER-M01_06-marginal_PCK2-v1",
+      "slot": "M01_06",
+      "target": "EIF2B3",
+      "question_ids": [
+        "M01_06_H3_PCK2"
+      ],
+      "hypothesis_ids": [],
+      "record_type": "tool_envelope",
+      "source_kind": "current_day6_k562",
+      "tool_name": "data_experiment",
+      "query_id": "TQ_3ee8c514e10643a889fcb55496aca55c",
+      "status": "OK",
+      "source_record_ids": [
+        "dataset:replogle_k562_essential_day6"
+      ],
+      "source_hash": "a4ed5fc5343926000ce81bcba83f9ee7a5c33bed2c13417814cccd90596b6265",
+      "raw_file": "raw/M01_06_marginal_PCK2.json",
+      "timestamp": "2026-10-21T08:32:11.403369+00:00",
+      "supports": "Observed current-dataset result or retrieved source content within tool scope.",
+      "does_not_support": [
+        "causal EIF2B3 mechanism",
+        "RNA stability change without direct assay",
+        "independent replication",
+        "protein activity from RNA detection"
+      ]
+    },
+    {
+      "evidence_id": "ER-M01_06-marginal_PHGDH-v1",
+      "slot": "M01_06",
+      "target": "EIF2B3",
+      "question_ids": [
+        "M01_06_H3_PHGDH"
+      ],
+      "hypothesis_ids": [],
+      "record_type": "tool_envelope",
+      "source_kind": "current_day6_k562",
+      "tool_name": "data_experiment",
+      "query_id": "TQ_954cd41dc7654442b316ec350a57f548",
+      "status": "OK",
+      "source_record_ids": [
+        "dataset:replogle_k562_essential_day6"
+      ],
+      "source_hash": "ea8e2defd48f20cbfb246538d48d3c0474083be3f7a41c103afc18e9c858c233",
+      "raw_file": "raw/M01_06_marginal_PHGDH.json",
+      "timestamp": "2026-10-21T08:32:12.989102+00:00",
+      "supports": "Observed current-dataset result or retrieved source content within tool scope.",
+      "does_not_support": [
+        "causal EIF2B3 mechanism",
+        "RNA stability change without direct assay",
+        "independent replication",
+        "protein activity from RNA detection"
+      ]
+    },
+    {
+      "evidence_id": "ER-M01_06-marginal_SESN2-v1",
+      "slot": "M01_06",
+      "target": "EIF2B3",
+      "question_ids": [
+        "M01_06_H3_SESN2"
+      ],
+      "hypothesis_ids": [],
+      "record_type": "tool_envelope",
+      "source_kind": "current_day6_k562",
+      "tool_name": "data_experiment",
+      "query_id": "TQ_ceb0cdf54dbe402cac5c7d7128cc9a66",
+      "status": "OK",
+      "source_record_ids": [
+        "dataset:replogle_k562_essential_day6"
+      ],
+      "source_hash": "551f4dd031752eb9b75311d924bf628c221c64ea16896e33523fb642c43b54cb",
+      "raw_file": "raw/M01_06_marginal_SESN2.json",
+      "timestamp": "2026-10-21T08:32:14.582299+00:00",
+      "supports": "Observed current-dataset result or retrieved source content within tool scope.",
+      "does_not_support": [
+        "causal EIF2B3 mechanism",
+        "RNA stability change without direct assay",
+        "independent replication",
+        "protein activity from RNA detection"
+      ]
+    },
+    {
+      "evidence_id": "ER-M01_06-gene_info-v1",
+      "slot": "M01_06",
+      "target": "EIF2B3",
+      "question_ids": [
+        "M01_06_IDENTITY_Q1"
+      ],
+      "hypothesis_ids": [],
+      "record_type": "tool_envelope",
+      "source_kind": "curated_gene_context",
+      "tool_name": "gene_knowledge",
+      "query_id": "TQ_71c17a149d094959b7b97ac750e5a7f1",
+      "status": "SOURCE_ERROR",
+      "source_record_ids": [],
+      "source_hash": "aee3cf1d923efaed740ab36021e88cb319aa52792eae462e97b0f5e8f5f08c94",
+      "raw_file": "raw/M01_06_gene_info.json",
+      "timestamp": "2026-10-21T08:32:15.604857+00:00",
+      "supports": "Observed current-dataset result or retrieved source content within tool scope.",
+      "does_not_support": [
+        "causal EIF2B3 mechanism",
+        "RNA stability change without direct assay",
+        "independent replication",
+        "protein activity from RNA detection"
+      ]
+    },
+    {
+      "evidence_id": "ER-M01_06-lit_eif2b_isr-v1",
+      "slot": "M01_06",
+      "target": "EIF2B3",
+      "question_ids": [
+        "M01_06_H1_L1"
+      ],
+      "hypothesis_ids": [],
+      "record_type": "tool_envelope",
+      "source_kind": "external_literature_search",
+      "tool_name": "literature",
+      "query_id": "TQ_4d9a78186b9c4260bd115868b35def42",
+      "status": "SOURCE_ERROR",
+      "source_record_ids": [],
+      "source_hash": "80cdc0a2a292477dfdf84567984932de0b37b40a6b8d1a4757eb9b7d43cc7b22",
+      "raw_file": "raw/M01_06_lit_eif2b_isr.json",
+      "timestamp": "2026-10-21T08:32:16.610096+00:00",
+      "supports": "Observed current-dataset result or retrieved source content within tool scope.",
+      "does_not_support": [
+        "causal EIF2B3 mechanism",
+        "RNA stability change without direct assay",
+        "independent replication",
+        "protein activity from RNA detection"
+      ]
+    },
+    {
+      "evidence_id": "ER-M01_06-lit_rna_processing-v1",
+      "slot": "M01_06",
+      "target": "EIF2B3",
+      "question_ids": [
+        "M01_06_H2_L1"
+      ],
+      "hypothesis_ids": [],
+      "record_type": "tool_envelope",
+      "source_kind": "external_literature_search",
+      "tool_name": "literature",
+      "query_id": "TQ_14d577bf233646b4a9d68c32e9663668",
+      "status": "SOURCE_ERROR",
+      "source_record_ids": [],
+      "source_hash": "1dd05b26279a5e757dc5c7dbfaf03dc05629606eead8998c218fdb803f571f6e",
+      "raw_file": "raw/M01_06_lit_rna_processing.json",
+      "timestamp": "2026-10-21T08:32:17.979343+00:00",
+      "supports": "Observed current-dataset result or retrieved source content within tool scope.",
+      "does_not_support": [
+        "causal EIF2B3 mechanism",
+        "RNA stability change without direct assay",
+        "independent replication",
+        "protein activity from RNA detection"
+      ]
+    }
+  ],
+  "web_fallback_evidence_records": [
+    {
+      "evidence_id": "ER-M01_06-web-eif2b-isr-v1",
+      "slot": "M01_06",
+      "target": "EIF2B3",
+      "question_ids": [
+        "M01_06_H1_L1"
+      ],
+      "hypothesis_ids": [
+        "M01_06_H1"
+      ],
+      "record_type": "web_primary_paper_search",
+      "source_kind": "external_primary_literature",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7990499/",
+      "web_ref": "turn5search0",
+      "source_hash": "9e91056c518e7b114e3593f1d067ac9d6c9f89381feaab8c9855de070fc9c104",
+      "locator": "PMC7990499; PMID 33688831; eLife 2021; abstract",
+      "verbatim_excerpt": "The integrated stress response (ISR) is activated by phosphorylation of the translation initiation factor eIF2... eIF2B...",
+      "supports": "eIF2B assembly/conformation and activity are experimentally connected to ISR regulation in the reported system.",
+      "does_not_support": [
+        "EIF2B3 perturbation in current K562",
+        "PCK2/PHGDH/SESN2 RNA induction",
+        "RNA stability or processing"
+      ],
+      "retrieval_status": "search_result; open blocked_by_recaptcha"
+    },
+    {
+      "evidence_id": "ER-M01_06-web-eif2b3-mutant-v1",
+      "slot": "M01_06",
+      "target": "EIF2B3",
+      "question_ids": [
+        "M01_06_H1_L1"
+      ],
+      "hypothesis_ids": [
+        "M01_06_H1"
+      ],
+      "record_type": "web_primary_paper_search",
+      "source_kind": "external_primary_literature",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/26625702/",
+      "web_ref": "turn5search9",
+      "source_hash": "9e91056c518e7b114e3593f1d067ac9d6c9f89381feaab8c9855de070fc9c104",
+      "locator": "PMID 26625702; PubMed record",
+      "verbatim_excerpt": "Endoplasmic reticulum stress intolerance in EIF2B3 mutant oligodendrocytes is modulated by depressed autophagy.",
+      "supports": "EIF2B3 mutant oligodendrocytes and ER-stress/autophagy context are reported in the paper record.",
+      "does_not_support": [
+        "direct EIF2B3-to-RNA-stability mechanism",
+        "current K562 perturbation",
+        "three-gene RNA state"
+      ],
+      "retrieval_status": "search_result; open_without_extractable_lines"
+    },
+    {
+      "evidence_id": "ER-M01_06-web-eif2b-allostery-v1",
+      "slot": "M01_06",
+      "target": "EIF2B3",
+      "question_ids": [
+        "M01_06_H1_L1"
+      ],
+      "hypothesis_ids": [
+        "M01_06_H1"
+      ],
+      "record_type": "web_primary_paper_search",
+      "source_kind": "external_primary_literature",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9132573/",
+      "web_ref": "turn5search10",
+      "source_hash": "9e91056c518e7b114e3593f1d067ac9d6c9f89381feaab8c9855de070fc9c104",
+      "locator": "PMC9132573",
+      "verbatim_excerpt": "A point mutation in the nucleotide exchange factor eIF2B constitutively activates the integrated stress response by allosteric modulation.",
+      "supports": "A reported eIF2B point mutation can activate ISR in its experimental model.",
+      "does_not_support": [
+        "EIF2B3 knockdown direction",
+        "PCK2/PHGDH/SESN2 RNA mechanism",
+        "RNA processing or stability"
+      ],
+      "retrieval_status": "search_result; open blocked_by_recaptcha"
+    }
+  ],
+  "web_fallback_file": "web_fallback_M01_06.json",
+  "source_hashes": {
+    "explorer": "92b0055be703e16f7614dd1db45bd60721736e2bba22263616179652fac55b21",
+    "c1_recheck": "1e487906a204a51363ab6ac5be959f0e28f977b3af989ed1250dc5961cdfb44b"
+  },
+  "limitations": [
+    "Day6 K562 is one current experimental dataset, not independent replication.",
+    "Literature search/abstract retrieval does not establish claim support; no mechanism is upgraded from a search hit.",
+    "Tool failure, NO_RESULT or insufficient support is recorded as such and is not treated as biological absence.",
+    "No direct mature/unmatured RNA, half-life, processing or nuclear-cytoplasmic assay is available from the current tool surface."
+  ],
+  "reproducibility": {
+    "script": "research://outputs/m01_new3_luna_20261021/investigator/run_m01_06.py",
+    "registry_run_id": "m01-new3-luna-investigator-20261021-M01_06"
+  }
+}

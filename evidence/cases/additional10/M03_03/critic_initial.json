@@ -1,0 +1,8 @@
+{
+  "schema":"codex_critic_audit_v1","role":"Critic","backend":"GPT-5.6-Luna","round":1,"module":"M03_03","target":"HSPA9","signed_pattern":"CCAR1+ CCNB1+ CDC20+","status":"followup_requested","source_case_sha256":"1427b7633324ea14c06c346eb327c5d3216cf4d7e641158dec30e032f84f0fa1",
+  "input_artifacts":["explorer/M03_03.json","investigator/M03_03.json","investigator/raw/M03_03_joint.json","investigator/raw/M03_03_supplemental.json","JOINT_DATA_RECHECK.json","critic/WEB_SOURCE_CHECK.json"],
+  "c1":{"verdict":"pass","scope":"H1/H2/H3 remain distinct; CCNB1/CDC20 are detection markers, not proof of cell-cycle causality."},
+  "c2":{"observed_claim":{"status":"supported_descriptive","value":"92/420; matched NT delta -22.4418 pp","evidence":"investigator/raw/M03_03_joint.json","independent_replication":false},"H1":{"status":"insufficient","reason":"HSPA9 source is human CD34+ erythroid maturation with siRNA/TP53 context, not K562 or selected joint state; no target efficacy here."},"H2":{"status":"insufficient","reason":"No independent cell-cycle/state labels."},"H3":{"status":"partially_supported_but_not_exclusive","reason":"Depth descriptive delta -12.6420 pp attenuates effect but cannot be labeled technical fraction."},"literature_source":"M03_03-SRC"},
+  "claims":[{"id":"M03_03-O1","status":"supported"},{"id":"M03_03-H1","status":"insufficient"},{"id":"M03_03-H2","status":"insufficient"},{"id":"M03_03-H3","status":"partially_supported"}],
+  "routing":"One bounded follow-up requested."
+}

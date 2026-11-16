@@ -1,0 +1,152 @@
+{
+  "model_config": "configs/agent_runtime_glm53_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 0,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 8,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 1200000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 1
+  },
+  "critic_rechecks_per_round": 2,
+  "registry_budgets": {
+    "total": 8,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "protocol_v3": true,
+  "protocol_id": "jure_user_selected_eif2b5_single_cycle_20260929",
+  "case_order": [
+    "C"
+  ],
+  "case_execution_policy": "user_selected_single_cycle",
+  "user_authorization": "好，跑一轮试试吧",
+  "initial_case_sources": {
+    "C": {
+      "path": "outputs/case_c_eif2b5_single_cycle_20260929/initial_case/case_file.json",
+      "sha256": "805e5037dcdd8c965108e504108e7371ebf22a0bb2c00c24557a335503c42cb4"
+    }
+  },
+  "schema_retries": 0,
+  "failed_stage_retries": 0,
+  "provider_retry_delays_seconds": [],
+  "max_transitions": 3,
+  "provider_max_calls_per_case": 40,
+  "policy": "One Explorer -> Investigator -> Critic cycle only. Stop at first Critic route/STOP; no second cycle. Agents author all science. No host-provided hypotheses, query priority, literature conclusions or verdicts. A/B and original C/D remain unchanged. Preserve paid output and usage during any local engineering recovery.",
+  "resume_sources": {
+    "C": {
+      "directory": "outputs/case_c_eif2b5_single_cycle_20260929/information_update_patch/C",
+      "case_sha256": "01d9c26769379f7eff8a4391fc674e13756abb025bc310616400c68d8dd8e652"
+    }
+  },
+  "saved_investigator_prefix": {
+    "responses": [
+      {
+        "path": "outputs/case_c_eif2b5_single_cycle_20260929/run_001/C/model_calls/call_0004_investigator/response.json",
+        "sha256": "37500ba21e089a6866e2d558f619b517d5189a757a00d3da34022563834f2ee7",
+        "role": "investigator",
+        "method": "prioritize_questions"
+      },
+      {
+        "path": "outputs/case_c_eif2b5_single_cycle_20260929/conditional_mode_binding/plan_response.json",
+        "sha256": "0a3966085e66b74992bcddc05590ef70b182fb7c7f900d8382e108e968c2129e",
+        "role": "investigator",
+        "method": "operationalize_question"
+      },
+      {
+        "path": "outputs/case_c_eif2b5_single_cycle_20260929/run_002/C/model_calls/call_0001_investigator/response.json",
+        "sha256": "60c103e035f1e714a8096c11d5d18fcc28e4cb93fcd41284354536f447ea8667",
+        "role": "investigator",
+        "method": "select_tool"
+      },
+      {
+        "path": "outputs/case_c_eif2b5_single_cycle_20260929/run_002/C/model_calls/call_0002_investigator/response.json",
+        "sha256": "81065e9b1419df9be443f019c2b83650ec976fd129fa35f2172a8dc0306fce65",
+        "role": "investigator",
+        "method": "interpret_tool_result"
+      },
+      {
+        "path": "outputs/case_c_eif2b5_single_cycle_20260929/run_002/C/model_calls/call_0003_investigator/response.json",
+        "sha256": "2c4924855de50148c198b1705fc8c7d98154ec44c6d7d4b5e887daaa604bf1aa",
+        "role": "investigator",
+        "method": "select_tool"
+      },
+      {
+        "path": "outputs/case_c_eif2b5_single_cycle_20260929/run_002/C/model_calls/call_0004_investigator/response.json",
+        "sha256": "dfd433bf7baffc9957ed79100586bf06df033e69cb502a06ca5e5e37a0183b36",
+        "role": "investigator",
+        "method": "interpret_tool_result"
+      },
+      {
+        "path": "outputs/case_c_eif2b5_single_cycle_20260929/run_002/C/model_calls/call_0005_investigator/response.json",
+        "sha256": "8f25f4b1dc0f8d93d43f4e7cddfd2e9793a03b10c50ab8a6cda577e68d425cdc",
+        "role": "investigator",
+        "method": "select_tool"
+      },
+      {
+        "path": "outputs/case_c_eif2b5_single_cycle_20260929/information_update_patch/interpretation_response.json",
+        "sha256": "07a09791b50f9358e757e6f1a90fe9c468659f56772a2b18e5e15312847c1f78",
+        "role": "investigator",
+        "method": "interpret_tool_result"
+      }
+    ],
+    "tools": [
+      {
+        "path": "outputs/case_c_eif2b5_single_cycle_20260929/run_002/C/02_investigator_attempt1/raw_evidence/2e50528994641d49a3a5558ae5dd870b04f31eb8745f6d7483f22ecde219de62.json",
+        "sha256": "2e50528994641d49a3a5558ae5dd870b04f31eb8745f6d7483f22ecde219de62",
+        "question_id": "Q_62b158b87e23997d97be"
+      },
+      {
+        "path": "outputs/case_c_eif2b5_single_cycle_20260929/run_002/C/02_investigator_attempt1/raw_evidence/e38d7b377189711a63a0dcea65d88318d778846efbca4b3df3901633899ca097.json",
+        "sha256": "e38d7b377189711a63a0dcea65d88318d778846efbca4b3df3901633899ca097",
+        "question_id": "Q_62b158b87e23997d97be"
+      },
+      {
+        "path": "outputs/case_c_eif2b5_single_cycle_20260929/run_002/C/02_investigator_attempt1/raw_evidence/875534d7d76323847624cb4a1372d47696caaf64bb9b96cbc616a3d1fcd1d87f.json",
+        "sha256": "875534d7d76323847624cb4a1372d47696caaf64bb9b96cbc616a3d1fcd1d87f",
+        "question_id": "Q_62b158b87e23997d97be"
+      }
+    ],
+    "envelopes": [
+      {
+        "path": "/Users/mac/Documents/ChatGPT/JURE/outputs/case_c_eif2b5_single_cycle_20260929/run_002/C/tools/artifacts/2dd6940e01eaa55eb833b6a1a15ec48878b20220eeb5684b1e1334491fb60e87.json",
+        "sha256": "2dd6940e01eaa55eb833b6a1a15ec48878b20220eeb5684b1e1334491fb60e87"
+      },
+      {
+        "path": "/Users/mac/Documents/ChatGPT/JURE/outputs/case_c_eif2b5_single_cycle_20260929/run_002/C/tools/artifacts/a957268a3438d6056e82d15590af315c7fb1ffe94a8940e0b006885c88976dee.json",
+        "sha256": "a957268a3438d6056e82d15590af315c7fb1ffe94a8940e0b006885c88976dee"
+      },
+      {
+        "path": "/Users/mac/Documents/ChatGPT/JURE/outputs/case_c_eif2b5_single_cycle_20260929/run_002/C/tools/artifacts/4e9eaae1069d76439357d0f584827e4bc6706587b2dd285a2384aed64d2ee5d4.json",
+        "sha256": "4e9eaae1069d76439357d0f584827e4bc6706587b2dd285a2384aed64d2ee5d4"
+      }
+    ]
+  },
+  "engineering_recovery": {
+    "same_logical_transition": 2,
+    "inherited_model_calls": 12,
+    "inherited_tool_calls": 3,
+    "no_budget_reset": true,
+    "scientific_rounds_added": 0,
+    "reason": "Investigator-authored missing information_update only; exact replay of prior queries and responses."
+  }
+}

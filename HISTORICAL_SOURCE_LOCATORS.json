@@ -1,0 +1,44 @@
+[
+  {
+    "slot": "M01_04",
+    "historical_source": "outputs/m01_new3_luna_20261021/investigator/followup_v1/M01_04_web.json",
+    "sha256": "12983b5bf3c8db2c5dc5ead1c6bf5dc27c912e806a9af68d6e5d0fc8e0b0f116",
+    "hash_matches_archived_reference": true,
+    "identity_url": "https://www.ncbi.nlm.nih.gov/gene/100652748",
+    "sources": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/gene/100652748",
+        "title": null,
+        "pmid": null,
+        "type": "gene_registry"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37344598/",
+        "title": "Structural basis of mitochondrial protein import by the TIM23 complex",
+        "pmid": "37344598",
+        "type": "primary_paper"
+      }
+    ]
+  },
+  {
+    "slot": "M01_05",
+    "historical_source": "outputs/m01_new3_luna_20261021/investigator/followup_v1/M01_05_web.json",
+    "sha256": "7b4f8e1cc036efe9e9f514bda1ea49dc017d25f7d4d09b1154ed8294125ec5ca",
+    "hash_matches_archived_reference": true,
+    "identity_url": "https://pubchem.ncbi.nlm.nih.gov/gene/SAMM50/human",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26530328/",
+        "title": "Mitofilin and CHCHD6 physically interact with Sam50 to sustain cristae structure",
+        "pmid": "26530328",
+        "type": "primary_paper"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34037656/",
+        "title": "SAMM50 acts with p62 in piecemeal basal- and OXPHOS-induced mitophagy of SAM and MICOS components",
+        "pmid": "34037656",
+        "type": "primary_paper"
+      }
+    ]
+  }
+]

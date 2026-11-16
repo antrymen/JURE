@@ -1,0 +1,243 @@
+{
+  "schema": "codex_explorer_proposal_v1",
+  "backend": "Codex-subagent",
+  "role": "Explorer",
+  "case_id": "perturbation_scan_day6_v01_20260927:C4c5e003b0938b2c462f9",
+  "module": "M02",
+  "slot": "M02_02",
+  "source_case_file": "outputs/module_additional10_luna_20261004/preparation/initial_cases/M02_02/case_file.json",
+  "source_case_sha256": "4fe3939033ee77af4bc90c9a850088cb87da6371658fa3cb2e4372b55a8fed03",
+  "clue_id": "CLUE_1e4641825f52b5f2b50c6bf3",
+  "observed_fact": {
+    "text": "Day 6 K562 中，RPL24 标记扰动的 DDIT3+PHGDH-SESN2- 出现频率为 0.50869565（234/460）；按扰动 batch 构成加权的 NT 频率为 0.14789537，Δ = +36.08002777 个百分点。该关联属于 exploratory_perturbation_candidate，不建立机制。",
+    "target": "RPL24",
+    "signed_pattern": "DDIT3+PHGDH-SESN2-",
+    "genes": [
+      "DDIT3",
+      "PHGDH",
+      "SESN2"
+    ],
+    "states": [
+      1,
+      0,
+      0
+    ],
+    "encoding": "1 = detected expression; 0 = undetected expression (not inferred regulatory activity)",
+    "perturbation_frequency": 0.508695652173913,
+    "matched_nt_frequency": 0.14789537447677897,
+    "delta_pp": 36.0800277697134,
+    "target_cells": 460,
+    "perturbation_hits": 234,
+    "selected_family_holm_exploratory": 4.247557383737847e-63,
+    "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+    "replication_status": "NOT_PERFORMED"
+  },
+  "mechanistic_question": "RPL24 扰动是否通过ribosome assembly and nucleolar stress改变 DDIT3+PHGDH-SESN2- 的联合检测？需比较 DDIT3+边际, PHGDH-边际, SESN2-边际 与完整 DDIT3+PHGDH-SESN2- joint，区分细胞内响应、状态组成和检测概率。",
+  "hypotheses": [
+    {
+      "id": "M02_02-H1",
+      "statement": "待查假说：RPL24→ribosome biogenesis/nucleolar-stress response可能改变 DDIT3+PHGDH-SESN2- 的细胞内联合表达；这只是候选过程，当前 Case 不证明该通路或直接调控边。",
+      "structure": {
+        "type": "cell_intrinsic_response",
+        "causal_path": "RPL24→ribosome biogenesis/nucleolar-stress response → DDIT3+PHGDH-SESN2- intracellular joint probability",
+        "direct_regulatory_edges_asserted": false,
+        "specific_mediator": "未指定；需要证据后才能提出可追溯分子中介",
+        "status": "untested_hypothesis"
+      },
+      "predictions": [
+        {
+          "id": "M02_02-H1-P1",
+          "expected_if_supported": "当前聚合焦点 joint Δ=+36.08 pp；在 batch、细胞质量和非焦点状态可比后，DDIT3+边际, PHGDH-边际, SESN2-边际呈与该过程一致的选择性变化，且完整 DDIT3+PHGDH-SESN2- joint 的残余差异仍存在。具体边际方向须由八状态表估计，不能把聚合 Δ 当作条件效应。",
+          "weakening_outcome": "条件化后 DDIT3+PHGDH-SESN2- joint 与边际变化消失，或变化方向/状态分布与 ribosome assembly and nucleolar stress 的候选预期不一致；单个边际变化本身不能否定细胞内响应。边际解释与候选过程是否真实是正交问题，命名过程仍需独立过程证据。",
+          "neutral_outcome": "状态重叠不足、区间过宽或只能获得聚合频率时，不对候选过程作方向裁决。",
+          "evidence_question": {
+            "id": "M02_02-H1-Q1",
+            "question": "在 RPL24 与 NT 的八状态表中，DDIT3+边际, PHGDH-边际, SESN2-边际及完整 DDIT3+PHGDH-SESN2- joint 的条件差异是否在质量匹配后仍保留，并与ribosome assembly and nucleolar stress的可追溯读出相符？",
+            "prediction_id": "M02_02-H1-P1"
+          }
+        }
+      ],
+      "limitations": [
+        "当前输入没有给出状态内效应、完整状态表或可裁决中介证据。",
+        "Day 6 exploratory association 不等于因果或机制确认。"
+      ]
+    },
+    {
+      "id": "M02_02-H2",
+      "statement": "备择假说：RPL24扰动主要改变预存细胞状态的组成，富集或耗竭已有 DDIT3+PHGDH-SESN2- 倾向的细胞，而非在状态内诱发该联合表达。",
+      "structure": {
+        "type": "state_composition",
+        "causal_path": "RPL24 perturbation → non-DDIT3,PHGDH,SESN2 state composition → DDIT3+PHGDH-SESN2- frequency",
+        "direct_regulatory_edges_asserted": false,
+        "specific_mediator": "未指定；需要证据后才能提出可追溯分子中介",
+        "status": "untested_hypothesis"
+      },
+      "predictions": [
+        {
+          "id": "M02_02-H2-P1",
+          "expected_if_supported": "当前聚合焦点 joint Δ=+36.08 pp；用不含 DDIT3,PHGDH,SESN2 的状态标志重加权 NT 后，主要 DDIT3+PHGDH-SESN2- 差异可被状态比例重建；各状态内三个边际和完整 joint 的残余差异接近零。",
+          "weakening_outcome": "独立状态比例相近，但在多个重叠状态内 DDIT3+PHGDH-SESN2- joint 或任一边际仍有稳定差异；组成重加权无法重建观察效应。单个边际变化不能单独裁决候选过程。",
+          "neutral_outcome": "状态标志依赖焦点基因或跨条件重叠不足时，组成与细胞内效应不能排他区分。",
+          "evidence_question": {
+            "id": "M02_02-H2-Q1",
+            "question": "不使用 DDIT3,PHGDH,SESN2 定义的状态比例及其 NT→RPL24 重加权，能解释 DDIT3+PHGDH-SESN2- 的多少；状态内三个边际和 joint 残余是多少？",
+            "prediction_id": "M02_02-H2-P1"
+          }
+        }
+      ],
+      "limitations": [
+        "当前输入没有给出状态内效应、完整状态表或可裁决中介证据。",
+        "Day 6 exploratory association 不等于因果或机制确认。"
+      ]
+    },
+    {
+      "id": "M02_02-H3",
+      "statement": "备择假说：RPL24 与 NT 的检测概率差异可能改变观测 signed-state 频率，方向需由八状态表及三个边际判定；这只是测量解释，不建立因果。",
+      "structure": {
+        "type": "detectability_or_marginal_explanation",
+        "causal_path": "quality/depth difference → marginal detection of DDIT3,PHGDH,SESN2 → DDIT3+PHGDH-SESN2- observed frequency",
+        "direct_regulatory_edges_asserted": false,
+        "specific_mediator": "未指定；需要证据后才能提出可追溯分子中介",
+        "status": "untested_hypothesis"
+      },
+      "predictions": [
+        {
+          "id": "M02_02-H3-P1",
+          "expected_if_supported": "这是混合 signed state（正边际 DDIT3；负边际 PHGDH,SESN2），不能预先指定深度方向；应从八状态和三个边际的实际方向判断 DDIT3+PHGDH-SESN2- 的 Δ=+36.08 pp 是否由检测概率改变解释。 比较 P(PHGDH-, SESN2- | DDIT3+) 在扰动和匹配 NT 中的描述性差异；若条件分布接近而 DDIT3+ 比例增加，与主要由 DDIT3 检出增加驱动相容；若条件分布也变化，则仅 DDIT3 边际不足以描述；均不建立因果。",
+          "weakening_outcome": "深度和质量匹配后 DDIT3+PHGDH-SESN2- joint 仍保留选择性差异，且八状态/边际方向不符合检测概率模型；这会削弱检测解释。",
+          "neutral_outcome": "深度分层样本不足或检测阈值本身位于候选过程下游时，不对检测解释作排他裁决。",
+          "evidence_question": {
+            "id": "M02_02-H3-Q1",
+            "question": "DDIT3+边际, PHGDH-边际, SESN2-边际与每细胞 ncounts/UMI 的联合分布如何变化？按 batch 和深度匹配后，DDIT3+PHGDH-SESN2- joint 与边际差异还剩多少？",
+            "prediction_id": "M02_02-H3-P1"
+          }
+        }
+      ],
+      "limitations": [
+        "当前输入没有给出状态内效应、完整状态表或可裁决中介证据。",
+        "Day 6 exploratory association 不等于因果或机制确认。"
+      ]
+    }
+  ],
+  "pairwise_contrasts": [
+    {
+      "hypothesis_ids": [
+        "M02_02-H1",
+        "M02_02-H2"
+      ],
+      "distinction": "候选细胞内过程与预存状态组成",
+      "observable": "不含 DDIT3,PHGDH,SESN2 的状态重加权、状态内 DDIT3+PHGDH-SESN2- joint 与三边际",
+      "favors_first": "状态比例重加权不能解释主要差异，而质量匹配后 DDIT3+PHGDH-SESN2- joint 或任一边际仍有与 ribosome assembly and nucleolar stress 一致的选择性残余；边际数量本身不作硬阈值。",
+      "favors_second": "状态比例重加权可重建主要 DDIT3+PHGDH-SESN2- 差异，状态内 joint 与边际残余接近零。",
+      "neutral_outcome": "状态标志依赖焦点基因或重叠不足时不作排他裁决。",
+      "prediction_ids": [
+        "M02_02-H1-P1",
+        "M02_02-H2-P1"
+      ]
+    },
+    {
+      "hypothesis_ids": [
+        "M02_02-H1",
+        "M02_02-H3"
+      ],
+      "distinction": "候选细胞内过程与检测深度",
+      "observable": "深度匹配后的 DDIT3+PHGDH-SESN2- joint、三个边际及无关基因 joint 对照",
+      "favors_first": "深度匹配后 DDIT3+PHGDH-SESN2- joint 仍有与 ribosome assembly and nucleolar stress 一致的状态选择性，且不被通用检测模型重建；单个边际变化不能单独排除该过程。",
+      "favors_second": "深度分层可重建聚合 Δ=+36.08 pp，且八状态与边际随检测概率模型同步变化。",
+      "neutral_outcome": "深度既可能是过程后果，无法单独切断路径。",
+      "prediction_ids": [
+        "M02_02-H1-P1",
+        "M02_02-H3-P1"
+      ]
+    },
+    {
+      "hypothesis_ids": [
+        "M02_02-H2",
+        "M02_02-H3"
+      ],
+      "distinction": "状态组成与检测差异",
+      "observable": "独立状态标志、状态比例、ncounts/UMI 与三基因边际的联合分层",
+      "favors_first": "独立状态比例变化可重建差异且深度匹配后仍有状态特异性。",
+      "favors_second": "所谓状态差异随深度控制消失，且无关 joint 同步变化。",
+      "neutral_outcome": "独立状态标志不足或深度与状态高度共线。",
+      "prediction_ids": [
+        "M02_02-H2-P1",
+        "M02_02-H3-P1"
+      ]
+    }
+  ],
+  "companion_context": {
+    "count": 8,
+    "source": "outputs/module_additional10_luna_20261004/preparation/initial_cases/M02_02/companion_summary.json",
+    "independent_validation": false,
+    "patterns": [
+      {
+        "reference_id": "R2c25816f86029aa8ab80",
+        "signed_pattern": "DDIT3+ PHGDH- SESN2-",
+        "delta_pp": 36.0800277697134,
+        "core_status": "stable_core",
+        "is_focal_case": true,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R3d521869b482f182e97a",
+        "signed_pattern": "BBC3- DDIT3+ DDIT4-",
+        "delta_pp": 32.58470829373091,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R9e82270852c7e4ce52b4",
+        "signed_pattern": "DDIT3+ DDIT4- SESN2-",
+        "delta_pp": 27.888546172909955,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rccc32dbbe95f0f836ae7",
+        "signed_pattern": "DDIT3+ HERPUD1- SESN2-",
+        "delta_pp": 27.325214812156034,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Re05cb62c8a900654aa34",
+        "signed_pattern": "DDIT3+ DDIT4- KLF6-",
+        "delta_pp": 25.698735045364902,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R237fa95df64a91ef3bff",
+        "signed_pattern": "DDIT3+ DDIT4- TRIB3-",
+        "delta_pp": 23.254523899938775,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R588aaaeba21a739a7bfb",
+        "signed_pattern": "DDIT3+ DDIT4- GDF15-",
+        "delta_pp": 16.69033113081701,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Ra73197ebae177825d304",
+        "signed_pattern": "DDIT3+ DDIT4- IER2-",
+        "delta_pp": 14.502400500344578,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      }
+    ]
+  },
+  "limitations": [
+    "本提案只整理已保存 Case File 的观察事实，不调用 GLM、不执行统计重算或机制裁决。"
+  ]
+}

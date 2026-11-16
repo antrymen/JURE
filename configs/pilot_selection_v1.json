@@ -1,0 +1,31 @@
+{
+  "protocol_id": "jure_day6_four_case_pilot_v1",
+  "dataset_id": "replogle_k562_day6",
+  "expected_candidate_count": 6129,
+  "scope": "Pilot preparation only; frozen before first pilot ranking, after upstream Day6 results existed. Not prospective registration of discovery.",
+  "eligibility": {
+    "min_condition_cells": 300,
+    "min_abs_matched_effect": 0.2,
+    "min_nt_cells_per_occupied_batch": 20,
+    "min_effective_matched_nt": 100,
+    "min_directional_support": 10,
+    "max_selected_family_holm_exploratory": 0.05,
+    "evidence_level": "EXPLORATORY_ASSOCIATION",
+    "external_validation_status": "NOT_PERFORMED"
+  },
+  "threshold_source": "broad_screening/config.py high_target_support_cells=300 and high_effect_pp=20; configs/clue_discovery/replogle_day6_frozen.yaml support and alpha gates",
+  "slot_order": ["A", "B", "C", "D"],
+  "slots": {
+    "A": {"category": "stable_core_representative", "groups": ["M02", "M03", "M04"], "membership": "stable_core", "direction": "either"},
+    "B": {"category": "strong_enrichment", "direction": "enrichment"},
+    "C": {"category": "strong_depletion", "direction": "depletion"},
+    "D": {"category": "structural_interest", "priority": ["signed_state_contrast", "gene_disjoint_correlated_context", "cross_module"]}
+  },
+  "ranking": ["D_only:structural_priority_ascending", "abs(matched_effect)_descending", "condition_cells_descending", "directional_support_descending", "condition_id_ascending", "reference_id_ascending", "case_id_ascending"],
+  "directional_support": "enrichment: perturbation_hits; depletion: sum(nt_hits in occupied perturbation batches)",
+  "effective_matched_nt": "1 / sum((perturbation_n_batch / perturbation_n_total)^2 / nt_n_batch)",
+  "deduplication": ["different condition_id", "different reference_id (full signed state)", "different sampling_block_id"],
+  "overlap_policy": "Greedy A then B then C then D; each eligible candidate may satisfy multiple slots, but is selected once. D uses first available structural tier after deduplication.",
+  "empty_slot_policy": "FAIL_CLOSED; never relax thresholds, priorities or deduplication; no Case Files published unless all four slots fill",
+  "boundary": "No mechanistic question, hypothesis, prediction, Evidence Queue, EvidenceRecord, claim audit, route or final case report. Initialize revision 1 with clue_ready / next_actor none; do not run Agents."
+}

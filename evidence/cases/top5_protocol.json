@@ -1,0 +1,14 @@
+{
+  "run_id": "module_top5_codex_agents_20261004",
+  "backend": "Codex native subagents",
+  "flow": [
+    "Explorer",
+    "Investigator",
+    "Critic"
+  ],
+  "execution_boundary": "Role outputs are separately archived Codex-subagent artifacts, not a run of the existing GLM runtime and not injected as fake CaseStore events.",
+  "routing": "Critic may request one bounded follow-up round per role when concrete missing evidence/content can be obtained; otherwise retain evidence gaps and limits. Do not optimize for a winning mechanism.",
+  "source": "outputs/module_top5_codex_agents_20261004/RUN_PROTOCOL.json",
+  "source_sha256": "adea81dddd0101fc29ff785198580e8c33ddae7986860304d0e1f00fd367cb76",
+  "archive_scope": "Selected protocol fields; not a full runtime transcript."
+}

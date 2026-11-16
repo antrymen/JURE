@@ -1,0 +1,8 @@
+{
+  "schema":"codex_critic_audit_v1","role":"Critic","backend":"GPT-5.6-Luna","round":1,"module":"M04_03","target":"MED30","signed_pattern":"HIST1H1B+ HIST1H1E+ HIST1H4C+","status":"followup_requested","source_case_sha256":"c4abe45f0fac6b56508f593a5c0bd87a9907580a886cab402ec49e51462884a1",
+  "input_artifacts":["explorer/M04_03.json","investigator/M04_03.json","investigator/raw/M04_03_joint.json","investigator/raw/M04_03_supplemental.json","JOINT_DATA_RECHECK.json","critic/WEB_SOURCE_CHECK.json"],
+  "c1":{"verdict":"pass","scope":"H1/H2/H3 are distinct; no chromatin or transcriptional sign is inferred from detection."},
+  "c2":{"observed_claim":{"status":"supported_descriptive","value":"51/288; matched NT delta -26.9495 pp","evidence":"investigator/raw/M04_03_joint.json","independent_replication":false},"H1":{"status":"insufficient","reason":"MED30 source is human glioma knockdown/amplification context, not K562 histone joint state; no target efficacy."},"H2":{"status":"insufficient","reason":"No independent state labels."},"H3":{"status":"partially_supported_but_not_exclusive","reason":"Depth descriptive delta -13.3450 pp attenuates focal delta but does not identify measurement error."},"literature_source":"M04_03-SRC"},
+  "claims":[{"id":"M04_03-O1","status":"supported"},{"id":"M04_03-H1","status":"insufficient"},{"id":"M04_03-H2","status":"insufficient"},{"id":"M04_03-H3","status":"partially_supported"}],
+  "routing":"One bounded follow-up requested."
+}

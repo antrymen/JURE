@@ -1,0 +1,62 @@
+{
+  "schema": "codex_critic_audit_v1",
+  "role": "Critic",
+  "backend": "GPT-5.6-Luna",
+  "round": 2,
+  "module": "M02_03",
+  "target": "TSR2",
+  "signed_pattern": "DDIT3+ PHGDH- SESN2-",
+  "status": "evidence_limited",
+  "source_case_sha256": "1b9179e11b26bcc6c29e27ecf11f778fd14b54515a9bd8c43636ad2c3dc24077",
+  "inputs": [
+    "explorer/M02_03.json",
+    "investigator/M02_03.json",
+    "investigator/followup_v1/M02_03.json",
+    "investigator/followup_v1/METADATA_INVENTORY.json",
+    "critic/M02_03.json"
+  ],
+  "c1": {
+    "verdict": "pass",
+    "scope": "H1/H2/H3 distinct, testable, nonexclusive"
+  },
+  "c2": {
+    "observation": {
+      "status": "supported_descriptive",
+      "condition": "255/523",
+      "matched_nt": "0.14696669",
+      "delta_pp": 34.0605008076
+    },
+    "conditional_joint": {
+      "anchor": "DDIT3+",
+      "other_state": "PHGDH- SESN2-",
+      "anchor_prevalence_target": 0.6787762906,
+      "supported_anchor_fraction": 1.0,
+      "valid_batches": 48,
+      "target_weighted_rate": 0.7183098592,
+      "batch_nt_weighted_rate": 0.4937990458,
+      "weighted_delta_pp": 22.4510813392,
+      "interpretation": "descriptive conditional association; not interaction"
+    },
+    "H1": "insufficient: TSR2 human hematopoietic/erythroid source is indirect for K562 joint state",
+    "H2": "insufficient: no independent state labels",
+    "H3": "insufficient: depth descriptive delta +34.0199 pp does not resolve mechanism",
+    "metadata": "Current allowed metadata lacks independent state labels, measured efficacy, guide sequence/off-target annotations and orthogonal RNA; guide IDs exist. See METADATA_CAPABILITY_CHECK.json; absence of fields is not a biological negative.",
+    "literature_locator": "critic/WEB_SOURCE_CHECK.json:M02_03-SRC",
+    "followup_hash": "66dbc1dce7fc93d345bd498e7b8d07954bc8c6d8f0aa6eb0a7469928ef84e527"
+  },
+  "followup": "completed; no further query",
+  "case_id": "perturbation_scan_day6_v01_20260927:C2a5b0e6c42cd8615870d",
+  "inputs_sha256": {
+    "explorer/M02_03.json": "4a0e9fdc91be62bd4e07ec36b052e409580cf8651731eb827d6e4a93fd9f5e45",
+    "investigator/M02_03.json": "e2286422b5a3ac4380aa65c95b79f50c4f63b4944f332388cfd34e6b98364f5c",
+    "investigator/followup_v1/M02_03.json": "66dbc1dce7fc93d345bd498e7b8d07954bc8c6d8f0aa6eb0a7469928ef84e527",
+    "investigator/followup_v1/METADATA_INVENTORY.json": "51e06d33c42e9359c31be6da7ad6c7f6ced89665ccc474ec80c6388ddacaed4d",
+    "critic/M02_03.json": "0b2834c0f669ff6758afb415bb0f1d07a7d792aaef84a1376a687cb07632c9ef",
+    "METADATA_CAPABILITY_CHECK.json": "9187d0fbd29feacdd7343d73513eee076c1422c8bd437ca64b25e35340a0233a"
+  },
+  "final_artifact_reconciliation": {
+    "performed_by": "parent agent",
+    "scope": "Identity/hash binding and synchronization with Critic-authored FINAL_CORRECTIONS.md; no new scientific verdict",
+    "critic_corrections_sha256": "f18af8c2585e1f7bc9492cf0cb940ca6d8d56b5fce541b766020bfdb47318bf3"
+  }
+}

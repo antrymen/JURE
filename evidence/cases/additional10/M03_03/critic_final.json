@@ -1,0 +1,47 @@
+{
+  "schema": "codex_critic_audit_v1",
+  "role": "Critic",
+  "backend": "GPT-5.6-Luna",
+  "round": 2,
+  "module": "M03_03",
+  "target": "HSPA9",
+  "signed_pattern": "CCAR1+ CCNB1+ CDC20+",
+  "status": "evidence_limited",
+  "source_case_sha256": "1427b7633324ea14c06c346eb327c5d3216cf4d7e641158dec30e032f84f0fa1",
+  "inputs": [
+    "explorer/M03_03.json",
+    "investigator/M03_03.json",
+    "JOINT_DATA_RECHECK.json",
+    "critic/M03_03.json"
+  ],
+  "c1": {
+    "verdict": "pass",
+    "scope": "H1/H2/H3 distinct; cycle-marker detection is not causal"
+  },
+  "c2": {
+    "observation": {
+      "status": "supported_descriptive",
+      "condition": "92/420",
+      "delta_pp": -22.4418398183
+    },
+    "H1": "insufficient: human CD34+ HSPA9 siRNA erythroid source, not K562 joint state",
+    "H2": "insufficient: no independent cycle/state labels",
+    "H3": "partially_supported_nonexclusive: depth descriptive delta -12.6420 pp, no calibration",
+    "metadata": "Current allowed metadata lacks independent state labels, measured efficacy, guide sequence/off-target annotations and orthogonal RNA; guide IDs exist. See METADATA_CAPABILITY_CHECK.json; absence of fields is not a biological negative.",
+    "literature_locator": "critic/WEB_SOURCE_CHECK.json:M03_03-SRC"
+  },
+  "followup": "none further; evidence_limited",
+  "case_id": "perturbation_scan_day6_v01_20260927:C8bd915c4ba75e425d16e",
+  "inputs_sha256": {
+    "explorer/M03_03.json": "4892f6bf7a7c10196e5f5ced008a80dad4db3fe18d692a338230f6b461f78f12",
+    "investigator/M03_03.json": "553304dbcf96497bfe5ad21c37c0c75a1724ab3f9d27ec741712a55c944509fc",
+    "JOINT_DATA_RECHECK.json": "2405e8716b3b3baee21920fe31206c3ee3f28caea0804a28e09585e9ff687110",
+    "critic/M03_03.json": "d3110fd08a463c8d39a5c108cbc0cf4914fbb6211f5818b782319ed9ad8e01df",
+    "METADATA_CAPABILITY_CHECK.json": "9187d0fbd29feacdd7343d73513eee076c1422c8bd437ca64b25e35340a0233a"
+  },
+  "final_artifact_reconciliation": {
+    "performed_by": "parent agent",
+    "scope": "Identity/hash binding and synchronization with Critic-authored FINAL_CORRECTIONS.md; no new scientific verdict",
+    "critic_corrections_sha256": "f18af8c2585e1f7bc9492cf0cb940ca6d8d56b5fce541b766020bfdb47318bf3"
+  }
+}

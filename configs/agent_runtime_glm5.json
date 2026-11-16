@@ -1,0 +1,12 @@
+{
+  "provider": "bigmodel",
+  "model": "glm-5",
+  "endpoint": "https://open.bigmodel.cn/api/paas/v4/chat/completions",
+  "api_key_env": "JURE_GLM_API_KEY",
+  "temperature": 0.2,
+  "max_tokens": 16384,
+  "thinking": "disabled",
+  "timeout_seconds": 300,
+  "max_calls": 80,
+  "automatic_provider_retries": 0
+}

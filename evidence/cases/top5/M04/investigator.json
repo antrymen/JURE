@@ -1,0 +1,674 @@
+{
+  "schema": "codex_investigator_evidence_v1",
+  "role": "Investigator",
+  "backend": "Codex-subagent",
+  "module": "M04",
+  "case_id": "perturbation_scan_day6_v01_20260927:C9f709b04cedfeb61242c",
+  "source_case_sha256": "6d647bed4c616ee7303debc32e4c75689d34f3ff9a2f99fe119586955b5d6f94",
+  "explorer_proposal": "outputs/module_top5_codex_agents_20261004/explorer/M04.json",
+  "explorer_sha256": "7666d72faf90d8292669df8097443a8fd224f81a3924e63327c3cb01f8e88840",
+  "target": "SMN2",
+  "signed_pattern": "HIST1H1B+ HIST1H1E+ HIST1H4C+",
+  "status": "PARTIAL_EVIDENCE_NO_MECHANISTIC_WINNER",
+  "selected_questions": [
+    {
+      "id": "M04-H1-Q1",
+      "reason": "检验完整状态解释是否超出只解释单基因的文献，并查询边际异质性。"
+    },
+    {
+      "id": "M04-H3-Q1",
+      "reason": "测量/边际解释可直接用同一细胞store的八状态和测量深度部分检验。"
+    }
+  ],
+  "unanswered_question_ids": [
+    "M04-H2-Q1"
+  ],
+  "tool_choice": {
+    "data": "3 RealToolRegistry calls plus read-only bulk supplement using same hash-verified CellStateStore",
+    "literature": "PubMed registry retrieve failed NETWORK_ERROR; primary-source web search/open used with scope recorded",
+    "knowledge_graph": "未选；现有图谱路径不能区分细胞内/组成/检测三种解释，优先数据和primary文献。"
+  },
+  "identity_checks": {
+    "target_n_equal": true,
+    "target_hits_equal": true,
+    "matched_nt_equal": true,
+    "delta_equal": true
+  },
+  "data_evidence": [
+    {
+      "claim_id": "M04-E1",
+      "question_ids": [
+        "M04-H1-Q1",
+        "M04-H3-Q1"
+      ],
+      "claim": "相同允许细胞群中的完整signed-state原始关联被重新计数精确复现。",
+      "result": {
+        "condition_n": 319,
+        "condition_hits": 43,
+        "condition_frequency": 0.13479623824451412,
+        "matched_nt_frequency": 0.44894034083578505,
+        "delta_percentage_points": -31.41441025912709,
+        "batch_support": [
+          {
+            "batch": "1",
+            "perturbation_n": 1,
+            "perturbation_hits": 0,
+            "nt_n": 234,
+            "nt_hits": 120,
+            "weight": 0.003134796238244514,
+            "condition_cell_set_id": "5c6b0212929a445db08858a9703753fdbd1ad0c943391628b26dce8a89918a06",
+            "nt_cell_set_id": "cf46b943ef7bfe19b3e5a28787e5abe32b262414fc56c1201c49405f50d2b4f5"
+          },
+          {
+            "batch": "10",
+            "perturbation_n": 5,
+            "perturbation_hits": 2,
+            "nt_n": 233,
+            "nt_hits": 106,
+            "weight": 0.01567398119122257,
+            "condition_cell_set_id": "0633e1386c3f1f5999865bb851c0b1654251145aa0293c6baca0df62178a80c0",
+            "nt_cell_set_id": "a302de9e521a7117610ef9d1b20b1fbacbcbfb66a8a9c9d0cf2f3942db6dd163"
+          },
+          {
+            "batch": "11",
+            "perturbation_n": 7,
+            "perturbation_hits": 2,
+            "nt_n": 213,
+            "nt_hits": 107,
+            "weight": 0.0219435736677116,
+            "condition_cell_set_id": "6bf4c55b7641c006d28d553b11043053d605b22e7020f1a6b54bcd5d6d43f8b8",
+            "nt_cell_set_id": "96c09be534b7555cc614c776131f8987bdd79ea1e10ec731fd250a2dc2a8d61f"
+          },
+          {
+            "batch": "12",
+            "perturbation_n": 5,
+            "perturbation_hits": 1,
+            "nt_n": 200,
+            "nt_hits": 120,
+            "weight": 0.01567398119122257,
+            "condition_cell_set_id": "a2b13048329118f794a0c4384cffc0adaf790820475c2d09899d999e44fddce2",
+            "nt_cell_set_id": "69ca04384391e33470c77f1bae402caf2d65bf40a388cf54892159d2c6382844"
+          },
+          {
+            "batch": "13",
+            "perturbation_n": 7,
+            "perturbation_hits": 1,
+            "nt_n": 235,
+            "nt_hits": 129,
+            "weight": 0.0219435736677116,
+            "condition_cell_set_id": "6aa5f9c55343b8868652bc8e2c30b9241136d0dc57ab714ac0d0b5e8c9b8631b",
+            "nt_cell_set_id": "0f0b2518e149ac35c2bfb4658c2e9e0c3efb3d3daae3161e3281fe4033448d45"
+          },
+          {
+            "batch": "14",
+            "perturbation_n": 7,
+            "perturbation_hits": 2,
+            "nt_n": 220,
+            "nt_hits": 104,
+            "weight": 0.0219435736677116,
+            "condition_cell_set_id": "a7a5d1455db506f95eaa03021affd57c862a2ce8044acea8bd7c787d0ae3df65",
+            "nt_cell_set_id": "b31e3f3a85ef37c0cf2d31272ae74b257524f2780330c079de046d32c40f6eaa"
+          },
+          {
+            "batch": "15",
+            "perturbation_n": 6,
+            "perturbation_hits": 1,
+            "nt_n": 229,
+            "nt_hits": 128,
+            "weight": 0.018808777429467086,
+            "condition_cell_set_id": "964eb65bc71b7b62228d6c4d11893b4acf61cf71abf7335257189521e7a6871c",
+            "nt_cell_set_id": "35e7f2fa1f830d7101a7309dec1e2493fc9a2c8bfefe8d6023f23d7a50705955"
+          },
+          {
+            "batch": "16",
+            "perturbation_n": 6,
+            "perturbation_hits": 1,
+            "nt_n": 240,
+            "nt_hits": 119,
+            "weight": 0.018808777429467086,
+            "condition_cell_set_id": "770029b44981c548a06a6eab5435d149cb2fe8a197121ad8482071cfb5c7a646",
+            "nt_cell_set_id": "76e9593e194fafa6a208191400a1e75443ad9853b6583df5da5343173c2e1c11"
+          },
+          {
+            "batch": "17",
+            "perturbation_n": 6,
+            "perturbation_hits": 2,
+            "nt_n": 214,
+            "nt_hits": 62,
+            "weight": 0.018808777429467086,
+            "condition_cell_set_id": "81d98ee627cd2851122bb29eb3f0566f85172ff45827f9ea99e82a5269810bbb",
+            "nt_cell_set_id": "83e5912f53456321368e78d88754008a8a7e37333df5661c2916a4ada4d3a76d"
+          },
+          {
+            "batch": "18",
+            "perturbation_n": 5,
+            "perturbation_hits": 1,
+            "nt_n": 229,
+            "nt_hits": 59,
+            "weight": 0.01567398119122257,
+            "condition_cell_set_id": "ef297d30c7c1df07e761f40c906062ae408617e7e3f75a84c31075d51e762690",
+            "nt_cell_set_id": "505d0c59ae1cef19ac51d2cd4dfc60b609ff41331d8a073ecbde7ae99f9194c2"
+          },
+          {
+            "batch": "19",
+            "perturbation_n": 5,
+            "perturbation_hits": 0,
+            "nt_n": 229,
+            "nt_hits": 67,
+            "weight": 0.01567398119122257,
+            "condition_cell_set_id": "208038d9a60d2ecaa19e0e17a14dc91f0e1b898627c7e7accdcd4d8b9ea7763f",
+            "nt_cell_set_id": "80619c7ff879b095a837ef063e612f6b8b090ef4f92e92ce13a69d63f3bcd56c"
+          },
+          {
+            "batch": "2",
+            "perturbation_n": 12,
+            "perturbation_hits": 1,
+            "nt_n": 231,
+            "nt_hits": 112,
+            "weight": 0.03761755485893417,
+            "condition_cell_set_id": "c3a9cf3284cafa728d2974a664fd1e04ef3c9ede57172295076a63afeeae4abb",
+            "nt_cell_set_id": "90aad843723e44f32316a0e8c2272f4388cd9865278948588a7caae38fcf7640"
+          },
+          {
+            "batch": "20",
+            "perturbation_n": 6,
+            "perturbation_hits": 0,
+            "nt_n": 192,
+            "nt_hits": 55,
+            "weight": 0.018808777429467086,
+            "condition_cell_set_id": "769373a4f30258ccc761f85b2512e42338e3a65d96a91c8400c279ff5fd12740",
+            "nt_cell_set_id": "161fd85c607a432182b6b7618c00cad7fb096fe1bfff757e6d6d933aad3a6f3c"
+          },
+          {
+            "batch": "21",
+            "perturbation_n": 5,
+            "perturbation_hits": 0,
+            "nt_n": 116,
+            "nt_hits": 33,
+            "weight": 0.01567398119122257,
+            "condition_cell_set_id": "f09e319230c1843ab82de500caf56e288c32883a45e01e9fdd2b9376eb942e3a",
+            "nt_cell_set_id": "32104a1dd7f4e364db773c1bf9da8fe973778009ac092251a7f3ba46600d4cd4"
+          },
+          {
+            "batch": "22",
+            "perturbation_n": 4,
+            "perturbation_hits": 1,
+            "nt_n": 201,
+            "nt_hits": 64,
+            "weight": 0.012539184952978056,
+            "condition_cell_set_id": "951db0e8cd3d1788bae26127db2b24c0df12b335712896a33120c24fb10b21ea",
+            "nt_cell_set_id": "51290d92a8abe4ad098b1987e575f238fd25a5c31261541a1a15945d81b1c180"
+          },
+          {
+            "batch": "23",
+            "perturbation_n": 11,
+            "perturbation_hits": 1,
+            "nt_n": 214,
+            "nt_hits": 64,
+            "weight": 0.034482758620689655,
+            "condition_cell_set_id": "e220313078a726271b0240e8d11063d79d34db8735e9c0d0b32f4162dcfc9731",
+            "nt_cell_set_id": "c29db22367990d45f4438d663893d43ab2201316454df090329c705939253bdf"
+          },
+          {
+            "batch": "24",
+            "perturbation_n": 9,
+            "perturbation_hits": 0,
+            "nt_n": 232,
+            "nt_hits": 62,
+            "weight": 0.02821316614420063,
+            "condition_cell_set_id": "dbd6abb5784ba0c52ae8ecbaacbdfa4637f34c1d0a55bc865a34a3fcca3176b7",
+            "nt_cell_set_id": "5ef423aea178ccd2aaefea56776fac74a420af39c8d81cebdb174358a418e7f0"
+          },
+          {
+            "batch": "25",
+            "perturbation_n": 4,
+            "perturbation_hits": 3,
+            "nt_n": 281,
+            "nt_hits": 136,
+            "weight": 0.012539184952978056,
+            "condition_cell_set_id": "928c3e279fee5770fbd1821e4a4a6c8f01af2c8d4ca0edf6298b0d23e5f26f91",
+            "nt_cell_set_id": "2f9b5d7b0e9626b4861b1aaee20a8ef24266aed31b7b5abb167e2c702c2e1b53"
+          },
+          {
+            "batch": "26",
+            "perturbation_n": 6,
+            "perturbation_hits": 0,
+            "nt_n": 234,
+            "nt_hits": 124,
+            "weight": 0.018808777429467086,
+            "condition_cell_set_id": "38438d8a38dd7ab65be18e4e88ce11bcec55daa80dbd7a203f10b96e6a9a1b91",
+            "nt_cell_set_id": "3940aac88eecba0482059a2efa90c6bcfc91506f4d21ba5b7c9f3e580691f4ba"
+          },
+          {
+            "batch": "27",
+            "perturbation_n": 7,
+            "perturbation_hits": 2,
+            "nt_n": 252,
+            "nt_hits": 130,
+            "weight": 0.0219435736677116,
+            "condition_cell_set_id": "1abe1017ade54bfd4df91039aa82a3fc41e84c831a1cc9561e223f8b38813bb0",
+            "nt_cell_set_id": "b1f85dca3e1623ccf200b913d80670ae82b13cfb42c150f38295e04cab5d2146"
+          },
+          {
+            "batch": "28",
+            "perturbation_n": 5,
+            "perturbation_hits": 0,
+            "nt_n": 238,
+            "nt_hits": 124,
+            "weight": 0.01567398119122257,
+            "condition_cell_set_id": "92ab0297f1bdb6096f6cd004943931ef4fbe2fa65b306f03439a9aaee5b6847d",
+            "nt_cell_set_id": "f2c9c481b38637ec6cedf740336805f5b217085fbd7464be58bd586d540282c6"
+          },
+          {
+            "batch": "29",
+            "perturbation_n": 9,
+            "perturbation_hits": 0,
+            "nt_n": 226,
+            "nt_hits": 109,
+            "weight": 0.02821316614420063,
+            "condition_cell_set_id": "8d80a197fa9c307b74aab18c8f39ec63afcd6578826930b99c50bb1369722f69",
+            "nt_cell_set_id": "4a8bfcf684f13827cbd307f5de4bf5d269441f20b67ec423626443df13dd56f5"
+          },
+          {
+            "batch": "3",
+            "perturbation_n": 6,
+            "perturbation_hits": 0,
+            "nt_n": 228,
+            "nt_hits": 125,
+            "weight": 0.018808777429467086,
+            "condition_cell_set_id": "4a9e4a7383a8e8340b5ea08151d09bf432fced1f4df884627b1df593ca23f8d9",
+            "nt_cell_set_id": "dbe9b3d46671249e2985c47e5fec13c46b30c4f30901cca6f099ca51fdd84717"
+          },
+          {
+            "batch": "30",
+            "perturbation_n": 12,
+            "perturbation_hits": 1,
+            "nt_n": 248,
+            "nt_hits": 142,
+            "weight": 0.03761755485893417,
+            "condition_cell_set_id": "b107a428e45757171e8d0eb36fcb5fdcde5514cbe12afc7646e6bd6ff0757662",
+            "nt_cell_set_id": "aab3966e13fc7f8ef17688b082c7c4cc1395155a40610f56b32eacf9386048f0"
+          },
+          {
+            "batch": "31",
+            "perturbation_n": 9,
+            "perturbation_hits": 2,
+            "nt_n": 252,
+            "nt_hits": 121,
+            "weight": 0.02821316614420063,
+            "condition_cell_set_id": "b8065a84797b7abbc0c38ce57a056e66eebe2dcd541ec29c638a56922f8f48bd",
+            "nt_cell_set_id": "edbaf5dd21880b5aecd27c7ce233451ba1617260f6aefc780e8a35d4d704ff23"
+          },
+          {
+            "batch": "32",
+            "perturbation_n": 9,
+            "perturbation_hits": 1,
+            "nt_n": 258,
+            "nt_hits": 144,
+            "weight": 0.02821316614420063,
+            "condition_cell_set_id": "bbbfbf17fe9f090deef55b0386ce28fda7a7182d5300c7365480dd3afb1915c1",
+            "nt_cell_set_id": "f723421a3443e920fefbd9121ae0d4e4c002764fdf06f48df618ba7375116082"
+          },
+          {
+            "batch": "33",
+            "perturbation_n": 8,
+            "perturbation_hits": 0,
+            "nt_n": 260,
+            "nt_hits": 129,
+            "weight": 0.025078369905956112,
+            "condition_cell_set_id": "5196966970b700383c54835792a730e45ae0b1da67e24247191a1b590943bc15",
+            "nt_cell_set_id": "35e8e432d1fbe643ff8bc07e9f4bc5ad3e04631b66bbcc653695c48a41355284"
+          },
+          {
+            "batch": "34",
+            "perturbation_n": 9,
+            "perturbation_hits": 3,
+            "nt_n": 208,
+            "nt_hits": 113,
+            "weight": 0.02821316614420063,
+            "condition_cell_set_id": "a4f9e81b540d6ad5f5ccd90f9cb690b027738ebe98c3c8f2fb7d5e6d488b237f",
+            "nt_cell_set_id": "62d9f797e1e43e2a2fc88de99125ebbb262b0789536050ea94bc463de6936238"
+          },
+          {
+            "batch": "35",
+            "perturbation_n": 4,
+            "perturbation_hits": 0,
+            "nt_n": 216,
+            "nt_hits": 104,
+            "weight": 0.012539184952978056,
+            "condition_cell_set_id": "7c63c1024746f531f99272935a0bf9dd69bf31a4bd89c3c3a46e139b1ab3447a",
+            "nt_cell_set_id": "34d29d489f833540f40b4d70ffe8e2cc94b800c3e6e635a02bfb1a9be0885a28"
+          },
+          {
+            "batch": "36",
+            "perturbation_n": 7,
+            "perturbation_hits": 0,
+            "nt_n": 226,
+            "nt_hits": 105,
+            "weight": 0.0219435736677116,
+            "condition_cell_set_id": "846b0ef998d66978a1b46f59f9ec3ed26fb33da1e288cad6742fb680278e9ab8",
+            "nt_cell_set_id": "7c0e26ec608deefe5a9cc99131a5817455972bbf07eba522308c8ae1b1ed14a1"
+          },
+          {
+            "batch": "37",
+            "perturbation_n": 6,
+            "perturbation_hits": 1,
+            "nt_n": 185,
+            "nt_hits": 88,
+            "weight": 0.018808777429467086,
+            "condition_cell_set_id": "681b90f45d774683396c1c51de38fd26693c43a8ac03aa98efe921aaa658a06a",
+            "nt_cell_set_id": "5bf0074fac4402598a27ab0709eca36f6cb860b40954085a8e6fcec334cd623e"
+          },
+          {
+            "batch": "38",
+            "perturbation_n": 5,
+            "perturbation_hits": 0,
+            "nt_n": 223,
+            "nt_hits": 118,
+            "weight": 0.01567398119122257,
+            "condition_cell_set_id": "5158b8ec6e019fcbcc90e5d68208ea004a9beab9ce3ad056fff60daf76713e05",
+            "nt_cell_set_id": "00063d623a4a773424486e3c2c8278c95344a68cb6a2fef5c316bb778a1ba1f2"
+          },
+          {
+            "batch": "39",
+            "perturbation_n": 7,
+            "perturbation_hits": 1,
+            "nt_n": 210,
+            "nt_hits": 93,
+            "weight": 0.0219435736677116,
+            "condition_cell_set_id": "099d78538e0876cfb4a9d9d35f0b237de010c670a55645a426267c09c9e34ec8",
+            "nt_cell_set_id": "d2b7f35e709012dcd7adbaf4ad6e61d6c53aced3d9f1c7708ecc863302351e9e"
+          },
+          {
+            "batch": "4",
+            "perturbation_n": 4,
+            "perturbation_hits": 1,
+            "nt_n": 120,
+            "nt_hits": 54,
+            "weight": 0.012539184952978056,
+            "condition_cell_set_id": "cd9507745c04282203ef2433138c5b014eba0fc2f23bc2a8f0f929ddeeaf0f85",
+            "nt_cell_set_id": "84b538e68d1cf085a308d85e03e1c7660ad76ab94aee882dd5338f12a9d4f9e4"
+          },
+          {
+            "batch": "40",
+            "perturbation_n": 6,
+            "perturbation_hits": 2,
+            "nt_n": 242,
+            "nt_hits": 126,
+            "weight": 0.018808777429467086,
+            "condition_cell_set_id": "3789a7b2cb414fec4686860b23fbffbdf13eacc5d7e3ac94c340c4c900703650",
+            "nt_cell_set_id": "28d5d215b48e4dd3b33c51c012ec1b395ec45bd0a8b356d856e129a535c4b0d5"
+          },
+          {
+            "batch": "41",
+            "perturbation_n": 6,
+            "perturbation_hits": 0,
+            "nt_n": 225,
+            "nt_hits": 64,
+            "weight": 0.018808777429467086,
+            "condition_cell_set_id": "bfbcfb2a442fac036fe687187fdaa3cd237dc3e5f8591e547fb3ef0532e355f1",
+            "nt_cell_set_id": "db80f7372c5fbe4b323e0bc6c44cca9aaa0f921a02ed5cb081ed4c40b5308ffe"
+          },
+          {
+            "batch": "42",
+            "perturbation_n": 6,
+            "perturbation_hits": 0,
+            "nt_n": 257,
+            "nt_hits": 71,
+            "weight": 0.018808777429467086,
+            "condition_cell_set_id": "ac3e7708707eeb88b95b88f4de43f7c1ebf0fcfef6816e814b44c4891cb62e66",
+            "nt_cell_set_id": "5c8ecb87701d425a3a81e5a5a5538b443132517b663aa492c820bea3ca6e7e16"
+          },
+          {
+            "batch": "43",
+            "perturbation_n": 5,
+            "perturbation_hits": 0,
+            "nt_n": 226,
+            "nt_hits": 73,
+            "weight": 0.01567398119122257,
+            "condition_cell_set_id": "48815b6821dd72a0b96e3d8065a4a54726775d5b66a507f3a3b9af90cfe43524",
+            "nt_cell_set_id": "03dc3634f6bd1e01479f54d246f1cd114c2967df3921c320f676e0c6b029bb43"
+          },
+          {
+            "batch": "44",
+            "perturbation_n": 4,
+            "perturbation_hits": 0,
+            "nt_n": 225,
+            "nt_hits": 86,
+            "weight": 0.012539184952978056,
+            "condition_cell_set_id": "296003ff15ea97bb48691a53cbcd027ea6b84a3e9efa0af3f8ab35bc3bafb359",
+            "nt_cell_set_id": "098a36cc20e795342ca1488e327bc641d8133036bc488f4c237bd96c917b2539"
+          },
+          {
+            "batch": "45",
+            "perturbation_n": 6,
+            "perturbation_hits": 0,
+            "nt_n": 216,
+            "nt_hits": 71,
+            "weight": 0.018808777429467086,
+            "condition_cell_set_id": "a36b93b0136d140db77c983f5c6a268377fdbef5e646e632aa9830cb9c22854d",
+            "nt_cell_set_id": "05d2307251da061ed85e3aa4b6e82c6d92b6e3d5bd9fcc44a4303d325a7895b3"
+          },
+          {
+            "batch": "46",
+            "perturbation_n": 9,
+            "perturbation_hits": 0,
+            "nt_n": 253,
+            "nt_hits": 81,
+            "weight": 0.02821316614420063,
+            "condition_cell_set_id": "12269bb4310507f7595f5ae327acd0380caeb34488fd4b102712da9d99987d32",
+            "nt_cell_set_id": "7a00c09694ffbd1fffea8a26beb9af00fa32e37ec0ec1b8978e2c06bdea83e0c"
+          },
+          {
+            "batch": "47",
+            "perturbation_n": 5,
+            "perturbation_hits": 0,
+            "nt_n": 227,
+            "nt_hits": 55,
+            "weight": 0.01567398119122257,
+            "condition_cell_set_id": "d4f3178d3768fcb9c96223588f45ea28c3ecbd89fb93e8b3aaf681ac7b6fba03",
+            "nt_cell_set_id": "de82c4ea018427a9eec5dbbe8fcfdc6e6f7eb32e796b34b44a10c6f3f4ace77f"
+          },
+          {
+            "batch": "48",
+            "perturbation_n": 8,
+            "perturbation_hits": 1,
+            "nt_n": 151,
+            "nt_hits": 61,
+            "weight": 0.025078369905956112,
+            "condition_cell_set_id": "7046f2f237cf3cfcf0210e465522c037f6ee1d7ad0fc074e4e5f9f88721bf083",
+            "nt_cell_set_id": "7d087d5a69f7835a73af307f338caab7d0697efed448cb0fe53ce9b03d710995"
+          },
+          {
+            "batch": "5",
+            "perturbation_n": 11,
+            "perturbation_hits": 1,
+            "nt_n": 203,
+            "nt_hits": 115,
+            "weight": 0.034482758620689655,
+            "condition_cell_set_id": "712ec22c4aa4c7d706f2d881066c0ade9b8f99cd57ce48c51823711723b257d5",
+            "nt_cell_set_id": "3d41ae549797ae2a282b89ff145a64bd63d1bfa4966667c3551bb5ccb3a395b0"
+          },
+          {
+            "batch": "6",
+            "perturbation_n": 12,
+            "perturbation_hits": 3,
+            "nt_n": 255,
+            "nt_hits": 134,
+            "weight": 0.03761755485893417,
+            "condition_cell_set_id": "9433327c5240b0e201fdf14a3a03d7f84032b7851616b6bbd1fcf1d31df0a546",
+            "nt_cell_set_id": "9d53907484292f2e08c11ab6ae0c9252b394d83b72f52335e3dfd32bb061b183"
+          },
+          {
+            "batch": "7",
+            "perturbation_n": 6,
+            "perturbation_hits": 2,
+            "nt_n": 229,
+            "nt_hits": 122,
+            "weight": 0.018808777429467086,
+            "condition_cell_set_id": "815d9ce58986d200e87d69b3c0272ee3e43b5dd27e73cd0a068cfc7f8dea5799",
+            "nt_cell_set_id": "a7d99df011e48a6521023e3f3576f2ace97df33f0b4211fc8ca7cce686792c08"
+          },
+          {
+            "batch": "8",
+            "perturbation_n": 5,
+            "perturbation_hits": 2,
+            "nt_n": 252,
+            "nt_hits": 140,
+            "weight": 0.01567398119122257,
+            "condition_cell_set_id": "2cdce8bbd784bd152a8d96eda275d0effccd9a60b15e6c25b61ec2d40c4ba120",
+            "nt_cell_set_id": "0255b8bec032d3a44886c42b38f8b92ccff7b7aef8fbcf578b2db6fdc09144e0"
+          },
+          {
+            "batch": "9",
+            "perturbation_n": 6,
+            "perturbation_hits": 1,
+            "nt_n": 203,
+            "nt_hits": 100,
+            "weight": 0.018808777429467086,
+            "condition_cell_set_id": "838e786844fe81faff44a84ef99a4bad75c0ae85d6d3340d61c8b9c287505ef5",
+            "nt_cell_set_id": "e5f81da3419c73edbd452ecd2bef62c9b74b3b5bc9b2682858b8f702db442783"
+          }
+        ]
+      },
+      "source_query_id": "TQ_5d5891f7333d4381930249cdca7b8bd7",
+      "independent_confirmation": false,
+      "interpretation": "仅核实观察，不能支持机制胜出。"
+    },
+    {
+      "claim_id": "M04-E2",
+      "question_ids": [
+        "M04-H1-Q1",
+        "M04-H3-Q1"
+      ],
+      "claim": "HIST1H1B/HIST1H1E边际检测下降较大，HIST1H4C仍较高；三者不是均匀幅度下降。",
+      "marginal_positive_detection": [
+        {
+          "gene": "HIST1H1B",
+          "positive_condition_frequency": 0.2727272727272727,
+          "positive_matched_nt_frequency": 0.5104221792454595,
+          "delta_pp": -23.769490651818682
+        },
+        {
+          "gene": "HIST1H1E",
+          "positive_condition_frequency": 0.2946708463949843,
+          "positive_matched_nt_frequency": 0.666843542055319,
+          "delta_pp": -37.21726956603347
+        },
+        {
+          "gene": "HIST1H4C",
+          "positive_condition_frequency": 0.8369905956112853,
+          "positive_matched_nt_frequency": 0.898057231888215,
+          "delta_pp": -6.106663627692965
+        }
+      ],
+      "eight_state_table_reference": {
+        "path": "outputs/module_top5_codex_agents_20261004/investigator/raw/M04_supplemental.json",
+        "sha256": "aa9014bacad7c512219c037839cc26c4c05e2f258aee375f58caed45f91f74d4"
+      },
+      "independent_confirmation": false,
+      "interpretation": "由完整八状态求边际，不是高阶interaction检验；不将−当抑制。"
+    },
+    {
+      "claim_id": "M04-E3",
+      "question_ids": [
+        "M04-H1-Q1",
+        "M04-H3-Q1"
+      ],
+      "claim": "深度分箱后111下降仍保留。SMN–U7文献提供机制背景，但SMN2特异性、周期组成和组蛋白转录本定量方式均未解决，不能判定H1胜出。",
+      "depth_descriptive": {
+        "ncounts": {
+          "target_median": 11794.0,
+          "nt_pooled_median": 13714.0
+        },
+        "ngenes": {
+          "target_median": 3187.0,
+          "nt_pooled_median": 3669.0
+        },
+        "percent_mito": {
+          "target_median": 0.11667555,
+          "nt_pooled_median": 0.10593328
+        }
+      },
+      "depth_stratified_delta_pp": -25.718857639667828,
+      "supported_target_fraction": 1.0000000000000002,
+      "method": "8 measured signed states; batch-weighted NT. Depth sensitivity: per-batch NT ncounts median bins, >=1 target and >=20 NT cells; target-weighted mean within-bin differences over supported bins. Descriptive conditioning only; post-treatment ncounts may be mediator/collider. No p-value/causal effect.",
+      "independent_confirmation": false,
+      "limitations": [
+        "仅每batch的NT深度中位数二分，不能实现精细等深度；残留深度差异仍可能存在。",
+        "每个stratum允许1个target，属粗粒度敏感性描述，未给精确CI或选择后检验。",
+        "ncounts是处理后测量，可为生物中介/碰撞变量；不是调整后的因果效应。"
+      ]
+    }
+  ],
+  "literature_evidence": [
+    {
+      "source_id": "PMID:24332368",
+      "title": "SMN is essential for the biogenesis of U7 small nuclear ribonucleoprotein and 3′-end formation of histone mRNAs",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24332368/",
+      "raw_artifact": "outputs/module_top5_codex_agents_20261004/investigator/raw/primary3.json",
+      "raw_sha256": "20cc47f53aa8b2eb986b57bb21f327be2132397cb7926277da447836c41b7b39",
+      "retrieval_scope": "primary abstract / indexed article passage",
+      "claim_supported": "SMN 缺乏及 human-SMN rescue 实验支持 SMN→U7 snRNP→组蛋白RNA加工的功能联系；加工缺陷先于增殖缺陷。",
+      "boundary": "这是总 SMN 相关的不同模型实验，不是 SMN2 特异扰动；异常延伸/多聚腺苷化不等于本例三转录本共同漏检或降低。",
+      "independence": "Separate publication from Day6, but not an independent replication of this specific clue."
+    }
+  ],
+  "gaps": [
+    {
+      "id": "M04-G1",
+      "question_id": "M04-H2-Q1",
+      "description": "没有使用独立的预存细胞状态标签，未进行组成重加权，H1/H2无法分离。",
+      "status": "OPEN"
+    },
+    {
+      "id": "M04-G2",
+      "question_id": "M04-H3-Q1",
+      "description": "缺少相似表达非焦点对照组合、精细深度匹配和独立RNA测量，粗二分不能排除检测解释。",
+      "status": "OPEN"
+    },
+    {
+      "id": "M04-G3",
+      "question_id": "M04-H1-Q1",
+      "description": "背景原始研究与当前target、K562、完整signed state尚无一一对应的机制干预/救援证据。",
+      "status": "OPEN"
+    },
+    {
+      "id": "M04-G4",
+      "question_id": "M04-H1-Q1",
+      "description": "未验证SMN2指南特异性、SMN1交叉影响或全长SMN蛋白；不能从guide target标签推出SMN2特异机制。",
+      "status": "OPEN"
+    }
+  ],
+  "raw_artifacts": [
+    {
+      "path": "outputs/module_top5_codex_agents_20261004/investigator/raw/M04_joint.json",
+      "sha256": "89ffc66160a7b69e8ee5728cb6def82e940bd7c368f460752c3c5911a0d595c4"
+    },
+    {
+      "path": "outputs/module_top5_codex_agents_20261004/investigator/raw/M04_pair.json",
+      "sha256": "c5145de2d3d95ee924267abc266422c4135f98d45cca0d050810720f2e8591e4"
+    },
+    {
+      "path": "outputs/module_top5_codex_agents_20261004/investigator/raw/M04_anchor.json",
+      "sha256": "9ba46c1d40b37f5da8812b80d543c7bfe5cb4a3e70f599de83513933bc8be214"
+    },
+    {
+      "path": "outputs/module_top5_codex_agents_20261004/investigator/raw/M04_supplemental.json",
+      "sha256": "aa9014bacad7c512219c037839cc26c4c05e2f258aee375f58caed45f91f74d4"
+    },
+    {
+      "path": "outputs/module_top5_codex_agents_20261004/investigator/raw/M04_literature.json",
+      "sha256": "aa96a45294d74ccf7668ac5122ff7802db5bdb389009efe5dc817516e84c1f3b"
+    }
+  ],
+  "hypothesis_assessment": {
+    "H1": "PARTIAL_CONTEXT_COMPATIBILITY_NOT_VERIFIED",
+    "H2": "UNRESOLVED",
+    "H3": "DEPTH_ASSOCIATION_OBSERVED_CAUSAL_ROLE_UNRESOLVED"
+  },
+  "synthesis": "HIST1H1B/HIST1H1E边际检测下降较大，HIST1H4C仍较高；三者不是均匀幅度下降。 深度分箱后111下降仍保留。SMN–U7文献提供机制背景，但SMN2特异性、周期组成和组蛋白转录本定量方式均未解决，不能判定H1胜出。",
+  "independence_statement": "全部本地数据查询复用Day6同一数据，不是独立验证。文献有独立实验背景但不重复验证该specific clue。",
+  "depth_analysis_revision_log": "初始尝试每batch NT五分箱且>=10target门槛，M01仅12.6%覆盖、M02无可估计覆盖，故停止该版本并改为统一每batch NT中位数二分、>=1target/20NT，只作描述。不按效应方向挑选门槛，旧覆盖结果保留在本日志；该过程是探索性的。",
+  "handoff": "供Critic先C1再C2审查；无机制胜出结论；不修改原CaseFile。"
+}

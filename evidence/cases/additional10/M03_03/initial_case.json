@@ -1,0 +1,3679 @@
+{
+  "metadata": {
+    "case_id": "perturbation_scan_day6_v01_20260927:C8bd915c4ba75e425d16e",
+    "created_at": "2026-10-04T15:04:16.910855Z",
+    "updated_at": "2026-10-04T15:04:16.910863Z",
+    "schema_version": "0.1.1",
+    "project": "JURE",
+    "case_revision": 1,
+    "source_dataset": "replogle_k562_day6",
+    "cell_context": "K562",
+    "perturbation": "HSPA9"
+  },
+  "clue": {
+    "clue_id": "CLUE_6e799ef2225dbcad9208aa68",
+    "perturbation": "HSPA9",
+    "pattern": {
+      "genes": [
+        "CCAR1",
+        "CCNB1",
+        "CDC20"
+      ],
+      "states": [
+        1,
+        1,
+        1
+      ],
+      "order": 3,
+      "pattern_string": "CCAR1+CCNB1+CDC20+",
+      "encoding": "1 = detected expression; 0 = undetected expression (not inferred regulatory activity)"
+    },
+    "discovery_mode": "reference_guided",
+    "source_schema_version": "1.0",
+    "source_run_id": "replogle_frozen",
+    "source_artifact": "research://outputs/integration_tests/adapter_smoke/replogle_frozen/landscape/triage_inputs.jsonl",
+    "source_artifact_sha256": "740cd620e5d6b84538b8f45cdf104278eabaafede41238489b1e42063df988ab",
+    "reference_id": "Ra202d229aa24e8025918",
+    "catalogue_sha256": "23f7840ad7e9b14347b0101e2f8fddbc93f31f524033fb1f64368609cef6bf68",
+    "reference_evidence": {
+      "discovery": null,
+      "validation": null
+    },
+    "legacy_control": null,
+    "legacy_perturbation": null,
+    "perturbation_shift": {
+      "control_frequency": 0.443466017230271,
+      "perturb_frequency": 0.21904761904761905,
+      "delta_frequency": -0.22441839818265197,
+      "control_count": 4705,
+      "perturb_count": 92,
+      "p_value_shift": 6.091835389568814e-21,
+      "q_value_shift": null,
+      "support": null,
+      "status": "exploratory_perturbation_candidate",
+      "bootstrap": null,
+      "control_frequency_definition": "perturbation_batch_weighted_nt_frequency",
+      "control_count_scope": "pooled_nt_descriptive_not_matched_frequency_numerator",
+      "perturbation_n": 420,
+      "pooled_nt_n": 10691,
+      "matched_nt_cells_pooled": 10691,
+      "matched_nt_effective_n": 9290.763577853966,
+      "batch_support": [
+        {
+          "batch": "1",
+          "nt_hits": 95,
+          "nt_n": 234,
+          "perturbation_hits": 2,
+          "perturbation_n": 6
+        },
+        {
+          "batch": "10",
+          "nt_hits": 107,
+          "nt_n": 233,
+          "perturbation_hits": 1,
+          "perturbation_n": 5
+        },
+        {
+          "batch": "11",
+          "nt_hits": 102,
+          "nt_n": 213,
+          "perturbation_hits": 2,
+          "perturbation_n": 5
+        },
+        {
+          "batch": "12",
+          "nt_hits": 105,
+          "nt_n": 200,
+          "perturbation_hits": 3,
+          "perturbation_n": 11
+        },
+        {
+          "batch": "13",
+          "nt_hits": 110,
+          "nt_n": 235,
+          "perturbation_hits": 2,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "14",
+          "nt_hits": 99,
+          "nt_n": 220,
+          "perturbation_hits": 0,
+          "perturbation_n": 2
+        },
+        {
+          "batch": "15",
+          "nt_hits": 109,
+          "nt_n": 229,
+          "perturbation_hits": 2,
+          "perturbation_n": 11
+        },
+        {
+          "batch": "16",
+          "nt_hits": 126,
+          "nt_n": 240,
+          "perturbation_hits": 3,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "17",
+          "nt_hits": 104,
+          "nt_n": 214,
+          "perturbation_hits": 4,
+          "perturbation_n": 18
+        },
+        {
+          "batch": "18",
+          "nt_hits": 116,
+          "nt_n": 229,
+          "perturbation_hits": 3,
+          "perturbation_n": 12
+        },
+        {
+          "batch": "19",
+          "nt_hits": 119,
+          "nt_n": 229,
+          "perturbation_hits": 1,
+          "perturbation_n": 11
+        },
+        {
+          "batch": "2",
+          "nt_hits": 87,
+          "nt_n": 231,
+          "perturbation_hits": 2,
+          "perturbation_n": 13
+        },
+        {
+          "batch": "20",
+          "nt_hits": 96,
+          "nt_n": 192,
+          "perturbation_hits": 2,
+          "perturbation_n": 11
+        },
+        {
+          "batch": "21",
+          "nt_hits": 50,
+          "nt_n": 116,
+          "perturbation_hits": 0,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "22",
+          "nt_hits": 94,
+          "nt_n": 201,
+          "perturbation_hits": 2,
+          "perturbation_n": 7
+        },
+        {
+          "batch": "23",
+          "nt_hits": 111,
+          "nt_n": 214,
+          "perturbation_hits": 1,
+          "perturbation_n": 4
+        },
+        {
+          "batch": "24",
+          "nt_hits": 109,
+          "nt_n": 232,
+          "perturbation_hits": 2,
+          "perturbation_n": 5
+        },
+        {
+          "batch": "25",
+          "nt_hits": 112,
+          "nt_n": 281,
+          "perturbation_hits": 6,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "26",
+          "nt_hits": 75,
+          "nt_n": 234,
+          "perturbation_hits": 1,
+          "perturbation_n": 11
+        },
+        {
+          "batch": "27",
+          "nt_hits": 95,
+          "nt_n": 252,
+          "perturbation_hits": 2,
+          "perturbation_n": 12
+        },
+        {
+          "batch": "28",
+          "nt_hits": 93,
+          "nt_n": 238,
+          "perturbation_hits": 1,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "29",
+          "nt_hits": 101,
+          "nt_n": 226,
+          "perturbation_hits": 3,
+          "perturbation_n": 10
+        },
+        {
+          "batch": "3",
+          "nt_hits": 105,
+          "nt_n": 228,
+          "perturbation_hits": 2,
+          "perturbation_n": 7
+        },
+        {
+          "batch": "30",
+          "nt_hits": 110,
+          "nt_n": 248,
+          "perturbation_hits": 3,
+          "perturbation_n": 11
+        },
+        {
+          "batch": "31",
+          "nt_hits": 102,
+          "nt_n": 252,
+          "perturbation_hits": 1,
+          "perturbation_n": 6
+        },
+        {
+          "batch": "32",
+          "nt_hits": 85,
+          "nt_n": 258,
+          "perturbation_hits": 0,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "33",
+          "nt_hits": 96,
+          "nt_n": 260,
+          "perturbation_hits": 1,
+          "perturbation_n": 8
+        },
+        {
+          "batch": "34",
+          "nt_hits": 96,
+          "nt_n": 208,
+          "perturbation_hits": 2,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "35",
+          "nt_hits": 88,
+          "nt_n": 216,
+          "perturbation_hits": 2,
+          "perturbation_n": 8
+        },
+        {
+          "batch": "36",
+          "nt_hits": 90,
+          "nt_n": 226,
+          "perturbation_hits": 1,
+          "perturbation_n": 12
+        },
+        {
+          "batch": "37",
+          "nt_hits": 66,
+          "nt_n": 185,
+          "perturbation_hits": 0,
+          "perturbation_n": 7
+        },
+        {
+          "batch": "38",
+          "nt_hits": 100,
+          "nt_n": 223,
+          "perturbation_hits": 3,
+          "perturbation_n": 7
+        },
+        {
+          "batch": "39",
+          "nt_hits": 100,
+          "nt_n": 210,
+          "perturbation_hits": 2,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "4",
+          "nt_hits": 55,
+          "nt_n": 120,
+          "perturbation_hits": 4,
+          "perturbation_n": 13
+        },
+        {
+          "batch": "40",
+          "nt_hits": 110,
+          "nt_n": 242,
+          "perturbation_hits": 3,
+          "perturbation_n": 6
+        },
+        {
+          "batch": "41",
+          "nt_hits": 87,
+          "nt_n": 225,
+          "perturbation_hits": 3,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "42",
+          "nt_hits": 114,
+          "nt_n": 257,
+          "perturbation_hits": 1,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "43",
+          "nt_hits": 96,
+          "nt_n": 226,
+          "perturbation_hits": 1,
+          "perturbation_n": 12
+        },
+        {
+          "batch": "44",
+          "nt_hits": 89,
+          "nt_n": 225,
+          "perturbation_hits": 0,
+          "perturbation_n": 5
+        },
+        {
+          "batch": "45",
+          "nt_hits": 121,
+          "nt_n": 216,
+          "perturbation_hits": 5,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "46",
+          "nt_hits": 101,
+          "nt_n": 253,
+          "perturbation_hits": 1,
+          "perturbation_n": 10
+        },
+        {
+          "batch": "47",
+          "nt_hits": 64,
+          "nt_n": 227,
+          "perturbation_hits": 1,
+          "perturbation_n": 5
+        },
+        {
+          "batch": "48",
+          "nt_hits": 67,
+          "nt_n": 151,
+          "perturbation_hits": 1,
+          "perturbation_n": 5
+        },
+        {
+          "batch": "5",
+          "nt_hits": 110,
+          "nt_n": 203,
+          "perturbation_hits": 3,
+          "perturbation_n": 8
+        },
+        {
+          "batch": "6",
+          "nt_hits": 116,
+          "nt_n": 255,
+          "perturbation_hits": 0,
+          "perturbation_n": 7
+        },
+        {
+          "batch": "7",
+          "nt_hits": 112,
+          "nt_n": 229,
+          "perturbation_hits": 2,
+          "perturbation_n": 11
+        },
+        {
+          "batch": "8",
+          "nt_hits": 113,
+          "nt_n": 252,
+          "perturbation_hits": 2,
+          "perturbation_n": 10
+        },
+        {
+          "batch": "9",
+          "nt_hits": 97,
+          "nt_n": 203,
+          "perturbation_hits": 3,
+          "perturbation_n": 9
+        }
+      ],
+      "selected_family_holm_exploratory": 4.216975579062778e-15,
+      "family_size": 693594,
+      "nominal_pointwise_delta_ci_low": -0.2921682851115244,
+      "nominal_pointwise_delta_ci_high": -0.15666851125377956,
+      "ci_method": "nominal_pointwise_Hoeffding_not_selection_adjusted_not_simultaneous",
+      "statistical_method": "exact_batch_conditional_plus_selected_family_Holm",
+      "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+      "nt_selection_adjusted": false
+    },
+    "replication_status": "NOT_PERFORMED",
+    "interpretation_boundary": "This is an observed perturbation-associated higher-order expression pattern. It does not by itself establish a causal regulatory mechanism.",
+    "source_payload": {
+      "original_association": {
+        "batch_support": [
+          {
+            "batch": "1",
+            "nt_hits": 95,
+            "nt_n": 234,
+            "perturbation_hits": 2,
+            "perturbation_n": 6
+          },
+          {
+            "batch": "10",
+            "nt_hits": 107,
+            "nt_n": 233,
+            "perturbation_hits": 1,
+            "perturbation_n": 5
+          },
+          {
+            "batch": "11",
+            "nt_hits": 102,
+            "nt_n": 213,
+            "perturbation_hits": 2,
+            "perturbation_n": 5
+          },
+          {
+            "batch": "12",
+            "nt_hits": 105,
+            "nt_n": 200,
+            "perturbation_hits": 3,
+            "perturbation_n": 11
+          },
+          {
+            "batch": "13",
+            "nt_hits": 110,
+            "nt_n": 235,
+            "perturbation_hits": 2,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "14",
+            "nt_hits": 99,
+            "nt_n": 220,
+            "perturbation_hits": 0,
+            "perturbation_n": 2
+          },
+          {
+            "batch": "15",
+            "nt_hits": 109,
+            "nt_n": 229,
+            "perturbation_hits": 2,
+            "perturbation_n": 11
+          },
+          {
+            "batch": "16",
+            "nt_hits": 126,
+            "nt_n": 240,
+            "perturbation_hits": 3,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "17",
+            "nt_hits": 104,
+            "nt_n": 214,
+            "perturbation_hits": 4,
+            "perturbation_n": 18
+          },
+          {
+            "batch": "18",
+            "nt_hits": 116,
+            "nt_n": 229,
+            "perturbation_hits": 3,
+            "perturbation_n": 12
+          },
+          {
+            "batch": "19",
+            "nt_hits": 119,
+            "nt_n": 229,
+            "perturbation_hits": 1,
+            "perturbation_n": 11
+          },
+          {
+            "batch": "2",
+            "nt_hits": 87,
+            "nt_n": 231,
+            "perturbation_hits": 2,
+            "perturbation_n": 13
+          },
+          {
+            "batch": "20",
+            "nt_hits": 96,
+            "nt_n": 192,
+            "perturbation_hits": 2,
+            "perturbation_n": 11
+          },
+          {
+            "batch": "21",
+            "nt_hits": 50,
+            "nt_n": 116,
+            "perturbation_hits": 0,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "22",
+            "nt_hits": 94,
+            "nt_n": 201,
+            "perturbation_hits": 2,
+            "perturbation_n": 7
+          },
+          {
+            "batch": "23",
+            "nt_hits": 111,
+            "nt_n": 214,
+            "perturbation_hits": 1,
+            "perturbation_n": 4
+          },
+          {
+            "batch": "24",
+            "nt_hits": 109,
+            "nt_n": 232,
+            "perturbation_hits": 2,
+            "perturbation_n": 5
+          },
+          {
+            "batch": "25",
+            "nt_hits": 112,
+            "nt_n": 281,
+            "perturbation_hits": 6,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "26",
+            "nt_hits": 75,
+            "nt_n": 234,
+            "perturbation_hits": 1,
+            "perturbation_n": 11
+          },
+          {
+            "batch": "27",
+            "nt_hits": 95,
+            "nt_n": 252,
+            "perturbation_hits": 2,
+            "perturbation_n": 12
+          },
+          {
+            "batch": "28",
+            "nt_hits": 93,
+            "nt_n": 238,
+            "perturbation_hits": 1,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "29",
+            "nt_hits": 101,
+            "nt_n": 226,
+            "perturbation_hits": 3,
+            "perturbation_n": 10
+          },
+          {
+            "batch": "3",
+            "nt_hits": 105,
+            "nt_n": 228,
+            "perturbation_hits": 2,
+            "perturbation_n": 7
+          },
+          {
+            "batch": "30",
+            "nt_hits": 110,
+            "nt_n": 248,
+            "perturbation_hits": 3,
+            "perturbation_n": 11
+          },
+          {
+            "batch": "31",
+            "nt_hits": 102,
+            "nt_n": 252,
+            "perturbation_hits": 1,
+            "perturbation_n": 6
+          },
+          {
+            "batch": "32",
+            "nt_hits": 85,
+            "nt_n": 258,
+            "perturbation_hits": 0,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "33",
+            "nt_hits": 96,
+            "nt_n": 260,
+            "perturbation_hits": 1,
+            "perturbation_n": 8
+          },
+          {
+            "batch": "34",
+            "nt_hits": 96,
+            "nt_n": 208,
+            "perturbation_hits": 2,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "35",
+            "nt_hits": 88,
+            "nt_n": 216,
+            "perturbation_hits": 2,
+            "perturbation_n": 8
+          },
+          {
+            "batch": "36",
+            "nt_hits": 90,
+            "nt_n": 226,
+            "perturbation_hits": 1,
+            "perturbation_n": 12
+          },
+          {
+            "batch": "37",
+            "nt_hits": 66,
+            "nt_n": 185,
+            "perturbation_hits": 0,
+            "perturbation_n": 7
+          },
+          {
+            "batch": "38",
+            "nt_hits": 100,
+            "nt_n": 223,
+            "perturbation_hits": 3,
+            "perturbation_n": 7
+          },
+          {
+            "batch": "39",
+            "nt_hits": 100,
+            "nt_n": 210,
+            "perturbation_hits": 2,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "4",
+            "nt_hits": 55,
+            "nt_n": 120,
+            "perturbation_hits": 4,
+            "perturbation_n": 13
+          },
+          {
+            "batch": "40",
+            "nt_hits": 110,
+            "nt_n": 242,
+            "perturbation_hits": 3,
+            "perturbation_n": 6
+          },
+          {
+            "batch": "41",
+            "nt_hits": 87,
+            "nt_n": 225,
+            "perturbation_hits": 3,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "42",
+            "nt_hits": 114,
+            "nt_n": 257,
+            "perturbation_hits": 1,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "43",
+            "nt_hits": 96,
+            "nt_n": 226,
+            "perturbation_hits": 1,
+            "perturbation_n": 12
+          },
+          {
+            "batch": "44",
+            "nt_hits": 89,
+            "nt_n": 225,
+            "perturbation_hits": 0,
+            "perturbation_n": 5
+          },
+          {
+            "batch": "45",
+            "nt_hits": 121,
+            "nt_n": 216,
+            "perturbation_hits": 5,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "46",
+            "nt_hits": 101,
+            "nt_n": 253,
+            "perturbation_hits": 1,
+            "perturbation_n": 10
+          },
+          {
+            "batch": "47",
+            "nt_hits": 64,
+            "nt_n": 227,
+            "perturbation_hits": 1,
+            "perturbation_n": 5
+          },
+          {
+            "batch": "48",
+            "nt_hits": 67,
+            "nt_n": 151,
+            "perturbation_hits": 1,
+            "perturbation_n": 5
+          },
+          {
+            "batch": "5",
+            "nt_hits": 110,
+            "nt_n": 203,
+            "perturbation_hits": 3,
+            "perturbation_n": 8
+          },
+          {
+            "batch": "6",
+            "nt_hits": 116,
+            "nt_n": 255,
+            "perturbation_hits": 0,
+            "perturbation_n": 7
+          },
+          {
+            "batch": "7",
+            "nt_hits": 112,
+            "nt_n": 229,
+            "perturbation_hits": 2,
+            "perturbation_n": 11
+          },
+          {
+            "batch": "8",
+            "nt_hits": 113,
+            "nt_n": 252,
+            "perturbation_hits": 2,
+            "perturbation_n": 10
+          },
+          {
+            "batch": "9",
+            "nt_hits": 97,
+            "nt_n": 203,
+            "perturbation_hits": 3,
+            "perturbation_n": 9
+          }
+        ],
+        "biological_replicate_validated": false,
+        "catalogue_digest": "212b5b90e866e42d72ddb2bd77e3f5800125821f09c5d409f4cfc6d1d882f879",
+        "ci_method": "nominal_pointwise_Hoeffding_not_selection_adjusted_not_simultaneous",
+        "clue_id": "C8bd915c4ba75e425d16e",
+        "delta": -0.22441839818265197,
+        "delta_percentage_points": -22.441839818265198,
+        "effect_is_not_change_in_higher_order_interaction_strength": true,
+        "eligible_as_confirmed_clue": false,
+        "eligible_for_explorer_development": true,
+        "external_validation_status": "not_performed",
+        "family_size": 693594,
+        "genes": [
+          "CCAR1",
+          "CCNB1",
+          "CDC20"
+        ],
+        "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+        "matched_nt_frequency": 0.443466017230271,
+        "mechanistic_claim": false,
+        "nominal_pointwise_delta_ci_high": -0.15666851125377956,
+        "nominal_pointwise_delta_ci_low": -0.2921682851115244,
+        "nt_selection_adjusted": false,
+        "order": 3,
+        "p_value": 6.091835389568814e-21,
+        "pattern": "CCAR1+ CCNB1+ CDC20+",
+        "perturbation_frequency": 0.21904761904761905,
+        "perturbation_hits": 92,
+        "perturbation_n": 420,
+        "pooled_nt_frequency": 0.4400897951548031,
+        "pooled_nt_hits": 4705,
+        "pooled_nt_n": 10691,
+        "reference_evidence": {
+          "bidirectionally_qualified": false,
+          "candidate_id": "GS_93ff6067cfbebed8f11f19f4",
+          "discovery_bootstrap_stable": true,
+          "holm_qualified": true,
+          "nt_n_cells": 10691,
+          "nt_support": 4705,
+          "reference_id": "Ra202d229aa24e8025918",
+          "successful_directions": [
+            "A_to_B"
+          ],
+          "validation_bootstrap_stable": true
+        },
+        "reference_id": "Ra202d229aa24e8025918",
+        "selected_family_holm_exploratory": 4.216975579062778e-15,
+        "states": [
+          1,
+          1,
+          1
+        ],
+        "statistical_method": "exact_batch_conditional_plus_selected_family_Holm",
+        "status": "exploratory_perturbation_candidate",
+        "support_and_effect_gates_passed": true,
+        "target": "HSPA9"
+      },
+      "selected_case": {
+        "case": {
+          "association_evidence": {
+            "ci_method": "nominal_pointwise_Hoeffding_not_selection_adjusted_not_simultaneous",
+            "effect_is_not_change_in_higher_order_interaction_strength": true,
+            "family_size": 693594,
+            "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+            "nominal_pointwise_delta_ci_high": -0.15666851125377956,
+            "nominal_pointwise_delta_ci_low": -0.2921682851115244,
+            "nt_selection_adjusted": false,
+            "p_value": 6.091835389568814e-21,
+            "selected_family_holm_exploratory": 4.216975579062778e-15,
+            "statistical_method": "exact_batch_conditional_plus_selected_family_Holm",
+            "status": "exploratory_perturbation_candidate"
+          },
+          "candidate_id": "C8bd915c4ba75e425d16e",
+          "case_id": "perturbation_scan_day6_v01_20260927:C8bd915c4ba75e425d16e",
+          "condition_id": "HSPA9",
+          "coresponse_context": [],
+          "dataset_id": "replogle_k562_day6",
+          "effect_units": "prevalence_difference",
+          "evidence_level": "EXPLORATORY_ASSOCIATION",
+          "external_validation_status": "NOT_PERFORMED",
+          "genes": [
+            "CCAR1",
+            "CCNB1",
+            "CDC20"
+          ],
+          "group_context": {
+            "annotation_status": "NOT_ANNOTATED",
+            "group_id": "M03",
+            "legacy_context": {
+              "cross_module_context": {
+                "cross_module": true,
+                "dominant_module": "M01",
+                "module_specific": false,
+                "module_specificity": 0.09631312282472962,
+                "n_strong_modules": 11,
+                "strong_modules": [
+                  "M01",
+                  "M03",
+                  "M04",
+                  "M05",
+                  "M06",
+                  "M07",
+                  "M09",
+                  "M12",
+                  "M13",
+                  "M18",
+                  "M38"
+                ]
+              },
+              "module_robustness": "stable_across_continuous_choices",
+              "module_specificity": 0.0532408048098472,
+              "target_module_activity": {
+                "method": "median_signed_delta",
+                "module_id": "M03",
+                "value_pp": -17.740831455449616
+              }
+            },
+            "stability": {
+              "mean_co_clustering": 1.0,
+              "median_co_clustering": 1.0,
+              "min_co_clustering": 1.0,
+              "stable_core_size": 28
+            }
+          },
+          "matched_effect": -0.22441839818265197,
+          "order": 3,
+          "provenance": {
+            "association": {
+              "line": 1361,
+              "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+              "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b",
+              "source_clue_id": "C8bd915c4ba75e425d16e"
+            },
+            "matrix_and_cell_sources": {
+              "adapter": "ReplogleFrozenAdapter",
+              "aggregated_counts": {
+                "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/counts/counts.npz",
+                "sha256": "47a3a71534e2a80d3ceee07d91930058eb52031eb7f0f264ca17b28985b8d52d"
+              },
+              "association_source": {
+                "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+                "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b"
+              },
+              "broad_manifest": {
+                "path": "research://outputs/broad_screening_v01/audit/run_manifest.json",
+                "sha256": "ff967ba7b8636a7f04ac99bd4c8bee49a139c39a5fe14b78ea30d4444bc2eacd"
+              },
+              "cell_provenance": {
+                "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/metadata/allowed_cell_metadata.csv.gz",
+                "sha256": "e3ab27ee53c6c6f6c93b50aadc7c0bb267391626d5a2d5c0b561f5926ee8a550"
+              },
+              "frozen_input_output_hashes_verified": 144,
+              "mode": "read_only_artifact_conversion",
+              "reference_catalogue": {
+                "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+                "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1"
+              },
+              "statistics_recomputed": false
+            },
+            "reference": {
+              "gene_set_id": "GS_93ff6067cfbebed8f11f19f4",
+              "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+              "record_key": "Ra202d229aa24e8025918",
+              "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+              "source_evidence_retained": true
+            },
+            "selection_performed": false
+          },
+          "reference_evidence": {
+            "gain": {
+              "discovery:A": {
+                "gain_calibration_unstable": false,
+                "higher_order_gain_status": "evaluated",
+                "p_gain": 0.0005,
+                "pattern_absolute_gain": 0.0038241926866475207,
+                "pattern_gain_bootstrap": {
+                  "ci_high": 0.005834703246931005,
+                  "ci_low": 0.002025026348829673,
+                  "median": 0.0038148737057122906,
+                  "sign_stability": 1.0
+                },
+                "q_gain": 0.019230769230769232,
+                "set_level_gain": 0.0016715039657951977
+              },
+              "discovery:B": null,
+              "validation:A": {
+                "gain_method": "exact_conditional_complete_lower_order_fiber",
+                "gain_null_path": "gain/B_validation_from_A/GS_93ff6067cfbebed8f11f19f4_conditional_array_audit.json",
+                "gain_ok": true,
+                "gain_path": "gain/B_validation_from_A/GS_93ff6067cfbebed8f11f19f4.json",
+                "higher_order_gain_status": "evaluated",
+                "p_gain": 0.00011096797765432572,
+                "pattern_absolute_gain": 0.003564448014560906,
+                "pattern_gain_bootstrap": {
+                  "ci_high": 0.005540336444885367,
+                  "ci_low": 0.0016126306075729296,
+                  "median": 0.0035414671570614675,
+                  "sign_stability": 1.0
+                },
+                "q_gain": 0.00020079919766020845,
+                "set_level_gain": 0.0014038025925652308
+              },
+              "validation:B": null
+            },
+            "mfi": {
+              "discovery:A": {
+                "mfi": 0.8530169832414619,
+                "mfi_ci_high": 1.2405816957877893,
+                "mfi_ci_low": 0.46833964944941864,
+                "mfi_sign_stability": 1.0
+              },
+              "discovery:B": null,
+              "validation:A": {
+                "discovery_mfi": 0.8530169832414619,
+                "mfi": 0.7712214971228836,
+                "mfi_ci_high": 1.160106060827805,
+                "mfi_ci_low": 0.3539781201754745,
+                "mfi_sign_stability": 1.0,
+                "p_mfi": 0.0002633837670903453,
+                "q_mfi": 0.00045493559770150554
+              },
+              "validation:B": null
+            },
+            "provenance": {
+              "gene_set_id": "GS_93ff6067cfbebed8f11f19f4",
+              "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+              "record_key": "Ra202d229aa24e8025918",
+              "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+              "source_evidence_retained": true
+            },
+            "qualification": {
+              "complete_search": false,
+              "holm_qualified": true,
+              "state_level_FDR_controlled": false,
+              "validation_family_tests": [
+                {
+                  "adjusted_p": 0.0038838792179014003,
+                  "arm": "holm_025",
+                  "candidate_id": "GS_93ff6067cfbebed8f11f19f4",
+                  "evaluation_status": "evaluated",
+                  "family_gain_rejected": true,
+                  "family_id": "A_to_B:order3:gene_set_gain",
+                  "family_size": 76,
+                  "genes": [
+                    "CCAR1",
+                    "CCNB1",
+                    "CDC20"
+                  ],
+                  "level_per_direction": 0.025,
+                  "method": "holm",
+                  "p_for_accounting": 0.00011096797765432572,
+                  "p_gain": 0.00011096797765432572,
+                  "p_value_unit": "gene_set_not_concrete_state",
+                  "source_fold": "A",
+                  "tested": true,
+                  "validation_fold": "B"
+                }
+              ]
+            },
+            "reference_dataset_id": "replogle_k562_day6",
+            "reference_id": "Ra202d229aa24e8025918"
+          },
+          "reference_id": "Ra202d229aa24e8025918",
+          "sample_size_context": {
+            "burden_is_not_biological_breadth": true,
+            "flag_scope": "sample_size_stratum; individual sensitivity not estimated",
+            "sample_size_sensitive": true,
+            "support_context": "high_sample_count",
+            "target_candidate_count": 105,
+            "target_cell_count": 420
+          },
+          "sampling_block_id": "HSPA9|M03|depletion",
+          "schema_version": "1.0",
+          "signed_state_contrast_context": [
+            "REL93a2e86bbc39b693ce49"
+          ],
+          "stable_core_context": {
+            "members": [
+              "R025fdb8bf612b3f81a9d",
+              "R042863b40a5f24fb93ac",
+              "R0851bef9d0cec6c3d9a5",
+              "R0ffe7de6490d9ee80924",
+              "R121d9ade5af1989ab63b",
+              "R125be8147fd30e286dc4",
+              "R26b70bdb0fe7f26c64bb",
+              "R395eb03f9998a6cb6e17",
+              "R3beade0d61ae34776d13",
+              "R48617a1d1d735634a871",
+              "R4979e19ddf0d6fc3ebc1",
+              "R50ecbcae24fa06ebcc08",
+              "R6166fddedf1351ae2e6e",
+              "R62905c8ed50c5bb2f219",
+              "R6708d2005d3cf29f7b37",
+              "R68ee7bf3c0196cfdadb9",
+              "R7d391e1918102b8f844b",
+              "R82b17bf8cdc5aaec03c1",
+              "R93c980b719c460352790",
+              "R9511312fdfd3ecf4630d",
+              "R9815d28e8e5d55109361",
+              "R9dfc008d0fd1081f5c66",
+              "Ra202d229aa24e8025918",
+              "Ra8bf0b1f5f7f7b0e0bb5",
+              "Rbcef8cf5676436d011cc",
+              "Rccf6aeacbb2c01ee2cf3",
+              "Rf583d336d83aa31c1334",
+              "Rfbb4c765855b678bba99"
+            ],
+            "status": "stable_core"
+          },
+          "states": [
+            1,
+            1,
+            1
+          ],
+          "strata": [
+            "stable_module_core",
+            "cross_module",
+            "signed_state_contrast",
+            "depletion",
+            "high_effect",
+            "strong_depletion",
+            "high_target_support",
+            "sample_size_sensitive"
+          ],
+          "support": {
+            "condition": {
+              "batch_support": [
+                {
+                  "batch": "1",
+                  "nt_hits": 95,
+                  "nt_n": 234,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 6
+                },
+                {
+                  "batch": "10",
+                  "nt_hits": 107,
+                  "nt_n": 233,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "11",
+                  "nt_hits": 102,
+                  "nt_n": 213,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "12",
+                  "nt_hits": 105,
+                  "nt_n": 200,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "13",
+                  "nt_hits": 110,
+                  "nt_n": 235,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "14",
+                  "nt_hits": 99,
+                  "nt_n": 220,
+                  "perturbation_hits": 0,
+                  "perturbation_n": 2
+                },
+                {
+                  "batch": "15",
+                  "nt_hits": 109,
+                  "nt_n": 229,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "16",
+                  "nt_hits": 126,
+                  "nt_n": 240,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "17",
+                  "nt_hits": 104,
+                  "nt_n": 214,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 18
+                },
+                {
+                  "batch": "18",
+                  "nt_hits": 116,
+                  "nt_n": 229,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "19",
+                  "nt_hits": 119,
+                  "nt_n": 229,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "2",
+                  "nt_hits": 87,
+                  "nt_n": 231,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 13
+                },
+                {
+                  "batch": "20",
+                  "nt_hits": 96,
+                  "nt_n": 192,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "21",
+                  "nt_hits": 50,
+                  "nt_n": 116,
+                  "perturbation_hits": 0,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "22",
+                  "nt_hits": 94,
+                  "nt_n": 201,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "23",
+                  "nt_hits": 111,
+                  "nt_n": 214,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 4
+                },
+                {
+                  "batch": "24",
+                  "nt_hits": 109,
+                  "nt_n": 232,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "25",
+                  "nt_hits": 112,
+                  "nt_n": 281,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "26",
+                  "nt_hits": 75,
+                  "nt_n": 234,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "27",
+                  "nt_hits": 95,
+                  "nt_n": 252,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "28",
+                  "nt_hits": 93,
+                  "nt_n": 238,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "29",
+                  "nt_hits": 101,
+                  "nt_n": 226,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "3",
+                  "nt_hits": 105,
+                  "nt_n": 228,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "30",
+                  "nt_hits": 110,
+                  "nt_n": 248,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "31",
+                  "nt_hits": 102,
+                  "nt_n": 252,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 6
+                },
+                {
+                  "batch": "32",
+                  "nt_hits": 85,
+                  "nt_n": 258,
+                  "perturbation_hits": 0,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "33",
+                  "nt_hits": 96,
+                  "nt_n": 260,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 8
+                },
+                {
+                  "batch": "34",
+                  "nt_hits": 96,
+                  "nt_n": 208,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "35",
+                  "nt_hits": 88,
+                  "nt_n": 216,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 8
+                },
+                {
+                  "batch": "36",
+                  "nt_hits": 90,
+                  "nt_n": 226,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "37",
+                  "nt_hits": 66,
+                  "nt_n": 185,
+                  "perturbation_hits": 0,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "38",
+                  "nt_hits": 100,
+                  "nt_n": 223,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "39",
+                  "nt_hits": 100,
+                  "nt_n": 210,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "4",
+                  "nt_hits": 55,
+                  "nt_n": 120,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 13
+                },
+                {
+                  "batch": "40",
+                  "nt_hits": 110,
+                  "nt_n": 242,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 6
+                },
+                {
+                  "batch": "41",
+                  "nt_hits": 87,
+                  "nt_n": 225,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "42",
+                  "nt_hits": 114,
+                  "nt_n": 257,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "43",
+                  "nt_hits": 96,
+                  "nt_n": 226,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "44",
+                  "nt_hits": 89,
+                  "nt_n": 225,
+                  "perturbation_hits": 0,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "45",
+                  "nt_hits": 121,
+                  "nt_n": 216,
+                  "perturbation_hits": 5,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "46",
+                  "nt_hits": 101,
+                  "nt_n": 253,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "47",
+                  "nt_hits": 64,
+                  "nt_n": 227,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "48",
+                  "nt_hits": 67,
+                  "nt_n": 151,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "5",
+                  "nt_hits": 110,
+                  "nt_n": 203,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 8
+                },
+                {
+                  "batch": "6",
+                  "nt_hits": 116,
+                  "nt_n": 255,
+                  "perturbation_hits": 0,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "7",
+                  "nt_hits": 112,
+                  "nt_n": 229,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "8",
+                  "nt_hits": 113,
+                  "nt_n": 252,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "9",
+                  "nt_hits": 97,
+                  "nt_n": 203,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 9
+                }
+              ],
+              "perturbation_frequency": 0.21904761904761905,
+              "perturbation_hits": 92,
+              "perturbation_n": 420
+            },
+            "control": {
+              "matched_nt_frequency": 0.443466017230271,
+              "pooled_nt_n": 10691
+            }
+          }
+        },
+        "selected_at": "2026-10-04T15:04:16.291746+00:00",
+        "selection_method": "human",
+        "selection_provenance": {
+          "module": "M03",
+          "slot": "M03_03",
+          "source_clue_id": "C8bd915c4ba75e425d16e",
+          "source_line": 1361,
+          "triage_path": "research://outputs/integration_tests/adapter_smoke/replogle_frozen/landscape/triage_inputs.jsonl",
+          "triage_sha256": "740cd620e5d6b84538b8f45cdf104278eabaafede41238489b1e42063df988ab",
+          "user_authorization": "User final fixed ten additional cases; M03_03 HSPA9 added last."
+        },
+        "selection_reason": "M03_03: user-fixed additional exploratory case; no literature-based ranking.",
+        "selector": "module_additional10_luna_20261004"
+      }
+    },
+    "upstream_context": {
+      "condition_specific_relations": [
+        {
+          "direction_concordance": 0.1455847255369928,
+          "evaluable_condition_count": 419,
+          "gene_jaccard": 1.0,
+          "pearson_r": -0.7144143603490767,
+          "provenance": {
+            "source": "accepted_pair_profile_kernel"
+          },
+          "reference_a": "Ra202d229aa24e8025918",
+          "reference_b": "Rcfaeb5f9c898878062dc",
+          "relation_id": "REL93a2e86bbc39b693ce49",
+          "relation_type": "SIGNED_STATE_CONTRAST",
+          "scope": "descriptive_condition_profile_association; not_regulation",
+          "shared_candidate_conditions": [
+            "ATP6V1B2",
+            "CCNB1",
+            "DHX15",
+            "DNAJC19",
+            "EIF2B2",
+            "EIF2B4",
+            "EIF2B5",
+            "EIF2S1",
+            "HARS",
+            "HSPA5",
+            "HSPA9",
+            "INTS2",
+            "INTS8",
+            "MED1",
+            "MED12",
+            "MED19",
+            "MED30",
+            "MED9",
+            "NACA",
+            "PHB",
+            "PHB2",
+            "PMPCB",
+            "QARS",
+            "RARS",
+            "SFPQ",
+            "SUPT6H",
+            "TIMM23B",
+            "VARS",
+            "XPO1"
+          ],
+          "shared_genes": [
+            "CCAR1",
+            "CCNB1",
+            "CDC20"
+          ],
+          "spearman_rho": -0.6267280264014343
+        }
+      ],
+      "coresponse_context": [],
+      "dataset_evidence_status": "DAY6_EXPLORATORY",
+      "day8_status": "NOT_PERFORMED",
+      "evidence_level": "EXPLORATORY_ASSOCIATION",
+      "external_validation_status": "NOT_PERFORMED",
+      "group_context": {
+        "annotation_status": "NOT_ANNOTATED",
+        "group_id": "M03",
+        "legacy_context": {
+          "cross_module_context": {
+            "cross_module": true,
+            "dominant_module": "M01",
+            "module_specific": false,
+            "module_specificity": 0.09631312282472962,
+            "n_strong_modules": 11,
+            "strong_modules": [
+              "M01",
+              "M03",
+              "M04",
+              "M05",
+              "M06",
+              "M07",
+              "M09",
+              "M12",
+              "M13",
+              "M18",
+              "M38"
+            ]
+          },
+          "module_robustness": "stable_across_continuous_choices",
+          "module_specificity": 0.0532408048098472,
+          "target_module_activity": {
+            "method": "median_signed_delta",
+            "module_id": "M03",
+            "value_pp": -17.740831455449616
+          }
+        },
+        "stability": {
+          "mean_co_clustering": 1.0,
+          "median_co_clustering": 1.0,
+          "min_co_clustering": 1.0,
+          "stable_core_size": 28
+        }
+      },
+      "group_representative_reference_id": "R50ecbcae24fa06ebcc08",
+      "provenance": {
+        "association": {
+          "line": 1361,
+          "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+          "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b",
+          "source_clue_id": "C8bd915c4ba75e425d16e"
+        },
+        "matrix_and_cell_sources": {
+          "adapter": "ReplogleFrozenAdapter",
+          "aggregated_counts": {
+            "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/counts/counts.npz",
+            "sha256": "47a3a71534e2a80d3ceee07d91930058eb52031eb7f0f264ca17b28985b8d52d"
+          },
+          "association_source": {
+            "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+            "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b"
+          },
+          "broad_manifest": {
+            "path": "research://outputs/broad_screening_v01/audit/run_manifest.json",
+            "sha256": "ff967ba7b8636a7f04ac99bd4c8bee49a139c39a5fe14b78ea30d4444bc2eacd"
+          },
+          "cell_provenance": {
+            "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/metadata/allowed_cell_metadata.csv.gz",
+            "sha256": "e3ab27ee53c6c6f6c93b50aadc7c0bb267391626d5a2d5c0b561f5926ee8a550"
+          },
+          "frozen_input_output_hashes_verified": 144,
+          "mode": "read_only_artifact_conversion",
+          "reference_catalogue": {
+            "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+            "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1"
+          },
+          "statistics_recomputed": false
+        },
+        "reference": {
+          "gene_set_id": "GS_93ff6067cfbebed8f11f19f4",
+          "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+          "record_key": "Ra202d229aa24e8025918",
+          "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+          "source_evidence_retained": true
+        },
+        "selection_performed": false
+      },
+      "reference_evidence": {
+        "bootstrap_stability": {
+          "details": {
+            "discovery:A": {
+              "bootstrap_path": "bootstrap/A_discovery/GS_93ff6067cfbebed8f11f19f4_array_audit.json",
+              "bootstrap_status": "complete",
+              "mfi_sign_stability": 1.0,
+              "pattern_gain_bootstrap": {
+                "ci_high": 0.005834703246931005,
+                "ci_low": 0.002025026348829673,
+                "median": 0.0038148737057122906,
+                "sign_stability": 1.0
+              }
+            },
+            "discovery:B": null,
+            "validation:A": {
+              "bootstrap_ok": true,
+              "bootstrap_path": "bootstrap/B_validation_from_A/GS_93ff6067cfbebed8f11f19f4_array_audit.json",
+              "bootstrap_status": "complete",
+              "mfi_sign_stability": 1.0,
+              "pattern_gain_bootstrap": {
+                "ci_high": 0.005540336444885367,
+                "ci_low": 0.0016126306075729296,
+                "median": 0.0035414671570614675,
+                "sign_stability": 1.0
+              }
+            },
+            "validation:B": null
+          },
+          "discovery": true,
+          "validation": true
+        },
+        "crossfold_evidence": {
+          "bidirectionally_qualified": false,
+          "successful_directions": [
+            "A_to_B"
+          ]
+        },
+        "dataset_id": "replogle_k562_day6",
+        "estimability": {
+          "discovery:A": {
+            "estimability_status": "good",
+            "min_state_count": 63
+          },
+          "discovery:B": null,
+          "validation:A": {
+            "estimability_status": "good",
+            "min_state_count": 65
+          },
+          "validation:B": null
+        },
+        "evidence_level": "REFERENCE_PATTERN",
+        "gain_evidence": {
+          "discovery:A": {
+            "gain_calibration_unstable": false,
+            "higher_order_gain_status": "evaluated",
+            "p_gain": 0.0005,
+            "pattern_absolute_gain": 0.0038241926866475207,
+            "pattern_gain_bootstrap": {
+              "ci_high": 0.005834703246931005,
+              "ci_low": 0.002025026348829673,
+              "median": 0.0038148737057122906,
+              "sign_stability": 1.0
+            },
+            "q_gain": 0.019230769230769232,
+            "set_level_gain": 0.0016715039657951977
+          },
+          "discovery:B": null,
+          "validation:A": {
+            "gain_method": "exact_conditional_complete_lower_order_fiber",
+            "gain_null_path": "gain/B_validation_from_A/GS_93ff6067cfbebed8f11f19f4_conditional_array_audit.json",
+            "gain_ok": true,
+            "gain_path": "gain/B_validation_from_A/GS_93ff6067cfbebed8f11f19f4.json",
+            "higher_order_gain_status": "evaluated",
+            "p_gain": 0.00011096797765432572,
+            "pattern_absolute_gain": 0.003564448014560906,
+            "pattern_gain_bootstrap": {
+              "ci_high": 0.005540336444885367,
+              "ci_low": 0.0016126306075729296,
+              "median": 0.0035414671570614675,
+              "sign_stability": 1.0
+            },
+            "q_gain": 0.00020079919766020845,
+            "set_level_gain": 0.0014038025925652308
+          },
+          "validation:B": null
+        },
+        "genes": [
+          "CCAR1",
+          "CCNB1",
+          "CDC20"
+        ],
+        "mfi_evidence": {
+          "discovery:A": {
+            "mfi": 0.8530169832414619,
+            "mfi_ci_high": 1.2405816957877893,
+            "mfi_ci_low": 0.46833964944941864,
+            "mfi_sign_stability": 1.0
+          },
+          "discovery:B": null,
+          "validation:A": {
+            "discovery_mfi": 0.8530169832414619,
+            "mfi": 0.7712214971228836,
+            "mfi_ci_high": 1.160106060827805,
+            "mfi_ci_low": 0.3539781201754745,
+            "mfi_sign_stability": 1.0,
+            "p_mfi": 0.0002633837670903453,
+            "q_mfi": 0.00045493559770150554
+          },
+          "validation:B": null
+        },
+        "order": 3,
+        "provenance": {
+          "gene_set_id": "GS_93ff6067cfbebed8f11f19f4",
+          "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+          "record_key": "Ra202d229aa24e8025918",
+          "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+          "source_evidence_retained": true
+        },
+        "qualification": {
+          "complete_search": false,
+          "holm_qualified": true,
+          "state_level_FDR_controlled": false,
+          "validation_family_tests": [
+            {
+              "adjusted_p": 0.0038838792179014003,
+              "arm": "holm_025",
+              "candidate_id": "GS_93ff6067cfbebed8f11f19f4",
+              "evaluation_status": "evaluated",
+              "family_gain_rejected": true,
+              "family_id": "A_to_B:order3:gene_set_gain",
+              "family_size": 76,
+              "genes": [
+                "CCAR1",
+                "CCNB1",
+                "CDC20"
+              ],
+              "level_per_direction": 0.025,
+              "method": "holm",
+              "p_for_accounting": 0.00011096797765432572,
+              "p_gain": 0.00011096797765432572,
+              "p_value_unit": "gene_set_not_concrete_state",
+              "source_fold": "A",
+              "tested": true,
+              "validation_fold": "B"
+            }
+          ]
+        },
+        "reference_id": "Ra202d229aa24e8025918",
+        "reference_population": {
+          "control_labels": [
+            "non-targeting"
+          ],
+          "counts_by_fold": {
+            "A": {
+              "frequency": 0.4402245088868101,
+              "n_cells": 5345,
+              "support": 2353
+            },
+            "B": {
+              "frequency": 0.4399551066217733,
+              "n_cells": 5346,
+              "support": 2352
+            }
+          },
+          "n_cells": 10691,
+          "prevalence_scope": "pooled_descriptive",
+          "support": 4705
+        },
+        "reference_prevalence": 0.4400897951548031,
+        "states": [
+          1,
+          1,
+          1
+        ]
+      },
+      "sample_size_context": {
+        "burden_is_not_biological_breadth": true,
+        "flag_scope": "sample_size_stratum; individual sensitivity not estimated",
+        "sample_size_sensitive": true,
+        "support_context": "high_sample_count",
+        "target_candidate_count": 105,
+        "target_cell_count": 420
+      },
+      "sampling_block_id": "HSPA9|M03|depletion",
+      "signed_state_contrast_context": [
+        "REL93a2e86bbc39b693ce49"
+      ],
+      "stable_core_context": {
+        "members": [
+          "R025fdb8bf612b3f81a9d",
+          "R042863b40a5f24fb93ac",
+          "R0851bef9d0cec6c3d9a5",
+          "R0ffe7de6490d9ee80924",
+          "R121d9ade5af1989ab63b",
+          "R125be8147fd30e286dc4",
+          "R26b70bdb0fe7f26c64bb",
+          "R395eb03f9998a6cb6e17",
+          "R3beade0d61ae34776d13",
+          "R48617a1d1d735634a871",
+          "R4979e19ddf0d6fc3ebc1",
+          "R50ecbcae24fa06ebcc08",
+          "R6166fddedf1351ae2e6e",
+          "R62905c8ed50c5bb2f219",
+          "R6708d2005d3cf29f7b37",
+          "R68ee7bf3c0196cfdadb9",
+          "R7d391e1918102b8f844b",
+          "R82b17bf8cdc5aaec03c1",
+          "R93c980b719c460352790",
+          "R9511312fdfd3ecf4630d",
+          "R9815d28e8e5d55109361",
+          "R9dfc008d0fd1081f5c66",
+          "Ra202d229aa24e8025918",
+          "Ra8bf0b1f5f7f7b0e0bb5",
+          "Rbcef8cf5676436d011cc",
+          "Rccf6aeacbb2c01ee2cf3",
+          "Rf583d336d83aa31c1334",
+          "Rfbb4c765855b678bba99"
+        ],
+        "status": "stable_core"
+      }
+    }
+  },
+  "mechanistic_question": null,
+  "hypotheses": [],
+  "evidence_questions": [],
+  "evidence_records": [],
+  "evidence_assessments": [],
+  "evidence_gaps": [],
+  "contradictions": [],
+  "mechanistic_claims": [],
+  "critic_audits": {
+    "hypothesis_audits": [],
+    "evidence_audits": [],
+    "claim_audits": [],
+    "hypothesis_syntheses": [],
+    "routing_decisions": [],
+    "stop_records": [],
+    "revision_requests": [],
+    "investigation_requests": [],
+    "status_changes": [],
+    "progress_snapshots": [],
+    "final_reports": [],
+    "failure_attributions": [],
+    "recommended_experiments": []
+  },
+  "action_state": {
+    "current_phase": "clue_ready",
+    "next_actor": "none",
+    "selected_question_id": null,
+    "stop_reason": null
+  },
+  "investigation_history": [
+    {
+      "event_id": "event_77aa4085169545d4ae17a71e658aa1b3",
+      "sequence": 1,
+      "case_revision": 1,
+      "timestamp": "2026-10-04T15:04:16.911443Z",
+      "actor": "controller",
+      "action": "case.created",
+      "object_type": "case",
+      "object_id": "perturbation_scan_day6_v01_20260927:C8bd915c4ba75e425d16e",
+      "summary": "Created case from observed clue",
+      "metadata": {},
+      "changes": {
+        "after": {
+          "action_state": {
+            "current_phase": "clue_ready",
+            "next_actor": "none",
+            "selected_question_id": null,
+            "stop_reason": null
+          },
+          "clue": {
+            "catalogue_sha256": "23f7840ad7e9b14347b0101e2f8fddbc93f31f524033fb1f64368609cef6bf68",
+            "clue_id": "CLUE_6e799ef2225dbcad9208aa68",
+            "discovery_mode": "reference_guided",
+            "interpretation_boundary": "This is an observed perturbation-associated higher-order expression pattern. It does not by itself establish a causal regulatory mechanism.",
+            "legacy_control": null,
+            "legacy_perturbation": null,
+            "pattern": {
+              "encoding": "1 = detected expression; 0 = undetected expression (not inferred regulatory activity)",
+              "genes": [
+                "CCAR1",
+                "CCNB1",
+                "CDC20"
+              ],
+              "order": 3,
+              "pattern_string": "CCAR1+CCNB1+CDC20+",
+              "states": [
+                1,
+                1,
+                1
+              ]
+            },
+            "perturbation": "HSPA9",
+            "perturbation_shift": {
+              "batch_support": [
+                {
+                  "batch": "1",
+                  "nt_hits": 95,
+                  "nt_n": 234,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 6
+                },
+                {
+                  "batch": "10",
+                  "nt_hits": 107,
+                  "nt_n": 233,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "11",
+                  "nt_hits": 102,
+                  "nt_n": 213,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "12",
+                  "nt_hits": 105,
+                  "nt_n": 200,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "13",
+                  "nt_hits": 110,
+                  "nt_n": 235,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "14",
+                  "nt_hits": 99,
+                  "nt_n": 220,
+                  "perturbation_hits": 0,
+                  "perturbation_n": 2
+                },
+                {
+                  "batch": "15",
+                  "nt_hits": 109,
+                  "nt_n": 229,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "16",
+                  "nt_hits": 126,
+                  "nt_n": 240,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "17",
+                  "nt_hits": 104,
+                  "nt_n": 214,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 18
+                },
+                {
+                  "batch": "18",
+                  "nt_hits": 116,
+                  "nt_n": 229,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "19",
+                  "nt_hits": 119,
+                  "nt_n": 229,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "2",
+                  "nt_hits": 87,
+                  "nt_n": 231,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 13
+                },
+                {
+                  "batch": "20",
+                  "nt_hits": 96,
+                  "nt_n": 192,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "21",
+                  "nt_hits": 50,
+                  "nt_n": 116,
+                  "perturbation_hits": 0,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "22",
+                  "nt_hits": 94,
+                  "nt_n": 201,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "23",
+                  "nt_hits": 111,
+                  "nt_n": 214,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 4
+                },
+                {
+                  "batch": "24",
+                  "nt_hits": 109,
+                  "nt_n": 232,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "25",
+                  "nt_hits": 112,
+                  "nt_n": 281,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "26",
+                  "nt_hits": 75,
+                  "nt_n": 234,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "27",
+                  "nt_hits": 95,
+                  "nt_n": 252,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "28",
+                  "nt_hits": 93,
+                  "nt_n": 238,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "29",
+                  "nt_hits": 101,
+                  "nt_n": 226,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "3",
+                  "nt_hits": 105,
+                  "nt_n": 228,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "30",
+                  "nt_hits": 110,
+                  "nt_n": 248,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "31",
+                  "nt_hits": 102,
+                  "nt_n": 252,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 6
+                },
+                {
+                  "batch": "32",
+                  "nt_hits": 85,
+                  "nt_n": 258,
+                  "perturbation_hits": 0,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "33",
+                  "nt_hits": 96,
+                  "nt_n": 260,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 8
+                },
+                {
+                  "batch": "34",
+                  "nt_hits": 96,
+                  "nt_n": 208,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "35",
+                  "nt_hits": 88,
+                  "nt_n": 216,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 8
+                },
+                {
+                  "batch": "36",
+                  "nt_hits": 90,
+                  "nt_n": 226,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "37",
+                  "nt_hits": 66,
+                  "nt_n": 185,
+                  "perturbation_hits": 0,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "38",
+                  "nt_hits": 100,
+                  "nt_n": 223,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "39",
+                  "nt_hits": 100,
+                  "nt_n": 210,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "4",
+                  "nt_hits": 55,
+                  "nt_n": 120,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 13
+                },
+                {
+                  "batch": "40",
+                  "nt_hits": 110,
+                  "nt_n": 242,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 6
+                },
+                {
+                  "batch": "41",
+                  "nt_hits": 87,
+                  "nt_n": 225,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "42",
+                  "nt_hits": 114,
+                  "nt_n": 257,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "43",
+                  "nt_hits": 96,
+                  "nt_n": 226,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "44",
+                  "nt_hits": 89,
+                  "nt_n": 225,
+                  "perturbation_hits": 0,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "45",
+                  "nt_hits": 121,
+                  "nt_n": 216,
+                  "perturbation_hits": 5,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "46",
+                  "nt_hits": 101,
+                  "nt_n": 253,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "47",
+                  "nt_hits": 64,
+                  "nt_n": 227,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "48",
+                  "nt_hits": 67,
+                  "nt_n": 151,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "5",
+                  "nt_hits": 110,
+                  "nt_n": 203,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 8
+                },
+                {
+                  "batch": "6",
+                  "nt_hits": 116,
+                  "nt_n": 255,
+                  "perturbation_hits": 0,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "7",
+                  "nt_hits": 112,
+                  "nt_n": 229,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "8",
+                  "nt_hits": 113,
+                  "nt_n": 252,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "9",
+                  "nt_hits": 97,
+                  "nt_n": 203,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 9
+                }
+              ],
+              "bootstrap": null,
+              "ci_method": "nominal_pointwise_Hoeffding_not_selection_adjusted_not_simultaneous",
+              "control_count": 4705,
+              "control_count_scope": "pooled_nt_descriptive_not_matched_frequency_numerator",
+              "control_frequency": 0.443466017230271,
+              "control_frequency_definition": "perturbation_batch_weighted_nt_frequency",
+              "delta_frequency": -0.22441839818265197,
+              "family_size": 693594,
+              "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+              "matched_nt_cells_pooled": 10691,
+              "matched_nt_effective_n": 9290.763577853966,
+              "nominal_pointwise_delta_ci_high": -0.15666851125377956,
+              "nominal_pointwise_delta_ci_low": -0.2921682851115244,
+              "nt_selection_adjusted": false,
+              "p_value_shift": 6.091835389568814e-21,
+              "perturb_count": 92,
+              "perturb_frequency": 0.21904761904761905,
+              "perturbation_n": 420,
+              "pooled_nt_n": 10691,
+              "q_value_shift": null,
+              "selected_family_holm_exploratory": 4.216975579062778e-15,
+              "statistical_method": "exact_batch_conditional_plus_selected_family_Holm",
+              "status": "exploratory_perturbation_candidate",
+              "support": null
+            },
+            "reference_evidence": {
+              "discovery": null,
+              "validation": null
+            },
+            "reference_id": "Ra202d229aa24e8025918",
+            "replication_status": "NOT_PERFORMED",
+            "source_artifact": "research://outputs/integration_tests/adapter_smoke/replogle_frozen/landscape/triage_inputs.jsonl",
+            "source_artifact_sha256": "740cd620e5d6b84538b8f45cdf104278eabaafede41238489b1e42063df988ab",
+            "source_payload": {
+              "original_association": {
+                "batch_support": [
+                  {
+                    "batch": "1",
+                    "nt_hits": 95,
+                    "nt_n": 234,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 6
+                  },
+                  {
+                    "batch": "10",
+                    "nt_hits": 107,
+                    "nt_n": 233,
+                    "perturbation_hits": 1,
+                    "perturbation_n": 5
+                  },
+                  {
+                    "batch": "11",
+                    "nt_hits": 102,
+                    "nt_n": 213,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 5
+                  },
+                  {
+                    "batch": "12",
+                    "nt_hits": 105,
+                    "nt_n": 200,
+                    "perturbation_hits": 3,
+                    "perturbation_n": 11
+                  },
+                  {
+                    "batch": "13",
+                    "nt_hits": 110,
+                    "nt_n": 235,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "14",
+                    "nt_hits": 99,
+                    "nt_n": 220,
+                    "perturbation_hits": 0,
+                    "perturbation_n": 2
+                  },
+                  {
+                    "batch": "15",
+                    "nt_hits": 109,
+                    "nt_n": 229,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 11
+                  },
+                  {
+                    "batch": "16",
+                    "nt_hits": 126,
+                    "nt_n": 240,
+                    "perturbation_hits": 3,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "17",
+                    "nt_hits": 104,
+                    "nt_n": 214,
+                    "perturbation_hits": 4,
+                    "perturbation_n": 18
+                  },
+                  {
+                    "batch": "18",
+                    "nt_hits": 116,
+                    "nt_n": 229,
+                    "perturbation_hits": 3,
+                    "perturbation_n": 12
+                  },
+                  {
+                    "batch": "19",
+                    "nt_hits": 119,
+                    "nt_n": 229,
+                    "perturbation_hits": 1,
+                    "perturbation_n": 11
+                  },
+                  {
+                    "batch": "2",
+                    "nt_hits": 87,
+                    "nt_n": 231,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 13
+                  },
+                  {
+                    "batch": "20",
+                    "nt_hits": 96,
+                    "nt_n": 192,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 11
+                  },
+                  {
+                    "batch": "21",
+                    "nt_hits": 50,
+                    "nt_n": 116,
+                    "perturbation_hits": 0,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "22",
+                    "nt_hits": 94,
+                    "nt_n": 201,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 7
+                  },
+                  {
+                    "batch": "23",
+                    "nt_hits": 111,
+                    "nt_n": 214,
+                    "perturbation_hits": 1,
+                    "perturbation_n": 4
+                  },
+                  {
+                    "batch": "24",
+                    "nt_hits": 109,
+                    "nt_n": 232,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 5
+                  },
+                  {
+                    "batch": "25",
+                    "nt_hits": 112,
+                    "nt_n": 281,
+                    "perturbation_hits": 6,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "26",
+                    "nt_hits": 75,
+                    "nt_n": 234,
+                    "perturbation_hits": 1,
+                    "perturbation_n": 11
+                  },
+                  {
+                    "batch": "27",
+                    "nt_hits": 95,
+                    "nt_n": 252,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 12
+                  },
+                  {
+                    "batch": "28",
+                    "nt_hits": 93,
+                    "nt_n": 238,
+                    "perturbation_hits": 1,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "29",
+                    "nt_hits": 101,
+                    "nt_n": 226,
+                    "perturbation_hits": 3,
+                    "perturbation_n": 10
+                  },
+                  {
+                    "batch": "3",
+                    "nt_hits": 105,
+                    "nt_n": 228,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 7
+                  },
+                  {
+                    "batch": "30",
+                    "nt_hits": 110,
+                    "nt_n": 248,
+                    "perturbation_hits": 3,
+                    "perturbation_n": 11
+                  },
+                  {
+                    "batch": "31",
+                    "nt_hits": 102,
+                    "nt_n": 252,
+                    "perturbation_hits": 1,
+                    "perturbation_n": 6
+                  },
+                  {
+                    "batch": "32",
+                    "nt_hits": 85,
+                    "nt_n": 258,
+                    "perturbation_hits": 0,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "33",
+                    "nt_hits": 96,
+                    "nt_n": 260,
+                    "perturbation_hits": 1,
+                    "perturbation_n": 8
+                  },
+                  {
+                    "batch": "34",
+                    "nt_hits": 96,
+                    "nt_n": 208,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "35",
+                    "nt_hits": 88,
+                    "nt_n": 216,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 8
+                  },
+                  {
+                    "batch": "36",
+                    "nt_hits": 90,
+                    "nt_n": 226,
+                    "perturbation_hits": 1,
+                    "perturbation_n": 12
+                  },
+                  {
+                    "batch": "37",
+                    "nt_hits": 66,
+                    "nt_n": 185,
+                    "perturbation_hits": 0,
+                    "perturbation_n": 7
+                  },
+                  {
+                    "batch": "38",
+                    "nt_hits": 100,
+                    "nt_n": 223,
+                    "perturbation_hits": 3,
+                    "perturbation_n": 7
+                  },
+                  {
+                    "batch": "39",
+                    "nt_hits": 100,
+                    "nt_n": 210,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "4",
+                    "nt_hits": 55,
+                    "nt_n": 120,
+                    "perturbation_hits": 4,
+                    "perturbation_n": 13
+                  },
+                  {
+                    "batch": "40",
+                    "nt_hits": 110,
+                    "nt_n": 242,
+                    "perturbation_hits": 3,
+                    "perturbation_n": 6
+                  },
+                  {
+                    "batch": "41",
+                    "nt_hits": 87,
+                    "nt_n": 225,
+                    "perturbation_hits": 3,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "42",
+                    "nt_hits": 114,
+                    "nt_n": 257,
+                    "perturbation_hits": 1,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "43",
+                    "nt_hits": 96,
+                    "nt_n": 226,
+                    "perturbation_hits": 1,
+                    "perturbation_n": 12
+                  },
+                  {
+                    "batch": "44",
+                    "nt_hits": 89,
+                    "nt_n": 225,
+                    "perturbation_hits": 0,
+                    "perturbation_n": 5
+                  },
+                  {
+                    "batch": "45",
+                    "nt_hits": 121,
+                    "nt_n": 216,
+                    "perturbation_hits": 5,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "46",
+                    "nt_hits": 101,
+                    "nt_n": 253,
+                    "perturbation_hits": 1,
+                    "perturbation_n": 10
+                  },
+                  {
+                    "batch": "47",
+                    "nt_hits": 64,
+                    "nt_n": 227,
+                    "perturbation_hits": 1,
+                    "perturbation_n": 5
+                  },
+                  {
+                    "batch": "48",
+                    "nt_hits": 67,
+                    "nt_n": 151,
+                    "perturbation_hits": 1,
+                    "perturbation_n": 5
+                  },
+                  {
+                    "batch": "5",
+                    "nt_hits": 110,
+                    "nt_n": 203,
+                    "perturbation_hits": 3,
+                    "perturbation_n": 8
+                  },
+                  {
+                    "batch": "6",
+                    "nt_hits": 116,
+                    "nt_n": 255,
+                    "perturbation_hits": 0,
+                    "perturbation_n": 7
+                  },
+                  {
+                    "batch": "7",
+                    "nt_hits": 112,
+                    "nt_n": 229,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 11
+                  },
+                  {
+                    "batch": "8",
+                    "nt_hits": 113,
+                    "nt_n": 252,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 10
+                  },
+                  {
+                    "batch": "9",
+                    "nt_hits": 97,
+                    "nt_n": 203,
+                    "perturbation_hits": 3,
+                    "perturbation_n": 9
+                  }
+                ],
+                "biological_replicate_validated": false,
+                "catalogue_digest": "212b5b90e866e42d72ddb2bd77e3f5800125821f09c5d409f4cfc6d1d882f879",
+                "ci_method": "nominal_pointwise_Hoeffding_not_selection_adjusted_not_simultaneous",
+                "clue_id": "C8bd915c4ba75e425d16e",
+                "delta": -0.22441839818265197,
+                "delta_percentage_points": -22.441839818265198,
+                "effect_is_not_change_in_higher_order_interaction_strength": true,
+                "eligible_as_confirmed_clue": false,
+                "eligible_for_explorer_development": true,
+                "external_validation_status": "not_performed",
+                "family_size": 693594,
+                "genes": [
+                  "CCAR1",
+                  "CCNB1",
+                  "CDC20"
+                ],
+                "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+                "matched_nt_frequency": 0.443466017230271,
+                "mechanistic_claim": false,
+                "nominal_pointwise_delta_ci_high": -0.15666851125377956,
+                "nominal_pointwise_delta_ci_low": -0.2921682851115244,
+                "nt_selection_adjusted": false,
+                "order": 3,
+                "p_value": 6.091835389568814e-21,
+                "pattern": "CCAR1+ CCNB1+ CDC20+",
+                "perturbation_frequency": 0.21904761904761905,
+                "perturbation_hits": 92,
+                "perturbation_n": 420,
+                "pooled_nt_frequency": 0.4400897951548031,
+                "pooled_nt_hits": 4705,
+                "pooled_nt_n": 10691,
+                "reference_evidence": {
+                  "bidirectionally_qualified": false,
+                  "candidate_id": "GS_93ff6067cfbebed8f11f19f4",
+                  "discovery_bootstrap_stable": true,
+                  "holm_qualified": true,
+                  "nt_n_cells": 10691,
+                  "nt_support": 4705,
+                  "reference_id": "Ra202d229aa24e8025918",
+                  "successful_directions": [
+                    "A_to_B"
+                  ],
+                  "validation_bootstrap_stable": true
+                },
+                "reference_id": "Ra202d229aa24e8025918",
+                "selected_family_holm_exploratory": 4.216975579062778e-15,
+                "states": [
+                  1,
+                  1,
+                  1
+                ],
+                "statistical_method": "exact_batch_conditional_plus_selected_family_Holm",
+                "status": "exploratory_perturbation_candidate",
+                "support_and_effect_gates_passed": true,
+                "target": "HSPA9"
+              },
+              "selected_case": {
+                "case": {
+                  "association_evidence": {
+                    "ci_method": "nominal_pointwise_Hoeffding_not_selection_adjusted_not_simultaneous",
+                    "effect_is_not_change_in_higher_order_interaction_strength": true,
+                    "family_size": 693594,
+                    "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+                    "nominal_pointwise_delta_ci_high": -0.15666851125377956,
+                    "nominal_pointwise_delta_ci_low": -0.2921682851115244,
+                    "nt_selection_adjusted": false,
+                    "p_value": 6.091835389568814e-21,
+                    "selected_family_holm_exploratory": 4.216975579062778e-15,
+                    "statistical_method": "exact_batch_conditional_plus_selected_family_Holm",
+                    "status": "exploratory_perturbation_candidate"
+                  },
+                  "candidate_id": "C8bd915c4ba75e425d16e",
+                  "case_id": "perturbation_scan_day6_v01_20260927:C8bd915c4ba75e425d16e",
+                  "condition_id": "HSPA9",
+                  "coresponse_context": [],
+                  "dataset_id": "replogle_k562_day6",
+                  "effect_units": "prevalence_difference",
+                  "evidence_level": "EXPLORATORY_ASSOCIATION",
+                  "external_validation_status": "NOT_PERFORMED",
+                  "genes": [
+                    "CCAR1",
+                    "CCNB1",
+                    "CDC20"
+                  ],
+                  "group_context": {
+                    "annotation_status": "NOT_ANNOTATED",
+                    "group_id": "M03",
+                    "legacy_context": {
+                      "cross_module_context": {
+                        "cross_module": true,
+                        "dominant_module": "M01",
+                        "module_specific": false,
+                        "module_specificity": 0.09631312282472962,
+                        "n_strong_modules": 11,
+                        "strong_modules": [
+                          "M01",
+                          "M03",
+                          "M04",
+                          "M05",
+                          "M06",
+                          "M07",
+                          "M09",
+                          "M12",
+                          "M13",
+                          "M18",
+                          "M38"
+                        ]
+                      },
+                      "module_robustness": "stable_across_continuous_choices",
+                      "module_specificity": 0.0532408048098472,
+                      "target_module_activity": {
+                        "method": "median_signed_delta",
+                        "module_id": "M03",
+                        "value_pp": -17.740831455449616
+                      }
+                    },
+                    "stability": {
+                      "mean_co_clustering": 1.0,
+                      "median_co_clustering": 1.0,
+                      "min_co_clustering": 1.0,
+                      "stable_core_size": 28
+                    }
+                  },
+                  "matched_effect": -0.22441839818265197,
+                  "order": 3,
+                  "provenance": {
+                    "association": {
+                      "line": 1361,
+                      "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+                      "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b",
+                      "source_clue_id": "C8bd915c4ba75e425d16e"
+                    },
+                    "matrix_and_cell_sources": {
+                      "adapter": "ReplogleFrozenAdapter",
+                      "aggregated_counts": {
+                        "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/counts/counts.npz",
+                        "sha256": "47a3a71534e2a80d3ceee07d91930058eb52031eb7f0f264ca17b28985b8d52d"
+                      },
+                      "association_source": {
+                        "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+                        "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b"
+                      },
+                      "broad_manifest": {
+                        "path": "research://outputs/broad_screening_v01/audit/run_manifest.json",
+                        "sha256": "ff967ba7b8636a7f04ac99bd4c8bee49a139c39a5fe14b78ea30d4444bc2eacd"
+                      },
+                      "cell_provenance": {
+                        "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/metadata/allowed_cell_metadata.csv.gz",
+                        "sha256": "e3ab27ee53c6c6f6c93b50aadc7c0bb267391626d5a2d5c0b561f5926ee8a550"
+                      },
+                      "frozen_input_output_hashes_verified": 144,
+                      "mode": "read_only_artifact_conversion",
+                      "reference_catalogue": {
+                        "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+                        "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1"
+                      },
+                      "statistics_recomputed": false
+                    },
+                    "reference": {
+                      "gene_set_id": "GS_93ff6067cfbebed8f11f19f4",
+                      "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+                      "record_key": "Ra202d229aa24e8025918",
+                      "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+                      "source_evidence_retained": true
+                    },
+                    "selection_performed": false
+                  },
+                  "reference_evidence": {
+                    "gain": {
+                      "discovery:A": {
+                        "gain_calibration_unstable": false,
+                        "higher_order_gain_status": "evaluated",
+                        "p_gain": 0.0005,
+                        "pattern_absolute_gain": 0.0038241926866475207,
+                        "pattern_gain_bootstrap": {
+                          "ci_high": 0.005834703246931005,
+                          "ci_low": 0.002025026348829673,
+                          "median": 0.0038148737057122906,
+                          "sign_stability": 1.0
+                        },
+                        "q_gain": 0.019230769230769232,
+                        "set_level_gain": 0.0016715039657951977
+                      },
+                      "discovery:B": null,
+                      "validation:A": {
+                        "gain_method": "exact_conditional_complete_lower_order_fiber",
+                        "gain_null_path": "gain/B_validation_from_A/GS_93ff6067cfbebed8f11f19f4_conditional_array_audit.json",
+                        "gain_ok": true,
+                        "gain_path": "gain/B_validation_from_A/GS_93ff6067cfbebed8f11f19f4.json",
+                        "higher_order_gain_status": "evaluated",
+                        "p_gain": 0.00011096797765432572,
+                        "pattern_absolute_gain": 0.003564448014560906,
+                        "pattern_gain_bootstrap": {
+                          "ci_high": 0.005540336444885367,
+                          "ci_low": 0.0016126306075729296,
+                          "median": 0.0035414671570614675,
+                          "sign_stability": 1.0
+                        },
+                        "q_gain": 0.00020079919766020845,
+                        "set_level_gain": 0.0014038025925652308
+                      },
+                      "validation:B": null
+                    },
+                    "mfi": {
+                      "discovery:A": {
+                        "mfi": 0.8530169832414619,
+                        "mfi_ci_high": 1.2405816957877893,
+                        "mfi_ci_low": 0.46833964944941864,
+                        "mfi_sign_stability": 1.0
+                      },
+                      "discovery:B": null,
+                      "validation:A": {
+                        "discovery_mfi": 0.8530169832414619,
+                        "mfi": 0.7712214971228836,
+                        "mfi_ci_high": 1.160106060827805,
+                        "mfi_ci_low": 0.3539781201754745,
+                        "mfi_sign_stability": 1.0,
+                        "p_mfi": 0.0002633837670903453,
+                        "q_mfi": 0.00045493559770150554
+                      },
+                      "validation:B": null
+                    },
+                    "provenance": {
+                      "gene_set_id": "GS_93ff6067cfbebed8f11f19f4",
+                      "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+                      "record_key": "Ra202d229aa24e8025918",
+                      "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+                      "source_evidence_retained": true
+                    },
+                    "qualification": {
+                      "complete_search": false,
+                      "holm_qualified": true,
+                      "state_level_FDR_controlled": false,
+                      "validation_family_tests": [
+                        {
+                          "adjusted_p": 0.0038838792179014003,
+                          "arm": "holm_025",
+                          "candidate_id": "GS_93ff6067cfbebed8f11f19f4",
+                          "evaluation_status": "evaluated",
+                          "family_gain_rejected": true,
+                          "family_id": "A_to_B:order3:gene_set_gain",
+                          "family_size": 76,
+                          "genes": [
+                            "CCAR1",
+                            "CCNB1",
+                            "CDC20"
+                          ],
+                          "level_per_direction": 0.025,
+                          "method": "holm",
+                          "p_for_accounting": 0.00011096797765432572,
+                          "p_gain": 0.00011096797765432572,
+                          "p_value_unit": "gene_set_not_concrete_state",
+                          "source_fold": "A",
+                          "tested": true,
+                          "validation_fold": "B"
+                        }
+                      ]
+                    },
+                    "reference_dataset_id": "replogle_k562_day6",
+                    "reference_id": "Ra202d229aa24e8025918"
+                  },
+                  "reference_id": "Ra202d229aa24e8025918",
+                  "sample_size_context": {
+                    "burden_is_not_biological_breadth": true,
+                    "flag_scope": "sample_size_stratum; individual sensitivity not estimated",
+                    "sample_size_sensitive": true,
+                    "support_context": "high_sample_count",
+                    "target_candidate_count": 105,
+                    "target_cell_count": 420
+                  },
+                  "sampling_block_id": "HSPA9|M03|depletion",
+                  "schema_version": "1.0",
+                  "signed_state_contrast_context": [
+                    "REL93a2e86bbc39b693ce49"
+                  ],
+                  "stable_core_context": {
+                    "members": [
+                      "R025fdb8bf612b3f81a9d",
+                      "R042863b40a5f24fb93ac",
+                      "R0851bef9d0cec6c3d9a5",
+                      "R0ffe7de6490d9ee80924",
+                      "R121d9ade5af1989ab63b",
+                      "R125be8147fd30e286dc4",
+                      "R26b70bdb0fe7f26c64bb",
+                      "R395eb03f9998a6cb6e17",
+                      "R3beade0d61ae34776d13",
+                      "R48617a1d1d735634a871",
+                      "R4979e19ddf0d6fc3ebc1",
+                      "R50ecbcae24fa06ebcc08",
+                      "R6166fddedf1351ae2e6e",
+                      "R62905c8ed50c5bb2f219",
+                      "R6708d2005d3cf29f7b37",
+                      "R68ee7bf3c0196cfdadb9",
+                      "R7d391e1918102b8f844b",
+                      "R82b17bf8cdc5aaec03c1",
+                      "R93c980b719c460352790",
+                      "R9511312fdfd3ecf4630d",
+                      "R9815d28e8e5d55109361",
+                      "R9dfc008d0fd1081f5c66",
+                      "Ra202d229aa24e8025918",
+                      "Ra8bf0b1f5f7f7b0e0bb5",
+                      "Rbcef8cf5676436d011cc",
+                      "Rccf6aeacbb2c01ee2cf3",
+                      "Rf583d336d83aa31c1334",
+                      "Rfbb4c765855b678bba99"
+                    ],
+                    "status": "stable_core"
+                  },
+                  "states": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "strata": [
+                    "stable_module_core",
+                    "cross_module",
+                    "signed_state_contrast",
+                    "depletion",
+                    "high_effect",
+                    "strong_depletion",
+                    "high_target_support",
+                    "sample_size_sensitive"
+                  ],
+                  "support": {
+                    "condition": {
+                      "batch_support": [
+                        {
+                          "batch": "1",
+                          "nt_hits": 95,
+                          "nt_n": 234,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 6
+                        },
+                        {
+                          "batch": "10",
+                          "nt_hits": 107,
+                          "nt_n": 233,
+                          "perturbation_hits": 1,
+                          "perturbation_n": 5
+                        },
+                        {
+                          "batch": "11",
+                          "nt_hits": 102,
+                          "nt_n": 213,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 5
+                        },
+                        {
+                          "batch": "12",
+                          "nt_hits": 105,
+                          "nt_n": 200,
+                          "perturbation_hits": 3,
+                          "perturbation_n": 11
+                        },
+                        {
+                          "batch": "13",
+                          "nt_hits": 110,
+                          "nt_n": 235,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "14",
+                          "nt_hits": 99,
+                          "nt_n": 220,
+                          "perturbation_hits": 0,
+                          "perturbation_n": 2
+                        },
+                        {
+                          "batch": "15",
+                          "nt_hits": 109,
+                          "nt_n": 229,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 11
+                        },
+                        {
+                          "batch": "16",
+                          "nt_hits": 126,
+                          "nt_n": 240,
+                          "perturbation_hits": 3,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "17",
+                          "nt_hits": 104,
+                          "nt_n": 214,
+                          "perturbation_hits": 4,
+                          "perturbation_n": 18
+                        },
+                        {
+                          "batch": "18",
+                          "nt_hits": 116,
+                          "nt_n": 229,
+                          "perturbation_hits": 3,
+                          "perturbation_n": 12
+                        },
+                        {
+                          "batch": "19",
+                          "nt_hits": 119,
+                          "nt_n": 229,
+                          "perturbation_hits": 1,
+                          "perturbation_n": 11
+                        },
+                        {
+                          "batch": "2",
+                          "nt_hits": 87,
+                          "nt_n": 231,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 13
+                        },
+                        {
+                          "batch": "20",
+                          "nt_hits": 96,
+                          "nt_n": 192,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 11
+                        },
+                        {
+                          "batch": "21",
+                          "nt_hits": 50,
+                          "nt_n": 116,
+                          "perturbation_hits": 0,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "22",
+                          "nt_hits": 94,
+                          "nt_n": 201,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 7
+                        },
+                        {
+                          "batch": "23",
+                          "nt_hits": 111,
+                          "nt_n": 214,
+                          "perturbation_hits": 1,
+                          "perturbation_n": 4
+                        },
+                        {
+                          "batch": "24",
+                          "nt_hits": 109,
+                          "nt_n": 232,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 5
+                        },
+                        {
+                          "batch": "25",
+                          "nt_hits": 112,
+                          "nt_n": 281,
+                          "perturbation_hits": 6,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "26",
+                          "nt_hits": 75,
+                          "nt_n": 234,
+                          "perturbation_hits": 1,
+                          "perturbation_n": 11
+                        },
+                        {
+                          "batch": "27",
+                          "nt_hits": 95,
+                          "nt_n": 252,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 12
+                        },
+                        {
+                          "batch": "28",
+                          "nt_hits": 93,
+                          "nt_n": 238,
+                          "perturbation_hits": 1,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "29",
+                          "nt_hits": 101,
+                          "nt_n": 226,
+                          "perturbation_hits": 3,
+                          "perturbation_n": 10
+                        },
+                        {
+                          "batch": "3",
+                          "nt_hits": 105,
+                          "nt_n": 228,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 7
+                        },
+                        {
+                          "batch": "30",
+                          "nt_hits": 110,
+                          "nt_n": 248,
+                          "perturbation_hits": 3,
+                          "perturbation_n": 11
+                        },
+                        {
+                          "batch": "31",
+                          "nt_hits": 102,
+                          "nt_n": 252,
+                          "perturbation_hits": 1,
+                          "perturbation_n": 6
+                        },
+                        {
+                          "batch": "32",
+                          "nt_hits": 85,
+                          "nt_n": 258,
+                          "perturbation_hits": 0,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "33",
+                          "nt_hits": 96,
+                          "nt_n": 260,
+                          "perturbation_hits": 1,
+                          "perturbation_n": 8
+                        },
+                        {
+                          "batch": "34",
+                          "nt_hits": 96,
+                          "nt_n": 208,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "35",
+                          "nt_hits": 88,
+                          "nt_n": 216,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 8
+                        },
+                        {
+                          "batch": "36",
+                          "nt_hits": 90,
+                          "nt_n": 226,
+                          "perturbation_hits": 1,
+                          "perturbation_n": 12
+                        },
+                        {
+                          "batch": "37",
+                          "nt_hits": 66,
+                          "nt_n": 185,
+                          "perturbation_hits": 0,
+                          "perturbation_n": 7
+                        },
+                        {
+                          "batch": "38",
+                          "nt_hits": 100,
+                          "nt_n": 223,
+                          "perturbation_hits": 3,
+                          "perturbation_n": 7
+                        },
+                        {
+                          "batch": "39",
+                          "nt_hits": 100,
+                          "nt_n": 210,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "4",
+                          "nt_hits": 55,
+                          "nt_n": 120,
+                          "perturbation_hits": 4,
+                          "perturbation_n": 13
+                        },
+                        {
+                          "batch": "40",
+                          "nt_hits": 110,
+                          "nt_n": 242,
+                          "perturbation_hits": 3,
+                          "perturbation_n": 6
+                        },
+                        {
+                          "batch": "41",
+                          "nt_hits": 87,
+                          "nt_n": 225,
+                          "perturbation_hits": 3,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "42",
+                          "nt_hits": 114,
+                          "nt_n": 257,
+                          "perturbation_hits": 1,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "43",
+                          "nt_hits": 96,
+                          "nt_n": 226,
+                          "perturbation_hits": 1,
+                          "perturbation_n": 12
+                        },
+                        {
+                          "batch": "44",
+                          "nt_hits": 89,
+                          "nt_n": 225,
+                          "perturbation_hits": 0,
+                          "perturbation_n": 5
+                        },
+                        {
+                          "batch": "45",
+                          "nt_hits": 121,
+                          "nt_n": 216,
+                          "perturbation_hits": 5,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "46",
+                          "nt_hits": 101,
+                          "nt_n": 253,
+                          "perturbation_hits": 1,
+                          "perturbation_n": 10
+                        },
+                        {
+                          "batch": "47",
+                          "nt_hits": 64,
+                          "nt_n": 227,
+                          "perturbation_hits": 1,
+                          "perturbation_n": 5
+                        },
+                        {
+                          "batch": "48",
+                          "nt_hits": 67,
+                          "nt_n": 151,
+                          "perturbation_hits": 1,
+                          "perturbation_n": 5
+                        },
+                        {
+                          "batch": "5",
+                          "nt_hits": 110,
+                          "nt_n": 203,
+                          "perturbation_hits": 3,
+                          "perturbation_n": 8
+                        },
+                        {
+                          "batch": "6",
+                          "nt_hits": 116,
+                          "nt_n": 255,
+                          "perturbation_hits": 0,
+                          "perturbation_n": 7
+                        },
+                        {
+                          "batch": "7",
+                          "nt_hits": 112,
+                          "nt_n": 229,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 11
+                        },
+                        {
+                          "batch": "8",
+                          "nt_hits": 113,
+                          "nt_n": 252,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 10
+                        },
+                        {
+                          "batch": "9",
+                          "nt_hits": 97,
+                          "nt_n": 203,
+                          "perturbation_hits": 3,
+                          "perturbation_n": 9
+                        }
+                      ],
+                      "perturbation_frequency": 0.21904761904761905,
+                      "perturbation_hits": 92,
+                      "perturbation_n": 420
+                    },
+                    "control": {
+                      "matched_nt_frequency": 0.443466017230271,
+                      "pooled_nt_n": 10691
+                    }
+                  }
+                },
+                "selected_at": "2026-10-04T15:04:16.291746+00:00",
+                "selection_method": "human",
+                "selection_provenance": {
+                  "module": "M03",
+                  "slot": "M03_03",
+                  "source_clue_id": "C8bd915c4ba75e425d16e",
+                  "source_line": 1361,
+                  "triage_path": "research://outputs/integration_tests/adapter_smoke/replogle_frozen/landscape/triage_inputs.jsonl",
+                  "triage_sha256": "740cd620e5d6b84538b8f45cdf104278eabaafede41238489b1e42063df988ab",
+                  "user_authorization": "User final fixed ten additional cases; M03_03 HSPA9 added last."
+                },
+                "selection_reason": "M03_03: user-fixed additional exploratory case; no literature-based ranking.",
+                "selector": "module_additional10_luna_20261004"
+              }
+            },
+            "source_run_id": "replogle_frozen",
+            "source_schema_version": "1.0",
+            "upstream_context": {
+              "condition_specific_relations": [
+                {
+                  "direction_concordance": 0.1455847255369928,
+                  "evaluable_condition_count": 419,
+                  "gene_jaccard": 1.0,
+                  "pearson_r": -0.7144143603490767,
+                  "provenance": {
+                    "source": "accepted_pair_profile_kernel"
+                  },
+                  "reference_a": "Ra202d229aa24e8025918",
+                  "reference_b": "Rcfaeb5f9c898878062dc",
+                  "relation_id": "REL93a2e86bbc39b693ce49",
+                  "relation_type": "SIGNED_STATE_CONTRAST",
+                  "scope": "descriptive_condition_profile_association; not_regulation",
+                  "shared_candidate_conditions": [
+                    "ATP6V1B2",
+                    "CCNB1",
+                    "DHX15",
+                    "DNAJC19",
+                    "EIF2B2",
+                    "EIF2B4",
+                    "EIF2B5",
+                    "EIF2S1",
+                    "HARS",
+                    "HSPA5",
+                    "HSPA9",
+                    "INTS2",
+                    "INTS8",
+                    "MED1",
+                    "MED12",
+                    "MED19",
+                    "MED30",
+                    "MED9",
+                    "NACA",
+                    "PHB",
+                    "PHB2",
+                    "PMPCB",
+                    "QARS",
+                    "RARS",
+                    "SFPQ",
+                    "SUPT6H",
+                    "TIMM23B",
+                    "VARS",
+                    "XPO1"
+                  ],
+                  "shared_genes": [
+                    "CCAR1",
+                    "CCNB1",
+                    "CDC20"
+                  ],
+                  "spearman_rho": -0.6267280264014343
+                }
+              ],
+              "coresponse_context": [],
+              "dataset_evidence_status": "DAY6_EXPLORATORY",
+              "day8_status": "NOT_PERFORMED",
+              "evidence_level": "EXPLORATORY_ASSOCIATION",
+              "external_validation_status": "NOT_PERFORMED",
+              "group_context": {
+                "annotation_status": "NOT_ANNOTATED",
+                "group_id": "M03",
+                "legacy_context": {
+                  "cross_module_context": {
+                    "cross_module": true,
+                    "dominant_module": "M01",
+                    "module_specific": false,
+                    "module_specificity": 0.09631312282472962,
+                    "n_strong_modules": 11,
+                    "strong_modules": [
+                      "M01",
+                      "M03",
+                      "M04",
+                      "M05",
+                      "M06",
+                      "M07",
+                      "M09",
+                      "M12",
+                      "M13",
+                      "M18",
+                      "M38"
+                    ]
+                  },
+                  "module_robustness": "stable_across_continuous_choices",
+                  "module_specificity": 0.0532408048098472,
+                  "target_module_activity": {
+                    "method": "median_signed_delta",
+                    "module_id": "M03",
+                    "value_pp": -17.740831455449616
+                  }
+                },
+                "stability": {
+                  "mean_co_clustering": 1.0,
+                  "median_co_clustering": 1.0,
+                  "min_co_clustering": 1.0,
+                  "stable_core_size": 28
+                }
+              },
+              "group_representative_reference_id": "R50ecbcae24fa06ebcc08",
+              "provenance": {
+                "association": {
+                  "line": 1361,
+                  "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+                  "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b",
+                  "source_clue_id": "C8bd915c4ba75e425d16e"
+                },
+                "matrix_and_cell_sources": {
+                  "adapter": "ReplogleFrozenAdapter",
+                  "aggregated_counts": {
+                    "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/counts/counts.npz",
+                    "sha256": "47a3a71534e2a80d3ceee07d91930058eb52031eb7f0f264ca17b28985b8d52d"
+                  },
+                  "association_source": {
+                    "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+                    "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b"
+                  },
+                  "broad_manifest": {
+                    "path": "research://outputs/broad_screening_v01/audit/run_manifest.json",
+                    "sha256": "ff967ba7b8636a7f04ac99bd4c8bee49a139c39a5fe14b78ea30d4444bc2eacd"
+                  },
+                  "cell_provenance": {
+                    "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/metadata/allowed_cell_metadata.csv.gz",
+                    "sha256": "e3ab27ee53c6c6f6c93b50aadc7c0bb267391626d5a2d5c0b561f5926ee8a550"
+                  },
+                  "frozen_input_output_hashes_verified": 144,
+                  "mode": "read_only_artifact_conversion",
+                  "reference_catalogue": {
+                    "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+                    "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1"
+                  },
+                  "statistics_recomputed": false
+                },
+                "reference": {
+                  "gene_set_id": "GS_93ff6067cfbebed8f11f19f4",
+                  "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+                  "record_key": "Ra202d229aa24e8025918",
+                  "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+                  "source_evidence_retained": true
+                },
+                "selection_performed": false
+              },
+              "reference_evidence": {
+                "bootstrap_stability": {
+                  "details": {
+                    "discovery:A": {
+                      "bootstrap_path": "bootstrap/A_discovery/GS_93ff6067cfbebed8f11f19f4_array_audit.json",
+                      "bootstrap_status": "complete",
+                      "mfi_sign_stability": 1.0,
+                      "pattern_gain_bootstrap": {
+                        "ci_high": 0.005834703246931005,
+                        "ci_low": 0.002025026348829673,
+                        "median": 0.0038148737057122906,
+                        "sign_stability": 1.0
+                      }
+                    },
+                    "discovery:B": null,
+                    "validation:A": {
+                      "bootstrap_ok": true,
+                      "bootstrap_path": "bootstrap/B_validation_from_A/GS_93ff6067cfbebed8f11f19f4_array_audit.json",
+                      "bootstrap_status": "complete",
+                      "mfi_sign_stability": 1.0,
+                      "pattern_gain_bootstrap": {
+                        "ci_high": 0.005540336444885367,
+                        "ci_low": 0.0016126306075729296,
+                        "median": 0.0035414671570614675,
+                        "sign_stability": 1.0
+                      }
+                    },
+                    "validation:B": null
+                  },
+                  "discovery": true,
+                  "validation": true
+                },
+                "crossfold_evidence": {
+                  "bidirectionally_qualified": false,
+                  "successful_directions": [
+                    "A_to_B"
+                  ]
+                },
+                "dataset_id": "replogle_k562_day6",
+                "estimability": {
+                  "discovery:A": {
+                    "estimability_status": "good",
+                    "min_state_count": 63
+                  },
+                  "discovery:B": null,
+                  "validation:A": {
+                    "estimability_status": "good",
+                    "min_state_count": 65
+                  },
+                  "validation:B": null
+                },
+                "evidence_level": "REFERENCE_PATTERN",
+                "gain_evidence": {
+                  "discovery:A": {
+                    "gain_calibration_unstable": false,
+                    "higher_order_gain_status": "evaluated",
+                    "p_gain": 0.0005,
+                    "pattern_absolute_gain": 0.0038241926866475207,
+                    "pattern_gain_bootstrap": {
+                      "ci_high": 0.005834703246931005,
+                      "ci_low": 0.002025026348829673,
+                      "median": 0.0038148737057122906,
+                      "sign_stability": 1.0
+                    },
+                    "q_gain": 0.019230769230769232,
+                    "set_level_gain": 0.0016715039657951977
+                  },
+                  "discovery:B": null,
+                  "validation:A": {
+                    "gain_method": "exact_conditional_complete_lower_order_fiber",
+                    "gain_null_path": "gain/B_validation_from_A/GS_93ff6067cfbebed8f11f19f4_conditional_array_audit.json",
+                    "gain_ok": true,
+                    "gain_path": "gain/B_validation_from_A/GS_93ff6067cfbebed8f11f19f4.json",
+                    "higher_order_gain_status": "evaluated",
+                    "p_gain": 0.00011096797765432572,
+                    "pattern_absolute_gain": 0.003564448014560906,
+                    "pattern_gain_bootstrap": {
+                      "ci_high": 0.005540336444885367,
+                      "ci_low": 0.0016126306075729296,
+                      "median": 0.0035414671570614675,
+                      "sign_stability": 1.0
+                    },
+                    "q_gain": 0.00020079919766020845,
+                    "set_level_gain": 0.0014038025925652308
+                  },
+                  "validation:B": null
+                },
+                "genes": [
+                  "CCAR1",
+                  "CCNB1",
+                  "CDC20"
+                ],
+                "mfi_evidence": {
+                  "discovery:A": {
+                    "mfi": 0.8530169832414619,
+                    "mfi_ci_high": 1.2405816957877893,
+                    "mfi_ci_low": 0.46833964944941864,
+                    "mfi_sign_stability": 1.0
+                  },
+                  "discovery:B": null,
+                  "validation:A": {
+                    "discovery_mfi": 0.8530169832414619,
+                    "mfi": 0.7712214971228836,
+                    "mfi_ci_high": 1.160106060827805,
+                    "mfi_ci_low": 0.3539781201754745,
+                    "mfi_sign_stability": 1.0,
+                    "p_mfi": 0.0002633837670903453,
+                    "q_mfi": 0.00045493559770150554
+                  },
+                  "validation:B": null
+                },
+                "order": 3,
+                "provenance": {
+                  "gene_set_id": "GS_93ff6067cfbebed8f11f19f4",
+                  "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+                  "record_key": "Ra202d229aa24e8025918",
+                  "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+                  "source_evidence_retained": true
+                },
+                "qualification": {
+                  "complete_search": false,
+                  "holm_qualified": true,
+                  "state_level_FDR_controlled": false,
+                  "validation_family_tests": [
+                    {
+                      "adjusted_p": 0.0038838792179014003,
+                      "arm": "holm_025",
+                      "candidate_id": "GS_93ff6067cfbebed8f11f19f4",
+                      "evaluation_status": "evaluated",
+                      "family_gain_rejected": true,
+                      "family_id": "A_to_B:order3:gene_set_gain",
+                      "family_size": 76,
+                      "genes": [
+                        "CCAR1",
+                        "CCNB1",
+                        "CDC20"
+                      ],
+                      "level_per_direction": 0.025,
+                      "method": "holm",
+                      "p_for_accounting": 0.00011096797765432572,
+                      "p_gain": 0.00011096797765432572,
+                      "p_value_unit": "gene_set_not_concrete_state",
+                      "source_fold": "A",
+                      "tested": true,
+                      "validation_fold": "B"
+                    }
+                  ]
+                },
+                "reference_id": "Ra202d229aa24e8025918",
+                "reference_population": {
+                  "control_labels": [
+                    "non-targeting"
+                  ],
+                  "counts_by_fold": {
+                    "A": {
+                      "frequency": 0.4402245088868101,
+                      "n_cells": 5345,
+                      "support": 2353
+                    },
+                    "B": {
+                      "frequency": 0.4399551066217733,
+                      "n_cells": 5346,
+                      "support": 2352
+                    }
+                  },
+                  "n_cells": 10691,
+                  "prevalence_scope": "pooled_descriptive",
+                  "support": 4705
+                },
+                "reference_prevalence": 0.4400897951548031,
+                "states": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "sample_size_context": {
+                "burden_is_not_biological_breadth": true,
+                "flag_scope": "sample_size_stratum; individual sensitivity not estimated",
+                "sample_size_sensitive": true,
+                "support_context": "high_sample_count",
+                "target_candidate_count": 105,
+                "target_cell_count": 420
+              },
+              "sampling_block_id": "HSPA9|M03|depletion",
+              "signed_state_contrast_context": [
+                "REL93a2e86bbc39b693ce49"
+              ],
+              "stable_core_context": {
+                "members": [
+                  "R025fdb8bf612b3f81a9d",
+                  "R042863b40a5f24fb93ac",
+                  "R0851bef9d0cec6c3d9a5",
+                  "R0ffe7de6490d9ee80924",
+                  "R121d9ade5af1989ab63b",
+                  "R125be8147fd30e286dc4",
+                  "R26b70bdb0fe7f26c64bb",
+                  "R395eb03f9998a6cb6e17",
+                  "R3beade0d61ae34776d13",
+                  "R48617a1d1d735634a871",
+                  "R4979e19ddf0d6fc3ebc1",
+                  "R50ecbcae24fa06ebcc08",
+                  "R6166fddedf1351ae2e6e",
+                  "R62905c8ed50c5bb2f219",
+                  "R6708d2005d3cf29f7b37",
+                  "R68ee7bf3c0196cfdadb9",
+                  "R7d391e1918102b8f844b",
+                  "R82b17bf8cdc5aaec03c1",
+                  "R93c980b719c460352790",
+                  "R9511312fdfd3ecf4630d",
+                  "R9815d28e8e5d55109361",
+                  "R9dfc008d0fd1081f5c66",
+                  "Ra202d229aa24e8025918",
+                  "Ra8bf0b1f5f7f7b0e0bb5",
+                  "Rbcef8cf5676436d011cc",
+                  "Rccf6aeacbb2c01ee2cf3",
+                  "Rf583d336d83aa31c1334",
+                  "Rfbb4c765855b678bba99"
+                ],
+                "status": "stable_core"
+              }
+            }
+          },
+          "contradictions": [],
+          "critic_audits": {
+            "claim_audits": [],
+            "evidence_audits": [],
+            "failure_attributions": [],
+            "final_reports": [],
+            "hypothesis_audits": [],
+            "hypothesis_syntheses": [],
+            "investigation_requests": [],
+            "progress_snapshots": [],
+            "recommended_experiments": [],
+            "revision_requests": [],
+            "routing_decisions": [],
+            "status_changes": [],
+            "stop_records": []
+          },
+          "evidence_assessments": [],
+          "evidence_gaps": [],
+          "evidence_questions": [],
+          "evidence_records": [],
+          "hypotheses": [],
+          "mechanistic_claims": [],
+          "mechanistic_question": null,
+          "metadata": {
+            "case_id": "perturbation_scan_day6_v01_20260927:C8bd915c4ba75e425d16e",
+            "case_revision": 1,
+            "cell_context": "K562",
+            "created_at": "2026-10-04T15:04:16.910855Z",
+            "perturbation": "HSPA9",
+            "project": "JURE",
+            "schema_version": "0.1.1",
+            "source_dataset": "replogle_k562_day6",
+            "updated_at": "2026-10-04T15:04:16.910863Z"
+          }
+        },
+        "before": {}
+      }
+    }
+  ]
+}

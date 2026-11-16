@@ -1,0 +1,20 @@
+{
+  "protocol_id": "explorer_contract_benchmark_v1",
+  "count": 20,
+  "direction_counts": {"enrichment": 10, "depletion": 10},
+  "selection": "SHA256(protocol_id + ':' + TriageInput.case_id) ascending within direction; unique perturbation conditions across both strata; exclude all four pilot conditions; no effect ranking",
+  "source_run": "outputs/integration_tests/adapter_smoke/replogle_frozen",
+  "capability_snapshot": "outputs/agent_pilot_v1_20260928/run_017_glm53_v301_ab/A/registry_snapshot.json",
+  "arms": ["legacy_identifiers", "deterministic_adapter"],
+  "model_config": "configs/agent_runtime_glm53_v19.json",
+  "max_calls_per_input_per_arm": 1,
+  "retries": 0,
+  "provider_retries": 0,
+  "parallel_workers": 2,
+  "explorer": {"min_hypotheses": 3, "max_hypotheses": 4, "max_retries": 0, "max_context_chars": 750000, "max_response_chars": 60000, "protocol_v3": true, "round_budget_basis": "completed"},
+  "primary_metric": "Schema plus reference-validation pass / all fixed input-arm attempts, including provider failures; report full scientific-guard submission rate separately",
+  "adapter_acceptance_threshold": 0.95,
+  "scientific_retention": "Round-trip content projection equality for every successfully compiled adapter proposal; log exact supplied-symbol case normalization separately; never compare independently generated hypotheses as identical",
+  "forbidden": ["evidence tool calls", "Investigator", "Critic", "pilot A/B/C/D execution", "sample replacement", "post-result protocol editing", "automatic retry", "automatic full-case launch"],
+  "interpretation_limit": "Paired engineering interface comparison with different output contracts, not an isolated causal ablation of IDs, scientific innovation, or biological accuracy benchmark; 20 inputs give a descriptive estimate, not proof of population reliability."
+}

@@ -1,0 +1,77 @@
+{
+  "protocol_id": "jure_admission_v1_case_a_glm47_technical_recovery",
+  "case_order": [
+    "A"
+  ],
+  "model_config": "configs/agent_runtime_glm47_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 1,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 18,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 2
+  },
+  "critic_rechecks_per_round": 2,
+  "schema_retries": 0,
+  "failed_stage_retries": 1,
+  "max_transitions": 12,
+  "provider_max_calls_per_case": 80,
+  "registry_budgets": {
+    "total": 18,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "policy": "Case A only. Continue the engineering-failure checkpoint with its 8 cumulative calls and unchanged clue/history; use the repaired initial content adapter and three-layer admission. Declare at most two new initial-interface attempts, no transport schema retries or stage retries. Preserve total 80-call, 18-tool, 12-transition and existing scientific limits. GLM-4.7-Flash replaces GLM-5.3 by user preference; no costly fallback. Scientific reasoning, evidence choices and C1/C2 judgments are generated only by JURE Agents. Stop on bounded failure. B/C/D remain paused. This is engineering recovery with a model change, not an isolated scientific ablation.",
+  "provider_retry_delays_seconds": [],
+  "protocol_v3": true,
+  "case_execution_policy": "admission_v1_technical_recovery",
+  "acceptance_criterion": {
+    "primary": "At least one A/B case commits nonempty claim-level evidence audits after passing C1. A winning mechanism is not required.",
+    "secondary": [
+      "capability IDs on all new evidence questions",
+      "Critic acceptance records for every submitted revision",
+      "Investigator predeclared comparison outcomes and advisory information updates",
+      "distinct terminal reason codes",
+      "all evidence sources REAL and initial facts unchanged"
+    ],
+    "failure_policy": "Stop at frozen limits. No budget escalation, C1 weakening, case substitution or selective omission."
+  },
+  "technical_continuation": "preserve_all_calls_and_committed_v3_state",
+  "resume_sources": {
+    "A": {
+      "directory": "outputs/agent_pilot_v1_20260928/run_017_glm53_v301_ab/A",
+      "case_sha256": "4be96af7bc0dffcbbfeb5bae8221a914605d60a88481c3569387e837b98cae0e"
+    }
+  },
+  "per_case_retry_caps": {
+    "A": {
+      "explorer_max_retries": 1,
+      "failed_stage_retries": 0
+    }
+  },
+  "technical_recovery": {
+    "inherited_model_calls": 8,
+    "new_interface_generation_attempts": 2,
+    "reason": "User authorized real Case A verification after admission v1 repair and requested a cheaper GLM model. Old initial-stage attempts were exhausted. Two new interface attempts are declared explicitly; cumulative model/tool/scientific budgets are not reset."
+  }
+}

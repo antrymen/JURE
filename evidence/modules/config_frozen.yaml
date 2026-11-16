@@ -1,0 +1,74 @@
+created_utc: '2026-09-27T16:42:54.904011+00:00'
+config:
+  version: broad_screening_v01
+  seed: 20260927
+  bootstrap_repetitions: 50
+  bootstrap_enabled: true
+  stable_core_enabled: true
+  clustering_cut: 0.3
+  sensitivity_cuts:
+  - 0.2
+  - 0.4
+  - 0.5
+  stable_core_pair_probability: 0.8
+  stable_core_min_size: 2
+  high_effect_pp: 20.0
+  high_target_support_cells: 300
+  sample_size_context_cells: 150
+  strong_module_activity_pp: 10.0
+  module_specificity_min: 0.5
+  context_pearson_min: 0.8
+  context_spearman_min: 0.7
+  context_shared_candidates_min: 5
+  contrast_pearson_max: -0.5
+  robustness_jaccard_min: 0.5
+  robustness_centroid_min: 0.8
+  robustness_core_recovery_min: 0.7
+  top_pairs: 50
+  main_cards: 4
+  dpi: 300
+units: effect matrices and module activity in percentage points; candidate delta retains
+  original fraction
+primary_cohort: targets with at least one frozen exploratory candidate
+primary_representation: continuous_signed_delta
+primary_similarity: Pearson
+target_similarity: cosine
+linkage: average
+module_activity: median_signed_delta
+representative_rule: 'correlation medoid; ties: pair stability, candidate coverage,
+  median absolute effect, reference ID'
+stable_core_rule: largest complete-linkage block at fixed pairwise coassignment threshold;
+  minimum size two
+gene_only_collapse: target-wise OR of candidate masks within the exact same gene triplet
+specificity_definition: absolute median activity / sum absolute median activities
+  over groups with >=3 patterns and >=2 triplets
+strong_group_definition: abs(median delta) >= configured pp threshold in eligible
+  groups
+module_specific_definition: exactly one strong eligible group and its specificity
+  >= configured threshold
+cross_module_definition: at least two strong eligible groups
+sample_size_sensitive_definition: near-support-floor or high-support sample-size stratum;
+  individual sensitivity not estimated
+redundancy_definition: same target, response group and effect direction; descriptive
+  sampling block only
+models_called: 0
+external_retrieval_calls: 0
+day8_accessed: false
+biological_annotation_performed: false
+source_code_sha256:
+  broad_screening/run.py: af525462debda67d87250489c7212ab9b1ac1422b33281f7a2e8e60813e7cbd8
+  broad_screening/config.py: 02a4fb4f638d0b852ad5f797a6fc0eb5c9259be7a6c633ccf0d2a9229b646f82
+  broad_screening/analysis.py: cce94e0110fef9c60d1fb4ba0069e343782b65bc107faaa2188e4bd400f39dc6
+  broad_screening/io.py: 4c97051cd0cf02c9087a3cdd56d4b1732f4b66250308a1e709625bea8db372e1
+  broad_screening/__init__.py: 09b57deacb2b67ad43dc7d1c757182578ab9f9b2e5edf6b3b7d265f67ff0bbb2
+  broad_screening/coverage.py: bf8498dc7c6cd383c598d81e2ccfa9c4529bc6bf36cda3a4ae38d4e7ee3203f7
+  broad_screening/sensitivity.py: 50e8171b315c90812aa9c67984bd1fc057b99a8ff8ddd9ca7f5bb75fcafebf58
+  broad_screening/triage.py: 7bd4e356bb1204736fa374855def9b76e5c705ae92f5f84694818229ea4dd6a4
+  broad_screening/verify.py: ccaaed38c9cd44acb59edfeb8a93c8025ec6356de2277180125fcb03d74f5599
+  broad_screening/report.py: 68d319e070bdb737086f2016bd9445559a22bc8e92c7b9928de67f160878120c
+  landscape_analysis/run.py: cc0573490752cde9e080c2f846bc027ebc1b1ce53a67a9caf26ef0495f022d2b
+  landscape_analysis/publication_figures.py: cade10197669dedd0887404d26f6b2a798cd1f8000a019695d79418d1e917787
+  landscape_analysis/__init__.py: 70f1ebae0116b0b4997513ba99b588a2df1af5e13330886ab30cd0306600addf
+  landscape_analysis/core.py: 457dcfe37fbbb3cec279d61c41b778d417f70c873702c4c2c4db01fcb8b18301
+  landscape_analysis/plots.py: c342ef75205b7f361d35ba0e41654abb97af69e072f9a9804cf2a31ea7c099e6
+  landscape_analysis/report.py: 2d8d9b88fcb554ce2549e4c4b919bb4d916265283b1c579fd38c43ce6cda4d8b

@@ -1,0 +1,1247 @@
+==================================================
+四十、Existing Landscape Findings 必须纳入正式功能
+==================================================
+
+当前已经完成过一次 Broad Screening landscape analysis，
+得到了一批有价值的 empirical findings。
+
+这些结果不是 ground truth，
+也不能硬编码进代码。
+
+但新版 Broad Screening v0.1 必须能够从冻结输入
+自动重新计算、复现和审计这些现象。
+
+当前历史结果包括：
+
+1. Top 4 pattern groups
+   覆盖约 61.5% candidates；
+
+2. PCA：
+   PC1–3 cumulative variance ≈ 67.4%
+   PC1–4 cumulative variance ≈ 72.4%；
+
+3. 单独按 pattern 计算，
+   覆盖 70% candidates
+   仍需要约 66 patterns；
+
+4. M01–M04 是主要 response groups；
+
+5. M01 与 M02
+   存在 gene overlap，
+   但 module activity correlation ≈ -0.49；
+
+6. 存在 gene-disjoint patterns
+   response correlation ≈ 0.95；
+
+7. M03 / M04 bootstrap stability ≈ 1.00，
+   M02 ≈ 0.89，
+   M01 ≈ 0.75；
+
+8. candidate burden
+   与 target cell count
+   Spearman rho ≈ 0.333。
+
+所有数字必须重新从冻结数据计算。
+
+禁止：
+
+assert(value == 0.615)
+
+或：
+
+hardcode M01 membership。
+
+如果重新实现后数字变化，
+报告差异并定位原因。
+
+==================================================
+四十一、Broad Screening 必须回答三个核心科学问题
+==================================================
+
+最终 LANDSCAPE_REPORT
+不要只输出 clustering tables。
+
+必须围绕三个问题组织：
+
+Question 1：
+
+Are perturbation-associated higher-order responses
+globally concentrated?
+
+对应证据：
+
+module concentration
+
+PCA variance
+
+candidate coverage
+
+pattern diversity
+
+----------------------------------
+
+Question 2：
+
+Does exact signed joint-state identity matter
+beyond gene membership?
+
+对应证据：
+
+same-gene / overlapping-gene
+different-state comparisons
+
+M01 vs M02-like contrasts
+
+signed-state response correlation
+
+----------------------------------
+
+Question 3：
+
+Can distinct gene sets show shared
+perturbation-response structure?
+
+对应证据：
+
+gene-disjoint correlated patterns
+
+shared candidate targets
+
+module co-response
+
+这三个问题将来直接对应
+Results section 的三个小结。
+
+==================================================
+四十二、Global Concentration Analysis
+==================================================
+
+实现：
+
+candidate_coverage_by_module(k)
+
+输入：
+
+k = 1...number_of_modules
+
+输出：
+
+top-k modules
+覆盖的 candidate fraction。
+
+至少保存：
+
+top1_fraction
+
+top2_fraction
+
+top3_fraction
+
+top4_fraction
+
+以及完整 curve。
+
+同时实现：
+
+candidate_coverage_by_pattern(k)
+
+回答：
+
+需要多少 individual patterns
+才能覆盖：
+
+50%
+60%
+70%
+80%
+90%
+
+candidate records。
+
+==================================================
+四十三、为什么同时需要 Module Coverage 和 Pattern Coverage
+==================================================
+
+例如历史结果：
+
+Top 4 modules
+覆盖约 61.5%
+
+但：
+
+70% candidates
+仍涉及约 66 individual patterns。
+
+这两个结果不能互相替代。
+
+它们共同说明：
+
+response landscape
+具有：
+
+concentration
+
+但同时保留：
+
+within-module diversity。
+
+报告中禁止写：
+
+“four modules explain most biology”
+
+更准确：
+
+“Candidate responses are concentrated into several
+shared response groups while retaining substantial
+pattern-level diversity.”
+
+==================================================
+四十四、Low-dimensionality Analysis
+==================================================
+
+PCA 必须基于：
+
+continuous signed effect matrix
+
+而不是：
+
+candidate binary matrix。
+
+保存：
+
+variance_explained_ratio
+
+cumulative_variance
+
+target_scores
+
+pattern_loadings
+
+并生成：
+
+scree plot
+
+cumulative variance plot。
+
+==================================================
+四十五、Low-dimensionality 的论文表述
+==================================================
+
+如果历史结果复现：
+
+PC1–3 ≈ 67.4%
+
+允许写：
+
+“Perturbation-associated joint-state responses
+show substantial low-dimensional structure.”
+
+禁止写：
+
+“there are three biological programs.”
+
+PCA axis：
+
+不是：
+
+biological pathway
+
+不是：
+
+cell state
+
+不是：
+
+mechanism。
+
+==================================================
+四十六、Module M01–M04 自动识别
+==================================================
+
+Broad Screening 必须从 clustering
+自动产生 module IDs。
+
+如果重新运行得到：
+
+M01
+M02
+M03
+M04
+
+与历史结构基本一致，
+
+保存 mapping。
+
+如果 module numbering
+因为 clustering implementation 改变，
+
+使用 overlap matching
+映射到历史 module IDs，
+
+但不要为了复现历史标签
+强制修改 clustering。
+
+==================================================
+四十七、Module Card 必须包含具体 Signed State
+==================================================
+
+每个主要 module card：
+
+module_id
+
+n_candidates
+
+fraction_total
+
+n_patterns
+
+n_targets
+
+dominant_direction
+
+representative_signed_pattern
+
+mean_co_clustering
+
+stable_core_size
+
+boundary_size
+
+例如历史代表：
+
+M01:
+DDIT4+ PHGDH+ TRIB3+
+
+M02:
+DDIT3+ DDIT4- SESN2-
+
+M03:
+CCNB1+ CKS2+ PLK1+
+
+M04:
+HIST1H1B+ HIST1H1D+ HIST1H1E+
+
+但必须重新从当前 frozen data
+根据 medoid / representative rule 选择。
+
+不要硬编码。
+
+==================================================
+四十八、Signed-State Specificity Analysis
+==================================================
+
+这是 Broad Screening 的核心功能之一。
+
+寻找：
+
+A. exact same gene triplet
+   but different +/- states
+
+B. partially overlapping genes
+   but different +/- states
+
+比较它们：
+
+target-wise response correlation
+
+candidate overlap
+
+direction concordance
+
+module membership。
+
+目标：
+
+量化：
+
+“gene membership alone
+是否足以描述 perturbation response”。
+
+==================================================
+四十九、Module-level Signed-State Contrast
+==================================================
+
+如果两个 modules：
+
+共享较多 genes
+
+但：
+
+activity correlation < 0
+
+输出：
+
+signed_state_contrast_pairs.csv
+
+至少：
+
+module_A
+
+module_B
+
+gene_overlap
+
+representative_state_A
+
+representative_state_B
+
+activity_correlation
+
+direction_relation
+
+candidate_overlap
+
+==================================================
+五十、M01 vs M02 类现象
+==================================================
+
+历史分析：
+
+M01 与 M02
+存在 gene overlap，
+
+但 module activity correlation ≈ -0.49。
+
+如果复现：
+
+将其作为：
+
+primary signed-state specificity example。
+
+但不要写：
+
+“M01 inhibits M02”
+
+或：
+
+“two antagonistic pathways”
+
+只能写：
+
+“Overlapping gene content can correspond to
+divergent perturbation-response profiles when
+the exact signed joint state differs.”
+
+==================================================
+五十一、Gene-disjoint Co-response Analysis
+==================================================
+
+这是第二个核心 Broad finding。
+
+对所有：
+
+gene_overlap = 0
+
+的 pattern pairs，
+
+根据：
+
+continuous target-wise delta profiles
+
+计算：
+
+Pearson
+
+Spearman
+
+shared candidate targets
+
+direction concordance。
+
+排序后输出：
+
+top_correlated_disjoint_gene_patterns.csv
+
+==================================================
+五十二、Gene-disjoint Example
+==================================================
+
+历史结果：
+
+PCK2+ PHGDH+ TRIB3+
+
+vs
+
+CEBPB+ DDIT4+ SESN2+
+
+Pearson response correlation ≈ 0.95
+
+shared candidate targets ≈ 49。
+
+重新计算。
+
+如果仍然位于 top examples：
+
+保留作为 Figure example。
+
+如果不再成立：
+
+不要为了论文保留旧数字。
+
+报告真实最新结果。
+
+==================================================
+五十三、Gene-disjoint Finding 的解释边界
+==================================================
+
+允许：
+
+“Gene-disjoint joint states can exhibit highly
+correlated perturbation-response profiles.”
+
+允许提出问题：
+
+“Could distinct joint states represent different
+readouts of a shared cellular response?”
+
+禁止直接：
+
+“These states belong to the same biological pathway.”
+
+因为共同响应还可能来自：
+
+cell-state composition
+
+cell cycle
+
+stress
+
+batch
+
+detection depth
+
+shared technical effects
+
+或未测混杂。
+
+==================================================
+五十四、Module Stability 是正式 Broad 功能
+==================================================
+
+使用：
+
+target bootstrap
+
+默认：
+
+50 replicates
+
+支持：
+
+100 replicates
+
+每次：
+
+resample targets with replacement
+
+recompute response similarity
+
+recluster
+
+align modules
+
+计算：
+
+pattern pair co-clustering probability。
+
+==================================================
+五十五、Module Stability 输出
+==================================================
+
+每个 module：
+
+mean_co_clustering
+
+median_co_clustering
+
+min_co_clustering
+
+stable_core_patterns
+
+boundary_patterns
+
+core_fraction
+
+unstable_pairs
+
+输出：
+
+module_stability.csv
+
+co_clustering_matrix.csv
+
+stable_core_membership.csv
+
+==================================================
+五十六、M01–M04 Stability 审计
+==================================================
+
+历史观察：
+
+M03 ≈ 1.00
+
+M04 ≈ 1.00
+
+M02 ≈ 0.89
+
+M01 ≈ 0.75
+
+M01 部分 pattern pairs
+低至约 0.28。
+
+重新计算。
+
+如果复现：
+
+解释为：
+
+M03/M04:
+internally stable statistical groups
+
+M02:
+relatively stable
+
+M01:
+large but heterogeneous,
+requiring stable-core vs boundary separation
+
+禁止：
+
+“validated biological module”。
+
+==================================================
+五十七、Stable Core
+==================================================
+
+对于稳定性不足的大 module：
+
+尤其类似历史 M01，
+
+必须输出：
+
+stable_core
+
+boundary_members
+
+不要将整个 module
+直接作为一个 biological annotation unit。
+
+后续 annotation 默认优先：
+
+stable core
+
+然后再比较：
+
+whole module。
+
+==================================================
+五十八、Module Annotation Input
+==================================================
+
+对每个 module
+分别生成两个 annotation objects：
+
+whole_module
+
+stable_core
+
+例如：
+
+M01_whole
+
+M01_core
+
+以后 JEV / GO / literature
+可以比较：
+
+整体 annotation
+
+vs
+
+稳定核心 annotation。
+
+==================================================
+五十九、Target Sample-size Dependence
+==================================================
+
+重新计算：
+
+Spearman(
+target_cell_count,
+n_candidates
+)
+
+历史：
+
+rho ≈ 0.333。
+
+同时检查：
+
+target_cell_count
+vs
+mean_abs_delta
+
+target_cell_count
+vs
+n_modules_hit
+
+target_cell_count
+vs
+max_abs_delta
+
+输出：
+
+sample_size_dependence.csv
+
+==================================================
+六十、Sample-size Dependence 的使用
+==================================================
+
+如果 candidate burden
+明显依赖 target cell count：
+
+禁止：
+
+“Target X affects more biological programs
+because it has more candidate patterns.”
+
+Broad report 中必须提示：
+
+candidate discovery burden
+is partially sample-size dependent。
+
+Case triage 中：
+
+n_candidates
+
+不能作为单独优先级依据。
+
+==================================================
+六十一、Case Triage 必须利用 Broad Structure
+==================================================
+
+不要：
+
+sort by adjusted_p
+→ take top20。
+
+生成不同 strata：
+
+A. stable module representatives
+
+B. M01-like stable-core representatives
+
+C. module-specific targets
+
+D. cross-module targets
+
+E. enrichment cases
+
+F. depletion cases
+
+G. gene-disjoint co-response examples
+
+H. signed-state contrast examples
+
+I. high-effect / high-support cases
+
+J. sample-size-sensitive cases
+   （用于负面/审计，不优先机制结论）
+
+==================================================
+六十二、Module-specific Target
+==================================================
+
+定义：
+
+某 target
+在一个 module 上 activity 很强，
+
+而其他 modules activity 较弱。
+
+实现：
+
+module_specificity_score
+
+但第一版不要把它叫：
+
+biological specificity。
+
+它只是：
+
+response-landscape specificity。
+
+输出：
+
+module_specific_targets.csv
+
+==================================================
+六十三、Cross-module Target
+==================================================
+
+定义：
+
+同一个 perturbation
+同时强烈影响多个 response modules。
+
+输出：
+
+cross_module_targets.csv
+
+这种 case
+未来特别适合 Explorer：
+
+因为它可以提出：
+
+shared upstream mechanism
+
+vs
+
+multiple independent downstream responses
+
+等 competing hypotheses。
+
+==================================================
+六十四、Broad Screening → Deep Investigation 接口
+==================================================
+
+输出：
+
+deep_case_pool.jsonl
+
+每条至少：
+
+case_id
+
+target
+
+reference_id
+
+signed_pattern
+
+delta
+
+direction
+
+support
+
+exploratory_adjusted_p
+
+module_id
+
+module_stability
+
+core_or_boundary
+
+target_module_activity
+
+module_specificity
+
+cross_module_context
+
+gene_overlap_context
+
+gene_disjoint_correlated_context
+
+sample_size_context
+
+day8_status
+
+evidence_status
+
+==================================================
+六十五、evidence_status
+==================================================
+
+当前所有 Day 6：
+
+evidence_status =
+"day6_exploratory"
+
+未来 Day 8：
+
+external_validation_passed
+
+external_validation_failed
+
+not_testable_day8
+
+pending_day8
+
+Broad Screening
+不能自行升级 evidence status。
+
+==================================================
+六十六、Broad Screening 的最终产物不是一个“排名”
+==================================================
+
+最终输出应该是：
+
+Landscape
+
+Modules
+
+Stable cores
+
+Response relationships
+
+Case strata
+
+而不是：
+
+CandidateScore = ...
+
+Top100 candidates
+
+Broad Screening 的目标是：
+
+organize
+
+而不是：
+
+declare winners。
+
+==================================================
+六十七、Broad Screening 与 Deep Investigation 的边界
+==================================================
+
+Broad Screening 可以说：
+
+“TIMM23B strongly enriches a state belonging to M01.”
+
+Broad Screening 不应该回答：
+
+“Why does TIMM23B regulate DDIT4/PHGDH/TRIB3?”
+
+后一个问题属于：
+
+Mechanism Explorer。
+
+==================================================
+六十八、Broad Screening 与 Biological Annotation 的边界
+==================================================
+
+v0.1：
+
+只形成 statistical response landscape。
+
+v0.2：
+
+才允许增加：
+
+JEV
+
+GO/pathway
+
+literature-based module annotation
+
+但 annotation 结果仍不能自动变成机制。
+
+==================================================
+六十九、Benchmark / Ablation Hooks
+==================================================
+
+为后续论文保留：
+
+similarity =
+pearson
+spearman
+
+representation =
+continuous_delta
+candidate_binary
+
+signed_state =
+preserve
+collapse_to_gene_set
+
+bootstrap =
+on
+off
+
+stable_core =
+on
+off
+
+这几个 ablation 很重要。
+
+尤其：
+
+signed_state preserve
+vs
+collapse_to_gene_set
+
+可以直接测试：
+
+保留 +/- state
+是否真的改善 response organization。
+
+==================================================
+七十、非常重要的 Signed-State Ablation
+==================================================
+
+设计一个正式 ablation：
+
+Full representation:
+
+A+ B- C+
+
+vs
+
+Gene-only representation:
+
+{A,B,C}
+
+比较：
+
+module coherence
+
+module stability
+
+response similarity preservation
+
+case redundancy
+
+gene-disjoint structure
+
+目标不是预设 full 一定赢，
+
+而是量化：
+
+exact state identity
+是否提供超越 gene membership 的信息。
+
+==================================================
+七十一、Figure-ready Outputs
+==================================================
+
+生成：
+
+figure_data/
+
+A_landscape_matrix.csv
+
+B_module_cards.csv
+
+C_pca_scores.csv
+
+C_pca_variance.csv
+
+D_gene_disjoint_example.csv
+
+E_signed_state_contrast.csv
+
+F_module_stability.csv
+
+G_sample_size_dependence.csv
+
+所有 Figure 数字
+必须来自这些 frozen plot-ready tables。
+
+不要从图脚本临时重新计算。
+
+==================================================
+七十二、主 Broad Screening Figure
+==================================================
+
+建议布局：
+
+Panel A:
+419 targets × pattern response landscape
+
+Panel B:
+M01–M04 module cards
+
+Panel C:
+PCA low-dimensional structure
+
+Panel D:
+gene-disjoint highly correlated pattern pair
+
+Panel E:
+overlapping genes / different signed states
+with divergent response profiles
+
+Panel F:
+module bootstrap stability
+
+主图不要塞：
+
+所有 6129 candidates。
+
+==================================================
+七十三、Results-ready Summary
+==================================================
+
+自动生成：
+
+RESULTS_SUMMARY.md
+
+只允许根据冻结结果填数字。
+
+结构：
+
+1. Candidate responses are concentrated
+   into shared response groups.
+
+2. The landscape shows substantial
+   low-dimensional structure.
+
+3. Signed joint-state identity retains
+   information beyond gene membership.
+
+4. Gene-disjoint states can show
+   coordinated perturbation responses.
+
+5. Response groups differ in internal stability.
+
+6. Candidate burden is partially
+   associated with target sample size.
+
+不要自动写：
+
+novel biological programs
+
+new regulatory mechanisms
+
+causal modules。
+
+==================================================
+七十四、验收：必须复现当前已有 Landscape 现象
+==================================================
+
+Broad Screening v0.1
+完成后，
+
+对比当前已有：
+
+LANDSCAPE_REPORT.md
+
+但不是要求数字逐字一致。
+
+检查：
+
+A. candidate concentration
+   是否同量级；
+
+B. PCA variance
+   是否一致；
+
+C. major modules
+   是否高度重叠；
+
+D. M01/M02-like signed-state divergence
+   是否仍存在；
+
+E. gene-disjoint co-response
+   是否仍存在；
+
+F. stability ordering
+   是否基本一致；
+
+G. sample-size dependence
+   是否复现。
+
+如果不一致：
+
+不要调整算法追旧结果。
+
+输出：
+
+REPRODUCTION_DIAGNOSTIC.md
+
+说明：
+
+input difference
+
+distance definition
+
+NA handling
+
+clustering implementation
+
+bootstrap randomness
+
+module alignment
+
+等可能原因。
+
+==================================================
+七十五、不要重复做已经完成的事情
+==================================================
+
+如果现有：
+
+outputs/broad_screening_v01_landscape_20260927/
+
+已经包含：
+
+validated landscape matrices
+
+module assignments
+
+PCA
+
+bootstrap stability
+
+gene-disjoint correlations
+
+sample-size analysis
+
+优先：
+
+审计并复用。
+
+不要为了“实现新版”
+无意义地全部重算。
+
+Broad Screening v0.1
+应把这些已有分析
+整理成：
+
+reproducible pipeline
+
++
+standardized outputs
+
++
+case triage interface。
+
+==================================================
+七十六、完成后停止
+==================================================
+
+完成：
+
+Landscape pipeline
+
+module stability
+
+signed-state analysis
+
+gene-disjoint analysis
+
+sample-size audit
+
+case triage
+
+figure-ready outputs
+
+后停止。
+
+不要自行：
+
+调用 JEV
+
+运行 GO enrichment
+
+搜索文献
+
+运行 Day 8
+
+调用 Explorer / Investigator / Critic
+
+等待人工审阅 Broad Screening v0.1
+后再进入：
+
+Broad Biological Interpretation。

@@ -1,0 +1,3791 @@
+{
+  "metadata": {
+    "case_id": "perturbation_scan_day6_v01_20260927:C4c5e003b0938b2c462f9",
+    "created_at": "2026-10-04T15:04:16.548282Z",
+    "updated_at": "2026-10-04T15:04:16.548289Z",
+    "schema_version": "0.1.1",
+    "project": "JURE",
+    "case_revision": 1,
+    "source_dataset": "replogle_k562_day6",
+    "cell_context": "K562",
+    "perturbation": "RPL24"
+  },
+  "clue": {
+    "clue_id": "CLUE_1e4641825f52b5f2b50c6bf3",
+    "perturbation": "RPL24",
+    "pattern": {
+      "genes": [
+        "DDIT3",
+        "PHGDH",
+        "SESN2"
+      ],
+      "states": [
+        1,
+        0,
+        0
+      ],
+      "order": 3,
+      "pattern_string": "DDIT3+PHGDH-SESN2-",
+      "encoding": "1 = detected expression; 0 = undetected expression (not inferred regulatory activity)"
+    },
+    "discovery_mode": "reference_guided",
+    "source_schema_version": "1.0",
+    "source_run_id": "replogle_frozen",
+    "source_artifact": "research://outputs/integration_tests/adapter_smoke/replogle_frozen/landscape/triage_inputs.jsonl",
+    "source_artifact_sha256": "740cd620e5d6b84538b8f45cdf104278eabaafede41238489b1e42063df988ab",
+    "reference_id": "R2c25816f86029aa8ab80",
+    "catalogue_sha256": "23f7840ad7e9b14347b0101e2f8fddbc93f31f524033fb1f64368609cef6bf68",
+    "reference_evidence": {
+      "discovery": null,
+      "validation": null
+    },
+    "legacy_control": null,
+    "legacy_perturbation": null,
+    "perturbation_shift": {
+      "control_frequency": 0.14789537447677897,
+      "perturb_frequency": 0.508695652173913,
+      "delta_frequency": 0.360800277697134,
+      "control_count": 1572,
+      "perturb_count": 234,
+      "p_value_shift": 6.125510164442448e-69,
+      "q_value_shift": null,
+      "support": null,
+      "status": "exploratory_perturbation_candidate",
+      "bootstrap": null,
+      "control_frequency_definition": "perturbation_batch_weighted_nt_frequency",
+      "control_count_scope": "pooled_nt_descriptive_not_matched_frequency_numerator",
+      "perturbation_n": 460,
+      "pooled_nt_n": 10691,
+      "matched_nt_cells_pooled": 10691,
+      "matched_nt_effective_n": 9765.223884991714,
+      "batch_support": [
+        {
+          "batch": "1",
+          "nt_hits": 28,
+          "nt_n": 234,
+          "perturbation_hits": 4,
+          "perturbation_n": 6
+        },
+        {
+          "batch": "10",
+          "nt_hits": 25,
+          "nt_n": 233,
+          "perturbation_hits": 1,
+          "perturbation_n": 12
+        },
+        {
+          "batch": "11",
+          "nt_hits": 30,
+          "nt_n": 213,
+          "perturbation_hits": 9,
+          "perturbation_n": 10
+        },
+        {
+          "batch": "12",
+          "nt_hits": 25,
+          "nt_n": 200,
+          "perturbation_hits": 11,
+          "perturbation_n": 16
+        },
+        {
+          "batch": "13",
+          "nt_hits": 32,
+          "nt_n": 235,
+          "perturbation_hits": 7,
+          "perturbation_n": 12
+        },
+        {
+          "batch": "14",
+          "nt_hits": 39,
+          "nt_n": 220,
+          "perturbation_hits": 4,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "15",
+          "nt_hits": 32,
+          "nt_n": 229,
+          "perturbation_hits": 7,
+          "perturbation_n": 11
+        },
+        {
+          "batch": "16",
+          "nt_hits": 36,
+          "nt_n": 240,
+          "perturbation_hits": 6,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "17",
+          "nt_hits": 31,
+          "nt_n": 214,
+          "perturbation_hits": 4,
+          "perturbation_n": 10
+        },
+        {
+          "batch": "18",
+          "nt_hits": 33,
+          "nt_n": 229,
+          "perturbation_hits": 3,
+          "perturbation_n": 11
+        },
+        {
+          "batch": "19",
+          "nt_hits": 40,
+          "nt_n": 229,
+          "perturbation_hits": 8,
+          "perturbation_n": 12
+        },
+        {
+          "batch": "2",
+          "nt_hits": 36,
+          "nt_n": 231,
+          "perturbation_hits": 6,
+          "perturbation_n": 12
+        },
+        {
+          "batch": "20",
+          "nt_hits": 27,
+          "nt_n": 192,
+          "perturbation_hits": 5,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "21",
+          "nt_hits": 19,
+          "nt_n": 116,
+          "perturbation_hits": 2,
+          "perturbation_n": 2
+        },
+        {
+          "batch": "22",
+          "nt_hits": 29,
+          "nt_n": 201,
+          "perturbation_hits": 4,
+          "perturbation_n": 8
+        },
+        {
+          "batch": "23",
+          "nt_hits": 34,
+          "nt_n": 214,
+          "perturbation_hits": 7,
+          "perturbation_n": 11
+        },
+        {
+          "batch": "24",
+          "nt_hits": 37,
+          "nt_n": 232,
+          "perturbation_hits": 4,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "25",
+          "nt_hits": 30,
+          "nt_n": 281,
+          "perturbation_hits": 7,
+          "perturbation_n": 11
+        },
+        {
+          "batch": "26",
+          "nt_hits": 35,
+          "nt_n": 234,
+          "perturbation_hits": 6,
+          "perturbation_n": 11
+        },
+        {
+          "batch": "27",
+          "nt_hits": 36,
+          "nt_n": 252,
+          "perturbation_hits": 9,
+          "perturbation_n": 17
+        },
+        {
+          "batch": "28",
+          "nt_hits": 46,
+          "nt_n": 238,
+          "perturbation_hits": 3,
+          "perturbation_n": 11
+        },
+        {
+          "batch": "29",
+          "nt_hits": 29,
+          "nt_n": 226,
+          "perturbation_hits": 6,
+          "perturbation_n": 12
+        },
+        {
+          "batch": "3",
+          "nt_hits": 25,
+          "nt_n": 228,
+          "perturbation_hits": 3,
+          "perturbation_n": 5
+        },
+        {
+          "batch": "30",
+          "nt_hits": 31,
+          "nt_n": 248,
+          "perturbation_hits": 4,
+          "perturbation_n": 8
+        },
+        {
+          "batch": "31",
+          "nt_hits": 34,
+          "nt_n": 252,
+          "perturbation_hits": 7,
+          "perturbation_n": 15
+        },
+        {
+          "batch": "32",
+          "nt_hits": 23,
+          "nt_n": 258,
+          "perturbation_hits": 6,
+          "perturbation_n": 9
+        },
+        {
+          "batch": "33",
+          "nt_hits": 35,
+          "nt_n": 260,
+          "perturbation_hits": 2,
+          "perturbation_n": 5
+        },
+        {
+          "batch": "34",
+          "nt_hits": 37,
+          "nt_n": 208,
+          "perturbation_hits": 7,
+          "perturbation_n": 13
+        },
+        {
+          "batch": "35",
+          "nt_hits": 39,
+          "nt_n": 216,
+          "perturbation_hits": 2,
+          "perturbation_n": 6
+        },
+        {
+          "batch": "36",
+          "nt_hits": 35,
+          "nt_n": 226,
+          "perturbation_hits": 6,
+          "perturbation_n": 7
+        },
+        {
+          "batch": "37",
+          "nt_hits": 31,
+          "nt_n": 185,
+          "perturbation_hits": 2,
+          "perturbation_n": 8
+        },
+        {
+          "batch": "38",
+          "nt_hits": 39,
+          "nt_n": 223,
+          "perturbation_hits": 4,
+          "perturbation_n": 6
+        },
+        {
+          "batch": "39",
+          "nt_hits": 29,
+          "nt_n": 210,
+          "perturbation_hits": 5,
+          "perturbation_n": 7
+        },
+        {
+          "batch": "4",
+          "nt_hits": 20,
+          "nt_n": 120,
+          "perturbation_hits": 0,
+          "perturbation_n": 5
+        },
+        {
+          "batch": "40",
+          "nt_hits": 41,
+          "nt_n": 242,
+          "perturbation_hits": 2,
+          "perturbation_n": 4
+        },
+        {
+          "batch": "41",
+          "nt_hits": 39,
+          "nt_n": 225,
+          "perturbation_hits": 4,
+          "perturbation_n": 10
+        },
+        {
+          "batch": "42",
+          "nt_hits": 36,
+          "nt_n": 257,
+          "perturbation_hits": 8,
+          "perturbation_n": 15
+        },
+        {
+          "batch": "43",
+          "nt_hits": 40,
+          "nt_n": 226,
+          "perturbation_hits": 4,
+          "perturbation_n": 8
+        },
+        {
+          "batch": "44",
+          "nt_hits": 51,
+          "nt_n": 225,
+          "perturbation_hits": 6,
+          "perturbation_n": 12
+        },
+        {
+          "batch": "45",
+          "nt_hits": 36,
+          "nt_n": 216,
+          "perturbation_hits": 5,
+          "perturbation_n": 10
+        },
+        {
+          "batch": "46",
+          "nt_hits": 32,
+          "nt_n": 253,
+          "perturbation_hits": 4,
+          "perturbation_n": 10
+        },
+        {
+          "batch": "47",
+          "nt_hits": 26,
+          "nt_n": 227,
+          "perturbation_hits": 5,
+          "perturbation_n": 10
+        },
+        {
+          "batch": "48",
+          "nt_hits": 20,
+          "nt_n": 151,
+          "perturbation_hits": 2,
+          "perturbation_n": 5
+        },
+        {
+          "batch": "5",
+          "nt_hits": 39,
+          "nt_n": 203,
+          "perturbation_hits": 4,
+          "perturbation_n": 11
+        },
+        {
+          "batch": "6",
+          "nt_hits": 33,
+          "nt_n": 255,
+          "perturbation_hits": 4,
+          "perturbation_n": 15
+        },
+        {
+          "batch": "7",
+          "nt_hits": 35,
+          "nt_n": 229,
+          "perturbation_hits": 7,
+          "perturbation_n": 13
+        },
+        {
+          "batch": "8",
+          "nt_hits": 34,
+          "nt_n": 252,
+          "perturbation_hits": 5,
+          "perturbation_n": 7
+        },
+        {
+          "batch": "9",
+          "nt_hits": 23,
+          "nt_n": 203,
+          "perturbation_hits": 3,
+          "perturbation_n": 5
+        }
+      ],
+      "selected_family_holm_exploratory": 4.247557383737847e-63,
+      "family_size": 693594,
+      "nominal_pointwise_delta_ci_low": 0.296004213259288,
+      "nominal_pointwise_delta_ci_high": 0.42559634213498004,
+      "ci_method": "nominal_pointwise_Hoeffding_not_selection_adjusted_not_simultaneous",
+      "statistical_method": "exact_batch_conditional_plus_selected_family_Holm",
+      "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+      "nt_selection_adjusted": false
+    },
+    "replication_status": "NOT_PERFORMED",
+    "interpretation_boundary": "This is an observed perturbation-associated higher-order expression pattern. It does not by itself establish a causal regulatory mechanism.",
+    "source_payload": {
+      "original_association": {
+        "batch_support": [
+          {
+            "batch": "1",
+            "nt_hits": 28,
+            "nt_n": 234,
+            "perturbation_hits": 4,
+            "perturbation_n": 6
+          },
+          {
+            "batch": "10",
+            "nt_hits": 25,
+            "nt_n": 233,
+            "perturbation_hits": 1,
+            "perturbation_n": 12
+          },
+          {
+            "batch": "11",
+            "nt_hits": 30,
+            "nt_n": 213,
+            "perturbation_hits": 9,
+            "perturbation_n": 10
+          },
+          {
+            "batch": "12",
+            "nt_hits": 25,
+            "nt_n": 200,
+            "perturbation_hits": 11,
+            "perturbation_n": 16
+          },
+          {
+            "batch": "13",
+            "nt_hits": 32,
+            "nt_n": 235,
+            "perturbation_hits": 7,
+            "perturbation_n": 12
+          },
+          {
+            "batch": "14",
+            "nt_hits": 39,
+            "nt_n": 220,
+            "perturbation_hits": 4,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "15",
+            "nt_hits": 32,
+            "nt_n": 229,
+            "perturbation_hits": 7,
+            "perturbation_n": 11
+          },
+          {
+            "batch": "16",
+            "nt_hits": 36,
+            "nt_n": 240,
+            "perturbation_hits": 6,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "17",
+            "nt_hits": 31,
+            "nt_n": 214,
+            "perturbation_hits": 4,
+            "perturbation_n": 10
+          },
+          {
+            "batch": "18",
+            "nt_hits": 33,
+            "nt_n": 229,
+            "perturbation_hits": 3,
+            "perturbation_n": 11
+          },
+          {
+            "batch": "19",
+            "nt_hits": 40,
+            "nt_n": 229,
+            "perturbation_hits": 8,
+            "perturbation_n": 12
+          },
+          {
+            "batch": "2",
+            "nt_hits": 36,
+            "nt_n": 231,
+            "perturbation_hits": 6,
+            "perturbation_n": 12
+          },
+          {
+            "batch": "20",
+            "nt_hits": 27,
+            "nt_n": 192,
+            "perturbation_hits": 5,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "21",
+            "nt_hits": 19,
+            "nt_n": 116,
+            "perturbation_hits": 2,
+            "perturbation_n": 2
+          },
+          {
+            "batch": "22",
+            "nt_hits": 29,
+            "nt_n": 201,
+            "perturbation_hits": 4,
+            "perturbation_n": 8
+          },
+          {
+            "batch": "23",
+            "nt_hits": 34,
+            "nt_n": 214,
+            "perturbation_hits": 7,
+            "perturbation_n": 11
+          },
+          {
+            "batch": "24",
+            "nt_hits": 37,
+            "nt_n": 232,
+            "perturbation_hits": 4,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "25",
+            "nt_hits": 30,
+            "nt_n": 281,
+            "perturbation_hits": 7,
+            "perturbation_n": 11
+          },
+          {
+            "batch": "26",
+            "nt_hits": 35,
+            "nt_n": 234,
+            "perturbation_hits": 6,
+            "perturbation_n": 11
+          },
+          {
+            "batch": "27",
+            "nt_hits": 36,
+            "nt_n": 252,
+            "perturbation_hits": 9,
+            "perturbation_n": 17
+          },
+          {
+            "batch": "28",
+            "nt_hits": 46,
+            "nt_n": 238,
+            "perturbation_hits": 3,
+            "perturbation_n": 11
+          },
+          {
+            "batch": "29",
+            "nt_hits": 29,
+            "nt_n": 226,
+            "perturbation_hits": 6,
+            "perturbation_n": 12
+          },
+          {
+            "batch": "3",
+            "nt_hits": 25,
+            "nt_n": 228,
+            "perturbation_hits": 3,
+            "perturbation_n": 5
+          },
+          {
+            "batch": "30",
+            "nt_hits": 31,
+            "nt_n": 248,
+            "perturbation_hits": 4,
+            "perturbation_n": 8
+          },
+          {
+            "batch": "31",
+            "nt_hits": 34,
+            "nt_n": 252,
+            "perturbation_hits": 7,
+            "perturbation_n": 15
+          },
+          {
+            "batch": "32",
+            "nt_hits": 23,
+            "nt_n": 258,
+            "perturbation_hits": 6,
+            "perturbation_n": 9
+          },
+          {
+            "batch": "33",
+            "nt_hits": 35,
+            "nt_n": 260,
+            "perturbation_hits": 2,
+            "perturbation_n": 5
+          },
+          {
+            "batch": "34",
+            "nt_hits": 37,
+            "nt_n": 208,
+            "perturbation_hits": 7,
+            "perturbation_n": 13
+          },
+          {
+            "batch": "35",
+            "nt_hits": 39,
+            "nt_n": 216,
+            "perturbation_hits": 2,
+            "perturbation_n": 6
+          },
+          {
+            "batch": "36",
+            "nt_hits": 35,
+            "nt_n": 226,
+            "perturbation_hits": 6,
+            "perturbation_n": 7
+          },
+          {
+            "batch": "37",
+            "nt_hits": 31,
+            "nt_n": 185,
+            "perturbation_hits": 2,
+            "perturbation_n": 8
+          },
+          {
+            "batch": "38",
+            "nt_hits": 39,
+            "nt_n": 223,
+            "perturbation_hits": 4,
+            "perturbation_n": 6
+          },
+          {
+            "batch": "39",
+            "nt_hits": 29,
+            "nt_n": 210,
+            "perturbation_hits": 5,
+            "perturbation_n": 7
+          },
+          {
+            "batch": "4",
+            "nt_hits": 20,
+            "nt_n": 120,
+            "perturbation_hits": 0,
+            "perturbation_n": 5
+          },
+          {
+            "batch": "40",
+            "nt_hits": 41,
+            "nt_n": 242,
+            "perturbation_hits": 2,
+            "perturbation_n": 4
+          },
+          {
+            "batch": "41",
+            "nt_hits": 39,
+            "nt_n": 225,
+            "perturbation_hits": 4,
+            "perturbation_n": 10
+          },
+          {
+            "batch": "42",
+            "nt_hits": 36,
+            "nt_n": 257,
+            "perturbation_hits": 8,
+            "perturbation_n": 15
+          },
+          {
+            "batch": "43",
+            "nt_hits": 40,
+            "nt_n": 226,
+            "perturbation_hits": 4,
+            "perturbation_n": 8
+          },
+          {
+            "batch": "44",
+            "nt_hits": 51,
+            "nt_n": 225,
+            "perturbation_hits": 6,
+            "perturbation_n": 12
+          },
+          {
+            "batch": "45",
+            "nt_hits": 36,
+            "nt_n": 216,
+            "perturbation_hits": 5,
+            "perturbation_n": 10
+          },
+          {
+            "batch": "46",
+            "nt_hits": 32,
+            "nt_n": 253,
+            "perturbation_hits": 4,
+            "perturbation_n": 10
+          },
+          {
+            "batch": "47",
+            "nt_hits": 26,
+            "nt_n": 227,
+            "perturbation_hits": 5,
+            "perturbation_n": 10
+          },
+          {
+            "batch": "48",
+            "nt_hits": 20,
+            "nt_n": 151,
+            "perturbation_hits": 2,
+            "perturbation_n": 5
+          },
+          {
+            "batch": "5",
+            "nt_hits": 39,
+            "nt_n": 203,
+            "perturbation_hits": 4,
+            "perturbation_n": 11
+          },
+          {
+            "batch": "6",
+            "nt_hits": 33,
+            "nt_n": 255,
+            "perturbation_hits": 4,
+            "perturbation_n": 15
+          },
+          {
+            "batch": "7",
+            "nt_hits": 35,
+            "nt_n": 229,
+            "perturbation_hits": 7,
+            "perturbation_n": 13
+          },
+          {
+            "batch": "8",
+            "nt_hits": 34,
+            "nt_n": 252,
+            "perturbation_hits": 5,
+            "perturbation_n": 7
+          },
+          {
+            "batch": "9",
+            "nt_hits": 23,
+            "nt_n": 203,
+            "perturbation_hits": 3,
+            "perturbation_n": 5
+          }
+        ],
+        "biological_replicate_validated": false,
+        "catalogue_digest": "212b5b90e866e42d72ddb2bd77e3f5800125821f09c5d409f4cfc6d1d882f879",
+        "ci_method": "nominal_pointwise_Hoeffding_not_selection_adjusted_not_simultaneous",
+        "clue_id": "C4c5e003b0938b2c462f9",
+        "delta": 0.360800277697134,
+        "delta_percentage_points": 36.0800277697134,
+        "effect_is_not_change_in_higher_order_interaction_strength": true,
+        "eligible_as_confirmed_clue": false,
+        "eligible_for_explorer_development": true,
+        "external_validation_status": "not_performed",
+        "family_size": 693594,
+        "genes": [
+          "DDIT3",
+          "PHGDH",
+          "SESN2"
+        ],
+        "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+        "matched_nt_frequency": 0.14789537447677897,
+        "mechanistic_claim": false,
+        "nominal_pointwise_delta_ci_high": 0.42559634213498004,
+        "nominal_pointwise_delta_ci_low": 0.296004213259288,
+        "nt_selection_adjusted": false,
+        "order": 3,
+        "p_value": 6.125510164442448e-69,
+        "pattern": "DDIT3+ PHGDH- SESN2-",
+        "perturbation_frequency": 0.508695652173913,
+        "perturbation_hits": 234,
+        "perturbation_n": 460,
+        "pooled_nt_frequency": 0.1470395659900851,
+        "pooled_nt_hits": 1572,
+        "pooled_nt_n": 10691,
+        "reference_evidence": {
+          "bidirectionally_qualified": true,
+          "candidate_id": "GS_3640547dbd86b2559105bb3f",
+          "discovery_bootstrap_stable": true,
+          "holm_qualified": true,
+          "nt_n_cells": 10691,
+          "nt_support": 1572,
+          "reference_id": "R2c25816f86029aa8ab80",
+          "successful_directions": [
+            "A_to_B",
+            "B_to_A"
+          ],
+          "validation_bootstrap_stable": true
+        },
+        "reference_id": "R2c25816f86029aa8ab80",
+        "selected_family_holm_exploratory": 4.247557383737847e-63,
+        "states": [
+          1,
+          0,
+          0
+        ],
+        "statistical_method": "exact_batch_conditional_plus_selected_family_Holm",
+        "status": "exploratory_perturbation_candidate",
+        "support_and_effect_gates_passed": true,
+        "target": "RPL24"
+      },
+      "selected_case": {
+        "case": {
+          "association_evidence": {
+            "ci_method": "nominal_pointwise_Hoeffding_not_selection_adjusted_not_simultaneous",
+            "effect_is_not_change_in_higher_order_interaction_strength": true,
+            "family_size": 693594,
+            "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+            "nominal_pointwise_delta_ci_high": 0.42559634213498004,
+            "nominal_pointwise_delta_ci_low": 0.296004213259288,
+            "nt_selection_adjusted": false,
+            "p_value": 6.125510164442448e-69,
+            "selected_family_holm_exploratory": 4.247557383737847e-63,
+            "statistical_method": "exact_batch_conditional_plus_selected_family_Holm",
+            "status": "exploratory_perturbation_candidate"
+          },
+          "candidate_id": "C4c5e003b0938b2c462f9",
+          "case_id": "perturbation_scan_day6_v01_20260927:C4c5e003b0938b2c462f9",
+          "condition_id": "RPL24",
+          "coresponse_context": [],
+          "dataset_id": "replogle_k562_day6",
+          "effect_units": "prevalence_difference",
+          "evidence_level": "EXPLORATORY_ASSOCIATION",
+          "external_validation_status": "NOT_PERFORMED",
+          "genes": [
+            "DDIT3",
+            "PHGDH",
+            "SESN2"
+          ],
+          "group_context": {
+            "annotation_status": "NOT_ANNOTATED",
+            "group_id": "M02",
+            "legacy_context": {
+              "cross_module_context": {
+                "cross_module": true,
+                "dominant_module": "M11",
+                "module_specific": false,
+                "module_specificity": 0.1173730555759852,
+                "n_strong_modules": 4,
+                "strong_modules": [
+                  "M02",
+                  "M06",
+                  "M09",
+                  "M11"
+                ]
+              },
+              "module_robustness": "stable_across_continuous_choices",
+              "module_specificity": 0.1113949915968379,
+              "target_module_activity": {
+                "method": "median_signed_delta",
+                "module_id": "M02",
+                "value_pp": 19.972427515377895
+              }
+            },
+            "stability": {
+              "mean_co_clustering": 0.890909090909091,
+              "median_co_clustering": 1.0,
+              "min_co_clustering": 0.64,
+              "stable_core_size": 10
+            }
+          },
+          "matched_effect": 0.360800277697134,
+          "order": 3,
+          "provenance": {
+            "association": {
+              "line": 174,
+              "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+              "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b",
+              "source_clue_id": "C4c5e003b0938b2c462f9"
+            },
+            "matrix_and_cell_sources": {
+              "adapter": "ReplogleFrozenAdapter",
+              "aggregated_counts": {
+                "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/counts/counts.npz",
+                "sha256": "47a3a71534e2a80d3ceee07d91930058eb52031eb7f0f264ca17b28985b8d52d"
+              },
+              "association_source": {
+                "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+                "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b"
+              },
+              "broad_manifest": {
+                "path": "research://outputs/broad_screening_v01/audit/run_manifest.json",
+                "sha256": "ff967ba7b8636a7f04ac99bd4c8bee49a139c39a5fe14b78ea30d4444bc2eacd"
+              },
+              "cell_provenance": {
+                "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/metadata/allowed_cell_metadata.csv.gz",
+                "sha256": "e3ab27ee53c6c6f6c93b50aadc7c0bb267391626d5a2d5c0b561f5926ee8a550"
+              },
+              "frozen_input_output_hashes_verified": 144,
+              "mode": "read_only_artifact_conversion",
+              "reference_catalogue": {
+                "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+                "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1"
+              },
+              "statistics_recomputed": false
+            },
+            "reference": {
+              "gene_set_id": "GS_3640547dbd86b2559105bb3f",
+              "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+              "record_key": "R2c25816f86029aa8ab80",
+              "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+              "source_evidence_retained": true
+            },
+            "selection_performed": false
+          },
+          "reference_evidence": {
+            "gain": {
+              "discovery:A": {
+                "gain_calibration_unstable": false,
+                "higher_order_gain_status": "evaluated",
+                "p_gain": 0.0005,
+                "pattern_absolute_gain": 0.005799337402134119,
+                "pattern_gain_bootstrap": {
+                  "ci_high": 0.008237313095637954,
+                  "ci_low": 0.0035010705126417956,
+                  "median": 0.0058436229723792255,
+                  "sign_stability": 1.0
+                },
+                "q_gain": 0.019230769230769232,
+                "set_level_gain": 0.0019207076081346267
+              },
+              "discovery:B": {
+                "gain_calibration_unstable": false,
+                "higher_order_gain_status": "evaluated",
+                "p_gain": 0.0005,
+                "pattern_absolute_gain": 0.00503181080475304,
+                "pattern_gain_bootstrap": {
+                  "ci_high": 0.007494835359075472,
+                  "ci_low": 0.0024194235385922858,
+                  "median": 0.00507841383530222,
+                  "sign_stability": 1.0
+                },
+                "q_gain": 0.0196078431372549,
+                "set_level_gain": 0.00142467755938661
+              },
+              "validation:A": {
+                "gain_method": "exact_conditional_complete_lower_order_fiber",
+                "gain_null_path": "gain/B_validation_from_A/GS_3640547dbd86b2559105bb3f_conditional_array_audit.json",
+                "gain_ok": true,
+                "gain_path": "gain/B_validation_from_A/GS_3640547dbd86b2559105bb3f.json",
+                "higher_order_gain_status": "evaluated",
+                "p_gain": 9.731059415434828e-05,
+                "pattern_absolute_gain": 0.00503181080475304,
+                "pattern_gain_bootstrap": {
+                  "ci_high": 0.007358609161384403,
+                  "ci_low": 0.0025864686851590954,
+                  "median": 0.005073918406280242,
+                  "sign_stability": 1.0
+                },
+                "q_gain": 0.0001803806135544017,
+                "set_level_gain": 0.00142467755938661
+              },
+              "validation:B": {
+                "gain_method": "exact_conditional_complete_lower_order_fiber",
+                "gain_null_path": "gain/A_validation_from_B/GS_3640547dbd86b2559105bb3f_conditional_array_audit.json",
+                "gain_ok": true,
+                "gain_path": "gain/A_validation_from_B/GS_3640547dbd86b2559105bb3f.json",
+                "higher_order_gain_status": "evaluated",
+                "p_gain": 6.5797216130820845e-06,
+                "pattern_absolute_gain": 0.005799337402134119,
+                "pattern_gain_bootstrap": {
+                  "ci_high": 0.008077715314712821,
+                  "ci_low": 0.003462614437710943,
+                  "median": 0.0058044858405739,
+                  "sign_stability": 1.0
+                },
+                "q_gain": 1.1629275409168336e-05,
+                "set_level_gain": 0.0019207076081346267
+              }
+            },
+            "mfi": {
+              "discovery:A": {
+                "mfi": 0.666971182594589,
+                "mfi_ci_high": 0.9598211458390372,
+                "mfi_ci_low": 0.40163588195447025,
+                "mfi_sign_stability": 1.0
+              },
+              "discovery:B": {
+                "mfi": 0.5689293967603568,
+                "mfi_ci_high": 0.8543733708208995,
+                "mfi_ci_low": 0.27377384296676655,
+                "mfi_sign_stability": 1.0
+              },
+              "validation:A": {
+                "discovery_mfi": 0.666971182594589,
+                "mfi": 0.5689293967603568,
+                "mfi_ci_high": 0.844199900599486,
+                "mfi_ci_low": 0.295956521668995,
+                "mfi_sign_stability": 1.0,
+                "p_mfi": 9.73105941544678e-05,
+                "q_mfi": 0.00018038061355462324
+              },
+              "validation:B": {
+                "discovery_mfi": 0.5689293967603568,
+                "mfi": 0.666971182594589,
+                "mfi_ci_high": 0.9435195911523326,
+                "mfi_ci_low": 0.3926313321332131,
+                "mfi_sign_stability": 1.0,
+                "p_mfi": 6.579721613073634e-06,
+                "q_mfi": 1.1364973695309004e-05
+              }
+            },
+            "provenance": {
+              "gene_set_id": "GS_3640547dbd86b2559105bb3f",
+              "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+              "record_key": "R2c25816f86029aa8ab80",
+              "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+              "source_evidence_retained": true
+            },
+            "qualification": {
+              "complete_search": false,
+              "holm_qualified": true,
+              "state_level_FDR_controlled": false,
+              "validation_family_tests": [
+                {
+                  "adjusted_p": 0.00351186332521315,
+                  "arm": "holm_025",
+                  "candidate_id": "GS_3640547dbd86b2559105bb3f",
+                  "evaluation_status": "evaluated",
+                  "family_gain_rejected": true,
+                  "family_id": "A_to_B:order3:gene_set_gain",
+                  "family_size": 76,
+                  "genes": [
+                    "DDIT3",
+                    "PHGDH",
+                    "SESN2"
+                  ],
+                  "level_per_direction": 0.025,
+                  "method": "holm",
+                  "p_for_accounting": 9.731059415434828e-05,
+                  "p_gain": 9.731059415434828e-05,
+                  "p_value_unit": "gene_set_not_concrete_state",
+                  "source_fold": "A",
+                  "tested": true,
+                  "validation_fold": "B"
+                },
+                {
+                  "adjusted_p": 0.00022371053484479086,
+                  "arm": "holm_025",
+                  "candidate_id": "GS_3640547dbd86b2559105bb3f",
+                  "evaluation_status": "evaluated",
+                  "family_gain_rejected": true,
+                  "family_id": "B_to_A:order3:gene_set_gain",
+                  "family_size": 76,
+                  "genes": [
+                    "DDIT3",
+                    "PHGDH",
+                    "SESN2"
+                  ],
+                  "level_per_direction": 0.025,
+                  "method": "holm",
+                  "p_for_accounting": 6.5797216130820845e-06,
+                  "p_gain": 6.5797216130820845e-06,
+                  "p_value_unit": "gene_set_not_concrete_state",
+                  "source_fold": "B",
+                  "tested": true,
+                  "validation_fold": "A"
+                }
+              ]
+            },
+            "reference_dataset_id": "replogle_k562_day6",
+            "reference_id": "R2c25816f86029aa8ab80"
+          },
+          "reference_id": "R2c25816f86029aa8ab80",
+          "sample_size_context": {
+            "burden_is_not_biological_breadth": true,
+            "flag_scope": "sample_size_stratum; individual sensitivity not estimated",
+            "sample_size_sensitive": true,
+            "support_context": "high_sample_count",
+            "target_candidate_count": 28,
+            "target_cell_count": 460
+          },
+          "sampling_block_id": "RPL24|M02|enrichment",
+          "schema_version": "1.0",
+          "signed_state_contrast_context": [
+            "REL419219832cc03ae52a41",
+            "RELbdc540211e168afda39e"
+          ],
+          "stable_core_context": {
+            "members": [
+              "R0a14c1972bf845e0116d",
+              "R237fa95df64a91ef3bff",
+              "R2c25816f86029aa8ab80",
+              "R3d521869b482f182e97a",
+              "R41e4d60379cb3c1ccfa8",
+              "R588aaaeba21a739a7bfb",
+              "R9e82270852c7e4ce52b4",
+              "Ra73197ebae177825d304",
+              "Rccc32dbbe95f0f836ae7",
+              "Re05cb62c8a900654aa34"
+            ],
+            "status": "stable_core"
+          },
+          "states": [
+            1,
+            0,
+            0
+          ],
+          "strata": [
+            "stable_module_core",
+            "cross_module",
+            "enrichment",
+            "high_effect",
+            "strong_enrichment",
+            "high_target_support",
+            "sample_size_sensitive"
+          ],
+          "support": {
+            "condition": {
+              "batch_support": [
+                {
+                  "batch": "1",
+                  "nt_hits": 28,
+                  "nt_n": 234,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 6
+                },
+                {
+                  "batch": "10",
+                  "nt_hits": 25,
+                  "nt_n": 233,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "11",
+                  "nt_hits": 30,
+                  "nt_n": 213,
+                  "perturbation_hits": 9,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "12",
+                  "nt_hits": 25,
+                  "nt_n": 200,
+                  "perturbation_hits": 11,
+                  "perturbation_n": 16
+                },
+                {
+                  "batch": "13",
+                  "nt_hits": 32,
+                  "nt_n": 235,
+                  "perturbation_hits": 7,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "14",
+                  "nt_hits": 39,
+                  "nt_n": 220,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "15",
+                  "nt_hits": 32,
+                  "nt_n": 229,
+                  "perturbation_hits": 7,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "16",
+                  "nt_hits": 36,
+                  "nt_n": 240,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "17",
+                  "nt_hits": 31,
+                  "nt_n": 214,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "18",
+                  "nt_hits": 33,
+                  "nt_n": 229,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "19",
+                  "nt_hits": 40,
+                  "nt_n": 229,
+                  "perturbation_hits": 8,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "2",
+                  "nt_hits": 36,
+                  "nt_n": 231,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "20",
+                  "nt_hits": 27,
+                  "nt_n": 192,
+                  "perturbation_hits": 5,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "21",
+                  "nt_hits": 19,
+                  "nt_n": 116,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 2
+                },
+                {
+                  "batch": "22",
+                  "nt_hits": 29,
+                  "nt_n": 201,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 8
+                },
+                {
+                  "batch": "23",
+                  "nt_hits": 34,
+                  "nt_n": 214,
+                  "perturbation_hits": 7,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "24",
+                  "nt_hits": 37,
+                  "nt_n": 232,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "25",
+                  "nt_hits": 30,
+                  "nt_n": 281,
+                  "perturbation_hits": 7,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "26",
+                  "nt_hits": 35,
+                  "nt_n": 234,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "27",
+                  "nt_hits": 36,
+                  "nt_n": 252,
+                  "perturbation_hits": 9,
+                  "perturbation_n": 17
+                },
+                {
+                  "batch": "28",
+                  "nt_hits": 46,
+                  "nt_n": 238,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "29",
+                  "nt_hits": 29,
+                  "nt_n": 226,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "3",
+                  "nt_hits": 25,
+                  "nt_n": 228,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "30",
+                  "nt_hits": 31,
+                  "nt_n": 248,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 8
+                },
+                {
+                  "batch": "31",
+                  "nt_hits": 34,
+                  "nt_n": 252,
+                  "perturbation_hits": 7,
+                  "perturbation_n": 15
+                },
+                {
+                  "batch": "32",
+                  "nt_hits": 23,
+                  "nt_n": 258,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "33",
+                  "nt_hits": 35,
+                  "nt_n": 260,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "34",
+                  "nt_hits": 37,
+                  "nt_n": 208,
+                  "perturbation_hits": 7,
+                  "perturbation_n": 13
+                },
+                {
+                  "batch": "35",
+                  "nt_hits": 39,
+                  "nt_n": 216,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 6
+                },
+                {
+                  "batch": "36",
+                  "nt_hits": 35,
+                  "nt_n": 226,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "37",
+                  "nt_hits": 31,
+                  "nt_n": 185,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 8
+                },
+                {
+                  "batch": "38",
+                  "nt_hits": 39,
+                  "nt_n": 223,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 6
+                },
+                {
+                  "batch": "39",
+                  "nt_hits": 29,
+                  "nt_n": 210,
+                  "perturbation_hits": 5,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "4",
+                  "nt_hits": 20,
+                  "nt_n": 120,
+                  "perturbation_hits": 0,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "40",
+                  "nt_hits": 41,
+                  "nt_n": 242,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 4
+                },
+                {
+                  "batch": "41",
+                  "nt_hits": 39,
+                  "nt_n": 225,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "42",
+                  "nt_hits": 36,
+                  "nt_n": 257,
+                  "perturbation_hits": 8,
+                  "perturbation_n": 15
+                },
+                {
+                  "batch": "43",
+                  "nt_hits": 40,
+                  "nt_n": 226,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 8
+                },
+                {
+                  "batch": "44",
+                  "nt_hits": 51,
+                  "nt_n": 225,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "45",
+                  "nt_hits": 36,
+                  "nt_n": 216,
+                  "perturbation_hits": 5,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "46",
+                  "nt_hits": 32,
+                  "nt_n": 253,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "47",
+                  "nt_hits": 26,
+                  "nt_n": 227,
+                  "perturbation_hits": 5,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "48",
+                  "nt_hits": 20,
+                  "nt_n": 151,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "5",
+                  "nt_hits": 39,
+                  "nt_n": 203,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "6",
+                  "nt_hits": 33,
+                  "nt_n": 255,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 15
+                },
+                {
+                  "batch": "7",
+                  "nt_hits": 35,
+                  "nt_n": 229,
+                  "perturbation_hits": 7,
+                  "perturbation_n": 13
+                },
+                {
+                  "batch": "8",
+                  "nt_hits": 34,
+                  "nt_n": 252,
+                  "perturbation_hits": 5,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "9",
+                  "nt_hits": 23,
+                  "nt_n": 203,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 5
+                }
+              ],
+              "perturbation_frequency": 0.508695652173913,
+              "perturbation_hits": 234,
+              "perturbation_n": 460
+            },
+            "control": {
+              "matched_nt_frequency": 0.14789537447677897,
+              "pooled_nt_n": 10691
+            }
+          }
+        },
+        "selected_at": "2026-10-04T15:04:16.291746+00:00",
+        "selection_method": "human",
+        "selection_provenance": {
+          "module": "M02",
+          "slot": "M02_02",
+          "source_clue_id": "C4c5e003b0938b2c462f9",
+          "source_line": 174,
+          "triage_path": "research://outputs/integration_tests/adapter_smoke/replogle_frozen/landscape/triage_inputs.jsonl",
+          "triage_sha256": "740cd620e5d6b84538b8f45cdf104278eabaafede41238489b1e42063df988ab",
+          "user_authorization": "User final fixed ten additional cases; M03_03 HSPA9 added last."
+        },
+        "selection_reason": "M02_02: user-fixed additional exploratory case; no literature-based ranking.",
+        "selector": "module_additional10_luna_20261004"
+      }
+    },
+    "upstream_context": {
+      "condition_specific_relations": [],
+      "coresponse_context": [],
+      "dataset_evidence_status": "DAY6_EXPLORATORY",
+      "day8_status": "NOT_PERFORMED",
+      "evidence_level": "EXPLORATORY_ASSOCIATION",
+      "external_validation_status": "NOT_PERFORMED",
+      "group_context": {
+        "annotation_status": "NOT_ANNOTATED",
+        "group_id": "M02",
+        "legacy_context": {
+          "cross_module_context": {
+            "cross_module": true,
+            "dominant_module": "M11",
+            "module_specific": false,
+            "module_specificity": 0.1173730555759852,
+            "n_strong_modules": 4,
+            "strong_modules": [
+              "M02",
+              "M06",
+              "M09",
+              "M11"
+            ]
+          },
+          "module_robustness": "stable_across_continuous_choices",
+          "module_specificity": 0.1113949915968379,
+          "target_module_activity": {
+            "method": "median_signed_delta",
+            "module_id": "M02",
+            "value_pp": 19.972427515377895
+          }
+        },
+        "stability": {
+          "mean_co_clustering": 0.890909090909091,
+          "median_co_clustering": 1.0,
+          "min_co_clustering": 0.64,
+          "stable_core_size": 10
+        }
+      },
+      "group_representative_reference_id": "Re05cb62c8a900654aa34",
+      "provenance": {
+        "association": {
+          "line": 174,
+          "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+          "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b",
+          "source_clue_id": "C4c5e003b0938b2c462f9"
+        },
+        "matrix_and_cell_sources": {
+          "adapter": "ReplogleFrozenAdapter",
+          "aggregated_counts": {
+            "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/counts/counts.npz",
+            "sha256": "47a3a71534e2a80d3ceee07d91930058eb52031eb7f0f264ca17b28985b8d52d"
+          },
+          "association_source": {
+            "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+            "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b"
+          },
+          "broad_manifest": {
+            "path": "research://outputs/broad_screening_v01/audit/run_manifest.json",
+            "sha256": "ff967ba7b8636a7f04ac99bd4c8bee49a139c39a5fe14b78ea30d4444bc2eacd"
+          },
+          "cell_provenance": {
+            "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/metadata/allowed_cell_metadata.csv.gz",
+            "sha256": "e3ab27ee53c6c6f6c93b50aadc7c0bb267391626d5a2d5c0b561f5926ee8a550"
+          },
+          "frozen_input_output_hashes_verified": 144,
+          "mode": "read_only_artifact_conversion",
+          "reference_catalogue": {
+            "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+            "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1"
+          },
+          "statistics_recomputed": false
+        },
+        "reference": {
+          "gene_set_id": "GS_3640547dbd86b2559105bb3f",
+          "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+          "record_key": "R2c25816f86029aa8ab80",
+          "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+          "source_evidence_retained": true
+        },
+        "selection_performed": false
+      },
+      "reference_evidence": {
+        "bootstrap_stability": {
+          "details": {
+            "discovery:A": {
+              "bootstrap_path": "bootstrap/A_discovery/GS_3640547dbd86b2559105bb3f_array_audit.json",
+              "bootstrap_status": "complete",
+              "mfi_sign_stability": 1.0,
+              "pattern_gain_bootstrap": {
+                "ci_high": 0.008237313095637954,
+                "ci_low": 0.0035010705126417956,
+                "median": 0.0058436229723792255,
+                "sign_stability": 1.0
+              }
+            },
+            "discovery:B": {
+              "bootstrap_path": "bootstrap/B_discovery/GS_3640547dbd86b2559105bb3f_array_audit.json",
+              "bootstrap_status": "complete",
+              "mfi_sign_stability": 1.0,
+              "pattern_gain_bootstrap": {
+                "ci_high": 0.007494835359075472,
+                "ci_low": 0.0024194235385922858,
+                "median": 0.00507841383530222,
+                "sign_stability": 1.0
+              }
+            },
+            "validation:A": {
+              "bootstrap_ok": true,
+              "bootstrap_path": "bootstrap/B_validation_from_A/GS_3640547dbd86b2559105bb3f_array_audit.json",
+              "bootstrap_status": "complete",
+              "mfi_sign_stability": 1.0,
+              "pattern_gain_bootstrap": {
+                "ci_high": 0.007358609161384403,
+                "ci_low": 0.0025864686851590954,
+                "median": 0.005073918406280242,
+                "sign_stability": 1.0
+              }
+            },
+            "validation:B": {
+              "bootstrap_ok": true,
+              "bootstrap_path": "bootstrap/A_validation_from_B/GS_3640547dbd86b2559105bb3f_array_audit.json",
+              "bootstrap_status": "complete",
+              "mfi_sign_stability": 1.0,
+              "pattern_gain_bootstrap": {
+                "ci_high": 0.008077715314712821,
+                "ci_low": 0.003462614437710943,
+                "median": 0.0058044858405739,
+                "sign_stability": 1.0
+              }
+            }
+          },
+          "discovery": true,
+          "validation": true
+        },
+        "crossfold_evidence": {
+          "bidirectionally_qualified": true,
+          "successful_directions": [
+            "A_to_B",
+            "B_to_A"
+          ]
+        },
+        "dataset_id": "replogle_k562_day6",
+        "estimability": {
+          "discovery:A": {
+            "estimability_status": "good",
+            "min_state_count": 186
+          },
+          "discovery:B": {
+            "estimability_status": "good",
+            "min_state_count": 214
+          },
+          "validation:A": {
+            "estimability_status": "good",
+            "min_state_count": 214
+          },
+          "validation:B": {
+            "estimability_status": "good",
+            "min_state_count": 186
+          }
+        },
+        "evidence_level": "REFERENCE_PATTERN",
+        "gain_evidence": {
+          "discovery:A": {
+            "gain_calibration_unstable": false,
+            "higher_order_gain_status": "evaluated",
+            "p_gain": 0.0005,
+            "pattern_absolute_gain": 0.005799337402134119,
+            "pattern_gain_bootstrap": {
+              "ci_high": 0.008237313095637954,
+              "ci_low": 0.0035010705126417956,
+              "median": 0.0058436229723792255,
+              "sign_stability": 1.0
+            },
+            "q_gain": 0.019230769230769232,
+            "set_level_gain": 0.0019207076081346267
+          },
+          "discovery:B": {
+            "gain_calibration_unstable": false,
+            "higher_order_gain_status": "evaluated",
+            "p_gain": 0.0005,
+            "pattern_absolute_gain": 0.00503181080475304,
+            "pattern_gain_bootstrap": {
+              "ci_high": 0.007494835359075472,
+              "ci_low": 0.0024194235385922858,
+              "median": 0.00507841383530222,
+              "sign_stability": 1.0
+            },
+            "q_gain": 0.0196078431372549,
+            "set_level_gain": 0.00142467755938661
+          },
+          "validation:A": {
+            "gain_method": "exact_conditional_complete_lower_order_fiber",
+            "gain_null_path": "gain/B_validation_from_A/GS_3640547dbd86b2559105bb3f_conditional_array_audit.json",
+            "gain_ok": true,
+            "gain_path": "gain/B_validation_from_A/GS_3640547dbd86b2559105bb3f.json",
+            "higher_order_gain_status": "evaluated",
+            "p_gain": 9.731059415434828e-05,
+            "pattern_absolute_gain": 0.00503181080475304,
+            "pattern_gain_bootstrap": {
+              "ci_high": 0.007358609161384403,
+              "ci_low": 0.0025864686851590954,
+              "median": 0.005073918406280242,
+              "sign_stability": 1.0
+            },
+            "q_gain": 0.0001803806135544017,
+            "set_level_gain": 0.00142467755938661
+          },
+          "validation:B": {
+            "gain_method": "exact_conditional_complete_lower_order_fiber",
+            "gain_null_path": "gain/A_validation_from_B/GS_3640547dbd86b2559105bb3f_conditional_array_audit.json",
+            "gain_ok": true,
+            "gain_path": "gain/A_validation_from_B/GS_3640547dbd86b2559105bb3f.json",
+            "higher_order_gain_status": "evaluated",
+            "p_gain": 6.5797216130820845e-06,
+            "pattern_absolute_gain": 0.005799337402134119,
+            "pattern_gain_bootstrap": {
+              "ci_high": 0.008077715314712821,
+              "ci_low": 0.003462614437710943,
+              "median": 0.0058044858405739,
+              "sign_stability": 1.0
+            },
+            "q_gain": 1.1629275409168336e-05,
+            "set_level_gain": 0.0019207076081346267
+          }
+        },
+        "genes": [
+          "DDIT3",
+          "PHGDH",
+          "SESN2"
+        ],
+        "mfi_evidence": {
+          "discovery:A": {
+            "mfi": 0.666971182594589,
+            "mfi_ci_high": 0.9598211458390372,
+            "mfi_ci_low": 0.40163588195447025,
+            "mfi_sign_stability": 1.0
+          },
+          "discovery:B": {
+            "mfi": 0.5689293967603568,
+            "mfi_ci_high": 0.8543733708208995,
+            "mfi_ci_low": 0.27377384296676655,
+            "mfi_sign_stability": 1.0
+          },
+          "validation:A": {
+            "discovery_mfi": 0.666971182594589,
+            "mfi": 0.5689293967603568,
+            "mfi_ci_high": 0.844199900599486,
+            "mfi_ci_low": 0.295956521668995,
+            "mfi_sign_stability": 1.0,
+            "p_mfi": 9.73105941544678e-05,
+            "q_mfi": 0.00018038061355462324
+          },
+          "validation:B": {
+            "discovery_mfi": 0.5689293967603568,
+            "mfi": 0.666971182594589,
+            "mfi_ci_high": 0.9435195911523326,
+            "mfi_ci_low": 0.3926313321332131,
+            "mfi_sign_stability": 1.0,
+            "p_mfi": 6.579721613073634e-06,
+            "q_mfi": 1.1364973695309004e-05
+          }
+        },
+        "order": 3,
+        "provenance": {
+          "gene_set_id": "GS_3640547dbd86b2559105bb3f",
+          "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+          "record_key": "R2c25816f86029aa8ab80",
+          "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+          "source_evidence_retained": true
+        },
+        "qualification": {
+          "complete_search": false,
+          "holm_qualified": true,
+          "state_level_FDR_controlled": false,
+          "validation_family_tests": [
+            {
+              "adjusted_p": 0.00351186332521315,
+              "arm": "holm_025",
+              "candidate_id": "GS_3640547dbd86b2559105bb3f",
+              "evaluation_status": "evaluated",
+              "family_gain_rejected": true,
+              "family_id": "A_to_B:order3:gene_set_gain",
+              "family_size": 76,
+              "genes": [
+                "DDIT3",
+                "PHGDH",
+                "SESN2"
+              ],
+              "level_per_direction": 0.025,
+              "method": "holm",
+              "p_for_accounting": 9.731059415434828e-05,
+              "p_gain": 9.731059415434828e-05,
+              "p_value_unit": "gene_set_not_concrete_state",
+              "source_fold": "A",
+              "tested": true,
+              "validation_fold": "B"
+            },
+            {
+              "adjusted_p": 0.00022371053484479086,
+              "arm": "holm_025",
+              "candidate_id": "GS_3640547dbd86b2559105bb3f",
+              "evaluation_status": "evaluated",
+              "family_gain_rejected": true,
+              "family_id": "B_to_A:order3:gene_set_gain",
+              "family_size": 76,
+              "genes": [
+                "DDIT3",
+                "PHGDH",
+                "SESN2"
+              ],
+              "level_per_direction": 0.025,
+              "method": "holm",
+              "p_for_accounting": 6.5797216130820845e-06,
+              "p_gain": 6.5797216130820845e-06,
+              "p_value_unit": "gene_set_not_concrete_state",
+              "source_fold": "B",
+              "tested": true,
+              "validation_fold": "A"
+            }
+          ]
+        },
+        "reference_id": "R2c25816f86029aa8ab80",
+        "reference_population": {
+          "control_labels": [
+            "non-targeting"
+          ],
+          "counts_by_fold": {
+            "A": {
+              "frequency": 0.14349859681945742,
+              "n_cells": 5345,
+              "support": 767
+            },
+            "B": {
+              "frequency": 0.15057987280209503,
+              "n_cells": 5346,
+              "support": 805
+            }
+          },
+          "n_cells": 10691,
+          "prevalence_scope": "pooled_descriptive",
+          "support": 1572
+        },
+        "reference_prevalence": 0.1470395659900851,
+        "states": [
+          1,
+          0,
+          0
+        ]
+      },
+      "sample_size_context": {
+        "burden_is_not_biological_breadth": true,
+        "flag_scope": "sample_size_stratum; individual sensitivity not estimated",
+        "sample_size_sensitive": true,
+        "support_context": "high_sample_count",
+        "target_candidate_count": 28,
+        "target_cell_count": 460
+      },
+      "sampling_block_id": "RPL24|M02|enrichment",
+      "signed_state_contrast_context": [
+        "REL419219832cc03ae52a41",
+        "RELbdc540211e168afda39e"
+      ],
+      "stable_core_context": {
+        "members": [
+          "R0a14c1972bf845e0116d",
+          "R237fa95df64a91ef3bff",
+          "R2c25816f86029aa8ab80",
+          "R3d521869b482f182e97a",
+          "R41e4d60379cb3c1ccfa8",
+          "R588aaaeba21a739a7bfb",
+          "R9e82270852c7e4ce52b4",
+          "Ra73197ebae177825d304",
+          "Rccc32dbbe95f0f836ae7",
+          "Re05cb62c8a900654aa34"
+        ],
+        "status": "stable_core"
+      }
+    }
+  },
+  "mechanistic_question": null,
+  "hypotheses": [],
+  "evidence_questions": [],
+  "evidence_records": [],
+  "evidence_assessments": [],
+  "evidence_gaps": [],
+  "contradictions": [],
+  "mechanistic_claims": [],
+  "critic_audits": {
+    "hypothesis_audits": [],
+    "evidence_audits": [],
+    "claim_audits": [],
+    "hypothesis_syntheses": [],
+    "routing_decisions": [],
+    "stop_records": [],
+    "revision_requests": [],
+    "investigation_requests": [],
+    "status_changes": [],
+    "progress_snapshots": [],
+    "final_reports": [],
+    "failure_attributions": [],
+    "recommended_experiments": []
+  },
+  "action_state": {
+    "current_phase": "clue_ready",
+    "next_actor": "none",
+    "selected_question_id": null,
+    "stop_reason": null
+  },
+  "investigation_history": [
+    {
+      "event_id": "event_dd6a9ea1e54e45ea9e92718c326df86b",
+      "sequence": 1,
+      "case_revision": 1,
+      "timestamp": "2026-10-04T15:04:16.548870Z",
+      "actor": "controller",
+      "action": "case.created",
+      "object_type": "case",
+      "object_id": "perturbation_scan_day6_v01_20260927:C4c5e003b0938b2c462f9",
+      "summary": "Created case from observed clue",
+      "metadata": {},
+      "changes": {
+        "after": {
+          "action_state": {
+            "current_phase": "clue_ready",
+            "next_actor": "none",
+            "selected_question_id": null,
+            "stop_reason": null
+          },
+          "clue": {
+            "catalogue_sha256": "23f7840ad7e9b14347b0101e2f8fddbc93f31f524033fb1f64368609cef6bf68",
+            "clue_id": "CLUE_1e4641825f52b5f2b50c6bf3",
+            "discovery_mode": "reference_guided",
+            "interpretation_boundary": "This is an observed perturbation-associated higher-order expression pattern. It does not by itself establish a causal regulatory mechanism.",
+            "legacy_control": null,
+            "legacy_perturbation": null,
+            "pattern": {
+              "encoding": "1 = detected expression; 0 = undetected expression (not inferred regulatory activity)",
+              "genes": [
+                "DDIT3",
+                "PHGDH",
+                "SESN2"
+              ],
+              "order": 3,
+              "pattern_string": "DDIT3+PHGDH-SESN2-",
+              "states": [
+                1,
+                0,
+                0
+              ]
+            },
+            "perturbation": "RPL24",
+            "perturbation_shift": {
+              "batch_support": [
+                {
+                  "batch": "1",
+                  "nt_hits": 28,
+                  "nt_n": 234,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 6
+                },
+                {
+                  "batch": "10",
+                  "nt_hits": 25,
+                  "nt_n": 233,
+                  "perturbation_hits": 1,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "11",
+                  "nt_hits": 30,
+                  "nt_n": 213,
+                  "perturbation_hits": 9,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "12",
+                  "nt_hits": 25,
+                  "nt_n": 200,
+                  "perturbation_hits": 11,
+                  "perturbation_n": 16
+                },
+                {
+                  "batch": "13",
+                  "nt_hits": 32,
+                  "nt_n": 235,
+                  "perturbation_hits": 7,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "14",
+                  "nt_hits": 39,
+                  "nt_n": 220,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "15",
+                  "nt_hits": 32,
+                  "nt_n": 229,
+                  "perturbation_hits": 7,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "16",
+                  "nt_hits": 36,
+                  "nt_n": 240,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "17",
+                  "nt_hits": 31,
+                  "nt_n": 214,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "18",
+                  "nt_hits": 33,
+                  "nt_n": 229,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "19",
+                  "nt_hits": 40,
+                  "nt_n": 229,
+                  "perturbation_hits": 8,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "2",
+                  "nt_hits": 36,
+                  "nt_n": 231,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "20",
+                  "nt_hits": 27,
+                  "nt_n": 192,
+                  "perturbation_hits": 5,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "21",
+                  "nt_hits": 19,
+                  "nt_n": 116,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 2
+                },
+                {
+                  "batch": "22",
+                  "nt_hits": 29,
+                  "nt_n": 201,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 8
+                },
+                {
+                  "batch": "23",
+                  "nt_hits": 34,
+                  "nt_n": 214,
+                  "perturbation_hits": 7,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "24",
+                  "nt_hits": 37,
+                  "nt_n": 232,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "25",
+                  "nt_hits": 30,
+                  "nt_n": 281,
+                  "perturbation_hits": 7,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "26",
+                  "nt_hits": 35,
+                  "nt_n": 234,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "27",
+                  "nt_hits": 36,
+                  "nt_n": 252,
+                  "perturbation_hits": 9,
+                  "perturbation_n": 17
+                },
+                {
+                  "batch": "28",
+                  "nt_hits": 46,
+                  "nt_n": 238,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "29",
+                  "nt_hits": 29,
+                  "nt_n": 226,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "3",
+                  "nt_hits": 25,
+                  "nt_n": 228,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "30",
+                  "nt_hits": 31,
+                  "nt_n": 248,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 8
+                },
+                {
+                  "batch": "31",
+                  "nt_hits": 34,
+                  "nt_n": 252,
+                  "perturbation_hits": 7,
+                  "perturbation_n": 15
+                },
+                {
+                  "batch": "32",
+                  "nt_hits": 23,
+                  "nt_n": 258,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 9
+                },
+                {
+                  "batch": "33",
+                  "nt_hits": 35,
+                  "nt_n": 260,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "34",
+                  "nt_hits": 37,
+                  "nt_n": 208,
+                  "perturbation_hits": 7,
+                  "perturbation_n": 13
+                },
+                {
+                  "batch": "35",
+                  "nt_hits": 39,
+                  "nt_n": 216,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 6
+                },
+                {
+                  "batch": "36",
+                  "nt_hits": 35,
+                  "nt_n": 226,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "37",
+                  "nt_hits": 31,
+                  "nt_n": 185,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 8
+                },
+                {
+                  "batch": "38",
+                  "nt_hits": 39,
+                  "nt_n": 223,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 6
+                },
+                {
+                  "batch": "39",
+                  "nt_hits": 29,
+                  "nt_n": 210,
+                  "perturbation_hits": 5,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "4",
+                  "nt_hits": 20,
+                  "nt_n": 120,
+                  "perturbation_hits": 0,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "40",
+                  "nt_hits": 41,
+                  "nt_n": 242,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 4
+                },
+                {
+                  "batch": "41",
+                  "nt_hits": 39,
+                  "nt_n": 225,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "42",
+                  "nt_hits": 36,
+                  "nt_n": 257,
+                  "perturbation_hits": 8,
+                  "perturbation_n": 15
+                },
+                {
+                  "batch": "43",
+                  "nt_hits": 40,
+                  "nt_n": 226,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 8
+                },
+                {
+                  "batch": "44",
+                  "nt_hits": 51,
+                  "nt_n": 225,
+                  "perturbation_hits": 6,
+                  "perturbation_n": 12
+                },
+                {
+                  "batch": "45",
+                  "nt_hits": 36,
+                  "nt_n": 216,
+                  "perturbation_hits": 5,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "46",
+                  "nt_hits": 32,
+                  "nt_n": 253,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "47",
+                  "nt_hits": 26,
+                  "nt_n": 227,
+                  "perturbation_hits": 5,
+                  "perturbation_n": 10
+                },
+                {
+                  "batch": "48",
+                  "nt_hits": 20,
+                  "nt_n": 151,
+                  "perturbation_hits": 2,
+                  "perturbation_n": 5
+                },
+                {
+                  "batch": "5",
+                  "nt_hits": 39,
+                  "nt_n": 203,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 11
+                },
+                {
+                  "batch": "6",
+                  "nt_hits": 33,
+                  "nt_n": 255,
+                  "perturbation_hits": 4,
+                  "perturbation_n": 15
+                },
+                {
+                  "batch": "7",
+                  "nt_hits": 35,
+                  "nt_n": 229,
+                  "perturbation_hits": 7,
+                  "perturbation_n": 13
+                },
+                {
+                  "batch": "8",
+                  "nt_hits": 34,
+                  "nt_n": 252,
+                  "perturbation_hits": 5,
+                  "perturbation_n": 7
+                },
+                {
+                  "batch": "9",
+                  "nt_hits": 23,
+                  "nt_n": 203,
+                  "perturbation_hits": 3,
+                  "perturbation_n": 5
+                }
+              ],
+              "bootstrap": null,
+              "ci_method": "nominal_pointwise_Hoeffding_not_selection_adjusted_not_simultaneous",
+              "control_count": 1572,
+              "control_count_scope": "pooled_nt_descriptive_not_matched_frequency_numerator",
+              "control_frequency": 0.14789537447677897,
+              "control_frequency_definition": "perturbation_batch_weighted_nt_frequency",
+              "delta_frequency": 0.360800277697134,
+              "family_size": 693594,
+              "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+              "matched_nt_cells_pooled": 10691,
+              "matched_nt_effective_n": 9765.223884991714,
+              "nominal_pointwise_delta_ci_high": 0.42559634213498004,
+              "nominal_pointwise_delta_ci_low": 0.296004213259288,
+              "nt_selection_adjusted": false,
+              "p_value_shift": 6.125510164442448e-69,
+              "perturb_count": 234,
+              "perturb_frequency": 0.508695652173913,
+              "perturbation_n": 460,
+              "pooled_nt_n": 10691,
+              "q_value_shift": null,
+              "selected_family_holm_exploratory": 4.247557383737847e-63,
+              "statistical_method": "exact_batch_conditional_plus_selected_family_Holm",
+              "status": "exploratory_perturbation_candidate",
+              "support": null
+            },
+            "reference_evidence": {
+              "discovery": null,
+              "validation": null
+            },
+            "reference_id": "R2c25816f86029aa8ab80",
+            "replication_status": "NOT_PERFORMED",
+            "source_artifact": "research://outputs/integration_tests/adapter_smoke/replogle_frozen/landscape/triage_inputs.jsonl",
+            "source_artifact_sha256": "740cd620e5d6b84538b8f45cdf104278eabaafede41238489b1e42063df988ab",
+            "source_payload": {
+              "original_association": {
+                "batch_support": [
+                  {
+                    "batch": "1",
+                    "nt_hits": 28,
+                    "nt_n": 234,
+                    "perturbation_hits": 4,
+                    "perturbation_n": 6
+                  },
+                  {
+                    "batch": "10",
+                    "nt_hits": 25,
+                    "nt_n": 233,
+                    "perturbation_hits": 1,
+                    "perturbation_n": 12
+                  },
+                  {
+                    "batch": "11",
+                    "nt_hits": 30,
+                    "nt_n": 213,
+                    "perturbation_hits": 9,
+                    "perturbation_n": 10
+                  },
+                  {
+                    "batch": "12",
+                    "nt_hits": 25,
+                    "nt_n": 200,
+                    "perturbation_hits": 11,
+                    "perturbation_n": 16
+                  },
+                  {
+                    "batch": "13",
+                    "nt_hits": 32,
+                    "nt_n": 235,
+                    "perturbation_hits": 7,
+                    "perturbation_n": 12
+                  },
+                  {
+                    "batch": "14",
+                    "nt_hits": 39,
+                    "nt_n": 220,
+                    "perturbation_hits": 4,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "15",
+                    "nt_hits": 32,
+                    "nt_n": 229,
+                    "perturbation_hits": 7,
+                    "perturbation_n": 11
+                  },
+                  {
+                    "batch": "16",
+                    "nt_hits": 36,
+                    "nt_n": 240,
+                    "perturbation_hits": 6,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "17",
+                    "nt_hits": 31,
+                    "nt_n": 214,
+                    "perturbation_hits": 4,
+                    "perturbation_n": 10
+                  },
+                  {
+                    "batch": "18",
+                    "nt_hits": 33,
+                    "nt_n": 229,
+                    "perturbation_hits": 3,
+                    "perturbation_n": 11
+                  },
+                  {
+                    "batch": "19",
+                    "nt_hits": 40,
+                    "nt_n": 229,
+                    "perturbation_hits": 8,
+                    "perturbation_n": 12
+                  },
+                  {
+                    "batch": "2",
+                    "nt_hits": 36,
+                    "nt_n": 231,
+                    "perturbation_hits": 6,
+                    "perturbation_n": 12
+                  },
+                  {
+                    "batch": "20",
+                    "nt_hits": 27,
+                    "nt_n": 192,
+                    "perturbation_hits": 5,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "21",
+                    "nt_hits": 19,
+                    "nt_n": 116,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 2
+                  },
+                  {
+                    "batch": "22",
+                    "nt_hits": 29,
+                    "nt_n": 201,
+                    "perturbation_hits": 4,
+                    "perturbation_n": 8
+                  },
+                  {
+                    "batch": "23",
+                    "nt_hits": 34,
+                    "nt_n": 214,
+                    "perturbation_hits": 7,
+                    "perturbation_n": 11
+                  },
+                  {
+                    "batch": "24",
+                    "nt_hits": 37,
+                    "nt_n": 232,
+                    "perturbation_hits": 4,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "25",
+                    "nt_hits": 30,
+                    "nt_n": 281,
+                    "perturbation_hits": 7,
+                    "perturbation_n": 11
+                  },
+                  {
+                    "batch": "26",
+                    "nt_hits": 35,
+                    "nt_n": 234,
+                    "perturbation_hits": 6,
+                    "perturbation_n": 11
+                  },
+                  {
+                    "batch": "27",
+                    "nt_hits": 36,
+                    "nt_n": 252,
+                    "perturbation_hits": 9,
+                    "perturbation_n": 17
+                  },
+                  {
+                    "batch": "28",
+                    "nt_hits": 46,
+                    "nt_n": 238,
+                    "perturbation_hits": 3,
+                    "perturbation_n": 11
+                  },
+                  {
+                    "batch": "29",
+                    "nt_hits": 29,
+                    "nt_n": 226,
+                    "perturbation_hits": 6,
+                    "perturbation_n": 12
+                  },
+                  {
+                    "batch": "3",
+                    "nt_hits": 25,
+                    "nt_n": 228,
+                    "perturbation_hits": 3,
+                    "perturbation_n": 5
+                  },
+                  {
+                    "batch": "30",
+                    "nt_hits": 31,
+                    "nt_n": 248,
+                    "perturbation_hits": 4,
+                    "perturbation_n": 8
+                  },
+                  {
+                    "batch": "31",
+                    "nt_hits": 34,
+                    "nt_n": 252,
+                    "perturbation_hits": 7,
+                    "perturbation_n": 15
+                  },
+                  {
+                    "batch": "32",
+                    "nt_hits": 23,
+                    "nt_n": 258,
+                    "perturbation_hits": 6,
+                    "perturbation_n": 9
+                  },
+                  {
+                    "batch": "33",
+                    "nt_hits": 35,
+                    "nt_n": 260,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 5
+                  },
+                  {
+                    "batch": "34",
+                    "nt_hits": 37,
+                    "nt_n": 208,
+                    "perturbation_hits": 7,
+                    "perturbation_n": 13
+                  },
+                  {
+                    "batch": "35",
+                    "nt_hits": 39,
+                    "nt_n": 216,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 6
+                  },
+                  {
+                    "batch": "36",
+                    "nt_hits": 35,
+                    "nt_n": 226,
+                    "perturbation_hits": 6,
+                    "perturbation_n": 7
+                  },
+                  {
+                    "batch": "37",
+                    "nt_hits": 31,
+                    "nt_n": 185,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 8
+                  },
+                  {
+                    "batch": "38",
+                    "nt_hits": 39,
+                    "nt_n": 223,
+                    "perturbation_hits": 4,
+                    "perturbation_n": 6
+                  },
+                  {
+                    "batch": "39",
+                    "nt_hits": 29,
+                    "nt_n": 210,
+                    "perturbation_hits": 5,
+                    "perturbation_n": 7
+                  },
+                  {
+                    "batch": "4",
+                    "nt_hits": 20,
+                    "nt_n": 120,
+                    "perturbation_hits": 0,
+                    "perturbation_n": 5
+                  },
+                  {
+                    "batch": "40",
+                    "nt_hits": 41,
+                    "nt_n": 242,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 4
+                  },
+                  {
+                    "batch": "41",
+                    "nt_hits": 39,
+                    "nt_n": 225,
+                    "perturbation_hits": 4,
+                    "perturbation_n": 10
+                  },
+                  {
+                    "batch": "42",
+                    "nt_hits": 36,
+                    "nt_n": 257,
+                    "perturbation_hits": 8,
+                    "perturbation_n": 15
+                  },
+                  {
+                    "batch": "43",
+                    "nt_hits": 40,
+                    "nt_n": 226,
+                    "perturbation_hits": 4,
+                    "perturbation_n": 8
+                  },
+                  {
+                    "batch": "44",
+                    "nt_hits": 51,
+                    "nt_n": 225,
+                    "perturbation_hits": 6,
+                    "perturbation_n": 12
+                  },
+                  {
+                    "batch": "45",
+                    "nt_hits": 36,
+                    "nt_n": 216,
+                    "perturbation_hits": 5,
+                    "perturbation_n": 10
+                  },
+                  {
+                    "batch": "46",
+                    "nt_hits": 32,
+                    "nt_n": 253,
+                    "perturbation_hits": 4,
+                    "perturbation_n": 10
+                  },
+                  {
+                    "batch": "47",
+                    "nt_hits": 26,
+                    "nt_n": 227,
+                    "perturbation_hits": 5,
+                    "perturbation_n": 10
+                  },
+                  {
+                    "batch": "48",
+                    "nt_hits": 20,
+                    "nt_n": 151,
+                    "perturbation_hits": 2,
+                    "perturbation_n": 5
+                  },
+                  {
+                    "batch": "5",
+                    "nt_hits": 39,
+                    "nt_n": 203,
+                    "perturbation_hits": 4,
+                    "perturbation_n": 11
+                  },
+                  {
+                    "batch": "6",
+                    "nt_hits": 33,
+                    "nt_n": 255,
+                    "perturbation_hits": 4,
+                    "perturbation_n": 15
+                  },
+                  {
+                    "batch": "7",
+                    "nt_hits": 35,
+                    "nt_n": 229,
+                    "perturbation_hits": 7,
+                    "perturbation_n": 13
+                  },
+                  {
+                    "batch": "8",
+                    "nt_hits": 34,
+                    "nt_n": 252,
+                    "perturbation_hits": 5,
+                    "perturbation_n": 7
+                  },
+                  {
+                    "batch": "9",
+                    "nt_hits": 23,
+                    "nt_n": 203,
+                    "perturbation_hits": 3,
+                    "perturbation_n": 5
+                  }
+                ],
+                "biological_replicate_validated": false,
+                "catalogue_digest": "212b5b90e866e42d72ddb2bd77e3f5800125821f09c5d409f4cfc6d1d882f879",
+                "ci_method": "nominal_pointwise_Hoeffding_not_selection_adjusted_not_simultaneous",
+                "clue_id": "C4c5e003b0938b2c462f9",
+                "delta": 0.360800277697134,
+                "delta_percentage_points": 36.0800277697134,
+                "effect_is_not_change_in_higher_order_interaction_strength": true,
+                "eligible_as_confirmed_clue": false,
+                "eligible_for_explorer_development": true,
+                "external_validation_status": "not_performed",
+                "family_size": 693594,
+                "genes": [
+                  "DDIT3",
+                  "PHGDH",
+                  "SESN2"
+                ],
+                "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+                "matched_nt_frequency": 0.14789537447677897,
+                "mechanistic_claim": false,
+                "nominal_pointwise_delta_ci_high": 0.42559634213498004,
+                "nominal_pointwise_delta_ci_low": 0.296004213259288,
+                "nt_selection_adjusted": false,
+                "order": 3,
+                "p_value": 6.125510164442448e-69,
+                "pattern": "DDIT3+ PHGDH- SESN2-",
+                "perturbation_frequency": 0.508695652173913,
+                "perturbation_hits": 234,
+                "perturbation_n": 460,
+                "pooled_nt_frequency": 0.1470395659900851,
+                "pooled_nt_hits": 1572,
+                "pooled_nt_n": 10691,
+                "reference_evidence": {
+                  "bidirectionally_qualified": true,
+                  "candidate_id": "GS_3640547dbd86b2559105bb3f",
+                  "discovery_bootstrap_stable": true,
+                  "holm_qualified": true,
+                  "nt_n_cells": 10691,
+                  "nt_support": 1572,
+                  "reference_id": "R2c25816f86029aa8ab80",
+                  "successful_directions": [
+                    "A_to_B",
+                    "B_to_A"
+                  ],
+                  "validation_bootstrap_stable": true
+                },
+                "reference_id": "R2c25816f86029aa8ab80",
+                "selected_family_holm_exploratory": 4.247557383737847e-63,
+                "states": [
+                  1,
+                  0,
+                  0
+                ],
+                "statistical_method": "exact_batch_conditional_plus_selected_family_Holm",
+                "status": "exploratory_perturbation_candidate",
+                "support_and_effect_gates_passed": true,
+                "target": "RPL24"
+              },
+              "selected_case": {
+                "case": {
+                  "association_evidence": {
+                    "ci_method": "nominal_pointwise_Hoeffding_not_selection_adjusted_not_simultaneous",
+                    "effect_is_not_change_in_higher_order_interaction_strength": true,
+                    "family_size": 693594,
+                    "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+                    "nominal_pointwise_delta_ci_high": 0.42559634213498004,
+                    "nominal_pointwise_delta_ci_low": 0.296004213259288,
+                    "nt_selection_adjusted": false,
+                    "p_value": 6.125510164442448e-69,
+                    "selected_family_holm_exploratory": 4.247557383737847e-63,
+                    "statistical_method": "exact_batch_conditional_plus_selected_family_Holm",
+                    "status": "exploratory_perturbation_candidate"
+                  },
+                  "candidate_id": "C4c5e003b0938b2c462f9",
+                  "case_id": "perturbation_scan_day6_v01_20260927:C4c5e003b0938b2c462f9",
+                  "condition_id": "RPL24",
+                  "coresponse_context": [],
+                  "dataset_id": "replogle_k562_day6",
+                  "effect_units": "prevalence_difference",
+                  "evidence_level": "EXPLORATORY_ASSOCIATION",
+                  "external_validation_status": "NOT_PERFORMED",
+                  "genes": [
+                    "DDIT3",
+                    "PHGDH",
+                    "SESN2"
+                  ],
+                  "group_context": {
+                    "annotation_status": "NOT_ANNOTATED",
+                    "group_id": "M02",
+                    "legacy_context": {
+                      "cross_module_context": {
+                        "cross_module": true,
+                        "dominant_module": "M11",
+                        "module_specific": false,
+                        "module_specificity": 0.1173730555759852,
+                        "n_strong_modules": 4,
+                        "strong_modules": [
+                          "M02",
+                          "M06",
+                          "M09",
+                          "M11"
+                        ]
+                      },
+                      "module_robustness": "stable_across_continuous_choices",
+                      "module_specificity": 0.1113949915968379,
+                      "target_module_activity": {
+                        "method": "median_signed_delta",
+                        "module_id": "M02",
+                        "value_pp": 19.972427515377895
+                      }
+                    },
+                    "stability": {
+                      "mean_co_clustering": 0.890909090909091,
+                      "median_co_clustering": 1.0,
+                      "min_co_clustering": 0.64,
+                      "stable_core_size": 10
+                    }
+                  },
+                  "matched_effect": 0.360800277697134,
+                  "order": 3,
+                  "provenance": {
+                    "association": {
+                      "line": 174,
+                      "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+                      "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b",
+                      "source_clue_id": "C4c5e003b0938b2c462f9"
+                    },
+                    "matrix_and_cell_sources": {
+                      "adapter": "ReplogleFrozenAdapter",
+                      "aggregated_counts": {
+                        "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/counts/counts.npz",
+                        "sha256": "47a3a71534e2a80d3ceee07d91930058eb52031eb7f0f264ca17b28985b8d52d"
+                      },
+                      "association_source": {
+                        "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+                        "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b"
+                      },
+                      "broad_manifest": {
+                        "path": "research://outputs/broad_screening_v01/audit/run_manifest.json",
+                        "sha256": "ff967ba7b8636a7f04ac99bd4c8bee49a139c39a5fe14b78ea30d4444bc2eacd"
+                      },
+                      "cell_provenance": {
+                        "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/metadata/allowed_cell_metadata.csv.gz",
+                        "sha256": "e3ab27ee53c6c6f6c93b50aadc7c0bb267391626d5a2d5c0b561f5926ee8a550"
+                      },
+                      "frozen_input_output_hashes_verified": 144,
+                      "mode": "read_only_artifact_conversion",
+                      "reference_catalogue": {
+                        "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+                        "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1"
+                      },
+                      "statistics_recomputed": false
+                    },
+                    "reference": {
+                      "gene_set_id": "GS_3640547dbd86b2559105bb3f",
+                      "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+                      "record_key": "R2c25816f86029aa8ab80",
+                      "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+                      "source_evidence_retained": true
+                    },
+                    "selection_performed": false
+                  },
+                  "reference_evidence": {
+                    "gain": {
+                      "discovery:A": {
+                        "gain_calibration_unstable": false,
+                        "higher_order_gain_status": "evaluated",
+                        "p_gain": 0.0005,
+                        "pattern_absolute_gain": 0.005799337402134119,
+                        "pattern_gain_bootstrap": {
+                          "ci_high": 0.008237313095637954,
+                          "ci_low": 0.0035010705126417956,
+                          "median": 0.0058436229723792255,
+                          "sign_stability": 1.0
+                        },
+                        "q_gain": 0.019230769230769232,
+                        "set_level_gain": 0.0019207076081346267
+                      },
+                      "discovery:B": {
+                        "gain_calibration_unstable": false,
+                        "higher_order_gain_status": "evaluated",
+                        "p_gain": 0.0005,
+                        "pattern_absolute_gain": 0.00503181080475304,
+                        "pattern_gain_bootstrap": {
+                          "ci_high": 0.007494835359075472,
+                          "ci_low": 0.0024194235385922858,
+                          "median": 0.00507841383530222,
+                          "sign_stability": 1.0
+                        },
+                        "q_gain": 0.0196078431372549,
+                        "set_level_gain": 0.00142467755938661
+                      },
+                      "validation:A": {
+                        "gain_method": "exact_conditional_complete_lower_order_fiber",
+                        "gain_null_path": "gain/B_validation_from_A/GS_3640547dbd86b2559105bb3f_conditional_array_audit.json",
+                        "gain_ok": true,
+                        "gain_path": "gain/B_validation_from_A/GS_3640547dbd86b2559105bb3f.json",
+                        "higher_order_gain_status": "evaluated",
+                        "p_gain": 9.731059415434828e-05,
+                        "pattern_absolute_gain": 0.00503181080475304,
+                        "pattern_gain_bootstrap": {
+                          "ci_high": 0.007358609161384403,
+                          "ci_low": 0.0025864686851590954,
+                          "median": 0.005073918406280242,
+                          "sign_stability": 1.0
+                        },
+                        "q_gain": 0.0001803806135544017,
+                        "set_level_gain": 0.00142467755938661
+                      },
+                      "validation:B": {
+                        "gain_method": "exact_conditional_complete_lower_order_fiber",
+                        "gain_null_path": "gain/A_validation_from_B/GS_3640547dbd86b2559105bb3f_conditional_array_audit.json",
+                        "gain_ok": true,
+                        "gain_path": "gain/A_validation_from_B/GS_3640547dbd86b2559105bb3f.json",
+                        "higher_order_gain_status": "evaluated",
+                        "p_gain": 6.5797216130820845e-06,
+                        "pattern_absolute_gain": 0.005799337402134119,
+                        "pattern_gain_bootstrap": {
+                          "ci_high": 0.008077715314712821,
+                          "ci_low": 0.003462614437710943,
+                          "median": 0.0058044858405739,
+                          "sign_stability": 1.0
+                        },
+                        "q_gain": 1.1629275409168336e-05,
+                        "set_level_gain": 0.0019207076081346267
+                      }
+                    },
+                    "mfi": {
+                      "discovery:A": {
+                        "mfi": 0.666971182594589,
+                        "mfi_ci_high": 0.9598211458390372,
+                        "mfi_ci_low": 0.40163588195447025,
+                        "mfi_sign_stability": 1.0
+                      },
+                      "discovery:B": {
+                        "mfi": 0.5689293967603568,
+                        "mfi_ci_high": 0.8543733708208995,
+                        "mfi_ci_low": 0.27377384296676655,
+                        "mfi_sign_stability": 1.0
+                      },
+                      "validation:A": {
+                        "discovery_mfi": 0.666971182594589,
+                        "mfi": 0.5689293967603568,
+                        "mfi_ci_high": 0.844199900599486,
+                        "mfi_ci_low": 0.295956521668995,
+                        "mfi_sign_stability": 1.0,
+                        "p_mfi": 9.73105941544678e-05,
+                        "q_mfi": 0.00018038061355462324
+                      },
+                      "validation:B": {
+                        "discovery_mfi": 0.5689293967603568,
+                        "mfi": 0.666971182594589,
+                        "mfi_ci_high": 0.9435195911523326,
+                        "mfi_ci_low": 0.3926313321332131,
+                        "mfi_sign_stability": 1.0,
+                        "p_mfi": 6.579721613073634e-06,
+                        "q_mfi": 1.1364973695309004e-05
+                      }
+                    },
+                    "provenance": {
+                      "gene_set_id": "GS_3640547dbd86b2559105bb3f",
+                      "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+                      "record_key": "R2c25816f86029aa8ab80",
+                      "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+                      "source_evidence_retained": true
+                    },
+                    "qualification": {
+                      "complete_search": false,
+                      "holm_qualified": true,
+                      "state_level_FDR_controlled": false,
+                      "validation_family_tests": [
+                        {
+                          "adjusted_p": 0.00351186332521315,
+                          "arm": "holm_025",
+                          "candidate_id": "GS_3640547dbd86b2559105bb3f",
+                          "evaluation_status": "evaluated",
+                          "family_gain_rejected": true,
+                          "family_id": "A_to_B:order3:gene_set_gain",
+                          "family_size": 76,
+                          "genes": [
+                            "DDIT3",
+                            "PHGDH",
+                            "SESN2"
+                          ],
+                          "level_per_direction": 0.025,
+                          "method": "holm",
+                          "p_for_accounting": 9.731059415434828e-05,
+                          "p_gain": 9.731059415434828e-05,
+                          "p_value_unit": "gene_set_not_concrete_state",
+                          "source_fold": "A",
+                          "tested": true,
+                          "validation_fold": "B"
+                        },
+                        {
+                          "adjusted_p": 0.00022371053484479086,
+                          "arm": "holm_025",
+                          "candidate_id": "GS_3640547dbd86b2559105bb3f",
+                          "evaluation_status": "evaluated",
+                          "family_gain_rejected": true,
+                          "family_id": "B_to_A:order3:gene_set_gain",
+                          "family_size": 76,
+                          "genes": [
+                            "DDIT3",
+                            "PHGDH",
+                            "SESN2"
+                          ],
+                          "level_per_direction": 0.025,
+                          "method": "holm",
+                          "p_for_accounting": 6.5797216130820845e-06,
+                          "p_gain": 6.5797216130820845e-06,
+                          "p_value_unit": "gene_set_not_concrete_state",
+                          "source_fold": "B",
+                          "tested": true,
+                          "validation_fold": "A"
+                        }
+                      ]
+                    },
+                    "reference_dataset_id": "replogle_k562_day6",
+                    "reference_id": "R2c25816f86029aa8ab80"
+                  },
+                  "reference_id": "R2c25816f86029aa8ab80",
+                  "sample_size_context": {
+                    "burden_is_not_biological_breadth": true,
+                    "flag_scope": "sample_size_stratum; individual sensitivity not estimated",
+                    "sample_size_sensitive": true,
+                    "support_context": "high_sample_count",
+                    "target_candidate_count": 28,
+                    "target_cell_count": 460
+                  },
+                  "sampling_block_id": "RPL24|M02|enrichment",
+                  "schema_version": "1.0",
+                  "signed_state_contrast_context": [
+                    "REL419219832cc03ae52a41",
+                    "RELbdc540211e168afda39e"
+                  ],
+                  "stable_core_context": {
+                    "members": [
+                      "R0a14c1972bf845e0116d",
+                      "R237fa95df64a91ef3bff",
+                      "R2c25816f86029aa8ab80",
+                      "R3d521869b482f182e97a",
+                      "R41e4d60379cb3c1ccfa8",
+                      "R588aaaeba21a739a7bfb",
+                      "R9e82270852c7e4ce52b4",
+                      "Ra73197ebae177825d304",
+                      "Rccc32dbbe95f0f836ae7",
+                      "Re05cb62c8a900654aa34"
+                    ],
+                    "status": "stable_core"
+                  },
+                  "states": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "strata": [
+                    "stable_module_core",
+                    "cross_module",
+                    "enrichment",
+                    "high_effect",
+                    "strong_enrichment",
+                    "high_target_support",
+                    "sample_size_sensitive"
+                  ],
+                  "support": {
+                    "condition": {
+                      "batch_support": [
+                        {
+                          "batch": "1",
+                          "nt_hits": 28,
+                          "nt_n": 234,
+                          "perturbation_hits": 4,
+                          "perturbation_n": 6
+                        },
+                        {
+                          "batch": "10",
+                          "nt_hits": 25,
+                          "nt_n": 233,
+                          "perturbation_hits": 1,
+                          "perturbation_n": 12
+                        },
+                        {
+                          "batch": "11",
+                          "nt_hits": 30,
+                          "nt_n": 213,
+                          "perturbation_hits": 9,
+                          "perturbation_n": 10
+                        },
+                        {
+                          "batch": "12",
+                          "nt_hits": 25,
+                          "nt_n": 200,
+                          "perturbation_hits": 11,
+                          "perturbation_n": 16
+                        },
+                        {
+                          "batch": "13",
+                          "nt_hits": 32,
+                          "nt_n": 235,
+                          "perturbation_hits": 7,
+                          "perturbation_n": 12
+                        },
+                        {
+                          "batch": "14",
+                          "nt_hits": 39,
+                          "nt_n": 220,
+                          "perturbation_hits": 4,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "15",
+                          "nt_hits": 32,
+                          "nt_n": 229,
+                          "perturbation_hits": 7,
+                          "perturbation_n": 11
+                        },
+                        {
+                          "batch": "16",
+                          "nt_hits": 36,
+                          "nt_n": 240,
+                          "perturbation_hits": 6,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "17",
+                          "nt_hits": 31,
+                          "nt_n": 214,
+                          "perturbation_hits": 4,
+                          "perturbation_n": 10
+                        },
+                        {
+                          "batch": "18",
+                          "nt_hits": 33,
+                          "nt_n": 229,
+                          "perturbation_hits": 3,
+                          "perturbation_n": 11
+                        },
+                        {
+                          "batch": "19",
+                          "nt_hits": 40,
+                          "nt_n": 229,
+                          "perturbation_hits": 8,
+                          "perturbation_n": 12
+                        },
+                        {
+                          "batch": "2",
+                          "nt_hits": 36,
+                          "nt_n": 231,
+                          "perturbation_hits": 6,
+                          "perturbation_n": 12
+                        },
+                        {
+                          "batch": "20",
+                          "nt_hits": 27,
+                          "nt_n": 192,
+                          "perturbation_hits": 5,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "21",
+                          "nt_hits": 19,
+                          "nt_n": 116,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 2
+                        },
+                        {
+                          "batch": "22",
+                          "nt_hits": 29,
+                          "nt_n": 201,
+                          "perturbation_hits": 4,
+                          "perturbation_n": 8
+                        },
+                        {
+                          "batch": "23",
+                          "nt_hits": 34,
+                          "nt_n": 214,
+                          "perturbation_hits": 7,
+                          "perturbation_n": 11
+                        },
+                        {
+                          "batch": "24",
+                          "nt_hits": 37,
+                          "nt_n": 232,
+                          "perturbation_hits": 4,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "25",
+                          "nt_hits": 30,
+                          "nt_n": 281,
+                          "perturbation_hits": 7,
+                          "perturbation_n": 11
+                        },
+                        {
+                          "batch": "26",
+                          "nt_hits": 35,
+                          "nt_n": 234,
+                          "perturbation_hits": 6,
+                          "perturbation_n": 11
+                        },
+                        {
+                          "batch": "27",
+                          "nt_hits": 36,
+                          "nt_n": 252,
+                          "perturbation_hits": 9,
+                          "perturbation_n": 17
+                        },
+                        {
+                          "batch": "28",
+                          "nt_hits": 46,
+                          "nt_n": 238,
+                          "perturbation_hits": 3,
+                          "perturbation_n": 11
+                        },
+                        {
+                          "batch": "29",
+                          "nt_hits": 29,
+                          "nt_n": 226,
+                          "perturbation_hits": 6,
+                          "perturbation_n": 12
+                        },
+                        {
+                          "batch": "3",
+                          "nt_hits": 25,
+                          "nt_n": 228,
+                          "perturbation_hits": 3,
+                          "perturbation_n": 5
+                        },
+                        {
+                          "batch": "30",
+                          "nt_hits": 31,
+                          "nt_n": 248,
+                          "perturbation_hits": 4,
+                          "perturbation_n": 8
+                        },
+                        {
+                          "batch": "31",
+                          "nt_hits": 34,
+                          "nt_n": 252,
+                          "perturbation_hits": 7,
+                          "perturbation_n": 15
+                        },
+                        {
+                          "batch": "32",
+                          "nt_hits": 23,
+                          "nt_n": 258,
+                          "perturbation_hits": 6,
+                          "perturbation_n": 9
+                        },
+                        {
+                          "batch": "33",
+                          "nt_hits": 35,
+                          "nt_n": 260,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 5
+                        },
+                        {
+                          "batch": "34",
+                          "nt_hits": 37,
+                          "nt_n": 208,
+                          "perturbation_hits": 7,
+                          "perturbation_n": 13
+                        },
+                        {
+                          "batch": "35",
+                          "nt_hits": 39,
+                          "nt_n": 216,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 6
+                        },
+                        {
+                          "batch": "36",
+                          "nt_hits": 35,
+                          "nt_n": 226,
+                          "perturbation_hits": 6,
+                          "perturbation_n": 7
+                        },
+                        {
+                          "batch": "37",
+                          "nt_hits": 31,
+                          "nt_n": 185,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 8
+                        },
+                        {
+                          "batch": "38",
+                          "nt_hits": 39,
+                          "nt_n": 223,
+                          "perturbation_hits": 4,
+                          "perturbation_n": 6
+                        },
+                        {
+                          "batch": "39",
+                          "nt_hits": 29,
+                          "nt_n": 210,
+                          "perturbation_hits": 5,
+                          "perturbation_n": 7
+                        },
+                        {
+                          "batch": "4",
+                          "nt_hits": 20,
+                          "nt_n": 120,
+                          "perturbation_hits": 0,
+                          "perturbation_n": 5
+                        },
+                        {
+                          "batch": "40",
+                          "nt_hits": 41,
+                          "nt_n": 242,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 4
+                        },
+                        {
+                          "batch": "41",
+                          "nt_hits": 39,
+                          "nt_n": 225,
+                          "perturbation_hits": 4,
+                          "perturbation_n": 10
+                        },
+                        {
+                          "batch": "42",
+                          "nt_hits": 36,
+                          "nt_n": 257,
+                          "perturbation_hits": 8,
+                          "perturbation_n": 15
+                        },
+                        {
+                          "batch": "43",
+                          "nt_hits": 40,
+                          "nt_n": 226,
+                          "perturbation_hits": 4,
+                          "perturbation_n": 8
+                        },
+                        {
+                          "batch": "44",
+                          "nt_hits": 51,
+                          "nt_n": 225,
+                          "perturbation_hits": 6,
+                          "perturbation_n": 12
+                        },
+                        {
+                          "batch": "45",
+                          "nt_hits": 36,
+                          "nt_n": 216,
+                          "perturbation_hits": 5,
+                          "perturbation_n": 10
+                        },
+                        {
+                          "batch": "46",
+                          "nt_hits": 32,
+                          "nt_n": 253,
+                          "perturbation_hits": 4,
+                          "perturbation_n": 10
+                        },
+                        {
+                          "batch": "47",
+                          "nt_hits": 26,
+                          "nt_n": 227,
+                          "perturbation_hits": 5,
+                          "perturbation_n": 10
+                        },
+                        {
+                          "batch": "48",
+                          "nt_hits": 20,
+                          "nt_n": 151,
+                          "perturbation_hits": 2,
+                          "perturbation_n": 5
+                        },
+                        {
+                          "batch": "5",
+                          "nt_hits": 39,
+                          "nt_n": 203,
+                          "perturbation_hits": 4,
+                          "perturbation_n": 11
+                        },
+                        {
+                          "batch": "6",
+                          "nt_hits": 33,
+                          "nt_n": 255,
+                          "perturbation_hits": 4,
+                          "perturbation_n": 15
+                        },
+                        {
+                          "batch": "7",
+                          "nt_hits": 35,
+                          "nt_n": 229,
+                          "perturbation_hits": 7,
+                          "perturbation_n": 13
+                        },
+                        {
+                          "batch": "8",
+                          "nt_hits": 34,
+                          "nt_n": 252,
+                          "perturbation_hits": 5,
+                          "perturbation_n": 7
+                        },
+                        {
+                          "batch": "9",
+                          "nt_hits": 23,
+                          "nt_n": 203,
+                          "perturbation_hits": 3,
+                          "perturbation_n": 5
+                        }
+                      ],
+                      "perturbation_frequency": 0.508695652173913,
+                      "perturbation_hits": 234,
+                      "perturbation_n": 460
+                    },
+                    "control": {
+                      "matched_nt_frequency": 0.14789537447677897,
+                      "pooled_nt_n": 10691
+                    }
+                  }
+                },
+                "selected_at": "2026-10-04T15:04:16.291746+00:00",
+                "selection_method": "human",
+                "selection_provenance": {
+                  "module": "M02",
+                  "slot": "M02_02",
+                  "source_clue_id": "C4c5e003b0938b2c462f9",
+                  "source_line": 174,
+                  "triage_path": "research://outputs/integration_tests/adapter_smoke/replogle_frozen/landscape/triage_inputs.jsonl",
+                  "triage_sha256": "740cd620e5d6b84538b8f45cdf104278eabaafede41238489b1e42063df988ab",
+                  "user_authorization": "User final fixed ten additional cases; M03_03 HSPA9 added last."
+                },
+                "selection_reason": "M02_02: user-fixed additional exploratory case; no literature-based ranking.",
+                "selector": "module_additional10_luna_20261004"
+              }
+            },
+            "source_run_id": "replogle_frozen",
+            "source_schema_version": "1.0",
+            "upstream_context": {
+              "condition_specific_relations": [],
+              "coresponse_context": [],
+              "dataset_evidence_status": "DAY6_EXPLORATORY",
+              "day8_status": "NOT_PERFORMED",
+              "evidence_level": "EXPLORATORY_ASSOCIATION",
+              "external_validation_status": "NOT_PERFORMED",
+              "group_context": {
+                "annotation_status": "NOT_ANNOTATED",
+                "group_id": "M02",
+                "legacy_context": {
+                  "cross_module_context": {
+                    "cross_module": true,
+                    "dominant_module": "M11",
+                    "module_specific": false,
+                    "module_specificity": 0.1173730555759852,
+                    "n_strong_modules": 4,
+                    "strong_modules": [
+                      "M02",
+                      "M06",
+                      "M09",
+                      "M11"
+                    ]
+                  },
+                  "module_robustness": "stable_across_continuous_choices",
+                  "module_specificity": 0.1113949915968379,
+                  "target_module_activity": {
+                    "method": "median_signed_delta",
+                    "module_id": "M02",
+                    "value_pp": 19.972427515377895
+                  }
+                },
+                "stability": {
+                  "mean_co_clustering": 0.890909090909091,
+                  "median_co_clustering": 1.0,
+                  "min_co_clustering": 0.64,
+                  "stable_core_size": 10
+                }
+              },
+              "group_representative_reference_id": "Re05cb62c8a900654aa34",
+              "provenance": {
+                "association": {
+                  "line": 174,
+                  "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+                  "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b",
+                  "source_clue_id": "C4c5e003b0938b2c462f9"
+                },
+                "matrix_and_cell_sources": {
+                  "adapter": "ReplogleFrozenAdapter",
+                  "aggregated_counts": {
+                    "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/counts/counts.npz",
+                    "sha256": "47a3a71534e2a80d3ceee07d91930058eb52031eb7f0f264ca17b28985b8d52d"
+                  },
+                  "association_source": {
+                    "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/scan/candidates.jsonl",
+                    "sha256": "783c4d818f098746b682498f0db6907d92d3ffa1d6d2cf4966a89e5c29bc6d0b"
+                  },
+                  "broad_manifest": {
+                    "path": "research://outputs/broad_screening_v01/audit/run_manifest.json",
+                    "sha256": "ff967ba7b8636a7f04ac99bd4c8bee49a139c39a5fe14b78ea30d4444bc2eacd"
+                  },
+                  "cell_provenance": {
+                    "path": "research://outputs/perturbation_scan_day6_v01_20260927/remote/outputs/day6_scan/metadata/allowed_cell_metadata.csv.gz",
+                    "sha256": "e3ab27ee53c6c6f6c93b50aadc7c0bb267391626d5a2d5c0b561f5926ee8a550"
+                  },
+                  "frozen_input_output_hashes_verified": 144,
+                  "mode": "read_only_artifact_conversion",
+                  "reference_catalogue": {
+                    "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+                    "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1"
+                  },
+                  "statistics_recomputed": false
+                },
+                "reference": {
+                  "gene_set_id": "GS_3640547dbd86b2559105bb3f",
+                  "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+                  "record_key": "R2c25816f86029aa8ab80",
+                  "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+                  "source_evidence_retained": true
+                },
+                "selection_performed": false
+              },
+              "reference_evidence": {
+                "bootstrap_stability": {
+                  "details": {
+                    "discovery:A": {
+                      "bootstrap_path": "bootstrap/A_discovery/GS_3640547dbd86b2559105bb3f_array_audit.json",
+                      "bootstrap_status": "complete",
+                      "mfi_sign_stability": 1.0,
+                      "pattern_gain_bootstrap": {
+                        "ci_high": 0.008237313095637954,
+                        "ci_low": 0.0035010705126417956,
+                        "median": 0.0058436229723792255,
+                        "sign_stability": 1.0
+                      }
+                    },
+                    "discovery:B": {
+                      "bootstrap_path": "bootstrap/B_discovery/GS_3640547dbd86b2559105bb3f_array_audit.json",
+                      "bootstrap_status": "complete",
+                      "mfi_sign_stability": 1.0,
+                      "pattern_gain_bootstrap": {
+                        "ci_high": 0.007494835359075472,
+                        "ci_low": 0.0024194235385922858,
+                        "median": 0.00507841383530222,
+                        "sign_stability": 1.0
+                      }
+                    },
+                    "validation:A": {
+                      "bootstrap_ok": true,
+                      "bootstrap_path": "bootstrap/B_validation_from_A/GS_3640547dbd86b2559105bb3f_array_audit.json",
+                      "bootstrap_status": "complete",
+                      "mfi_sign_stability": 1.0,
+                      "pattern_gain_bootstrap": {
+                        "ci_high": 0.007358609161384403,
+                        "ci_low": 0.0025864686851590954,
+                        "median": 0.005073918406280242,
+                        "sign_stability": 1.0
+                      }
+                    },
+                    "validation:B": {
+                      "bootstrap_ok": true,
+                      "bootstrap_path": "bootstrap/A_validation_from_B/GS_3640547dbd86b2559105bb3f_array_audit.json",
+                      "bootstrap_status": "complete",
+                      "mfi_sign_stability": 1.0,
+                      "pattern_gain_bootstrap": {
+                        "ci_high": 0.008077715314712821,
+                        "ci_low": 0.003462614437710943,
+                        "median": 0.0058044858405739,
+                        "sign_stability": 1.0
+                      }
+                    }
+                  },
+                  "discovery": true,
+                  "validation": true
+                },
+                "crossfold_evidence": {
+                  "bidirectionally_qualified": true,
+                  "successful_directions": [
+                    "A_to_B",
+                    "B_to_A"
+                  ]
+                },
+                "dataset_id": "replogle_k562_day6",
+                "estimability": {
+                  "discovery:A": {
+                    "estimability_status": "good",
+                    "min_state_count": 186
+                  },
+                  "discovery:B": {
+                    "estimability_status": "good",
+                    "min_state_count": 214
+                  },
+                  "validation:A": {
+                    "estimability_status": "good",
+                    "min_state_count": 214
+                  },
+                  "validation:B": {
+                    "estimability_status": "good",
+                    "min_state_count": 186
+                  }
+                },
+                "evidence_level": "REFERENCE_PATTERN",
+                "gain_evidence": {
+                  "discovery:A": {
+                    "gain_calibration_unstable": false,
+                    "higher_order_gain_status": "evaluated",
+                    "p_gain": 0.0005,
+                    "pattern_absolute_gain": 0.005799337402134119,
+                    "pattern_gain_bootstrap": {
+                      "ci_high": 0.008237313095637954,
+                      "ci_low": 0.0035010705126417956,
+                      "median": 0.0058436229723792255,
+                      "sign_stability": 1.0
+                    },
+                    "q_gain": 0.019230769230769232,
+                    "set_level_gain": 0.0019207076081346267
+                  },
+                  "discovery:B": {
+                    "gain_calibration_unstable": false,
+                    "higher_order_gain_status": "evaluated",
+                    "p_gain": 0.0005,
+                    "pattern_absolute_gain": 0.00503181080475304,
+                    "pattern_gain_bootstrap": {
+                      "ci_high": 0.007494835359075472,
+                      "ci_low": 0.0024194235385922858,
+                      "median": 0.00507841383530222,
+                      "sign_stability": 1.0
+                    },
+                    "q_gain": 0.0196078431372549,
+                    "set_level_gain": 0.00142467755938661
+                  },
+                  "validation:A": {
+                    "gain_method": "exact_conditional_complete_lower_order_fiber",
+                    "gain_null_path": "gain/B_validation_from_A/GS_3640547dbd86b2559105bb3f_conditional_array_audit.json",
+                    "gain_ok": true,
+                    "gain_path": "gain/B_validation_from_A/GS_3640547dbd86b2559105bb3f.json",
+                    "higher_order_gain_status": "evaluated",
+                    "p_gain": 9.731059415434828e-05,
+                    "pattern_absolute_gain": 0.00503181080475304,
+                    "pattern_gain_bootstrap": {
+                      "ci_high": 0.007358609161384403,
+                      "ci_low": 0.0025864686851590954,
+                      "median": 0.005073918406280242,
+                      "sign_stability": 1.0
+                    },
+                    "q_gain": 0.0001803806135544017,
+                    "set_level_gain": 0.00142467755938661
+                  },
+                  "validation:B": {
+                    "gain_method": "exact_conditional_complete_lower_order_fiber",
+                    "gain_null_path": "gain/A_validation_from_B/GS_3640547dbd86b2559105bb3f_conditional_array_audit.json",
+                    "gain_ok": true,
+                    "gain_path": "gain/A_validation_from_B/GS_3640547dbd86b2559105bb3f.json",
+                    "higher_order_gain_status": "evaluated",
+                    "p_gain": 6.5797216130820845e-06,
+                    "pattern_absolute_gain": 0.005799337402134119,
+                    "pattern_gain_bootstrap": {
+                      "ci_high": 0.008077715314712821,
+                      "ci_low": 0.003462614437710943,
+                      "median": 0.0058044858405739,
+                      "sign_stability": 1.0
+                    },
+                    "q_gain": 1.1629275409168336e-05,
+                    "set_level_gain": 0.0019207076081346267
+                  }
+                },
+                "genes": [
+                  "DDIT3",
+                  "PHGDH",
+                  "SESN2"
+                ],
+                "mfi_evidence": {
+                  "discovery:A": {
+                    "mfi": 0.666971182594589,
+                    "mfi_ci_high": 0.9598211458390372,
+                    "mfi_ci_low": 0.40163588195447025,
+                    "mfi_sign_stability": 1.0
+                  },
+                  "discovery:B": {
+                    "mfi": 0.5689293967603568,
+                    "mfi_ci_high": 0.8543733708208995,
+                    "mfi_ci_low": 0.27377384296676655,
+                    "mfi_sign_stability": 1.0
+                  },
+                  "validation:A": {
+                    "discovery_mfi": 0.666971182594589,
+                    "mfi": 0.5689293967603568,
+                    "mfi_ci_high": 0.844199900599486,
+                    "mfi_ci_low": 0.295956521668995,
+                    "mfi_sign_stability": 1.0,
+                    "p_mfi": 9.73105941544678e-05,
+                    "q_mfi": 0.00018038061355462324
+                  },
+                  "validation:B": {
+                    "discovery_mfi": 0.5689293967603568,
+                    "mfi": 0.666971182594589,
+                    "mfi_ci_high": 0.9435195911523326,
+                    "mfi_ci_low": 0.3926313321332131,
+                    "mfi_sign_stability": 1.0,
+                    "p_mfi": 6.579721613073634e-06,
+                    "q_mfi": 1.1364973695309004e-05
+                  }
+                },
+                "order": 3,
+                "provenance": {
+                  "gene_set_id": "GS_3640547dbd86b2559105bb3f",
+                  "path": "research://outputs/real_nt_v04_holm_20260927/remote/outputs/real_nt/genes_1000_full/holm_reference_catalogue_frozen.json",
+                  "record_key": "R2c25816f86029aa8ab80",
+                  "sha256": "4e849d916979141cea25cec606a2b18072b17f6990745384f2dd372574ff0cd1",
+                  "source_evidence_retained": true
+                },
+                "qualification": {
+                  "complete_search": false,
+                  "holm_qualified": true,
+                  "state_level_FDR_controlled": false,
+                  "validation_family_tests": [
+                    {
+                      "adjusted_p": 0.00351186332521315,
+                      "arm": "holm_025",
+                      "candidate_id": "GS_3640547dbd86b2559105bb3f",
+                      "evaluation_status": "evaluated",
+                      "family_gain_rejected": true,
+                      "family_id": "A_to_B:order3:gene_set_gain",
+                      "family_size": 76,
+                      "genes": [
+                        "DDIT3",
+                        "PHGDH",
+                        "SESN2"
+                      ],
+                      "level_per_direction": 0.025,
+                      "method": "holm",
+                      "p_for_accounting": 9.731059415434828e-05,
+                      "p_gain": 9.731059415434828e-05,
+                      "p_value_unit": "gene_set_not_concrete_state",
+                      "source_fold": "A",
+                      "tested": true,
+                      "validation_fold": "B"
+                    },
+                    {
+                      "adjusted_p": 0.00022371053484479086,
+                      "arm": "holm_025",
+                      "candidate_id": "GS_3640547dbd86b2559105bb3f",
+                      "evaluation_status": "evaluated",
+                      "family_gain_rejected": true,
+                      "family_id": "B_to_A:order3:gene_set_gain",
+                      "family_size": 76,
+                      "genes": [
+                        "DDIT3",
+                        "PHGDH",
+                        "SESN2"
+                      ],
+                      "level_per_direction": 0.025,
+                      "method": "holm",
+                      "p_for_accounting": 6.5797216130820845e-06,
+                      "p_gain": 6.5797216130820845e-06,
+                      "p_value_unit": "gene_set_not_concrete_state",
+                      "source_fold": "B",
+                      "tested": true,
+                      "validation_fold": "A"
+                    }
+                  ]
+                },
+                "reference_id": "R2c25816f86029aa8ab80",
+                "reference_population": {
+                  "control_labels": [
+                    "non-targeting"
+                  ],
+                  "counts_by_fold": {
+                    "A": {
+                      "frequency": 0.14349859681945742,
+                      "n_cells": 5345,
+                      "support": 767
+                    },
+                    "B": {
+                      "frequency": 0.15057987280209503,
+                      "n_cells": 5346,
+                      "support": 805
+                    }
+                  },
+                  "n_cells": 10691,
+                  "prevalence_scope": "pooled_descriptive",
+                  "support": 1572
+                },
+                "reference_prevalence": 0.1470395659900851,
+                "states": [
+                  1,
+                  0,
+                  0
+                ]
+              },
+              "sample_size_context": {
+                "burden_is_not_biological_breadth": true,
+                "flag_scope": "sample_size_stratum; individual sensitivity not estimated",
+                "sample_size_sensitive": true,
+                "support_context": "high_sample_count",
+                "target_candidate_count": 28,
+                "target_cell_count": 460
+              },
+              "sampling_block_id": "RPL24|M02|enrichment",
+              "signed_state_contrast_context": [
+                "REL419219832cc03ae52a41",
+                "RELbdc540211e168afda39e"
+              ],
+              "stable_core_context": {
+                "members": [
+                  "R0a14c1972bf845e0116d",
+                  "R237fa95df64a91ef3bff",
+                  "R2c25816f86029aa8ab80",
+                  "R3d521869b482f182e97a",
+                  "R41e4d60379cb3c1ccfa8",
+                  "R588aaaeba21a739a7bfb",
+                  "R9e82270852c7e4ce52b4",
+                  "Ra73197ebae177825d304",
+                  "Rccc32dbbe95f0f836ae7",
+                  "Re05cb62c8a900654aa34"
+                ],
+                "status": "stable_core"
+              }
+            }
+          },
+          "contradictions": [],
+          "critic_audits": {
+            "claim_audits": [],
+            "evidence_audits": [],
+            "failure_attributions": [],
+            "final_reports": [],
+            "hypothesis_audits": [],
+            "hypothesis_syntheses": [],
+            "investigation_requests": [],
+            "progress_snapshots": [],
+            "recommended_experiments": [],
+            "revision_requests": [],
+            "routing_decisions": [],
+            "status_changes": [],
+            "stop_records": []
+          },
+          "evidence_assessments": [],
+          "evidence_gaps": [],
+          "evidence_questions": [],
+          "evidence_records": [],
+          "hypotheses": [],
+          "mechanistic_claims": [],
+          "mechanistic_question": null,
+          "metadata": {
+            "case_id": "perturbation_scan_day6_v01_20260927:C4c5e003b0938b2c462f9",
+            "case_revision": 1,
+            "cell_context": "K562",
+            "created_at": "2026-10-04T15:04:16.548282Z",
+            "perturbation": "RPL24",
+            "project": "JURE",
+            "schema_version": "0.1.1",
+            "source_dataset": "replogle_k562_day6",
+            "updated_at": "2026-10-04T15:04:16.548289Z"
+          }
+        },
+        "before": {}
+      }
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "$defs": {
+    "EvidenceLevel": {
+      "enum": [
+        "REFERENCE_PATTERN",
+        "EXPLORATORY_ASSOCIATION",
+        "EXTERNALLY_VALIDATED_ASSOCIATION",
+        "MECHANISTICALLY_INVESTIGATED"
+      ],
+      "title": "EvidenceLevel",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "genes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Genes",
+      "type": "array"
+    },
+    "states": {
+      "items": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer"
+      },
+      "title": "States",
+      "type": "array"
+    },
+    "order": {
+      "minimum": 1,
+      "title": "Order",
+      "type": "integer"
+    },
+    "candidate_id": {
+      "title": "Candidate Id",
+      "type": "string"
+    },
+    "dataset_id": {
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "condition_id": {
+      "title": "Condition Id",
+      "type": "string"
+    },
+    "perturbation_target": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Perturbation Target"
+    },
+    "condition_type": {
+      "title": "Condition Type",
+      "type": "string"
+    },
+    "reference_id": {
+      "title": "Reference Id",
+      "type": "string"
+    },
+    "matched_effect": {
+      "title": "Matched Effect",
+      "type": "number"
+    },
+    "effect_units": {
+      "const": "prevalence_difference",
+      "default": "prevalence_difference",
+      "title": "Effect Units",
+      "type": "string"
+    },
+    "direction": {
+      "enum": [
+        "enrichment",
+        "depletion"
+      ],
+      "title": "Direction",
+      "type": "string"
+    },
+    "condition_support": {
+      "additionalProperties": true,
+      "title": "Condition Support",
+      "type": "object"
+    },
+    "control_support": {
+      "additionalProperties": true,
+      "title": "Control Support",
+      "type": "object"
+    },
+    "association_evidence": {
+      "additionalProperties": true,
+      "title": "Association Evidence",
+      "type": "object"
+    },
+    "evidence_level": {
+      "$ref": "#/$defs/EvidenceLevel",
+      "default": "EXPLORATORY_ASSOCIATION"
+    },
+    "external_validation_status": {
+      "default": "NOT_PERFORMED",
+      "title": "External Validation Status",
+      "type": "string"
+    },
+    "quality_flags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Quality Flags",
+      "type": "array"
+    },
+    "metadata": {
+      "additionalProperties": true,
+      "title": "Metadata",
+      "type": "object"
+    },
+    "provenance": {
+      "additionalProperties": true,
+      "title": "Provenance",
+      "type": "object"
+    }
+  },
+  "required": [
+    "genes",
+    "states",
+    "order",
+    "candidate_id",
+    "dataset_id",
+    "condition_id",
+    "condition_type",
+    "reference_id",
+    "matched_effect",
+    "direction",
+    "condition_support",
+    "control_support",
+    "association_evidence",
+    "provenance"
+  ],
+  "title": "ConditionAssociation",
+  "type": "object"
+}

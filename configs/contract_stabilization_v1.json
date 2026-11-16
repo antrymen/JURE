@@ -1,0 +1,22 @@
+{
+  "version": "contract-stabilization-v1",
+  "scientific_protocol": "EIC-frozen-v1",
+  "normalization_version": "representation-v1.1",
+  "model_config": "configs/agent_runtime_glm47_flash.json",
+  "smoke_inputs": 5,
+  "max_model_calls": 10,
+  "schema_retries": 0,
+  "evidence_tool_calls": 0,
+  "critic_calls": 0,
+  "selection": "Five type slots in fixed order: enrichment, depletion, stable-core, signed-state contrast, gene-disjoint context. Deterministic SHA256 order within each eligible pool, no duplicate clue IDs. Use previously initialized benchmark/pilot CaseFiles; never choose by model output.",
+  "acceptance": {
+    "minimum_completed_calls": 10,
+    "minimum_technical_passes": 9,
+    "minimum_per_role_passes": 4,
+    "minimum_complete_explorer_proposals": 4,
+    "scientific_validity": "NOT_ASSESSED"
+  },
+  "case_a": "PAUSED until historical replay and smoke results have been evaluated; no automatic launch by the smoke script",
+  "bcd": "PAUSED",
+  "failure_policy": "Retain every failure and source output. Do not modify code during the frozen smoke run, increase its calls, fill scientific gaps, substitute cases or run ablations."
+}

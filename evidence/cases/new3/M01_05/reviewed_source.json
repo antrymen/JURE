@@ -1,0 +1,34 @@
+{
+  "case_id": "M01_05",
+  "role": "Critic_final",
+  "verdict": "evidence_limited_no_mechanism_winner",
+  "source_hashes": {
+    "explorer": "7480dde4c39dc73a27d6fcf56390d10eee569c5fe062d53ac7f5e1f0416a223a",
+    "c1": "172cb27c0566ca211ff5c352e2f322758844f34871ecbca16aa71eab376c122c",
+    "investigator_initial": "cf6d9d2de0fcb9897fc011345314dab40c6716c52019e9375cce87b4eeeecca0",
+    "followup": "7ab625573fb21f16600a0b69091cb41a2072261a007d41e9d13f431bd2cf3a6d",
+    "followup_web": "7b4f8e1cc036efe9e9f514bda1ea49dc017d25f7d4d09b1154ed8294125ec5ca",
+    "hash_correction": "9cbe979f08753035a6fbb23b711f5ae1e3db15adad0e20ee4ff8a923a6a07ce5"
+  },
+  "request_execution_reevaluation": {
+    "c2_request": "一轮 SAMM50 身份、PMID 26530328/34037656 及 target-specific MICOS/quality-control 文献补查，并修正复制的TIMM23B限制语句。",
+    "execution": "NCBI/PubChem gene record核验 human SAMM50（HGNC:24276及别名）；PMID 26530328核验SAM50-MICOS/cristae关系；PMID 34037656核验SAMM50-specific KD与MICOS architecture/mitochondrial quality-control语境；限制语句已更正。",
+    "reevaluation": "SAMM50-specific背景证据成立，但只支持候选MICOS/cristae和quality-control方向，未证明当前K562联合RNA的ISR因果链。"
+  },
+  "evidence_audit": {
+    "current_data": "SAMM50条件 56/102 联合RNA检出，匹配NT差值48.83 pp；条件样本较小，数据工具只支持当前K562关联，不支持因果、ISR或独立重复。",
+    "literature_claims": [
+      {"claim": "SAMM50人类基因身份及别名", "support": "verified", "source": "gene record HGNC:24276"},
+      {"claim": "SAM50与MICOS/cristae组织相关", "support": "verified_target_specific_context", "source": "PMID 26530328"},
+      {"claim": "SAMM50-specific KD与MICOS architecture/quality-control相关", "support": "verified_target_specific_context", "source": "PMID 34037656"},
+      {"claim": "SAMM50扰动在当前K562导致ISR/ATF4与三基因RNA状态", "support": "not_verified", "source": "no matched molecular evidence"}
+    ],
+    "hypotheses": {
+      "M01_05_H1": "MICOS/cristae-ISR为有文献背景的候选路径，但当前case-specific ISR桥未测。",
+      "M01_05_H2": "quality-control/mitophagy为有背景的候选路径，但无当前mitophagy flux、核酸释放或阻断证据。",
+      "M01_05_H3": "组成/检测备择仍开放；现有频率结果不能排除。"
+    }
+  },
+  "additional_followup": {"required": false, "reason": "已完成一轮身份、目标特异文献及元数据修正；剩余问题需要匹配系统分子/功能实验，继续文献检索不能闭合因果链。"},
+  "final_boundary": "保留SAMM50-specific候选背景与当前RNA关联；不把文献背景升级为当前K562机制，不指定H1/H2/H3赢家。"
+}

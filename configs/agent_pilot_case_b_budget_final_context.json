@@ -1,0 +1,102 @@
+{
+  "model_config": "configs/agent_runtime_glm53_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 5,
+    "max_retries": 1,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "investigator": {
+    "max_questions_per_run": 1,
+    "max_tool_calls_per_run": 2,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 5,
+    "max_investigator_rounds": 5,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 32,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 1200000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 1
+  },
+  "critic_rechecks_per_round": 2,
+  "registry_budgets": {
+    "total": 32,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "protocol_v3": true,
+  "schema_retries": 0,
+  "failed_stage_retries": 0,
+  "provider_retry_delays_seconds": [],
+  "resume_execution_policy": "independent_existing_checkpoints",
+  "protocol_id": "jure_case_b_budget_final_context_capacity",
+  "case_order": [
+    "B"
+  ],
+  "provider_max_calls_per_case": 130,
+  "max_transitions": 16,
+  "resume_sources": {
+    "B": {
+      "directory": "outputs/agent_pilot_v1_20260928/run_050_case_b_budget_extension/B",
+      "case_sha256": "d6bfb5c019ffd8e11453dd223269d695ddd9e1f8ff4113163ab12f020d898315"
+    }
+  },
+  "budget_extension_authorization": {
+    "user_instruction": "放宽给case b的预算",
+    "baseline_run": "outputs/agent_pilot_v1_20260928/run_040_case_b_completion/B",
+    "source_sha256": "af757c32feb5d5525cda0f12385b37f45c26c0e0716544c10e6ac1dc8427b114",
+    "inherited_model_calls": 78,
+    "inherited_tool_calls": 15,
+    "old_caps": {
+      "model_calls": 80,
+      "tool_calls": 18,
+      "investigator_rounds": 3,
+      "critic_rounds": 3,
+      "investigator_tools_per_round": 4
+    },
+    "new_caps": {
+      "model_calls": 130,
+      "tool_calls": 32,
+      "investigator_rounds": 5,
+      "critic_rounds": 5,
+      "investigator_tools_per_round": 6
+    },
+    "additional_explorer_revision_allowance": 0,
+    "protocol_prompts_and_scientific_rules_unchanged": true,
+    "separate_budget_extension_not_pilot_v1_result": true
+  },
+  "policy": "B-only explicitly authorized budget extension. Resume Investigator from the preserved final C1/C2 checkpoint. Investigator chooses queries; Critic judges science and routes. No winner target. Preserve cumulative accounting and prior STOP. A/C/D paused. No prompt, scientific protocol, evidence support threshold or tool implementation changes.",
+  "final_round_budget_reservation": {
+    "cumulative_model_calls_before_round": 109,
+    "remaining_model_calls": 21,
+    "investigator_questions": 1,
+    "investigator_tools": 2,
+    "reason": "Reserve full Critic C1/C2 and hypothesis syntheses within unchanged cumulative cap130; no new Explorer revisions."
+  },
+  "saved_investigator_prefix": {
+    "responses": [],
+    "tools": [],
+    "envelopes": []
+  },
+  "engineering_recovery": {
+    "same_logical_transition": 16,
+    "reason": "Preserve all evidence and raise local serialized-context capacity from750000 to1200000 chars for final full Critic audit; no science/prompt/model/call/round budget change. Previous capacity failure made zero model calls.",
+    "base_context_chars": {
+      "hypothesis": 790534,
+      "evidence": 790532,
+      "final": 790529
+    },
+    "inherited_model_calls": 115,
+    "inherited_tool_calls": 23,
+    "no_budget_reset": true
+  }
+}

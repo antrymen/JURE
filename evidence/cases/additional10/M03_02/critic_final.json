@@ -1,0 +1,47 @@
+{
+  "schema": "codex_critic_audit_v1",
+  "role": "Critic",
+  "backend": "GPT-5.6-Luna",
+  "round": 2,
+  "module": "M03_02",
+  "target": "SUPT5H",
+  "signed_pattern": "CCAR1+ CCNB1+ CDC20+",
+  "status": "evidence_limited",
+  "source_case_sha256": "1c86ba8edebae8dea98e7b5d8fdbf2e2c1523ba956dfab3793b6ebe62dcf82ce",
+  "inputs": [
+    "explorer/M03_02.json",
+    "investigator/M03_02.json",
+    "JOINT_DATA_RECHECK.json",
+    "critic/M03_02.json"
+  ],
+  "c1": {
+    "verdict": "pass",
+    "scope": "H1/H2/H3 distinct; CCNB1/CDC20 detection does not prove cell-cycle causality"
+  },
+  "c2": {
+    "observation": {
+      "status": "supported_descriptive",
+      "condition": "59/406",
+      "delta_pp": -29.2660567705
+    },
+    "H1": "insufficient: HeLa TNF-alpha Spt5 knockdown source, not K562 joint state",
+    "H2": "insufficient: no independent cycle/state labels",
+    "H3": "partially_supported_nonexclusive: depth descriptive delta -18.5084 pp attenuates effect but may be biological",
+    "metadata": "Current allowed metadata lacks independent state labels, measured efficacy, guide sequence/off-target annotations and orthogonal RNA; guide IDs exist. See METADATA_CAPABILITY_CHECK.json; absence of fields is not a biological negative.",
+    "literature_locator": "critic/WEB_SOURCE_CHECK.json:M03_02-SRC"
+  },
+  "followup": "none further; evidence_limited",
+  "case_id": "perturbation_scan_day6_v01_20260927:C284b6a8b8208c74589b9",
+  "inputs_sha256": {
+    "explorer/M03_02.json": "6efd1ceb78b36665f0a8111fe39924f0394d49c7a4fa27f6441818b8b103026e",
+    "investigator/M03_02.json": "0df5c713fe16dd55cbef2d8f79af86f6dff436bb8e4df3d05ee3532fd742d9a5",
+    "JOINT_DATA_RECHECK.json": "2405e8716b3b3baee21920fe31206c3ee3f28caea0804a28e09585e9ff687110",
+    "critic/M03_02.json": "4772d3c525f5994899d2323a3bc146a9cea726f2a22efbc21e5ff984519e4488",
+    "METADATA_CAPABILITY_CHECK.json": "9187d0fbd29feacdd7343d73513eee076c1422c8bd437ca64b25e35340a0233a"
+  },
+  "final_artifact_reconciliation": {
+    "performed_by": "parent agent",
+    "scope": "Identity/hash binding and synchronization with Critic-authored FINAL_CORRECTIONS.md; no new scientific verdict",
+    "critic_corrections_sha256": "f18af8c2585e1f7bc9492cf0cb940ca6d8d56b5fce541b766020bfdb47318bf3"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "model_config": "configs/agent_runtime_glm53_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 0,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 8,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 1200000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 1
+  },
+  "critic_rechecks_per_round": 2,
+  "registry_budgets": {
+    "total": 8,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "protocol_v3": true,
+  "protocol_id": "jure_case_c_critic_semantic_reconciliation",
+  "case_order": [
+    "C"
+  ],
+  "case_execution_policy": "user_selected_single_cycle",
+  "user_authorization": "好，跑一轮试试吧",
+  "initial_case_sources": {
+    "C": {
+      "path": "outputs/case_c_eif2b5_single_cycle_20260929/initial_case/case_file.json",
+      "sha256": "805e5037dcdd8c965108e504108e7371ebf22a0bb2c00c24557a335503c42cb4"
+    }
+  },
+  "schema_retries": 0,
+  "failed_stage_retries": 0,
+  "provider_retry_delays_seconds": [],
+  "max_transitions": 3,
+  "provider_max_calls_per_case": 40,
+  "policy": "One Explorer -> Investigator -> Critic cycle only. Stop at first Critic route/STOP; no second cycle. Agents author all science. No host-provided hypotheses, query priority, literature conclusions or verdicts. A/B and original C/D remain unchanged. Preserve paid output and usage during any local engineering recovery.",
+  "resume_sources": {
+    "C": {
+      "directory": "outputs/case_c_eif2b5_single_cycle_20260929/run_004/C",
+      "case_sha256": "f3c99e2f8209d3a13b8bd6f82459095fbd9a5a8ddd44d3457b3e7444b7a9a8b3"
+    }
+  },
+  "saved_investigator_prefix": {
+    "responses": [
+      {
+        "path": "outputs/case_c_eif2b5_single_cycle_20260929/critic_reconciliation/audit_hypotheses_patched_response.json",
+        "sha256": "76b22366d76709773c40ddc4d5ade6a14eba4577b7b40c57e95015af7173a881",
+        "role": "critic",
+        "method": "audit_hypotheses"
+      },
+      {
+        "path": "outputs/case_c_eif2b5_single_cycle_20260929/run_004/C/model_calls/call_0001_critic/response.json",
+        "sha256": "f0cefb57e08704f55b87b46e3d6796adbd5c298b134e99cc7ff02ffdb9fbd456",
+        "role": "critic",
+        "method": "decompose_claims"
+      },
+      {
+        "path": "outputs/case_c_eif2b5_single_cycle_20260929/run_004/C/model_calls/call_0002_critic/response.json",
+        "sha256": "bfd4289ffa207e457f783fc6d503a7a58be1735bfa10c838e556aadadf498b3d",
+        "role": "critic",
+        "method": "plan_rechecks"
+      },
+      {
+        "path": "outputs/case_c_eif2b5_single_cycle_20260929/critic_gap_binding/audit_response.json",
+        "sha256": "ad13f40c858a683b3972d9e85dc7c845e81092a55689fc4be4a44b3392718726",
+        "role": "critic",
+        "method": "audit_evidence"
+      }
+    ],
+    "tools": [],
+    "envelopes": []
+  },
+  "engineering_recovery": {
+    "same_logical_transition": 3,
+    "inherited_model_calls": 20,
+    "inherited_tool_calls": 6,
+    "no_budget_reset": true,
+    "reason": "Bind declared ISR-arm gap alias; all paid Critic outputs and two rechecks replayed."
+  },
+  "saved_critic_rechecks": [
+    {
+      "path": "/Users/mac/Documents/ChatGPT/JURE/outputs/case_c_eif2b5_single_cycle_20260929/run_004/C/tools/artifacts/8a1f4aebc0591d990f567868641fa8223c37fb7965beddb11cf8a012a9e647c7.json",
+      "sha256": "8a1f4aebc0591d990f567868641fa8223c37fb7965beddb11cf8a012a9e647c7",
+      "parent_question_id": "Q_62b158b87e23997d97be"
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/JURE/outputs/case_c_eif2b5_single_cycle_20260929/run_004/C/tools/artifacts/112d7980939bd3dac53b497335c8b476687ab0e104e840f9a469276e2930fb82.json",
+      "sha256": "112d7980939bd3dac53b497335c8b476687ab0e104e840f9a469276e2930fb82",
+      "parent_question_id": "Q_5244426769746b4cf975"
+    }
+  ]
+}

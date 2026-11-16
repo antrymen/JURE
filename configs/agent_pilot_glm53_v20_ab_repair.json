@@ -1,0 +1,56 @@
+{
+  "protocol_id": "jure_real_agent_pilot_glm53_v2.0",
+  "case_order": [
+    "A",
+    "B"
+  ],
+  "a_gate": "successful Explorer, Investigator and Critic commits; audited STOP; intact initial sources; real evidence and transport traces; no mock",
+  "model_config": "configs/agent_runtime_glm53_v19.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 18,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed"
+  },
+  "critic_rechecks_per_round": 2,
+  "schema_retries": 1,
+  "failed_stage_retries": 1,
+  "max_transitions": 12,
+  "provider_max_calls_per_case": 80,
+  "registry_budgets": {
+    "total": 18,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "policy": "Continue A/B from committed checkpoints after v1.7 proved corrected budget routing. Native provider response_format=json_object is enabled; strict JSON/schema/semantic checks remain unchanged. Missing-contrast feedback lists required ID pairs deterministically and clarifies that unchanged, non-rejected hypotheses remain in the working set. No scientific comparisons are supplied by the host. All failed attempts, prior tokens/tools and original initial files remain preserved. Completed-round policy, scientific bounds and other operational budgets are unchanged. C/D remain paused. This is an engineering pilot, not an independent replication. GLM-5 still emitted prose under native JSON mode. User-authorized GLM fallback: glm-5.3 with required thinking enabled, explicit low effort, 32768 output cap and 300-second total deadline. Preserve all previous committed state, failed attempts, calls and costs; no promotion of uncommitted output. v2.0 fixes negative-subject proof assertions and explicitly unchanged historical-hypothesis preservation being misread as scientific verdicts. Positive causal proof and actual retained/confirmed verdicts remain rejected. Original model replies are checked read-only only; a new Agent response must pass before commit.",
+  "provider_retry_delays_seconds": [
+    15
+  ],
+  "resume_sources": {
+    "A": {
+      "directory": "outputs/agent_pilot_v1_20260928/run_011_glm53_v19_ab_repair/A",
+      "case_sha256": "3df1d140fb984a9b6f373ff6c8b86364930ca8973b8d7b348bd5e5bad5e98722"
+    },
+    "B": {
+      "directory": "outputs/agent_pilot_v1_20260928/run_008_glm5_v16/B",
+      "case_sha256": "79f8d4c1cdf77922dd91ce5affca95d4ba1ca7610a783f7fbac156fb4608dcdb"
+    }
+  },
+  "checkpoint_failed_investigator_allowance_cap": 0
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "codex_critic_audit_v1",
+  "role": "Critic",
+  "backend": "GPT-5.6-Luna",
+  "round": 2,
+  "module": "M05_03",
+  "target": "RIOK1",
+  "signed_pattern": "BBC3- DDIT3+ JUN-",
+  "status": "evidence_limited",
+  "source_case_sha256": "3eb2230e33294fcce679cbd051e63d78e0a148939087291590ac0e6b7bb88eb9",
+  "inputs": [
+    "explorer/M05_03.json",
+    "investigator/M05_03.json",
+    "investigator/followup_v1/M05_03.json",
+    "investigator/followup_v1/METADATA_INVENTORY.json",
+    "critic/M05_03.json"
+  ],
+  "c1": {
+    "verdict": "pass",
+    "scope": "H1/H2/H3 distinct; signed state is detection only"
+  },
+  "c2": {
+    "observation": {
+      "status": "supported_descriptive",
+      "condition": "134/326",
+      "matched_nt": "0.15396867",
+      "delta_pp": 25.7074275241
+    },
+    "conditional_joint": {
+      "anchor": "DDIT3+",
+      "other_state": "BBC3- JUN-",
+      "anchor_prevalence_target": 0.6012269939,
+      "supported_anchor_fraction": 1.0,
+      "valid_batches": 46,
+      "target_weighted_rate": 0.6836734694,
+      "batch_nt_weighted_rate": 0.5239519404,
+      "weighted_delta_pp": 15.972152899,
+      "interpretation": "descriptive conditional association; not interaction"
+    },
+    "H1": "insufficient: Nature source includes yeast RIO1-AID and human RPE-1 mAID-RIOK1, but neither validates K562 BBC3/DDIT3/JUN or target efficacy",
+    "H2": "insufficient: no independent state labels",
+    "H3": "insufficient: depth descriptive delta +25.9907 pp does not resolve mechanism",
+    "metadata": "Current allowed metadata lacks independent state labels, measured efficacy, guide sequence/off-target annotations and orthogonal RNA; guide IDs exist. See METADATA_CAPABILITY_CHECK.json; absence of fields is not a biological negative.",
+    "literature_locator": "critic/WEB_SOURCE_CHECK.json:M05_03-SRC",
+    "followup_hash": "0ea9306db933eaee02fb46f7e4a0c82e91aee636e7c4002647556046f69583e1"
+  },
+  "followup": "completed; no further query",
+  "case_id": "perturbation_scan_day6_v01_20260927:C153cd911e6055e996a0c",
+  "inputs_sha256": {
+    "explorer/M05_03.json": "0b9a9a40f65864bd0f5cf62c4f0786a85d11c9ee354b9234b0c78165810a92c9",
+    "investigator/M05_03.json": "030beaa7ad1a8b6078a73956fffa7cd995f8207aa97cb0b7696cacb41a0ddfda",
+    "investigator/followup_v1/M05_03.json": "0ea9306db933eaee02fb46f7e4a0c82e91aee636e7c4002647556046f69583e1",
+    "investigator/followup_v1/METADATA_INVENTORY.json": "51e06d33c42e9359c31be6da7ad6c7f6ced89665ccc474ec80c6388ddacaed4d",
+    "critic/M05_03.json": "35202c227eae49d1c4fa7bec23f5b0f59073cc085ad2111ba5fe1ece7dabc3b4",
+    "METADATA_CAPABILITY_CHECK.json": "9187d0fbd29feacdd7343d73513eee076c1422c8bd437ca64b25e35340a0233a"
+  },
+  "final_artifact_reconciliation": {
+    "performed_by": "parent agent",
+    "scope": "Identity/hash binding and synchronization with Critic-authored FINAL_CORRECTIONS.md; no new scientific verdict",
+    "critic_corrections_sha256": "f18af8c2585e1f7bc9492cf0cb940ca6d8d56b5fce541b766020bfdb47318bf3"
+  }
+}

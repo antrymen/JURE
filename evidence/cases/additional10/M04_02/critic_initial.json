@@ -1,0 +1,8 @@
+{
+  "schema":"codex_critic_audit_v1","role":"Critic","backend":"GPT-5.6-Luna","round":1,"module":"M04_02","target":"INTS2","signed_pattern":"HIST1H1B+ HIST1H1E+ HIST1H4C+","status":"followup_requested","source_case_sha256":"d9bdfd86ebd65855662679378eddf5f806bd5140557fa192fe0728856e48a8bc",
+  "input_artifacts":["explorer/M04_02.json","investigator/M04_02.json","investigator/raw/M04_02_joint.json","investigator/raw/M04_02_supplemental.json","JOINT_DATA_RECHECK.json","critic/WEB_SOURCE_CHECK.json"],
+  "c1":{"verdict":"pass","scope":"H1/H2/H3 are distinct; histone plus signs are detection only and do not imply chromatin activation."},
+  "c2":{"observed_claim":{"status":"supported_descriptive","value":"48/354; matched NT delta -31.4867 pp","evidence":"investigator/raw/M04_02_joint.json","independent_replication":false},"H1":{"status":"insufficient","reason":"Integrator paper depletes INTS11/INTS9/INTS4 in HeLa, not INTS2; no K562 histone joint or target efficacy."},"H2":{"status":"insufficient","reason":"No independent cell-cycle/chromatin state labels."},"H3":{"status":"partially_supported_but_not_exclusive","reason":"Depth descriptive delta -19.2473 pp attenuates effect, but histone RNA measurement and depth may be biological."},"literature_source":"M04_02-SRC; source-target mismatch is explicit."},
+  "claims":[{"id":"M04_02-O1","status":"supported"},{"id":"M04_02-H1","status":"insufficient"},{"id":"M04_02-H2","status":"insufficient"},{"id":"M04_02-H3","status":"partially_supported"}],
+  "routing":"One bounded follow-up requested to correct subunit context and metadata."
+}

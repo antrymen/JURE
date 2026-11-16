@@ -1,0 +1,379 @@
+{
+  "schema": "codex_explorer_proposal_v1",
+  "backend": "Codex-subagent",
+  "role": "Explorer",
+  "case_id": "perturbation_scan_day6_v01_20260927:Cd937978995df261151c7",
+  "module": "M01",
+  "slot": "M01_03",
+  "source_case_file": "outputs/module_additional10_luna_20261004/preparation/initial_cases/M01_03/case_file.json",
+  "source_case_sha256": "d621d541e041e6e7bfb74ea7684ebcea4083df90dae6ae75619222f8a5339e62",
+  "clue_id": "CLUE_3dd84e7e7fe9dd3602256b86",
+  "observed_fact": {
+    "text": "Day 6 K562 中，PHB2 标记扰动的 DDIT4+PHGDH+TRIB3+ 出现频率为 0.50843373（211/415）；按扰动 batch 构成加权的 NT 频率为 0.06447803，Δ = +44.39557059 个百分点。该关联属于 exploratory_perturbation_candidate，不建立机制。",
+    "target": "PHB2",
+    "signed_pattern": "DDIT4+PHGDH+TRIB3+",
+    "genes": [
+      "DDIT4",
+      "PHGDH",
+      "TRIB3"
+    ],
+    "states": [
+      1,
+      1,
+      1
+    ],
+    "encoding": "1 = detected expression; 0 = undetected expression (not inferred regulatory activity)",
+    "perturbation_frequency": 0.5084337349397591,
+    "matched_nt_frequency": 0.06447802906748062,
+    "delta_pp": 44.395570587227844,
+    "target_cells": 415,
+    "perturbation_hits": 211,
+    "selected_family_holm_exploratory": 3.1261478596402386e-118,
+    "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+    "replication_status": "NOT_PERFORMED"
+  },
+  "mechanistic_question": "PHB2 扰动是否通过mitochondrial proteostasis and respiratory-state remodeling改变 DDIT4+PHGDH+TRIB3+ 的联合检测？需比较 DDIT4+边际, PHGDH+边际, TRIB3+边际 与完整 DDIT4+PHGDH+TRIB3+ joint，区分细胞内响应、状态组成和检测概率。",
+  "hypotheses": [
+    {
+      "id": "M01_03-H1",
+      "statement": "待查假说：PHB2→mitochondrial proteostasis/respiratory adaptation可能改变 DDIT4+PHGDH+TRIB3+ 的细胞内联合表达；这只是候选过程，当前 Case 不证明该通路或直接调控边。",
+      "structure": {
+        "type": "cell_intrinsic_response",
+        "causal_path": "PHB2→mitochondrial proteostasis/respiratory adaptation → DDIT4+PHGDH+TRIB3+ intracellular joint probability",
+        "direct_regulatory_edges_asserted": false,
+        "specific_mediator": "未指定；需要证据后才能提出可追溯分子中介",
+        "status": "untested_hypothesis"
+      },
+      "predictions": [
+        {
+          "id": "M01_03-H1-P1",
+          "expected_if_supported": "当前聚合焦点 joint Δ=+44.40 pp；在 batch、细胞质量和非焦点状态可比后，DDIT4+边际, PHGDH+边际, TRIB3+边际呈与该过程一致的选择性变化，且完整 DDIT4+PHGDH+TRIB3+ joint 的残余差异仍存在。具体边际方向须由八状态表估计，不能把聚合 Δ 当作条件效应。",
+          "weakening_outcome": "条件化后 DDIT4+PHGDH+TRIB3+ joint 与边际变化消失，或变化方向/状态分布与 mitochondrial proteostasis and respiratory-state remodeling 的候选预期不一致；单个边际变化本身不能否定细胞内响应。边际解释与候选过程是否真实是正交问题，命名过程仍需独立过程证据。",
+          "neutral_outcome": "状态重叠不足、区间过宽或只能获得聚合频率时，不对候选过程作方向裁决。",
+          "evidence_question": {
+            "id": "M01_03-H1-Q1",
+            "question": "在 PHB2 与 NT 的八状态表中，DDIT4+边际, PHGDH+边际, TRIB3+边际及完整 DDIT4+PHGDH+TRIB3+ joint 的条件差异是否在质量匹配后仍保留，并与mitochondrial proteostasis and respiratory-state remodeling的可追溯读出相符？",
+            "prediction_id": "M01_03-H1-P1"
+          }
+        }
+      ],
+      "limitations": [
+        "当前输入没有给出状态内效应、完整状态表或可裁决中介证据。",
+        "Day 6 exploratory association 不等于因果或机制确认。"
+      ]
+    },
+    {
+      "id": "M01_03-H2",
+      "statement": "备择假说：PHB2扰动主要改变预存细胞状态的组成，富集或耗竭已有 DDIT4+PHGDH+TRIB3+ 倾向的细胞，而非在状态内诱发该联合表达。",
+      "structure": {
+        "type": "state_composition",
+        "causal_path": "PHB2 perturbation → non-DDIT4,PHGDH,TRIB3 state composition → DDIT4+PHGDH+TRIB3+ frequency",
+        "direct_regulatory_edges_asserted": false,
+        "specific_mediator": "未指定；需要证据后才能提出可追溯分子中介",
+        "status": "untested_hypothesis"
+      },
+      "predictions": [
+        {
+          "id": "M01_03-H2-P1",
+          "expected_if_supported": "当前聚合焦点 joint Δ=+44.40 pp；用不含 DDIT4,PHGDH,TRIB3 的状态标志重加权 NT 后，主要 DDIT4+PHGDH+TRIB3+ 差异可被状态比例重建；各状态内三个边际和完整 joint 的残余差异接近零。",
+          "weakening_outcome": "独立状态比例相近，但在多个重叠状态内 DDIT4+PHGDH+TRIB3+ joint 或任一边际仍有稳定差异；组成重加权无法重建观察效应。单个边际变化不能单独裁决候选过程。",
+          "neutral_outcome": "状态标志依赖焦点基因或跨条件重叠不足时，组成与细胞内效应不能排他区分。",
+          "evidence_question": {
+            "id": "M01_03-H2-Q1",
+            "question": "不使用 DDIT4,PHGDH,TRIB3 定义的状态比例及其 NT→PHB2 重加权，能解释 DDIT4+PHGDH+TRIB3+ 的多少；状态内三个边际和 joint 残余是多少？",
+            "prediction_id": "M01_03-H2-P1"
+          }
+        }
+      ],
+      "limitations": [
+        "当前输入没有给出状态内效应、完整状态表或可裁决中介证据。",
+        "Day 6 exploratory association 不等于因果或机制确认。"
+      ]
+    },
+    {
+      "id": "M01_03-H3",
+      "statement": "备择假说：PHB2 与 NT 的检测概率差异可能改变观测 signed-state 频率，方向需由八状态表及三个边际判定；这只是测量解释，不建立因果。",
+      "structure": {
+        "type": "detectability_or_marginal_explanation",
+        "causal_path": "quality/depth difference → marginal detection of DDIT4,PHGDH,TRIB3 → DDIT4+PHGDH+TRIB3+ observed frequency",
+        "direct_regulatory_edges_asserted": false,
+        "specific_mediator": "未指定；需要证据后才能提出可追溯分子中介",
+        "status": "untested_hypothesis"
+      },
+      "predictions": [
+        {
+          "id": "M01_03-H3-P1",
+          "expected_if_supported": "可检验的检测备择是普遍检出概率增加：DDIT4+PHGDH+TRIB3+ 和三个正边际都应随深度上升；深度匹配后 Δ=+44.40 pp 应明显收缩。 比较完整 DDIT4+PHGDH+TRIB3+ joint 与三个边际的条件概率；不得把聚合 Δ=+44.40 pp 直接当作过程效应。",
+          "weakening_outcome": "深度和质量匹配后 DDIT4+PHGDH+TRIB3+ joint 仍保留选择性差异，且八状态/边际方向不符合检测概率模型；这会削弱检测解释。",
+          "neutral_outcome": "深度分层样本不足或检测阈值本身位于候选过程下游时，不对检测解释作排他裁决。",
+          "evidence_question": {
+            "id": "M01_03-H3-Q1",
+            "question": "DDIT4+边际, PHGDH+边际, TRIB3+边际与每细胞 ncounts/UMI 的联合分布如何变化？按 batch 和深度匹配后，DDIT4+PHGDH+TRIB3+ joint 与边际差异还剩多少？",
+            "prediction_id": "M01_03-H3-P1"
+          }
+        }
+      ],
+      "limitations": [
+        "当前输入没有给出状态内效应、完整状态表或可裁决中介证据。",
+        "Day 6 exploratory association 不等于因果或机制确认。"
+      ]
+    }
+  ],
+  "pairwise_contrasts": [
+    {
+      "hypothesis_ids": [
+        "M01_03-H1",
+        "M01_03-H2"
+      ],
+      "distinction": "候选细胞内过程与预存状态组成",
+      "observable": "不含 DDIT4,PHGDH,TRIB3 的状态重加权、状态内 DDIT4+PHGDH+TRIB3+ joint 与三边际",
+      "favors_first": "状态比例重加权不能解释主要差异，而质量匹配后 DDIT4+PHGDH+TRIB3+ joint 或任一边际仍有与 mitochondrial proteostasis and respiratory-state remodeling 一致的选择性残余；边际数量本身不作硬阈值。",
+      "favors_second": "状态比例重加权可重建主要 DDIT4+PHGDH+TRIB3+ 差异，状态内 joint 与边际残余接近零。",
+      "neutral_outcome": "状态标志依赖焦点基因或重叠不足时不作排他裁决。",
+      "prediction_ids": [
+        "M01_03-H1-P1",
+        "M01_03-H2-P1"
+      ]
+    },
+    {
+      "hypothesis_ids": [
+        "M01_03-H1",
+        "M01_03-H3"
+      ],
+      "distinction": "候选细胞内过程与检测深度",
+      "observable": "深度匹配后的 DDIT4+PHGDH+TRIB3+ joint、三个边际及无关基因 joint 对照",
+      "favors_first": "深度匹配后 DDIT4+PHGDH+TRIB3+ joint 仍有与 mitochondrial proteostasis and respiratory-state remodeling 一致的状态选择性，且不被通用检测模型重建；单个边际变化不能单独排除该过程。",
+      "favors_second": "深度分层可重建聚合 Δ=+44.40 pp，且八状态与边际随检测概率模型同步变化。",
+      "neutral_outcome": "深度既可能是过程后果，无法单独切断路径。",
+      "prediction_ids": [
+        "M01_03-H1-P1",
+        "M01_03-H3-P1"
+      ]
+    },
+    {
+      "hypothesis_ids": [
+        "M01_03-H2",
+        "M01_03-H3"
+      ],
+      "distinction": "状态组成与检测差异",
+      "observable": "独立状态标志、状态比例、ncounts/UMI 与三基因边际的联合分层",
+      "favors_first": "独立状态比例变化可重建差异且深度匹配后仍有状态特异性。",
+      "favors_second": "所谓状态差异随深度控制消失，且无关 joint 同步变化。",
+      "neutral_outcome": "独立状态标志不足或深度与状态高度共线。",
+      "prediction_ids": [
+        "M01_03-H2-P1",
+        "M01_03-H3-P1"
+      ]
+    }
+  ],
+  "companion_context": {
+    "count": 25,
+    "source": "outputs/module_additional10_luna_20261004/preparation/initial_cases/M01_03/companion_summary.json",
+    "independent_validation": false,
+    "patterns": [
+      {
+        "reference_id": "Rbb8c003927b1dcc9bea1",
+        "signed_pattern": "DDIT4+ PHGDH+ RGS16+",
+        "delta_pp": 44.726721866276506,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rd8b66e4fd0d29529d457",
+        "signed_pattern": "DDIT4+ PHGDH+ TRIB3+",
+        "delta_pp": 44.395570587227844,
+        "core_status": "stable_core",
+        "is_focal_case": true,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R2259b1d021ff35964e95",
+        "signed_pattern": "DDIT3+ DDIT4+ TRIB3+",
+        "delta_pp": 41.40704217443779,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R68c9aac1c530c9ddf5ab",
+        "signed_pattern": "DDIT4+ JUN- KLF6-",
+        "delta_pp": 38.641658695721716,
+        "core_status": "boundary",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R092d3cf0f584eaaa5fa1",
+        "signed_pattern": "DDIT3+ DDIT4+ PPP1R15A+",
+        "delta_pp": 34.95927153544868,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rc33752b9861327ad2f70",
+        "signed_pattern": "DDIT3+ DDIT4+ GDF15+",
+        "delta_pp": 34.581589640248225,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rcae1791331350cc04be3",
+        "signed_pattern": "DDIT4+ RGS16+ SESN2+",
+        "delta_pp": 33.97307769481417,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R20f66e904e7bfe106d73",
+        "signed_pattern": "BBC3- DDIT4+ JUN-",
+        "delta_pp": 33.055932843679074,
+        "core_status": "boundary",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R507d4c0d9ed08c607726",
+        "signed_pattern": "DDIT4+ SESN2+ TRIB3+",
+        "delta_pp": 33.03179736343005,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R96993f8d97cd9dcde591",
+        "signed_pattern": "DDIT4+ PHGDH+ SESN2+",
+        "delta_pp": 32.53208552763417,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R2288b041a3412626a9d7",
+        "signed_pattern": "DDIT3+ DDIT4+ SESN2+",
+        "delta_pp": 31.0744590745221,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Re7e28e3434daf63c2391",
+        "signed_pattern": "DDIT3+ PHGDH+ SESN2+",
+        "delta_pp": 30.484714559366587,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Red058342a758ebb3d636",
+        "signed_pattern": "CEBPB+ DDIT4+ SESN2+",
+        "delta_pp": 29.232227508549112,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rd29c41c178cc3148be90",
+        "signed_pattern": "DDIT4+ PCK2+ PHGDH+",
+        "delta_pp": 27.696929676825192,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R16edf16a402088b1d164",
+        "signed_pattern": "CEBPB+ PHGDH+ SESN2+",
+        "delta_pp": 27.517761927192108,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R0cdf35341e1d4ee3bccd",
+        "signed_pattern": "DDIT3+ DDIT4+ IER2+",
+        "delta_pp": 27.316289616459787,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R9cf464d9b8c59de762d3",
+        "signed_pattern": "PCK2+ PHGDH+ TRIB3+",
+        "delta_pp": 27.296849429723345,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rd091c723153ae025363f",
+        "signed_pattern": "CEBPB+ SESN2+ TRIB3+",
+        "delta_pp": 27.24024324497398,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R3a4455cfc1e4af293a5a",
+        "signed_pattern": "DDIT3+ HERPUD1+ SESN2+",
+        "delta_pp": 23.06929236198013,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R556a985297a63c6e0a8b",
+        "signed_pattern": "PCK2+ PHGDH+ SESN2+",
+        "delta_pp": 20.914415486689908,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R2903abe3f6e3b7b5a455",
+        "signed_pattern": "CCDC71L+ DDIT4+ SESN2+",
+        "delta_pp": 18.810177214935408,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R431ae4e8066bb8869107",
+        "signed_pattern": "BBC3+ DDIT3+ DDIT4+",
+        "delta_pp": 14.04784028081862,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R0c3639abbc1fe516c18d",
+        "signed_pattern": "DDIT4+ JUN- PPP1R15A-",
+        "delta_pp": 12.162536785557798,
+        "core_status": "boundary",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R7638994efe5da521b11c",
+        "signed_pattern": "DDIT4+ GDF15- JUN-",
+        "delta_pp": 11.792535403681917,
+        "core_status": "boundary",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rb645ead951925471d1c7",
+        "signed_pattern": "DDIT4+ KLF6- PPP1R15A-",
+        "delta_pp": 11.409601313981943,
+        "core_status": "boundary",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      }
+    ]
+  },
+  "limitations": [
+    "本提案只整理已保存 Case File 的观察事实，不调用 GLM、不执行统计重算或机制裁决。"
+  ]
+}

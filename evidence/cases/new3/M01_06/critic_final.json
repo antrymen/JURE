@@ -1,0 +1,26 @@
+{
+  "case_id": "M01_06",
+  "role": "Critic_final",
+  "verdict": "evidence_limited_no_mechanism_winner",
+  "review_reference": "critic/c2/M01_06.json",
+  "review_reference_sha256": "7d9573b1e5a4917b6654b854e5251d12ec19d909cde89c3caf92fc0fbd7005c2",
+  "same_review": true,
+  "additional_c2": false,
+  "source_hashes": {
+    "revised_explorer": "92b0055be703e16f7614dd1db45bd60721736e2bba22263616179652fac55b21",
+    "c1_recheck": "1e487906a204a51363ab6ac5be959f0e28f977b3af989ed1250dc5961cdfb44b",
+    "investigator": "dd04b450eee4326b8b2d057fd60574c20da1155ba6b181102a74d074c4b05330",
+    "web_fallback": "9e91056c518e7b114e3593f1d067ac9d6c9f89381feaab8c9855de070fc9c104",
+    "hash_correction": "9cbe979f08753035a6fbb23b711f5ae1e3db15adad0e20ee4ff8a923a6a07ce5"
+  },
+  "request_execution_reevaluation": {
+    "c2_request": "首轮核验 M01_06 Investigator、web fallback、原始 trace 与 revised Explorer，检查文献编号、网页实际支持范围及是否需要补查。",
+    "execution": "已完成同一轮 C2：PMCID/PMID 编号与搜索摘要对应；eIF2B/ISR仅获上下文证据，部分页面受阻或无可提取正文；没有 EIF2B3-specific 当前 case 证据，也没有 RNA 稳定性/加工直接证据。",
+    "reevaluation": "沿用 C2 结论。修订 H2 的 RNA 终点针对性合格，但仍是未验证候选；不指定 H1/H2/H3 赢家。"
+  },
+  "additional_followup": {
+    "required": false,
+    "reason": "剩余问题需要成熟/未成熟RNA、半衰期、加工/核质分布及匹配功能实验；不再启动额外C2或强迫文献循环。"
+  },
+  "final_boundary": "仅保留当前RNA关联和有限eIF2B/ISR文献背景；搜索摘要、受阻网页和模型自述均不替代直接证据。"
+}

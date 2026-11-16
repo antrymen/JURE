@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "date": "2026-11-15",
+  "scope": "Public derivative, not byte-identical historical records. Parent originals retained privately. Embedded historical source hashes continue to identify historical originals, not these public derivatives.",
+  "changes": [
+    {
+      "file": "cases/additional10/M01_02/investigator.json",
+      "json_pointer": "/literature_evidence/evidence_excerpt",
+      "case": "M01_02",
+      "parent_sha256": "70db5473b9b5b2dbdfc266ac5049a79a0201b72f600c3214e972590ae3f5cd45",
+      "public_sha256": "e3c20dee2967109d8b4cfb7c9fb4a70344f4550b43ff185aa018d4d12072f016",
+      "removed_value_sha256": "06a48c5a53685087115b2af0ae7461a1092b95f940a7a0028455e002d40aba1b",
+      "operation": "omit third-party excerpt; preserve all other JSON values",
+      "reason": "REVIEW_TEXT_UNAVAILABLE"
+    },
+    {
+      "file": "cases/additional10/M01_03/investigator.json",
+      "json_pointer": "/literature_evidence/evidence_excerpt",
+      "case": "M01_03",
+      "parent_sha256": "d93c9db0c266bdc168f6b77356c44d63bbe830fcdc7749a962707a7f867b064c",
+      "public_sha256": "d97891e97e4ada253c152d197acd5e485a9a91039b29e63202be7b792991030a",
+      "removed_value_sha256": "4d7cb312027c5786c25b0e4b71037e2e7936db5741dc08263669b3c3429df44b",
+      "operation": "omit third-party excerpt; preserve all other JSON values",
+      "reason": "REVIEW_TEXT_UNAVAILABLE"
+    },
+    {
+      "file": "cases/additional10/M02_02/investigator.json",
+      "json_pointer": "/literature_evidence/evidence_excerpt",
+      "case": "M02_02",
+      "parent_sha256": "50422b7d16f1891c74f6bd65c498fb2f4494233b1af25832d57c362c011c551c",
+      "public_sha256": "a3b898ba60d6aac0641a6cccd93cb8b98445db12938ceb855cda0a53f4a7c5f1",
+      "removed_value_sha256": "124e90d1a5721a73a517ebb6cb97a005fa7b26939601c1cbae2d6897f4c976cb",
+      "operation": "omit third-party excerpt; preserve all other JSON values",
+      "reason": "REVIEW_TEXT_UNAVAILABLE"
+    },
+    {
+      "file": "cases/additional10/M02_02/executed_source.json",
+      "json_pointer": "/literature_evidence/evidence_excerpt",
+      "case": "M02_02",
+      "parent_sha256": "46a201f0a638ffd3115cc80870a1e4cf80f8d812c37d0b0d258acf656592a1cd",
+      "public_sha256": "86caa68a2a680463c98d11be20327ca0de50902a42af9b6d4b6d6a6f815ce41c",
+      "removed_value_sha256": "124e90d1a5721a73a517ebb6cb97a005fa7b26939601c1cbae2d6897f4c976cb",
+      "operation": "omit third-party excerpt; preserve all other JSON values",
+      "reason": "REVIEW_TEXT_UNAVAILABLE"
+    },
+    {
+      "file": "cases/additional10/M02_03/investigator.json",
+      "json_pointer": "/literature_evidence/evidence_excerpt",
+      "case": "M02_03",
+      "parent_sha256": "e2286422b5a3ac4380aa65c95b79f50c4f63b4944f332388cfd34e6b98364f5c",
+      "public_sha256": "49b5b3de590a48790858a00cc3840992b5ab3f90a29128d5578bb584772b4724",
+      "removed_value_sha256": "7ebc6776e0758f564622742d9e53bba64b64ed11d5948c555b74f0e57620d36f",
+      "operation": "omit third-party excerpt; preserve all other JSON values",
+      "reason": "REVIEW_TEXT_UNAVAILABLE"
+    },
+    {
+      "file": "cases/additional10/M02_03/executed_source.json",
+      "json_pointer": "/literature_evidence/evidence_excerpt",
+      "case": "M02_03",
+      "parent_sha256": "66dbc1dce7fc93d345bd498e7b8d07954bc8c6d8f0aa6eb0a7469928ef84e527",
+      "public_sha256": "1f440fac02830f4d560e7df5723887d068d5461d05c0b1e258a147bd1b4a666d",
+      "removed_value_sha256": "7ebc6776e0758f564622742d9e53bba64b64ed11d5948c555b74f0e57620d36f",
+      "operation": "omit third-party excerpt; preserve all other JSON values",
+      "reason": "REVIEW_TEXT_UNAVAILABLE"
+    },
+    {
+      "file": "cases/additional10/M04_02/investigator.json",
+      "json_pointer": "/literature_evidence/evidence_excerpt",
+      "case": "M04_02",
+      "parent_sha256": "be3c1eb8a06aef9224af3da398b56687be3ada0e564ab449f4adfbe691de5388",
+      "public_sha256": "3553f059d6da9ddae43a523e93e5f336fbf08f2383baa97592e651068b697252",
+      "removed_value_sha256": "740dbe618515c80f55d0c193c6a358382ca397b93ebff93ec228d0316e9315bd",
+      "operation": "omit third-party excerpt; preserve all other JSON values",
+      "reason": "REVIEW_REUSE_BASIS"
+    },
+    {
+      "file": "cases/additional10/M05_02/investigator.json",
+      "json_pointer": "/literature_evidence/evidence_excerpt",
+      "case": "M05_02",
+      "parent_sha256": "7af2a4c19e63df91aa372f0e8fd4a5ff8e1c2c167c85708ecd4b9102f2dea444",
+      "public_sha256": "ad441ba20078120b3ddf873be87e4f220fcda8adf01f189b2fc93697d969395f",
+      "removed_value_sha256": "124e90d1a5721a73a517ebb6cb97a005fa7b26939601c1cbae2d6897f4c976cb",
+      "operation": "omit third-party excerpt; preserve all other JSON values",
+      "reason": "REVIEW_TEXT_UNAVAILABLE"
+    },
+    {
+      "file": "cases/additional10/M05_02/executed_source.json",
+      "json_pointer": "/literature_evidence/evidence_excerpt",
+      "case": "M05_02",
+      "parent_sha256": "8e661f52cd2cb69a9e6e5d744c70fd2eb365d04cc9fe2ba29e0f127c91760afa",
+      "public_sha256": "7042aec4e84aadb64076d51c0d4b17c5a5209ac6f07c63991aae454aad716879",
+      "removed_value_sha256": "124e90d1a5721a73a517ebb6cb97a005fa7b26939601c1cbae2d6897f4c976cb",
+      "operation": "omit third-party excerpt; preserve all other JSON values",
+      "reason": "REVIEW_TEXT_UNAVAILABLE"
+    }
+  ]
+}

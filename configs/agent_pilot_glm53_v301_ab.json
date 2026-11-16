@@ -1,0 +1,74 @@
+{
+  "protocol_id": "jure_investigation_protocol_v3.0.1_ab_technical_continuation",
+  "case_order": [
+    "A",
+    "B"
+  ],
+  "model_config": "configs/agent_runtime_glm53_v19.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 18,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 2
+  },
+  "critic_rechecks_per_round": 2,
+  "schema_retries": 1,
+  "failed_stage_retries": 1,
+  "max_transitions": 12,
+  "provider_max_calls_per_case": 80,
+  "registry_budgets": {
+    "total": 18,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "policy": "Frozen A/B protocol evaluation from the same untouched initial Case Files. No baseline scientific output or posthoc mechanism analysis is seeded. Three changes: factual capability-aware predictions, Critic-targeted revision acceptance, and explicit hypothesis/outcome discrimination in evidence planning. Only RESOLVED acceptance consumes successful revision budget; PARTIAL/UNRESOLVED may retry within two acceptance attempts per request, existing bounded model/stage attempts, 12 transitions and 80 provider calls. Tools, model, context and numeric scientific/operational budgets otherwise retain baseline limits. C/D remain paused. C1 is never bypassed to achieve the C2 metric. All outcomes and failures are retained; a combined two-case protocol evolution pilot does not identify the causal effect of each individual change. Technical continuation retains A calls 1–5 and failed-stage history. A remaining initial stage has at most two Explorer generation attempts and no further stage retry; these tighter caps also apply to later A stages. B has not started. Format/namespace fixes do not alter scientific acceptance.",
+  "provider_retry_delays_seconds": [
+    15
+  ],
+  "protocol_v3": true,
+  "case_execution_policy": "independent_ab_protocol_evaluation",
+  "acceptance_criterion": {
+    "primary": "At least one A/B case commits nonempty claim-level evidence audits after passing C1. A winning mechanism is not required.",
+    "secondary": [
+      "capability IDs on all new evidence questions",
+      "Critic acceptance records for every submitted revision",
+      "Investigator predeclared comparison outcomes and advisory information updates",
+      "distinct terminal reason codes",
+      "all evidence sources REAL and initial facts unchanged"
+    ],
+    "failure_policy": "Stop at frozen limits. No budget escalation, C1 weakening, case substitution or selective omission."
+  },
+  "technical_continuation": "preserve_all_calls_and_committed_v3_state",
+  "resume_sources": {
+    "A": {
+      "directory": "outputs/agent_pilot_v1_20260928/run_016_glm53_v30_ab/A",
+      "case_sha256": "a4dc6cd1401da0483d328c0181e371efa92319d1b4b21bd2b9f4dd32cc2b2ae8"
+    }
+  },
+  "per_case_retry_caps": {
+    "A": {
+      "explorer_max_retries": 1,
+      "failed_stage_retries": 0
+    }
+  }
+}

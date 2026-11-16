@@ -1,0 +1,30 @@
+{
+  "case_id": "M01_06",
+  "role": "Critic_C1_recheck",
+  "source_file": "explorer/revised_v1/M01_06.json",
+  "source_sha256": "92b0055be703e16f7614dd1db45bd60721736e2bba22263616179652fac55b21",
+  "revision_note_file": "explorer/revised_v1/REVISION_NOTE.md",
+  "revision_note_sha256": "aaa863731ddb60a2e0aaa6b82b51c28900b39487225d1f39e696186f59f7506f",
+  "original_c1_source_sha256": "932941196ac38d10b93b80a5b03c223492e1969012f79c774f212ea2e7125387",
+  "verdict": "pass",
+  "recheck_scope": "仅复核原C1关于M01_06_H2未直接解释联合RNA终点的意见",
+  "original_issue": "原H2以选择性翻译或蛋白稳定性解释蛋白输出，未闭合PCK2+ PHGDH+ SESN2+联合RNA检出终点。",
+  "revision_audit": {
+    "endpoint_alignment": "resolved",
+    "mechanism_specificity": "adequate_candidate",
+    "testability": "pass",
+    "protein_as_surrogate_avoided": true,
+    "unverified_intermediates_marked": true,
+    "specific_findings": [
+      "H2已改为成熟/未成熟RNA加工、稳定性、降解或核质分布改变，直接提出联合RNA检出增加的机制。",
+      "RNA半衰期、转录抑制衰减曲线、加工/定位读出和逐基因检验构成可区分预测。",
+      "蛋白、翻译效率和蛋白半衰期被明确限定为区分性验证，不再替代RNA终点。",
+      "EIF2B3到RNA处理的分子中介明确标为未确定，未将假说写成既定联系。"
+    ],
+    "remaining_limits": [
+      "RNA稳定性/加工机制仍为候选，需 Investigator 真实证据；本复核不提供机制支持。",
+      "H1/H2/H3可能并存，复核不指定机制赢家。"
+    ]
+  },
+  "next_action": "通过C1复审，进入 Investigator；优先获取三基因成熟/未成熟RNA、半衰期/衰减曲线、加工与核质分布，并与p-eIF2α/ATF4及组成校正并行。"
+}

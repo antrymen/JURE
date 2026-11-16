@@ -1,0 +1,146 @@
+{
+  "model_config": "configs/agent_runtime_glm53_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 5,
+    "max_retries": 1,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 6,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 5,
+    "max_investigator_rounds": 5,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 32,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 1
+  },
+  "critic_rechecks_per_round": 2,
+  "registry_budgets": {
+    "total": 32,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "protocol_v3": true,
+  "schema_retries": 0,
+  "failed_stage_retries": 0,
+  "provider_retry_delays_seconds": [],
+  "resume_execution_policy": "independent_existing_checkpoints",
+  "protocol_id": "jure_case_b_budget_extension_h5_patch",
+  "case_order": [
+    "B"
+  ],
+  "provider_max_calls_per_case": 130,
+  "max_transitions": 14,
+  "resume_sources": {
+    "B": {
+      "directory": "outputs/agent_pilot_v1_20260928/case_b_h5_synthesis_patch_20260929/B",
+      "case_sha256": "c2ae05796fd3a5da3e7f8b6627c4ab16a305b439e9442a6eadab93deade74816"
+    }
+  },
+  "budget_extension_authorization": {
+    "user_instruction": "放宽给case b的预算",
+    "baseline_run": "outputs/agent_pilot_v1_20260928/run_040_case_b_completion/B",
+    "source_sha256": "af757c32feb5d5525cda0f12385b37f45c26c0e0716544c10e6ac1dc8427b114",
+    "inherited_model_calls": 78,
+    "inherited_tool_calls": 15,
+    "old_caps": {
+      "model_calls": 80,
+      "tool_calls": 18,
+      "investigator_rounds": 3,
+      "critic_rounds": 3,
+      "investigator_tools_per_round": 4
+    },
+    "new_caps": {
+      "model_calls": 130,
+      "tool_calls": 32,
+      "investigator_rounds": 5,
+      "critic_rounds": 5,
+      "investigator_tools_per_round": 6
+    },
+    "additional_explorer_revision_allowance": 0,
+    "protocol_prompts_and_scientific_rules_unchanged": true,
+    "separate_budget_extension_not_pilot_v1_result": true
+  },
+  "policy": "B-only explicitly authorized budget extension. Resume Investigator from the preserved final C1/C2 checkpoint. Investigator chooses queries; Critic judges science and routes. No winner target. Preserve cumulative accounting and prior STOP. A/C/D paused. No prompt, scientific protocol, evidence support threshold or tool implementation changes.",
+  "saved_investigator_prefix": {
+    "responses": [
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_046_case_b_budget_extension/B/model_calls/call_0002_critic/response.json",
+        "sha256": "82474e2fdd7ffee1bcfdcaa36a0edbe6a6388073542dee3513e3d54e6e186b94",
+        "role": "critic",
+        "method": "audit_hypotheses"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/case_b_existing_claim_binding_20260929/existing_claim_references_response.json",
+        "sha256": "0822e2cc52086759808121a21765addf48adb3b56a4cc0c0f1f5680141dd735c",
+        "role": "critic",
+        "method": "decompose_claims"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_047_case_b_budget_extension/B/model_calls/call_0001_critic/response.json",
+        "sha256": "ed2a8db1ca38dde2a30705e0bb3424c5e80299b953a668dc9be8a315e5b89be4",
+        "role": "critic",
+        "method": "plan_rechecks"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_047_case_b_budget_extension/B/model_calls/call_0002_critic/response.json",
+        "sha256": "346761df94d3d48b677334d72acb11f6fe8b7cff6b0d24f96f953347bcccd982",
+        "role": "critic",
+        "method": "audit_evidence"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_047_case_b_budget_extension/B/model_calls/call_0003_critic/response.json",
+        "sha256": "85418bee516238473b018d8bd3c282690d5008ff83fed27b89469afd2fb473bd",
+        "role": "critic",
+        "method": "synthesize_hypothesis"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_047_case_b_budget_extension/B/model_calls/call_0004_critic/response.json",
+        "sha256": "633e9928f2dcbc0fa3f1fe2e632ecd27e4c7cc1429d2340f67f9a7c3f198a599",
+        "role": "critic",
+        "method": "synthesize_hypothesis"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_047_case_b_budget_extension/B/model_calls/call_0005_critic/response.json",
+        "sha256": "ca0171f4cba6227ca257c93a61d10edc35263d9bcef78ec40b5e96c0ae4496ef",
+        "role": "critic",
+        "method": "synthesize_hypothesis"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_047_case_b_budget_extension/B/model_calls/call_0006_critic/response.json",
+        "sha256": "56976966300ffc277533f174d7068660c5e11d44a63b9cf9de6660248448586f",
+        "role": "critic",
+        "method": "synthesize_hypothesis"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/case_b_h5_synthesis_patch_20260929/h5_synthesis_response.json",
+        "sha256": "466d207668d78858cff523883cd32f1ef36c041989f7e91912ca91194dcb1a07",
+        "role": "critic",
+        "method": "synthesize_hypothesis"
+      }
+    ],
+    "tools": [],
+    "envelopes": []
+  },
+  "engineering_recovery": {
+    "same_logical_transition": 14,
+    "inherited_model_calls": 106,
+    "inherited_tool_calls": 21,
+    "reason": "Critic-authored missing H5 synthesis only. Explicit known gap references bound from raw explanatory labels. All scientific prose retained. Finish C4 boundary before allocating remaining model calls.",
+    "controller_boundary_after_current_critic": true,
+    "no_budget_reset": true
+  }
+}

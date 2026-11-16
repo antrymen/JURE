@@ -1,0 +1,148 @@
+{
+  "$defs": {
+    "ReferenceState": {
+      "additionalProperties": false,
+      "properties": {
+        "genes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Genes",
+          "type": "array"
+        },
+        "states": {
+          "items": {
+            "enum": [
+              0,
+              1
+            ],
+            "type": "integer"
+          },
+          "title": "States",
+          "type": "array"
+        },
+        "order": {
+          "minimum": 1,
+          "title": "Order",
+          "type": "integer"
+        },
+        "dataset_id": {
+          "title": "Dataset Id",
+          "type": "string"
+        },
+        "reference_id": {
+          "title": "Reference Id",
+          "type": "string"
+        },
+        "reference_population": {
+          "additionalProperties": true,
+          "title": "Reference Population",
+          "type": "object"
+        },
+        "reference_prevalence": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference Prevalence"
+        },
+        "mfi_evidence": {
+          "additionalProperties": true,
+          "title": "Mfi Evidence",
+          "type": "object"
+        },
+        "gain_evidence": {
+          "additionalProperties": true,
+          "title": "Gain Evidence",
+          "type": "object"
+        },
+        "estimability": {
+          "additionalProperties": true,
+          "title": "Estimability",
+          "type": "object"
+        },
+        "bootstrap_stability": {
+          "additionalProperties": true,
+          "title": "Bootstrap Stability",
+          "type": "object"
+        },
+        "crossfold_evidence": {
+          "additionalProperties": true,
+          "title": "Crossfold Evidence",
+          "type": "object"
+        },
+        "qualification": {
+          "additionalProperties": true,
+          "title": "Qualification",
+          "type": "object"
+        },
+        "evidence_level": {
+          "const": "REFERENCE_PATTERN",
+          "default": "REFERENCE_PATTERN",
+          "title": "Evidence Level",
+          "type": "string"
+        },
+        "provenance": {
+          "additionalProperties": true,
+          "title": "Provenance",
+          "type": "object"
+        }
+      },
+      "required": [
+        "genes",
+        "states",
+        "order",
+        "dataset_id",
+        "reference_id",
+        "reference_population",
+        "provenance"
+      ],
+      "title": "ReferenceState",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "dataset_id": {
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "records": {
+      "items": {
+        "$ref": "#/$defs/ReferenceState"
+      },
+      "title": "Records",
+      "type": "array"
+    },
+    "compatibility": {
+      "additionalProperties": true,
+      "title": "Compatibility",
+      "type": "object"
+    },
+    "provenance": {
+      "additionalProperties": true,
+      "title": "Provenance",
+      "type": "object"
+    }
+  },
+  "required": [
+    "dataset_id",
+    "records",
+    "compatibility",
+    "provenance"
+  ],
+  "title": "ReferenceCatalogue",
+  "type": "object"
+}

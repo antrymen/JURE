@@ -1,0 +1,7 @@
+{
+  "frozen_at": "2026-09-28T02:12:21.001476+00:00",
+  "protocol_path": "configs/pilot_selection_v1.json",
+  "protocol_sha256": "d324187b44db673ddd7be3c82a7ea588d906919a9905fa616dfadb54fd953caf",
+  "frozen_before_first_pilot_ranking": true,
+  "upstream_results_already_existed": true
+}

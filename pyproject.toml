@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jure-local"
+version = "0.3.0"
+description = "JURE local research code distribution: clue discovery and case investigation"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "pandas>=2.0", "pydantic>=2.10,<3", "PyYAML>=6,<7"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+real = ["anndata>=0.11", "h5py>=3.8"]
+
+[tool.setuptools.packages.find]
+include = ["clue_discovery*", "jure*", "triage*", "broad_screening*", "broad_annotation*", "landscape_analysis*", "perturbation_scan*", "real_nt_v04_holm*", "nt_reference_experiment*", "stage2_validation*", "real_data_test*", "real_data_v02*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.setuptools.package-data]
+"*" = ["*.json", "*.yaml", "*.yml", "*.md"]

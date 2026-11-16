@@ -1,0 +1,10 @@
+{
+  "minimum_effective_nt": 100,
+  "minimum_nt_batch": 20,
+  "minimum_target": 100,
+  "n": 6427,
+  "sha256": "d5a6af70ee8a78855ebb527fc7c0d93483e3e5c363fd84bb87472078e5d234f6",
+  "source": "research://outputs/result2_cross_dataset/day8_discovery/day8_scan/candidates.jsonl",
+  "validation_alpha": 0.05,
+  "validation_effect_filter": false
+}

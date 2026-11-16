@@ -1,0 +1,106 @@
+{
+  "protocol_id": "jure_scientific_content_case_a_resume_investigator",
+  "case_order": [
+    "A"
+  ],
+  "model_config": "configs/agent_runtime_glm53_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 1,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 18,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 2
+  },
+  "critic_rechecks_per_round": 2,
+  "schema_retries": 0,
+  "failed_stage_retries": 1,
+  "max_transitions": 18,
+  "provider_max_calls_per_case": 80,
+  "registry_budgets": {
+    "total": 18,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "policy": "User-authorized D12 correction and fresh full Critic C1/C2 review. Existing hypotheses/evidence/fees retained; do not infer scientific success from correction. B/C/D remain paused.",
+  "provider_retry_delays_seconds": [],
+  "protocol_v3": true,
+  "case_execution_policy": "user_authorized_d12_correction",
+  "acceptance_criterion": {
+    "primary": "At least one A/B case commits nonempty claim-level evidence audits after passing C1. A winning mechanism is not required.",
+    "secondary": [
+      "capability IDs on all new evidence questions",
+      "Critic acceptance records for every submitted revision",
+      "Investigator predeclared comparison outcomes and advisory information updates",
+      "distinct terminal reason codes",
+      "all evidence sources REAL and initial facts unchanged"
+    ],
+    "failure_policy": "Keep cumulative model80/tool18 caps and scientific round limits. Controller limit18. Preserve all outcomes; C1 must independently pass before C2."
+  },
+  "technical_continuation": "preserve_all_calls_and_committed_v3_state",
+  "resume_sources": {
+    "A": {
+      "directory": "outputs/agent_pilot_v1_20260928/run_030_case_a_c2/A",
+      "case_sha256": "3d8e19092f84d7fdda062ecc74afaf33ab433353b7d40b8a96f77225ca2a7b70"
+    }
+  },
+  "per_case_retry_caps": {
+    "A": {
+      "explorer_max_retries": 1,
+      "failed_stage_retries": 0
+    }
+  },
+  "transition_amendment": {
+    "user_authorization": "做吧，把完整流程跑完",
+    "previous_limit": 15,
+    "additional_transitions": 3,
+    "reason": "Resume full Critic audit after user-authorized removal of spurious D12. Model80/tool18/scientific round limits unchanged."
+  },
+  "engineering_recovery_note": {
+    "reason": "Recheck already names original evidence and complete query; bind only omitted dispatch name from original evidence provenance. All science and query parameters unchanged. Reuse C1 and both C2 responses; cumulative70/80 calls,14/18 tools."
+  },
+  "resume_execution_policy": "independent_existing_checkpoints",
+  "saved_investigator_prefix": {
+    "responses": [
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_029_case_a_c1_c2/A/model_calls/call_0001_critic/response.json",
+        "sha256": "001589d636cd071fd895ee2e4e49b6d982a9d4c8929f44505a549df2fbc80304",
+        "role": "critic",
+        "method": "audit_hypotheses"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_030_case_a_c2/A/model_calls/call_0001_critic/response.json",
+        "sha256": "9949de55b19978e4dcf8ffeb32f0012bee81441e65cd9737b0ffbeb2dd5f8e7e",
+        "role": "critic",
+        "method": "decompose_claims"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_030_case_a_c2/A/model_calls/call_0002_critic/response.json",
+        "sha256": "16df28089bc5dc9b3d49ae2df50417afffd0362a8a12ee59aacb18371d64445d",
+        "role": "critic",
+        "method": "plan_rechecks"
+      }
+    ],
+    "tools": [],
+    "envelopes": []
+  }
+}

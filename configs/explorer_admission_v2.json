@@ -1,0 +1,26 @@
+{
+  "policy_version": "explorer-admission-v2",
+  "status": "OFFLINE_VALIDATED_ONLY_DO_NOT_RUN",
+  "model_config": "configs/agent_runtime_glm47_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 0,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "initial_interface": "content_adapter",
+  "reframe_interface": "existing_typed_contract_with_three_layer_admission",
+  "case_execution": "PAUSED",
+  "budget_policy": "Paused policy descriptor only. No model calls, scientific budget resets or automatic expensive-model fallback. Historical Case A needs an explicit version/routing migration and preserved usage before any continuation. B/C/D remain paused.",
+  "source_model_docs": "https://docs.bigmodel.cn/cn/guide/models/free/glm-4.7-flash",
+  "workflow_order": [
+    "explorer",
+    "machine_completeness_gate",
+    "investigator",
+    "critic(C1->C2)"
+  ],
+  "revision_acceptance": "after_investigation_within_critic"
+}

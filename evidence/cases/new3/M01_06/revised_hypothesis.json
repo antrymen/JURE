@@ -1,0 +1,19 @@
+{
+  "revision": {
+    "revision_id": "M01_06_explorer_revised_v1",
+    "case_id": "M01_06",
+    "reason": "C1指出原H2主要解释蛋白终点，未闭合当前PCK2+ PHGDH+ SESN2+联合RNA检出终点；本轮仅将H2改为直接针对RNA稳定性/加工与RNA积累的竞争机制，并保留蛋白读出作为区分性验证。",
+    "critic_request_sha256": "9cd082701dd13a739dc89ca5880057d90d225e26ea7d82f0a870f43f86ffa511",
+    "original_version_sha256": "932941196ac38d10b93b80a5b03c223492e1969012f79c774f212ea2e7125387",
+    "bounded_revision": true,
+    "changed_hypothesis_ids": ["M01_06_H2"]
+  },
+  "case_identity": {"slot": "M01_06", "module": "M01", "target": "EIF2B3", "case_id": "perturbation_scan_day6_v01_20260927:C069fe06945fbd12ea4b7", "clue_id": "C069fe06945fbd12ea4b7", "joint_state": "PCK2+ PHGDH+ SESN2+", "input_hash": "ace21d8108215daafdbb79883641544823bdee9201e37eeea1df21bf7c306c91", "observed_fact": {"target": "EIF2B3", "genes": ["PCK2", "PHGDH", "SESN2"], "states": [1, 1, 1], "delta": 0.4301597735739461, "delta_pp": 43.01597735739461, "matched_NT_prevalence_pct": 5.060945719528473, "perturbation_prevalence_pct": 48.07692307692308, "perturbed_cells": 104, "state_positive_perturbed_cells": 50, "holm_p": 2.881710180559116e-29}, "interpretation_limit": "+表示联合RNA检测状态，不等于EIF2B3表达方向、eIF2B活性或已建立ISR机制。"},
+  "hypotheses": [
+    {"id": "M01_06_H1", "statement": "EIF2B3扰动可能降低或改变eIF2B复合体的翻译起始调控，造成ISR样翻译压力并使PCK2、PHGDH、SESN2分别进入检测状态；eIF2B3到p-eIF2α/ATF4的桥不可由基因身份直接推出。", "proposed_steps": ["确认EIF2B3 RNA、蛋白、复合体装配和eIF2B交换/翻译读出", "做p-eIF2α、ATF4、全局翻译及三个目标的时间序列", "分别干预ISR/ATF4并检验三基因，而非把联合状态当作一个转录模块"], "predictions": ["翻译或eIF2B功能变化应先于目标状态，并可能伴随p-eIF2α/ATF4改变", "ISR/ATF4阻断对PCK2、PHGDH、SESN2的影响可不对称", "EIF2B3救援或药理恢复eIF2B功能应部分逆转读出，若扰动造成的是功能缺陷"], "questions": ["EIF2B3扰动究竟改变了复合体数量、装配还是交换活性？", "全局翻译下降、选择性翻译和目标RNA变化的时间顺序是什么？", "目标基因是否需要ATF4，还是存在各自独立的调控边？"], "uncertainties": ["扰动方向、残余蛋白及复合体冗余未知", "p-eIF2α是上游调节信号，不能由EIF2B3 RNA直接代替", "PCK2、PHGDH、SESN2可能由不同应激或代谢状态共同检测"]},
+    {"id": "M01_06_H2", "statement": "EIF2B3扰动可能改变PCK2、PHGDH、SESN2转录本的加工、稳定性或降解，使三者的RNA半衰期延长或未成熟/成熟转录本积累，从而直接提高PCK2+ PHGDH+ SESN2+联合RNA检出；这是假说性的转录后RNA机制，不等于已知EIF2B3-RNA稳定性联系。", "proposed_steps": ["在单细胞和总体样本中并行测三基因成熟/未成熟RNA、连续表达量和检出率，并做RNA半衰期或转录抑制后的衰减曲线", "测剪接/3'端加工、核质分布及RNA质量控制读出，比较三基因是否有共同的RNA积累特征", "把目标蛋白、翻译效率和蛋白半衰期作为区分性验证：蛋白读出可与RNA不同步，但不能替代RNA终点"], "predictions": ["若RNA稳定性/加工占主导，目标成熟RNA半衰期延长、未成熟/成熟比例或核质分布改变，应先于或独立于p-eIF2α/ATF4，并可直接提高三重RNA检出", "对转录抑制或RNA降解通路干预，联合RNA状态及其单基因衰减曲线应发生可预测改变；三个基因可呈现不同幅度，仍需逐一检验", "蛋白或翻译效率可以不随RNA同步变化，若RNA稳定性读出不变而ATF4占据和新生转录一致，则削弱本假说并支持H1"], "questions": ["PCK2、PHGDH、SESN2的成熟/未成熟RNA、半衰期和核质分布是否在EIF2B3扰动后改变？", "三基因的联合检出是否由共同的RNA加工/降解特征解释，还是仅由检测阈值造成？", "蛋白、翻译效率和蛋白半衰期与RNA联合状态是否脱钩，并能否帮助区分H2与H1？"], "uncertainties": ["输入只有联合RNA频率，不能预先断言RNA稳定性或加工改变", "EIF2B3到RNA处理的中介尚未确定，任何候选RNA质量控制因子都需实验支持", "RNA稳定性、转录诱导和细胞组成效应可以并存"]},
+    {"id": "M01_06_H3", "statement": "PCK2+ PHGDH+ SESN2+的富集可能主要来自EIF2B3扰动后细胞存活、代谢状态或亚群组成改变，而非EIF2B3在同一细胞内直接诱导三基因。", "proposed_steps": ["在细胞周期、活性、线粒体比例、代谢状态和批次匹配后重算联合频率", "检查连续表达、检测率、单细胞共现及蛋白验证", "以独立扰动/救援和时间早期样本验证富集是否随靶向效应复现"], "predictions": ["协变量调整后联合富集明显减弱或集中于代谢亚群", "三个目标的连续表达与蛋白读出可能不一致", "匹配背景中仍存在早期、可逆的目标变化会削弱本备择"], "questions": ["联合状态是否与细胞周期、死亡/存活或代谢亚群标记耦合？", "三基因在同一细胞内的连续表达是否超过检测概率预期？", "独立扰动和EIF2B3救援能否复现同一联合状态？"], "uncertainties": ["当前频率效应不能分辨组成与细胞内机制", "dropout和检测阈值影响三重共现", "组成解释不排除EIF2B3存在真实翻译效应"]}
+  ],
+  "source_provenance": [{"claim_scope": "eIF2B作为eIF2鸟嘌呤核苷酸交换因子并受ISR调节；仅作H1候选背景，不证明本case机制", "primary_source": "https://pubmed.ncbi.nlm.nih.gov/29632131/", "citation": "Moon and Parker, RNA (2018), PMID 29632131"}],
+  "stage": "explorer_revised_v1"
+}

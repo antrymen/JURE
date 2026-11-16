@@ -1,0 +1,9 @@
+{
+  "protocol_revision": "claim-source-v1",
+  "kind": "configuration_overlay_not_a_runnable_pilot",
+  "investigator": {"source_aware_planning": true},
+  "critic": {"source_aware_stopping": true},
+  "budget_changes": {},
+  "case_mutations": [],
+  "note": "Merge role flags into a separately declared protocol revision run; retain its authorized cumulative budget and immutable source checkpoint. This overlay neither resumes a stopped case nor grants budget."
+}

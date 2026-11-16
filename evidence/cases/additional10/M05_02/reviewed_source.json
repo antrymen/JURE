@@ -1,0 +1,62 @@
+{
+  "schema": "codex_critic_audit_v1",
+  "role": "Critic",
+  "backend": "GPT-5.6-Luna",
+  "round": 2,
+  "module": "M05_02",
+  "target": "RPL24",
+  "signed_pattern": "BTG2- DDIT3+ KLF6-",
+  "status": "evidence_limited",
+  "source_case_sha256": "d9eac70a62a045b30c3f59a2f679ed4cfe3da20954a4e7b92628d5afbab69f97",
+  "inputs": [
+    "explorer/M05_02.json",
+    "investigator/M05_02.json",
+    "investigator/followup_v1/M05_02.json",
+    "investigator/followup_v1/METADATA_INVENTORY.json",
+    "critic/M05_02.json"
+  ],
+  "c1": {
+    "verdict": "pass",
+    "scope": "H1/H2/H3 distinct; minus means non-detection, not repression"
+  },
+  "c2": {
+    "observation": {
+      "status": "supported_descriptive",
+      "condition": "200/460",
+      "matched_nt": "0.17343324",
+      "delta_pp": 26.1349369245
+    },
+    "conditional_joint": {
+      "anchor": "DDIT3+",
+      "other_state": "BTG2- KLF6-",
+      "anchor_prevalence_target": 0.7804347826,
+      "supported_anchor_fraction": 1.0,
+      "valid_batches": 48,
+      "target_weighted_rate": 0.5571030641,
+      "batch_nt_weighted_rate": 0.5875287799,
+      "weighted_delta_pp": -3.0425715787,
+      "interpretation": "descriptive conditional association; does not support coordinated repression or interaction"
+    },
+    "H1": "insufficient: RPL24 p53 source is mouse/A549, not K562; TP53 applicability and efficacy unverified",
+    "H2": "insufficient: no independent state labels",
+    "H3": "insufficient: depth descriptive delta +26.1219 pp does not resolve mechanism",
+    "metadata": "Current allowed metadata lacks independent state labels, measured efficacy, guide sequence/off-target annotations and orthogonal RNA; guide IDs exist. See METADATA_CAPABILITY_CHECK.json; absence of fields is not a biological negative.",
+    "literature_locator": "critic/WEB_SOURCE_CHECK.json:M05_02-SRC",
+    "followup_hash": "8e661f52cd2cb69a9e6e5d744c70fd2eb365d04cc9fe2ba29e0f127c91760afa"
+  },
+  "followup": "completed; no further query",
+  "case_id": "perturbation_scan_day6_v01_20260927:C1702dc67d291c058f3bf",
+  "inputs_sha256": {
+    "explorer/M05_02.json": "04896bfa8a647e3f2ece58c1cb95af20e901c6128a511c619fb8dffea6cb6128",
+    "investigator/M05_02.json": "7af2a4c19e63df91aa372f0e8fd4a5ff8e1c2c167c85708ecd4b9102f2dea444",
+    "investigator/followup_v1/M05_02.json": "8e661f52cd2cb69a9e6e5d744c70fd2eb365d04cc9fe2ba29e0f127c91760afa",
+    "investigator/followup_v1/METADATA_INVENTORY.json": "51e06d33c42e9359c31be6da7ad6c7f6ced89665ccc474ec80c6388ddacaed4d",
+    "critic/M05_02.json": "4af6cc484a3a11cf30fb374d5cd87c4acdd70adc75ad1bd74cef85ed81744e55",
+    "METADATA_CAPABILITY_CHECK.json": "9187d0fbd29feacdd7343d73513eee076c1422c8bd437ca64b25e35340a0233a"
+  },
+  "final_artifact_reconciliation": {
+    "performed_by": "parent agent",
+    "scope": "Identity/hash binding and synchronization with Critic-authored FINAL_CORRECTIONS.md; no new scientific verdict",
+    "critic_corrections_sha256": "f18af8c2585e1f7bc9492cf0cb940ca6d8d56b5fce541b766020bfdb47318bf3"
+  }
+}

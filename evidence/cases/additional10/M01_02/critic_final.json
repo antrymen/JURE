@@ -1,0 +1,55 @@
+{
+  "schema": "codex_critic_audit_v1",
+  "role": "Critic",
+  "backend": "GPT-5.6-Luna",
+  "round": 2,
+  "module": "M01_02",
+  "target": "EIF2S1",
+  "signed_pattern": "DDIT4+ PHGDH+ TRIB3+",
+  "status": "evidence_limited",
+  "source_case_sha256": "4fa96613e15e2fd2712b5c2de7d0563c03c126c48c27e7b88d5e1b362f3a006b",
+  "inputs": [
+    "explorer/M01_02.json",
+    "investigator/M01_02.json",
+    "JOINT_DATA_RECHECK.json",
+    "critic/M01_02.json",
+    "critic/WEB_SOURCE_CHECK.json"
+  ],
+  "c1": {
+    "verdict": "pass",
+    "hypotheses": [
+      "cell_intrinsic_response",
+      "state_composition",
+      "detectability_or_marginal"
+    ],
+    "scope": "distinct testable coarse explanations; signed state is detection only"
+  },
+  "c2": {
+    "observation": {
+      "status": "supported_descriptive",
+      "condition": "153/243",
+      "matched_nt": "0.06295025",
+      "delta_pp": 56.6679380919
+    },
+    "H1": "insufficient: no independent state, orthogonal RNA or target efficacy; EIF2S1 source is indirect Eif2s1 deletion/ER-stress context",
+    "H2": "insufficient: no focal-gene-independent state labels",
+    "H3": "insufficient: depth stratification did not attenuate the focal effect; simple depth explanation is not supported by this sensitivity check, while measurement effects remain unexcluded without orthogonal calibration.",
+    "metadata": "Current allowed metadata lacks independent state labels, measured efficacy, guide sequence/off-target annotations and orthogonal RNA; guide IDs exist. See METADATA_CAPABILITY_CHECK.json; absence of fields is not a biological negative.",
+    "literature_locator": "critic/WEB_SOURCE_CHECK.json:M01_02-SRC"
+  },
+  "followup": "none further; key measurements unavailable",
+  "case_id": "perturbation_scan_day6_v01_20260927:Cd81422ac5a45261dcd11",
+  "inputs_sha256": {
+    "explorer/M01_02.json": "6715f9df777399974859bc56ba4c5d8ee278988620d6df5c11be933251977297",
+    "investigator/M01_02.json": "70db5473b9b5b2dbdfc266ac5049a79a0201b72f600c3214e972590ae3f5cd45",
+    "JOINT_DATA_RECHECK.json": "2405e8716b3b3baee21920fe31206c3ee3f28caea0804a28e09585e9ff687110",
+    "critic/M01_02.json": "7bd20a6f814d01e144b8bba4313913cee4ce8e4b1ba27efbfc0663181a9f7f24",
+    "critic/WEB_SOURCE_CHECK.json": "7a47595bbc4a83a6e0b25943f9bc1200724152c3bb6156281008e1ed6995e880",
+    "METADATA_CAPABILITY_CHECK.json": "9187d0fbd29feacdd7343d73513eee076c1422c8bd437ca64b25e35340a0233a"
+  },
+  "final_artifact_reconciliation": {
+    "performed_by": "parent agent",
+    "scope": "Identity/hash binding and synchronization with Critic-authored FINAL_CORRECTIONS.md; no new scientific verdict",
+    "critic_corrections_sha256": "f18af8c2585e1f7bc9492cf0cb940ca6d8d56b5fce541b766020bfdb47318bf3"
+  }
+}

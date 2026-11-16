@@ -1,0 +1,403 @@
+{
+  "schema": "codex_explorer_proposal_v1",
+  "backend": "Codex-subagent",
+  "role": "Explorer",
+  "case_id": "perturbation_scan_day6_v01_20260927:C284b6a8b8208c74589b9",
+  "module": "M03",
+  "slot": "M03_02",
+  "source_case_file": "outputs/module_additional10_luna_20261004/preparation/initial_cases/M03_02/case_file.json",
+  "source_case_sha256": "1c86ba8edebae8dea98e7b5d8fdbf2e2c1523ba956dfab3793b6ebe62dcf82ce",
+  "clue_id": "CLUE_9ca7dd6791683ecd4809fe92",
+  "observed_fact": {
+    "text": "Day 6 K562 中，SUPT5H 标记扰动的 CCAR1+CCNB1+CDC20+ 出现频率为 0.14532020（59/406）；按扰动 batch 构成加权的 NT 频率为 0.43798076，Δ = -29.26605677 个百分点。该关联属于 exploratory_perturbation_candidate，不建立机制。",
+    "target": "SUPT5H",
+    "signed_pattern": "CCAR1+CCNB1+CDC20+",
+    "genes": [
+      "CCAR1",
+      "CCNB1",
+      "CDC20"
+    ],
+    "states": [
+      1,
+      1,
+      1
+    ],
+    "encoding": "1 = detected expression; 0 = undetected expression (not inferred regulatory activity)",
+    "perturbation_frequency": 0.14532019704433496,
+    "matched_nt_frequency": 0.4379807647494974,
+    "delta_pp": -29.26605677051624,
+    "target_cells": 406,
+    "perturbation_hits": 59,
+    "selected_family_holm_exploratory": 1.2769338027741276e-29,
+    "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+    "replication_status": "NOT_PERFORMED"
+  },
+  "mechanistic_question": "SUPT5H 扰动是否通过RNA-polymerase-II elongation control改变 CCAR1+CCNB1+CDC20+ 的联合检测？需比较 CCAR1+边际, CCNB1+边际, CDC20+边际 与完整 CCAR1+CCNB1+CDC20+ joint，区分细胞内响应、状态组成和检测概率。",
+  "hypotheses": [
+    {
+      "id": "M03_02-H1",
+      "statement": "待查假说：SUPT5H→elongation-dependent transcriptional output可能改变 CCAR1+CCNB1+CDC20+ 的细胞内联合表达；这只是候选过程，当前 Case 不证明该通路或直接调控边。",
+      "structure": {
+        "type": "cell_intrinsic_response",
+        "causal_path": "SUPT5H→elongation-dependent transcriptional output → CCAR1+CCNB1+CDC20+ intracellular joint probability",
+        "direct_regulatory_edges_asserted": false,
+        "specific_mediator": "未指定；需要证据后才能提出可追溯分子中介",
+        "status": "untested_hypothesis"
+      },
+      "predictions": [
+        {
+          "id": "M03_02-H1-P1",
+          "expected_if_supported": "当前聚合焦点 joint Δ=-29.27 pp；在 batch、细胞质量和非焦点状态可比后，CCAR1+边际, CCNB1+边际, CDC20+边际呈与该过程一致的选择性变化，且完整 CCAR1+CCNB1+CDC20+ joint 的残余差异仍存在。具体边际方向须由八状态表估计，不能把聚合 Δ 当作条件效应。",
+          "weakening_outcome": "条件化后 CCAR1+CCNB1+CDC20+ joint 与边际变化消失，或变化方向/状态分布与 RNA-polymerase-II elongation control 的候选预期不一致；单个边际变化本身不能否定细胞内响应。边际解释与候选过程是否真实是正交问题，命名过程仍需独立过程证据。",
+          "neutral_outcome": "状态重叠不足、区间过宽或只能获得聚合频率时，不对候选过程作方向裁决。",
+          "evidence_question": {
+            "id": "M03_02-H1-Q1",
+            "question": "在 SUPT5H 与 NT 的八状态表中，CCAR1+边际, CCNB1+边际, CDC20+边际及完整 CCAR1+CCNB1+CDC20+ joint 的条件差异是否在质量匹配后仍保留，并与RNA-polymerase-II elongation control的可追溯读出相符？",
+            "prediction_id": "M03_02-H1-P1"
+          }
+        }
+      ],
+      "limitations": [
+        "当前输入没有给出状态内效应、完整状态表或可裁决中介证据。",
+        "Day 6 exploratory association 不等于因果或机制确认。"
+      ]
+    },
+    {
+      "id": "M03_02-H2",
+      "statement": "备择假说：SUPT5H扰动主要改变预存细胞状态的组成，富集或耗竭已有 CCAR1+CCNB1+CDC20+ 倾向的细胞，而非在状态内诱发该联合表达。",
+      "structure": {
+        "type": "state_composition",
+        "causal_path": "SUPT5H perturbation → non-CCAR1,CCNB1,CDC20 state composition → CCAR1+CCNB1+CDC20+ frequency",
+        "direct_regulatory_edges_asserted": false,
+        "specific_mediator": "未指定；需要证据后才能提出可追溯分子中介",
+        "status": "untested_hypothesis"
+      },
+      "predictions": [
+        {
+          "id": "M03_02-H2-P1",
+          "expected_if_supported": "当前聚合焦点 joint Δ=-29.27 pp；用不含 CCAR1,CCNB1,CDC20 的状态标志重加权 NT 后，主要 CCAR1+CCNB1+CDC20+ 差异可被状态比例重建；各状态内三个边际和完整 joint 的残余差异接近零。",
+          "weakening_outcome": "独立状态比例相近，但在多个重叠状态内 CCAR1+CCNB1+CDC20+ joint 或任一边际仍有稳定差异；组成重加权无法重建观察效应。单个边际变化不能单独裁决候选过程。",
+          "neutral_outcome": "状态标志依赖焦点基因或跨条件重叠不足时，组成与细胞内效应不能排他区分。",
+          "evidence_question": {
+            "id": "M03_02-H2-Q1",
+            "question": "不使用 CCAR1,CCNB1,CDC20 定义的状态比例及其 NT→SUPT5H 重加权，能解释 CCAR1+CCNB1+CDC20+ 的多少；状态内三个边际和 joint 残余是多少？",
+            "prediction_id": "M03_02-H2-P1"
+          }
+        }
+      ],
+      "limitations": [
+        "当前输入没有给出状态内效应、完整状态表或可裁决中介证据。",
+        "Day 6 exploratory association 不等于因果或机制确认。"
+      ]
+    },
+    {
+      "id": "M03_02-H3",
+      "statement": "备择假说：SUPT5H 与 NT 的检测概率差异可能改变观测 signed-state 频率，方向需由八状态表及三个边际判定；这只是测量解释，不建立因果。",
+      "structure": {
+        "type": "detectability_or_marginal_explanation",
+        "causal_path": "quality/depth difference → marginal detection of CCAR1,CCNB1,CDC20 → CCAR1+CCNB1+CDC20+ observed frequency",
+        "direct_regulatory_edges_asserted": false,
+        "specific_mediator": "未指定；需要证据后才能提出可追溯分子中介",
+        "status": "untested_hypothesis"
+      },
+      "predictions": [
+        {
+          "id": "M03_02-H3-P1",
+          "expected_if_supported": "可检验的检测备择是普遍检出概率减少：CCAR1+CCNB1+CDC20+ 和三个正边际都应随深度下降；深度匹配后 Δ=-29.27 pp 应明显收缩。 比较完整 CCAR1+CCNB1+CDC20+ joint 与三个边际的条件概率；不得把聚合 Δ=-29.27 pp 直接当作过程效应。",
+          "weakening_outcome": "深度和质量匹配后 CCAR1+CCNB1+CDC20+ joint 仍保留选择性差异，且八状态/边际方向不符合检测概率模型；这会削弱检测解释。",
+          "neutral_outcome": "深度分层样本不足或检测阈值本身位于候选过程下游时，不对检测解释作排他裁决。",
+          "evidence_question": {
+            "id": "M03_02-H3-Q1",
+            "question": "CCAR1+边际, CCNB1+边际, CDC20+边际与每细胞 ncounts/UMI 的联合分布如何变化？按 batch 和深度匹配后，CCAR1+CCNB1+CDC20+ joint 与边际差异还剩多少？",
+            "prediction_id": "M03_02-H3-P1"
+          }
+        }
+      ],
+      "limitations": [
+        "当前输入没有给出状态内效应、完整状态表或可裁决中介证据。",
+        "Day 6 exploratory association 不等于因果或机制确认。"
+      ]
+    }
+  ],
+  "pairwise_contrasts": [
+    {
+      "hypothesis_ids": [
+        "M03_02-H1",
+        "M03_02-H2"
+      ],
+      "distinction": "候选细胞内过程与预存状态组成",
+      "observable": "不含 CCAR1,CCNB1,CDC20 的状态重加权、状态内 CCAR1+CCNB1+CDC20+ joint 与三边际",
+      "favors_first": "状态比例重加权不能解释主要差异，而质量匹配后 CCAR1+CCNB1+CDC20+ joint 或任一边际仍有与 RNA-polymerase-II elongation control 一致的选择性残余；边际数量本身不作硬阈值。",
+      "favors_second": "状态比例重加权可重建主要 CCAR1+CCNB1+CDC20+ 差异，状态内 joint 与边际残余接近零。",
+      "neutral_outcome": "状态标志依赖焦点基因或重叠不足时不作排他裁决。",
+      "prediction_ids": [
+        "M03_02-H1-P1",
+        "M03_02-H2-P1"
+      ]
+    },
+    {
+      "hypothesis_ids": [
+        "M03_02-H1",
+        "M03_02-H3"
+      ],
+      "distinction": "候选细胞内过程与检测深度",
+      "observable": "深度匹配后的 CCAR1+CCNB1+CDC20+ joint、三个边际及无关基因 joint 对照",
+      "favors_first": "深度匹配后 CCAR1+CCNB1+CDC20+ joint 仍有与 RNA-polymerase-II elongation control 一致的状态选择性，且不被通用检测模型重建；单个边际变化不能单独排除该过程。",
+      "favors_second": "深度分层可重建聚合 Δ=-29.27 pp，且八状态与边际随检测概率模型同步变化。",
+      "neutral_outcome": "深度既可能是过程后果，无法单独切断路径。",
+      "prediction_ids": [
+        "M03_02-H1-P1",
+        "M03_02-H3-P1"
+      ]
+    },
+    {
+      "hypothesis_ids": [
+        "M03_02-H2",
+        "M03_02-H3"
+      ],
+      "distinction": "状态组成与检测差异",
+      "observable": "独立状态标志、状态比例、ncounts/UMI 与三基因边际的联合分层",
+      "favors_first": "独立状态比例变化可重建差异且深度匹配后仍有状态特异性。",
+      "favors_second": "所谓状态差异随深度控制消失，且无关 joint 同步变化。",
+      "neutral_outcome": "独立状态标志不足或深度与状态高度共线。",
+      "prediction_ids": [
+        "M03_02-H2-P1",
+        "M03_02-H3-P1"
+      ]
+    }
+  ],
+  "companion_context": {
+    "count": 28,
+    "source": "outputs/module_additional10_luna_20261004/preparation/initial_cases/M03_02/companion_summary.json",
+    "independent_validation": false,
+    "patterns": [
+      {
+        "reference_id": "R26b70bdb0fe7f26c64bb",
+        "signed_pattern": "CCNB1+ CKS2+ PLK1+",
+        "delta_pp": -29.768051275123735,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Ra202d229aa24e8025918",
+        "signed_pattern": "CCAR1+ CCNB1+ CDC20+",
+        "delta_pp": -29.26605677051624,
+        "core_status": "stable_core",
+        "is_focal_case": true,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R48617a1d1d735634a871",
+        "signed_pattern": "CCNB1+ PLK1+ TOP2A+",
+        "delta_pp": -26.71097884684964,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R121d9ade5af1989ab63b",
+        "signed_pattern": "CCNB1+ CCNB2+ PLK1+",
+        "delta_pp": -26.589521546781697,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R93c980b719c460352790",
+        "signed_pattern": "HMMR+ PLK1+ PTTG1+",
+        "delta_pp": -26.318535511258446,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R4979e19ddf0d6fc3ebc1",
+        "signed_pattern": "CCNB1+ HMMR+ PLK1+",
+        "delta_pp": -25.732231970859388,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Ra8bf0b1f5f7f7b0e0bb5",
+        "signed_pattern": "CCNB1+ DLGAP5+ PLK1+",
+        "delta_pp": -24.816680920232017,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R50ecbcae24fa06ebcc08",
+        "signed_pattern": "CCNB1+ CDC20+ PLK1+",
+        "delta_pp": -24.250375603536504,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R042863b40a5f24fb93ac",
+        "signed_pattern": "CCNB1+ CCNB2+ CDC20+",
+        "delta_pp": -23.061422859086044,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rf583d336d83aa31c1334",
+        "signed_pattern": "CCNB1+ CDC20+ HMMR+",
+        "delta_pp": -22.95031390776463,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rbcef8cf5676436d011cc",
+        "signed_pattern": "ASPM+ KIF14+ PLK1+",
+        "delta_pp": -22.82414224148291,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R0851bef9d0cec6c3d9a5",
+        "signed_pattern": "CKAP5+ KIF14+ PLK1+",
+        "delta_pp": -22.31362347928287,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R82b17bf8cdc5aaec03c1",
+        "signed_pattern": "CCNB2+ CDC20+ PLK1+",
+        "delta_pp": -21.66001701192504,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R9dfc008d0fd1081f5c66",
+        "signed_pattern": "CDC20+ HMMR+ PLK1+",
+        "delta_pp": -21.297437212428687,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R7d391e1918102b8f844b",
+        "signed_pattern": "CENPE+ HMMR+ PLK1+",
+        "delta_pp": -21.159593674376143,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R62905c8ed50c5bb2f219",
+        "signed_pattern": "CDC20+ DLGAP5+ PLK1+",
+        "delta_pp": -20.862327180515273,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rfbb4c765855b678bba99",
+        "signed_pattern": "CDC20+ CENPE+ PLK1+",
+        "delta_pp": -20.463399882405497,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rccf6aeacbb2c01ee2cf3",
+        "signed_pattern": "ASPM+ CDCA8+ PLK1+",
+        "delta_pp": -19.770527574490263,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R3beade0d61ae34776d13",
+        "signed_pattern": "CDC20+ DLGAP5+ HMMR+",
+        "delta_pp": -18.860334325383253,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R395eb03f9998a6cb6e17",
+        "signed_pattern": "AURKA+ CDCA8+ PLK1+",
+        "delta_pp": -17.817341862857774,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R125be8147fd30e286dc4",
+        "signed_pattern": "AURKA+ PLK1+ SGO2+",
+        "delta_pp": -16.576469716554715,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R9815d28e8e5d55109361",
+        "signed_pattern": "AURKA+ CENPA+ PLK1+",
+        "delta_pp": -15.33689971574151,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R6708d2005d3cf29f7b37",
+        "signed_pattern": "PIF1+ PLK1+ TOP2A+",
+        "delta_pp": -13.683226226545598,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R68ee7bf3c0196cfdadb9",
+        "signed_pattern": "ASPM+ PIF1+ PLK1+",
+        "delta_pp": -13.603218903983166,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R6166fddedf1351ae2e6e",
+        "signed_pattern": "ARL6IP1+ PIF1+ PLK1+",
+        "delta_pp": -13.181486166472842,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R025fdb8bf612b3f81a9d",
+        "signed_pattern": "AURKA+ PIF1+ PLK1+",
+        "delta_pp": -12.714494222853634,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R0ffe7de6490d9ee80924",
+        "signed_pattern": "CDC20+ PIF1+ PLK1+",
+        "delta_pp": -12.225529185014091,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R9511312fdfd3ecf4630d",
+        "signed_pattern": "AURKA+ CDC20+ PIF1+",
+        "delta_pp": -12.045234734352038,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      }
+    ]
+  },
+  "limitations": [
+    "本提案只整理已保存 Case File 的观察事实，不调用 GLM、不执行统计重算或机制裁决。"
+  ]
+}

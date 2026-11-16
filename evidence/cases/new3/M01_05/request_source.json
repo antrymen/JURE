@@ -1,0 +1,41 @@
+{
+  "case_id": "M01_05",
+  "role": "Critic_C2",
+  "verdict": "evidence_limited_followup_requested",
+  "source_hashes": {
+    "explorer": "7480dde4c39dc73a27d6fcf56390d10eee569c5fe062d53ac7f5e1f0416a223a",
+    "c1": "172cb27c0566ca211ff5c352e2f322758844f34871ecbca16aa71eab376c122c",
+    "investigator": "cf6d9d2de0fcb9897fc011345314dab40c6716c52019e9375cce87b4eeeecca0",
+    "acquisition_audit": "1d9eda8bd84ac0e9b07093cd88ea42ef6532dd0205296f36f69ad844c1820f5c",
+    "tool_trace": "eae7f36c9ac0e62b9a5b6aecd1dccc16ded0d363b344f93bcdc993d4281038c8",
+    "raw_joint": "207a40409d114961185c2a9164a5b732cf0342bbf7dc375e6badc6b1715da4aa",
+    "raw_literature_micos": "e8755e09f5e9873bdf5167e79ee470a0cacf3c02aec26c55bef97bcfe62432de",
+    "raw_literature_quality": "27922abc3a146f92add2964bc2e374891f39b705c11553cbf3a470f87a0ff365",
+    "raw_gene_info": "2dbaa9e89b404d7d9cb928339a0008a342ce0032430bc082492fa0469ddaefcf"
+  },
+  "evidence_audit": {
+    "data_scope": "pass_association_only",
+    "joint_result": {"condition_n": 102, "condition_hits": 56, "condition_frequency": 0.5490196078431373, "matched_nt_frequency": 0.06069450917467374, "delta_pp": 48.83250986684636, "holm_p_from_frozen_input": 1.5589398542145976e-33},
+    "pairwise_consistency": "pass; both tested pairs show elevated detection, but pairwise/joint RNA detection remains non-causal and the condition sample is small",
+    "identity_scope": "unresolved",
+    "literature_scope": "unavailable",
+    "target_specificity_issue": "SAMM50 identity was not resolved by the failed gene-info request; generic MICOS/cristae or mitochondrial-quality-control evidence must be explicitly tied to SAMM50 perturbation before being used for H1/H2.",
+    "tool_failures": ["Harmonizome gene identity request failed twice", "PubMed SAMM50/MICOS/cristae search failed twice", "PubMed SAMM50/mitophagy search failed twice"],
+    "tool_failure_interpretation": "These are unavailable evidence, not biological null results.",
+    "metadata_issue": "Investigator M01_05 limitations repeat a TIMM23B-specific statement; this is a provenance/reporting inconsistency and should be corrected in followup or final synthesis."
+  },
+  "hypothesis_assessment": {
+    "M01_05_H1": "Not adjudicated: current data support the RNA association only; SAMM50-specific MICOS/cristae and ISR bridge are untested.",
+    "M01_05_H2": "Not adjudicated: no mitophagy flux, cytosolic mitochondrial nucleic acid, inflammatory sensing, or cross-blockade evidence was acquired.",
+    "M01_05_H3": "Partially addressable: marginal and joint frequencies are available, but no cell-state composition, detection-depth adjustment, or independent perturbation/rescue evidence was acquired."
+  },
+  "followup": {
+    "required": true,
+    "round": 1,
+    "question": "What target-specific identity and primary evidence, if any, link SAMM50 perturbation to MICOS/cristae or mitochondrial quality-control changes in a defined system?",
+    "hypotheses": ["M01_05_H1", "M01_05_H2"],
+    "action": ["Resolve SAMM50 gene identity using a stable primary gene registry or equivalent and record approved symbol/aliases/species.", "Retrieve the named Explorer primary sources PMID 26530328 and PMID 34037656 by PMID/full-text route; preserve exact SAMM50 perturbation, species/cell context, measured endpoints, and relevant passage.", "Correct the copied TIMM23B limitation in the M01_05 evidence record or explicitly flag it as a template error in the final provenance summary."],
+    "completion_standard": "A successful result must include verifiable source records with SAMM50-specific perturbation scope and measured MICOS/cristae or quality-control endpoints; generic mitochondrial stress evidence alone is insufficient. The current RNA association remains non-causal regardless of tool outcome."
+  },
+  "stop_reason": "Do not stop at a mechanism conclusion: the only successful evidence is the current K562 association, while target identity and primary literature acquisition failed. One bounded provenance/identity followup is justified."
+}

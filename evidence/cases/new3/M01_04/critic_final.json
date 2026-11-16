@@ -1,0 +1,34 @@
+{
+  "case_id": "M01_04",
+  "role": "Critic_final",
+  "verdict": "evidence_limited_no_mechanism_winner",
+  "source_hashes": {
+    "explorer": "153b5ec2775139c039e907f580554969b20a97c9d1d475806bb92dbb36b34135",
+    "c1": "834ed808a5a54249759ed305e449c26f4c4b05c6689245ecaeb67d3fb5f38f3d",
+    "investigator_initial": "d0c891594bfb55c938f37bf1debb88b3b6456307e179d16ea8ccac481b4a8669",
+    "c2": "b92c60889591d6571ed77de132e967a05fbd60fd28301afc93e8ca5f5d61b806",
+    "followup": "82b5c56fd300f0d5bded876f592a13a2983ea7bb3da446750ae948f7b3694bdc",
+    "followup_web": "12983b5bf3c8db2c5dc5ead1c6bf5dc27c912e806a9af68d6e5d0fc8e0b0f116",
+    "hash_correction": "9cbe979f08753035a6fbb23b711f5ae1e3db15adad0e20ee4ff8a923a6a07ce5"
+  },
+  "request_execution_reevaluation": {
+    "c2_request": "一轮身份与 TIMM23B-specific 文献补查，明确区别 TIMM23B 与 TIM23/TIMM23A。",
+    "execution": "NCBI Gene 页面成功确认 human TIMM23B（Gene ID 100652748，HGNC:23581）；PMID 37344598 成功核验为 generic TIM23-complex import paper。未核验到 TIMM23B-specific perturbation/import study。",
+    "reevaluation": "身份问题解决；TIMM23B-specific机制证据仍缺失，因此H1只保留候选状态。"
+  },
+  "evidence_audit": {
+    "current_data": "TIMM23B条件 285/498 联合RNA检出，匹配NT差值50.75 pp；数据工具只支持当前K562关联，不支持因果、表达方向、蛋白活性或独立重复。",
+    "literature_claims": [
+      {"claim": "TIMM23B是独立批准的人类基因符号", "support": "verified", "source": "NCBI Gene 100652748"},
+      {"claim": "TIM23复合体参与presequence蛋白导入", "support": "verified_generic_context", "source": "PMID 37344598"},
+      {"claim": "TIMM23B扰动在本系统造成导入/蛋白稳态缺陷", "support": "not_verified", "source": "no target-specific primary record in bounded followup"}
+    ],
+    "hypotheses": {
+      "M01_04_H1": "候选导入/蛋白稳态-ISR路径，未闭合TIMM23B-specific上游桥。",
+      "M01_04_H2": "无ROS、膜电位、呼吸或能量读出，未评价。",
+      "M01_04_H3": "组成/检测备择仍开放；现有频率结果不能排除。"
+    }
+  },
+  "additional_followup": {"required": false, "reason": "已用一轮允许的身份/文献补查；剩余关键问题需要匹配系统的分子实验，而非继续重复文献检索。"},
+  "final_boundary": "保留关联与generic TIM23背景；不把generic TIM23证据转写为TIMM23B-specific机制，不指定H1/H2/H3赢家。"
+}

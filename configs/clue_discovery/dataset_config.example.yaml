@@ -1,0 +1,49 @@
+dataset_id: new_dataset
+data_origin: real
+adapter: table
+control_labels:
+- vehicle
+condition_field: exposure
+cell_id_field: barcode
+batch_field: plate
+replicate_field: donor
+condition_type: treatment
+gene_mapping:
+  feature_a: SYN_A
+  feature_b: SYN_B
+  feature_c: SYN_C
+binarization_rule: count_gt_zero
+modality: RNA_detection
+cell_context: SET_ME
+timepoint: SET_ME
+min_cells:
+  condition: 100
+  control_per_batch: 20
+  effective_control: 100
+  directional_support: 10
+matching_strategy: within_batch_control
+candidate_budget:
+  max_order: 3
+  hvg_pool_size: 3
+  fingerprint_bands: 4
+  n_null_simulations: 99
+bootstrap_config:
+  reference_repetitions: 40
+  landscape_repetitions: 12
+multiple_testing_config:
+  reference: validation_family_holm_025_per_direction
+  association: selected_family_holm_exploratory
+  alpha: 0.05
+  min_abs_delta: 0.1
+landscape_config:
+  context_shared_candidates_min: 1
+seed: 20260927
+paths:
+  cell_metadata: cells.csv
+  expression: counts.csv
+expected_conditions:
+- Condition_A
+- Condition_B
+- Condition_C
+reference_fold_field: reference_partition
+transfer_compatibility: {}

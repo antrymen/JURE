@@ -1,0 +1,88 @@
+{
+  "protocol_id": "jure_scientific_content_case_a_resume_investigator",
+  "case_order": [
+    "A"
+  ],
+  "model_config": "configs/agent_runtime_glm53_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 1,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 18,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 2
+  },
+  "critic_rechecks_per_round": 2,
+  "schema_retries": 0,
+  "failed_stage_retries": 1,
+  "max_transitions": 18,
+  "provider_max_calls_per_case": 80,
+  "registry_budgets": {
+    "total": 18,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "policy": "User-authorized D12 correction and fresh full Critic C1/C2 review. Existing hypotheses/evidence/fees retained; do not infer scientific success from correction. B/C/D remain paused.",
+  "provider_retry_delays_seconds": [],
+  "protocol_v3": true,
+  "case_execution_policy": "user_authorized_d12_correction",
+  "acceptance_criterion": {
+    "primary": "At least one A/B case commits nonempty claim-level evidence audits after passing C1. A winning mechanism is not required.",
+    "secondary": [
+      "capability IDs on all new evidence questions",
+      "Critic acceptance records for every submitted revision",
+      "Investigator predeclared comparison outcomes and advisory information updates",
+      "distinct terminal reason codes",
+      "all evidence sources REAL and initial facts unchanged"
+    ],
+    "failure_policy": "Keep cumulative model80/tool18 caps and scientific round limits. Controller limit18. Preserve all outcomes; C1 must independently pass before C2."
+  },
+  "technical_continuation": "preserve_all_calls_and_committed_v3_state",
+  "resume_sources": {
+    "A": {
+      "directory": "outputs/agent_pilot_v1_20260928/run_028_critic_case_a/A",
+      "case_sha256": "530be3c50b73ffc0673e56ca71a45eb88475b2a703c5f94d1cd675ee44bf972a"
+    }
+  },
+  "per_case_retry_caps": {
+    "A": {
+      "explorer_max_retries": 1,
+      "failed_stage_retries": 0
+    }
+  },
+  "transition_amendment": {
+    "user_authorization": "做吧，把完整流程跑完",
+    "previous_limit": 15,
+    "additional_transitions": 3,
+    "reason": "Resume full Critic audit after user-authorized removal of spurious D12. Model80/tool18/scientific round limits unchanged."
+  },
+  "engineering_recovery_note": {
+    "source": "run_028_critic_case_a",
+    "reason": "Explicit user-authorized removal of D12; historical records remain, full C1 is required."
+  },
+  "resume_execution_policy": "independent_existing_checkpoints",
+  "defect_correction": {
+    "path": "outputs/case_a_d12_correction_20260929/D12_CORRECTION.json",
+    "sha256": "008df120d3f4f6eadc3f4c5158a3a53494a6a742d88f44bfb2868114ec3e1835",
+    "user_authorization": "那就删除掉D12；做吧，把完整流程跑完"
+  }
+}

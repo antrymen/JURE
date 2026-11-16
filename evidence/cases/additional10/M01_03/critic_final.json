@@ -1,0 +1,50 @@
+{
+  "schema": "codex_critic_audit_v1",
+  "role": "Critic",
+  "backend": "GPT-5.6-Luna",
+  "round": 2,
+  "module": "M01_03",
+  "target": "PHB2",
+  "signed_pattern": "DDIT4+ PHGDH+ TRIB3+",
+  "status": "evidence_limited",
+  "source_case_sha256": "d621d541e041e6e7bfb74ea7684ebcea4083df90dae6ae75619222f8a5339e62",
+  "inputs": [
+    "explorer/M01_03.json",
+    "investigator/M01_03.json",
+    "JOINT_DATA_RECHECK.json",
+    "critic/M01_03.json",
+    "critic/WEB_SOURCE_CHECK.json"
+  ],
+  "c1": {
+    "verdict": "pass",
+    "scope": "H1/H2/H3 distinct, testable, nonexclusive; plus/minus detection only"
+  },
+  "c2": {
+    "observation": {
+      "status": "supported_descriptive",
+      "condition": "211/415",
+      "matched_nt": "0.06447803",
+      "delta_pp": 44.3955705872
+    },
+    "H1": "insufficient: PHB2 HeLa/HCT116/293T/MEF mitophagy context does not establish K562 joint state or efficacy",
+    "H2": "insufficient: no independent state labels",
+    "H3": "insufficient: depth stratification did not attenuate the focal effect; simple depth explanation is not supported by this sensitivity check, while measurement effects remain unexcluded without orthogonal calibration.",
+    "metadata": "Current allowed metadata lacks independent state labels, measured efficacy, guide sequence/off-target annotations and orthogonal RNA; guide IDs exist. See METADATA_CAPABILITY_CHECK.json; absence of fields is not a biological negative.",
+    "literature_locator": "critic/WEB_SOURCE_CHECK.json:M01_03-SRC"
+  },
+  "followup": "none further; evidence_limited",
+  "case_id": "perturbation_scan_day6_v01_20260927:Cd937978995df261151c7",
+  "inputs_sha256": {
+    "explorer/M01_03.json": "e189fc0236053c0daa9dcfeb2a3d7520ac0d9217e29943e9b30c67651a5fbba7",
+    "investigator/M01_03.json": "d93c9db0c266bdc168f6b77356c44d63bbe830fcdc7749a962707a7f867b064c",
+    "JOINT_DATA_RECHECK.json": "2405e8716b3b3baee21920fe31206c3ee3f28caea0804a28e09585e9ff687110",
+    "critic/M01_03.json": "f93d7aac158511cf56e3262f1c3f3129eebfb0f2bacd0a1b9515fd63b42288e4",
+    "critic/WEB_SOURCE_CHECK.json": "7a47595bbc4a83a6e0b25943f9bc1200724152c3bb6156281008e1ed6995e880",
+    "METADATA_CAPABILITY_CHECK.json": "9187d0fbd29feacdd7343d73513eee076c1422c8bd437ca64b25e35340a0233a"
+  },
+  "final_artifact_reconciliation": {
+    "performed_by": "parent agent",
+    "scope": "Identity/hash binding and synchronization with Critic-authored FINAL_CORRECTIONS.md; no new scientific verdict",
+    "critic_corrections_sha256": "f18af8c2585e1f7bc9492cf0cb940ca6d8d56b5fce541b766020bfdb47318bf3"
+  }
+}

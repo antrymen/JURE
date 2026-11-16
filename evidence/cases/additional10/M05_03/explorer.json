@@ -1,0 +1,211 @@
+{
+  "schema": "codex_explorer_proposal_v1",
+  "backend": "Codex-subagent",
+  "role": "Explorer",
+  "case_id": "perturbation_scan_day6_v01_20260927:C153cd911e6055e996a0c",
+  "module": "M05",
+  "slot": "M05_03",
+  "source_case_file": "outputs/module_additional10_luna_20261004/preparation/initial_cases/M05_03/case_file.json",
+  "source_case_sha256": "3eb2230e33294fcce679cbd051e63d78e0a148939087291590ac0e6b7bb88eb9",
+  "clue_id": "CLUE_3e84ab5422928d8adc72ddd0",
+  "observed_fact": {
+    "text": "Day 6 K562 中，RIOK1 标记扰动的 BBC3-DDIT3+JUN- 出现频率为 0.41104294（134/326）；按扰动 batch 构成加权的 NT 频率为 0.15396867，Δ = +25.70742752 个百分点。该关联属于 exploratory_perturbation_candidate，不建立机制。",
+    "target": "RIOK1",
+    "signed_pattern": "BBC3-DDIT3+JUN-",
+    "genes": [
+      "BBC3",
+      "DDIT3",
+      "JUN"
+    ],
+    "states": [
+      0,
+      1,
+      0
+    ],
+    "encoding": "1 = detected expression; 0 = undetected expression (not inferred regulatory activity)",
+    "perturbation_frequency": 0.4110429447852761,
+    "matched_nt_frequency": 0.15396866954427724,
+    "delta_pp": 25.707427524099884,
+    "target_cells": 326,
+    "perturbation_hits": 134,
+    "selected_family_holm_exploratory": 1.2398868124471204e-21,
+    "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+    "replication_status": "NOT_PERFORMED"
+  },
+  "mechanistic_question": "RIOK1 扰动是否通过late small-subunit ribosome maturation改变 BBC3-DDIT3+JUN- 的联合检测？需比较 BBC3-边际, DDIT3+边际, JUN-边际 与完整 BBC3-DDIT3+JUN- joint，区分细胞内响应、状态组成和检测概率。",
+  "hypotheses": [
+    {
+      "id": "M05_03-H1",
+      "statement": "待查假说：RIOK1→pre-40S maturation/translation competence可能改变 BBC3-DDIT3+JUN- 的细胞内联合表达；这只是候选过程，当前 Case 不证明该通路或直接调控边。",
+      "structure": {
+        "type": "cell_intrinsic_response",
+        "causal_path": "RIOK1→pre-40S maturation/translation competence → BBC3-DDIT3+JUN- intracellular joint probability",
+        "direct_regulatory_edges_asserted": false,
+        "specific_mediator": "未指定；需要证据后才能提出可追溯分子中介",
+        "status": "untested_hypothesis"
+      },
+      "predictions": [
+        {
+          "id": "M05_03-H1-P1",
+          "expected_if_supported": "当前聚合焦点 joint Δ=+25.71 pp；在 batch、细胞质量和非焦点状态可比后，BBC3-边际, DDIT3+边际, JUN-边际呈与该过程一致的选择性变化，且完整 BBC3-DDIT3+JUN- joint 的残余差异仍存在。具体边际方向须由八状态表估计，不能把聚合 Δ 当作条件效应。",
+          "weakening_outcome": "条件化后 BBC3-DDIT3+JUN- joint 与边际变化消失，或变化方向/状态分布与 late small-subunit ribosome maturation 的候选预期不一致；单个边际变化本身不能否定细胞内响应。边际解释与候选过程是否真实是正交问题，命名过程仍需独立过程证据。",
+          "neutral_outcome": "状态重叠不足、区间过宽或只能获得聚合频率时，不对候选过程作方向裁决。",
+          "evidence_question": {
+            "id": "M05_03-H1-Q1",
+            "question": "在 RIOK1 与 NT 的八状态表中，BBC3-边际, DDIT3+边际, JUN-边际及完整 BBC3-DDIT3+JUN- joint 的条件差异是否在质量匹配后仍保留，并与late small-subunit ribosome maturation的可追溯读出相符？",
+            "prediction_id": "M05_03-H1-P1"
+          }
+        }
+      ],
+      "limitations": [
+        "当前输入没有给出状态内效应、完整状态表或可裁决中介证据。",
+        "Day 6 exploratory association 不等于因果或机制确认。"
+      ]
+    },
+    {
+      "id": "M05_03-H2",
+      "statement": "备择假说：RIOK1扰动主要改变预存细胞状态的组成，富集或耗竭已有 BBC3-DDIT3+JUN- 倾向的细胞，而非在状态内诱发该联合表达。",
+      "structure": {
+        "type": "state_composition",
+        "causal_path": "RIOK1 perturbation → non-BBC3,DDIT3,JUN state composition → BBC3-DDIT3+JUN- frequency",
+        "direct_regulatory_edges_asserted": false,
+        "specific_mediator": "未指定；需要证据后才能提出可追溯分子中介",
+        "status": "untested_hypothesis"
+      },
+      "predictions": [
+        {
+          "id": "M05_03-H2-P1",
+          "expected_if_supported": "当前聚合焦点 joint Δ=+25.71 pp；用不含 BBC3,DDIT3,JUN 的状态标志重加权 NT 后，主要 BBC3-DDIT3+JUN- 差异可被状态比例重建；各状态内三个边际和完整 joint 的残余差异接近零。",
+          "weakening_outcome": "独立状态比例相近，但在多个重叠状态内 BBC3-DDIT3+JUN- joint 或任一边际仍有稳定差异；组成重加权无法重建观察效应。单个边际变化不能单独裁决候选过程。",
+          "neutral_outcome": "状态标志依赖焦点基因或跨条件重叠不足时，组成与细胞内效应不能排他区分。",
+          "evidence_question": {
+            "id": "M05_03-H2-Q1",
+            "question": "不使用 BBC3,DDIT3,JUN 定义的状态比例及其 NT→RIOK1 重加权，能解释 BBC3-DDIT3+JUN- 的多少；状态内三个边际和 joint 残余是多少？",
+            "prediction_id": "M05_03-H2-P1"
+          }
+        }
+      ],
+      "limitations": [
+        "当前输入没有给出状态内效应、完整状态表或可裁决中介证据。",
+        "Day 6 exploratory association 不等于因果或机制确认。"
+      ]
+    },
+    {
+      "id": "M05_03-H3",
+      "statement": "备择假说：RIOK1 与 NT 的检测概率差异可能改变观测 signed-state 频率，方向需由八状态表及三个边际判定；这只是测量解释，不建立因果。",
+      "structure": {
+        "type": "detectability_or_marginal_explanation",
+        "causal_path": "quality/depth difference → marginal detection of BBC3,DDIT3,JUN → BBC3-DDIT3+JUN- observed frequency",
+        "direct_regulatory_edges_asserted": false,
+        "specific_mediator": "未指定；需要证据后才能提出可追溯分子中介",
+        "status": "untested_hypothesis"
+      },
+      "predictions": [
+        {
+          "id": "M05_03-H3-P1",
+          "expected_if_supported": "这是混合 signed state（正边际 DDIT3；负边际 BBC3,JUN），不能预先指定深度方向；应从八状态和三个边际的实际方向判断 BBC3-DDIT3+JUN- 的 Δ=+25.71 pp 是否由检测概率改变解释。 比较 P(BBC3-, JUN- | DDIT3+) 在扰动和匹配 NT 中的描述性差异；若条件分布接近而 DDIT3+ 比例增加，与主要由 DDIT3 检出增加驱动相容；若条件分布也变化，则仅 DDIT3 边际不足以描述；均不建立因果。",
+          "weakening_outcome": "深度和质量匹配后 BBC3-DDIT3+JUN- joint 仍保留选择性差异，且八状态/边际方向不符合检测概率模型；这会削弱检测解释。",
+          "neutral_outcome": "深度分层样本不足或检测阈值本身位于候选过程下游时，不对检测解释作排他裁决。",
+          "evidence_question": {
+            "id": "M05_03-H3-Q1",
+            "question": "BBC3-边际, DDIT3+边际, JUN-边际与每细胞 ncounts/UMI 的联合分布如何变化？按 batch 和深度匹配后，BBC3-DDIT3+JUN- joint 与边际差异还剩多少？",
+            "prediction_id": "M05_03-H3-P1"
+          }
+        }
+      ],
+      "limitations": [
+        "当前输入没有给出状态内效应、完整状态表或可裁决中介证据。",
+        "Day 6 exploratory association 不等于因果或机制确认。"
+      ]
+    }
+  ],
+  "pairwise_contrasts": [
+    {
+      "hypothesis_ids": [
+        "M05_03-H1",
+        "M05_03-H2"
+      ],
+      "distinction": "候选细胞内过程与预存状态组成",
+      "observable": "不含 BBC3,DDIT3,JUN 的状态重加权、状态内 BBC3-DDIT3+JUN- joint 与三边际",
+      "favors_first": "状态比例重加权不能解释主要差异，而质量匹配后 BBC3-DDIT3+JUN- joint 或任一边际仍有与 late small-subunit ribosome maturation 一致的选择性残余；边际数量本身不作硬阈值。",
+      "favors_second": "状态比例重加权可重建主要 BBC3-DDIT3+JUN- 差异，状态内 joint 与边际残余接近零。",
+      "neutral_outcome": "状态标志依赖焦点基因或重叠不足时不作排他裁决。",
+      "prediction_ids": [
+        "M05_03-H1-P1",
+        "M05_03-H2-P1"
+      ]
+    },
+    {
+      "hypothesis_ids": [
+        "M05_03-H1",
+        "M05_03-H3"
+      ],
+      "distinction": "候选细胞内过程与检测深度",
+      "observable": "深度匹配后的 BBC3-DDIT3+JUN- joint、三个边际及无关基因 joint 对照",
+      "favors_first": "深度匹配后 BBC3-DDIT3+JUN- joint 仍有与 late small-subunit ribosome maturation 一致的状态选择性，且不被通用检测模型重建；单个边际变化不能单独排除该过程。",
+      "favors_second": "深度分层可重建聚合 Δ=+25.71 pp，且八状态与边际随检测概率模型同步变化。",
+      "neutral_outcome": "深度既可能是过程后果，无法单独切断路径。",
+      "prediction_ids": [
+        "M05_03-H1-P1",
+        "M05_03-H3-P1"
+      ]
+    },
+    {
+      "hypothesis_ids": [
+        "M05_03-H2",
+        "M05_03-H3"
+      ],
+      "distinction": "状态组成与检测差异",
+      "observable": "独立状态标志、状态比例、ncounts/UMI 与三基因边际的联合分层",
+      "favors_first": "独立状态比例变化可重建差异且深度匹配后仍有状态特异性。",
+      "favors_second": "所谓状态差异随深度控制消失，且无关 joint 同步变化。",
+      "neutral_outcome": "独立状态标志不足或深度与状态高度共线。",
+      "prediction_ids": [
+        "M05_03-H2-P1",
+        "M05_03-H3-P1"
+      ]
+    }
+  ],
+  "companion_context": {
+    "count": 4,
+    "source": "outputs/module_additional10_luna_20261004/preparation/initial_cases/M05_03/companion_summary.json",
+    "independent_validation": false,
+    "patterns": [
+      {
+        "reference_id": "R610d66f48fd3b60ed583",
+        "signed_pattern": "BBC3- DDIT3+ JUN-",
+        "delta_pp": 25.707427524099884,
+        "core_status": "stable_core",
+        "is_focal_case": true,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R7c292a6ea5ba154f1ca3",
+        "signed_pattern": "BTG2- DDIT3+ KLF6-",
+        "delta_pp": 23.93163360363029,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R1465900a6e9b4fa9cc93",
+        "signed_pattern": "DDIT3+ JUN- KLF6-",
+        "delta_pp": 22.490684074183076,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R8c84583589f0e1af1504",
+        "signed_pattern": "DDIT3+ JUN- PPP1R15A-",
+        "delta_pp": 11.247135266340576,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      }
+    ]
+  },
+  "limitations": [
+    "本提案只整理已保存 Case File 的观察事实，不调用 GLM、不执行统计重算或机制裁决。"
+  ]
+}

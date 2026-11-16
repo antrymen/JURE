@@ -1,0 +1,454 @@
+{
+  "classification": "Requires human review before publication",
+  "credential_scan": "No actual credentials identified; matches in excluded scanner source were regex literals.",
+  "retained_environment_references": [
+    {
+      "file": "tests/test_result2_validation.py",
+      "line": 18,
+      "type": "email"
+    },
+    {
+      "file": "stage2_validation/transfer_day8.py",
+      "line": 18,
+      "type": "local_path"
+    },
+    {
+      "file": "stage2_validation/transfer_day8.py",
+      "line": 19,
+      "type": "email"
+    },
+    {
+      "file": "stage2_validation/transfer_day8.py",
+      "line": 76,
+      "type": "email"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i3.json",
+      "line": 134,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i3.json",
+      "line": 139,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i3.json",
+      "line": 144,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i3.json",
+      "line": 151,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i3.json",
+      "line": 155,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i3.json",
+      "line": 159,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_a_final_completion.json",
+      "line": 120,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i2.json",
+      "line": 134,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i2.json",
+      "line": 139,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i2.json",
+      "line": 144,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i2.json",
+      "line": 151,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i2.json",
+      "line": 155,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i2.json",
+      "line": 159,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_selection_recovery.json",
+      "line": 137,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_selection_recovery.json",
+      "line": 142,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_selection_recovery.json",
+      "line": 147,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_selection_recovery.json",
+      "line": 154,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_selection_recovery.json",
+      "line": 158,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_selection_recovery.json",
+      "line": 162,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_connection_recovery.json",
+      "line": 173,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_connection_recovery.json",
+      "line": 178,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_connection_recovery.json",
+      "line": 183,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_connection_recovery.json",
+      "line": 188,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_connection_recovery.json",
+      "line": 193,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_connection_recovery.json",
+      "line": 198,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_connection_recovery.json",
+      "line": 205,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_connection_recovery.json",
+      "line": 209,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_connection_recovery.json",
+      "line": 213,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_connection_recovery.json",
+      "line": 217,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_connection_recovery.json",
+      "line": 221,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_connection_recovery.json",
+      "line": 225,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_synthesis_field_recovery.json",
+      "line": 139,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_synthesis_field_recovery.json",
+      "line": 144,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_a_c2_commit.json",
+      "line": 114,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i.json",
+      "line": 129,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i.json",
+      "line": 134,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i.json",
+      "line": 139,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i.json",
+      "line": 146,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i.json",
+      "line": 150,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_scientific_content_case_a_resume_i.json",
+      "line": 154,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_case_c_eif2b5_attribution_projection.json",
+      "line": 124,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_case_c_eif2b5_attribution_projection.json",
+      "line": 129,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_priority_recovery.json",
+      "line": 149,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_priority_recovery.json",
+      "line": 154,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_priority_recovery.json",
+      "line": 159,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_priority_recovery.json",
+      "line": 164,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_priority_recovery.json",
+      "line": 171,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_priority_recovery.json",
+      "line": 175,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_priority_recovery.json",
+      "line": 179,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_b_budget_priority_recovery.json",
+      "line": 183,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_pilot_case_a_synthesis_completion.json",
+      "line": 120,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_case_c_second_cycle_coverage.json",
+      "line": 111,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_case_c_second_cycle_coverage.json",
+      "line": 116,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_case_c_eif2b5_update_patch.json",
+      "line": 131,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_case_c_eif2b5_update_patch.json",
+      "line": 135,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_case_c_eif2b5_update_patch.json",
+      "line": 139,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_case_c_eif2b5_gap_binding.json",
+      "line": 100,
+      "type": "local_path"
+    },
+    {
+      "file": "configs/agent_case_c_eif2b5_gap_binding.json",
+      "line": 105,
+      "type": "local_path"
+    },
+    {
+      "file": "nt_reference_experiment/README.md",
+      "line": 32,
+      "type": "local_path"
+    },
+    {
+      "file": "scripts/tools/report_explorer_contract_benchmark.py",
+      "line": 54,
+      "type": "local_path"
+    },
+    {
+      "file": "scripts/tools/report_explorer_contract_benchmark.py",
+      "line": 55,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/tools/PROTOCOL_V3_AB.md",
+      "line": 33,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/tools/tn_query.md",
+      "line": 34,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/tools/tn_query.md",
+      "line": 62,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/tools/data_experiment.md",
+      "line": 39,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/tools/data_experiment.md",
+      "line": 153,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/tools/literature.md",
+      "line": 37,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/tools/literature.md",
+      "line": 163,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/tools/gene_knowledge.md",
+      "line": 34,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/tools/gene_knowledge.md",
+      "line": 81,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/tools/clue_query.md",
+      "line": 44,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/tools/clue_query.md",
+      "line": 133,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/tools/knowledge_graph.md",
+      "line": 34,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/tools/knowledge_graph.md",
+      "line": 122,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/tools/case_file.md",
+      "line": 34,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/tools/case_file.md",
+      "line": 131,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/clue_hunting/result2_validation_plan_20261012.md",
+      "line": 103,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/clue_hunting/result2_validation_plan_20261012.md",
+      "line": 104,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/clue_hunting/result2_validation_plan_20261012.md",
+      "line": 105,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/clue_hunting/result2_validation_plan_20261012.md",
+      "line": 106,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/clue_hunting/perturbation_scan_v01_design_proposal.md",
+      "line": 3,
+      "type": "local_path"
+    },
+    {
+      "file": "docs/clue_hunting/perturbation_scan_v01_design_proposal.md",
+      "line": 142,
+      "type": "local_path"
+    },
+    {
+      "file": "experiments/reference_scripts/outputs/supplementary_table_s1_20261102/export_pdf.py",
+      "line": 10,
+      "type": "local_path"
+    },
+    {
+      "file": "experiments/reference_scripts/outputs/supplementary_table_s1_20261102/export_pdf.py",
+      "line": 31,
+      "type": "local_path"
+    },
+    {
+      "file": "experiments/reference_scripts/outputs/supplementary_table_s1_20261102/prepare.py",
+      "line": 4,
+      "type": "local_path"
+    }
+  ],
+  "large_files": "Largest archived catalogue ~2.55 MB; aggregate evidence retained for verification.",
+  "third_party_rights": "Not independently cleared; author review required.",
+  "tracking": "Candidate is an export, not a new Git repository. Exclusions must also be checked at staging time."
+}

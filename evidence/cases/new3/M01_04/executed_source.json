@@ -1,0 +1,14 @@
+{
+  "slot":"M01_04",
+  "round":1,
+  "source_case":"../M01_04.json",
+  "status":"followup_completed_identity_resolved_target_specific_literature_gap_remains",
+  "critic_request":"What target-specific identity and primary literature evidence, if any, links human TIMM23B separately from TIMM23/TIMM23A?",
+  "evidence_records":[
+    {"evidence_id":"ER-M01_04-FU1-identity-v1","question_ids":["M01_04_C2_FU1"],"hypothesis_ids":["M01_04_H1"],"source_kind":"gene_registry","source_file":"M01_04_web.json","supports":"Approved human TIMM23B identity and stable identifiers.","does_not_support":["case-specific import phenotype","TIMM23 equivalence"]},
+    {"evidence_id":"ER-M01_04-FU1-generic-tim23-v1","question_ids":["M01_04_C2_FU1"],"hypothesis_ids":["M01_04_H1"],"source_kind":"external_primary_literature","source_file":"M01_04_web.json","supports":"Generic TIM23 complex mediates presequence protein import in the cited system.","does_not_support":["TIMM23B-specific perturbation","current K562 mechanism"]}
+  ],
+  "source_hashes":{"web_record":"12983b5bf3c8db2c5dc5ead1c6bf5dc27c912e806a9af68d6e5d0fc8e0b0f116","original_investigator":"d0c891594bfb55c938f37bf1debb88b3b6456307e179d16ea8ccac481b4a8669"},
+  "mechanism_boundary":"Identity is resolved; TIMM23B-specific import/proteostasis evidence was not verified in this bounded follow-up. Generic TIM23 context remains contextual only.",
+  "tool_failure_note":"Original registry gene/literature SOURCE_ERROR remains recorded in raw/ and is unavailable evidence, not a null result."
+}

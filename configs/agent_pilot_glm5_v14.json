@@ -1,0 +1,51 @@
+{
+  "protocol_id": "jure_real_agent_pilot_glm5_v1.4",
+  "case_order": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "a_gate": "successful Explorer, Investigator and Critic commits; audited STOP; intact initial sources; real evidence and transport traces; no mock",
+  "model_config": "configs/agent_runtime_glm5.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 2
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 18,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 750000
+  },
+  "critic_rechecks_per_round": 2,
+  "schema_retries": 1,
+  "failed_stage_retries": 1,
+  "max_transitions": 12,
+  "provider_max_calls_per_case": 80,
+  "registry_budgets": {
+    "total": 18,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "policy": "Operational bounds frozen before first case; not scientifically optimized. Controller follows persisted Agent routes and never chooses evidence tools or edits reasoning. Schema feedback contains validator diagnostics only. GLM-5 explicitly authorized after Flash failed before any scientific commit; output budget increased to 16384; transient provider retries use fixed delays, identical request and same model. Generic validator bug fixes: negate proof predicates, recognize provided typed clue identifiers and signed/hyphenated known entities, recognize hypothesized qualification. Previous uncommitted GLM outputs are not reused. Validation retries include the same Agent/method/case original uncommitted response as untrusted data. No host edits to it and no reuse across run directories. Statistical/logic abbreviations FDR/FWER/BH/BY/QC/AND/OR are not molecular names. Existing unsupported-name rule unchanged; diagnostics clarify that hypothetical labeling is not a name provenance source. Accept unqualified and tool-qualified equivalent operation names. Resume committed Case A checkpoint with unchanged hypotheses, append-only history and inherited stage traces; model/tool budgets include predecessor calls. No response is rewritten or promoted by the host.",
+  "provider_retry_delays_seconds": [
+    15,
+    30
+  ],
+  "resume_sources": {
+    "A": {
+      "directory": "outputs/agent_pilot_v1_20260928/run_005_glm5_v13/A",
+      "case_sha256": "9c1f6b6f7e2ff5a57b9205af4d07a59ae33b24872eb943300e34dcc17f9f2fba"
+    }
+  }
+}

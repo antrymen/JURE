@@ -1,0 +1,400 @@
+{
+  "schema": "codex_critic_audit_v1",
+  "role": "Critic",
+  "backend": "Codex-subagent",
+  "round": 1,
+  "case_id": "perturbation_scan_day6_v01_20260927:C85f61e2a8d591dfad00e",
+  "module": "M02",
+  "target": "RPL23",
+  "signed_pattern": "DDIT3+ PHGDH- SESN2-",
+  "source_case_sha256": "a3403a32d623282f36b01369adb4e873ba5a482880d2787cd76dd1e0515f85e2",
+  "input_artifacts": [
+    {
+      "path": "outputs/module_top5_codex_agents_20261004/explorer/M02.json",
+      "sha256": "79821a44013b2538d9e7132960fac19a0e3f2a324bd4bd0ad6d336f6fd624a63"
+    },
+    {
+      "path": "outputs/module_top5_codex_agents_20261004/investigator/M02.json",
+      "sha256": "960ae13086fbe6e0e673c6402557817d2dffb4b31051f7ed28e075846d236f1c"
+    }
+  ],
+  "execution_boundary": "Read-only audit of upstream artifacts. Not GLM runtime or authoritative CaseStore transaction; no evidence acquisition.",
+  "c1": {
+    "verdict": "pass",
+    "dimensions": {
+      "groundedness": "pass：观察与因果解释明确分离，完整signed state和Day6范围保留。",
+      "distinctness": "pass：细胞内响应、群体组成、检测解释在路径上不同；不要求互斥。",
+      "testability": "pass：给出状态内比较、组成重加权、深度/匹配基因/独立测量等可观察预测。",
+      "falsifiability": "pass：有足够重叠下的削弱结果，并将宽区间或资料缺失列为中性。",
+      "discriminability": "pass：三个成对contrast有支持两侧和无法区分的结果。",
+      "scope": "pass：作为粗粒度解释类别，未强称命名分子中介或interaction rewiring。",
+      "alternative_coverage": "pass：包括组成和测量两类主要替代解释，允许共同存在；并非穷尽所有分子机制。"
+    },
+    "hypothesis_ids": [
+      "M02-H1",
+      "M02-H2",
+      "M02-H3"
+    ],
+    "scope_note": "Coarse mechanistic categories only; no named molecular mediator established. Mixed signed states do not require coordinated repression. Models may coexist."
+  },
+  "c2": {
+    "executed": true,
+    "evidence_audits": [
+      {
+        "evidence_id": "M02-E1",
+        "upstream_locator": "data_evidence[0].claim_id",
+        "evidence_type": "dataset",
+        "raw_source": "outputs/module_top5_codex_agents_20261004/investigator/raw/M02_joint.json",
+        "raw_sha256": "a8d0a65487de3f92cd6e438274cb5964cb14ad81f49780ea9a8cdf47a2bdf5c4",
+        "relevance": "exact selected target and signed state in Day6 K562",
+        "directness": "direct descriptive count",
+        "context_match": "same source population; no independent replication",
+        "source_quality": "traceable frozen local source and counts; exploratory reuse and selection remain",
+        "provenance_completeness": "raw artifact and source lineage retained; no independent guide/causal identity verification",
+        "support_quality": "association / detection description only; insufficient for cause and mediation",
+        "overclaim_guard": "no causality, no interaction rewiring, no sign-as-repression, no adjusted causal effect",
+        "conflict": "none identified for the reported counts; mechanism alternatives not resolved"
+      },
+      {
+        "evidence_id": "M02-E2",
+        "upstream_locator": "data_evidence[1].claim_id",
+        "evidence_type": "dataset",
+        "raw_source": "outputs/module_top5_codex_agents_20261004/investigator/raw/M02_supplemental.json",
+        "raw_sha256": "171ade01602cf32ef8af2d64536677eca8b2b066f60ad2fd16ced1e3b2af2057",
+        "relevance": "exact selected target and signed state in Day6 K562",
+        "directness": "direct descriptive count",
+        "context_match": "same source population; no independent replication",
+        "source_quality": "traceable frozen local source and counts; exploratory reuse and selection remain",
+        "provenance_completeness": "raw artifact and source lineage retained; no independent guide/causal identity verification",
+        "support_quality": "association / detection description only; insufficient for cause and mediation",
+        "overclaim_guard": "no causality, no interaction rewiring, no sign-as-repression, no adjusted causal effect",
+        "conflict": "none identified for the reported counts; mechanism alternatives not resolved"
+      },
+      {
+        "evidence_id": "M02-E3",
+        "upstream_locator": "data_evidence[2].claim_id",
+        "evidence_type": "dataset",
+        "raw_source": "outputs/module_top5_codex_agents_20261004/investigator/raw/M02_supplemental.json",
+        "raw_sha256": "171ade01602cf32ef8af2d64536677eca8b2b066f60ad2fd16ced1e3b2af2057",
+        "relevance": "exact selected target and signed state in Day6 K562",
+        "directness": "post-treatment coarse conditional description",
+        "context_match": "same source population; no independent replication",
+        "source_quality": "traceable frozen local source and counts; exploratory reuse and selection remain",
+        "provenance_completeness": "raw artifact and source lineage retained; no independent guide/causal identity verification",
+        "support_quality": "association / detection description only; insufficient for cause and mediation",
+        "overclaim_guard": "no causality, no interaction rewiring, no sign-as-repression, no adjusted causal effect",
+        "conflict": "none identified for the reported counts; mechanism alternatives not resolved"
+      },
+      {
+        "evidence_id": "PMID:15314174",
+        "evidence_type": "literature",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15314174/",
+        "raw_source": "outputs/module_top5_codex_agents_20261004/investigator/raw/litsearch1.json",
+        "raw_sha256": "0913d15f96f4930244e5ecc59c62c38cef1ef066c21a06d20b5acbb392ca5ccf",
+        "retrieval_scope": "primary abstract / indexed article passage",
+        "relevance": "PMID15314174已保存摘要确有L23敲低与核仁应激/p53内容；它不测本例三基因状态，也没有确立K562语境，不能把p53机制移植到本例。",
+        "directness": "primary experiments in source context; indirect for selected full signed-state clue",
+        "context_match": "not established for target + K562 + full signed state together",
+        "source_quality": "primary-source extract inspected; complete paper methods not audited",
+        "provenance_completeness": "stored extract hash verified; scope bounded by retrieved text",
+        "support_quality": "contextual plausibility; cannot verify a critical exact-case mechanism claim",
+        "overclaim_guard": "仅为 RPL23 功能背景；未提供 K562 的 DDIT3+ PHGDH− SESN2− 机制，不能把其他细胞的 p53 路径直接移植。",
+        "conflict": "no matched direct contradiction acquired; different contexts not treated as replicate votes"
+      }
+    ],
+    "claim_audits": [
+      {
+        "claim_id": "M02-O1",
+        "hypothesis_id": null,
+        "hypothesis_revision_ref": "outputs/module_top5_codex_agents_20261004/explorer/M02.json#79821a44013b2538d9e7132960fac19a0e3f2a324bd4bd0ad6d336f6fd624a63",
+        "prediction_ids": [],
+        "claim": "Day 6 K562 中，RPL23 标记扰动的 DDIT3+ PHGDH- SESN2- 出现频率为 0.58542714（233/398）；按扰动 batch 构成加权的 NT 频率为 0.14691182，Δ = +43.85153111 个百分点。该关联属于 exploratory_perturbation_candidate，不建立机制。",
+        "critical": false,
+        "criticality_reason": "仅支持同一Day6选择后观察的计数复现；不裁决机制。",
+        "status": "supported",
+        "evidence_ids": [
+          "M02-E1"
+        ],
+        "interpretation": "仅支持同一Day6选择后观察的计数复现；不裁决机制。",
+        "supporting_evidence_ids": [
+          "M02-E1"
+        ],
+        "partially_supporting_evidence_ids": [],
+        "challenging_evidence_ids": [],
+        "non_discriminating_evidence_ids": []
+      },
+      {
+        "claim_id": "M02-H1-C1",
+        "hypothesis_id": "M02-H1",
+        "hypothesis_revision_ref": "outputs/module_top5_codex_agents_20261004/explorer/M02.json#79821a44013b2538d9e7132960fac19a0e3f2a324bd4bd0ad6d336f6fd624a63",
+        "prediction_ids": [
+          "M02-H1-P1"
+        ],
+        "claim": "在非焦点基因定义的可比细胞状态内，完整signed state仍有选择性变化。",
+        "critical": true,
+        "criticality_reason": "这是细胞内响应与组成解释的关键区别；尚无独立状态标签内比较，聚合关联不能替代。",
+        "status": "insufficient",
+        "evidence_ids": [
+          "M02-E1",
+          "M02-E2",
+          "M02-E3"
+        ],
+        "interpretation": "这是细胞内响应与组成解释的关键区别；尚无独立状态标签内比较，聚合关联不能替代。",
+        "supporting_evidence_ids": [],
+        "partially_supporting_evidence_ids": [],
+        "challenging_evidence_ids": [],
+        "non_discriminating_evidence_ids": [
+          "M02-E1",
+          "M02-E2",
+          "M02-E3"
+        ]
+      },
+      {
+        "claim_id": "M02-H1-C2",
+        "hypothesis_id": "M02-H1",
+        "hypothesis_revision_ref": "outputs/module_top5_codex_agents_20261004/explorer/M02.json#79821a44013b2538d9e7132960fac19a0e3f2a324bd4bd0ad6d336f6fd624a63",
+        "prediction_ids": [
+          "M02-H1-P1"
+        ],
+        "claim": "真实细胞内RNA响应足以解释本例完整状态，且非主要由测量差异产生。",
+        "critical": true,
+        "criticality_reason": "没有当前target、细胞语境、完整状态的直接机制/独立RNA测量，文献只增加背景合理性。",
+        "status": "insufficient",
+        "evidence_ids": [
+          "M02-E2",
+          "M02-E3",
+          "PMID:15314174"
+        ],
+        "interpretation": "没有当前target、细胞语境、完整状态的直接机制/独立RNA测量，文献只增加背景合理性。",
+        "supporting_evidence_ids": [],
+        "partially_supporting_evidence_ids": [],
+        "challenging_evidence_ids": [],
+        "non_discriminating_evidence_ids": [
+          "M02-E2",
+          "M02-E3",
+          "PMID:15314174"
+        ]
+      },
+      {
+        "claim_id": "M02-H2-C1",
+        "hypothesis_id": "M02-H2",
+        "hypothesis_revision_ref": "outputs/module_top5_codex_agents_20261004/explorer/M02.json#79821a44013b2538d9e7132960fac19a0e3f2a324bd4bd0ad6d336f6fd624a63",
+        "prediction_ids": [
+          "M02-H2-P1"
+        ],
+        "claim": "预存高概率状态的混合比例沿所需方向改变。",
+        "critical": true,
+        "criticality_reason": "组成主导需要独立于焦点基因的状态与比例；当前八状态本身不能当作独立状态标签。",
+        "status": "insufficient",
+        "evidence_ids": [
+          "M02-E1",
+          "M02-E2",
+          "M02-E3"
+        ],
+        "interpretation": "组成主导需要独立于焦点基因的状态与比例；当前八状态本身不能当作独立状态标签。",
+        "supporting_evidence_ids": [],
+        "partially_supporting_evidence_ids": [],
+        "challenging_evidence_ids": [],
+        "non_discriminating_evidence_ids": [
+          "M02-E1",
+          "M02-E2",
+          "M02-E3"
+        ]
+      },
+      {
+        "claim_id": "M02-H2-C2",
+        "hypothesis_id": "M02-H2",
+        "hypothesis_revision_ref": "outputs/module_top5_codex_agents_20261004/explorer/M02.json#79821a44013b2538d9e7132960fac19a0e3f2a324bd4bd0ad6d336f6fd624a63",
+        "prediction_ids": [
+          "M02-H2-P1"
+        ],
+        "claim": "用NT状态内频率和扰动状态比例可以重建主要群体效应。",
+        "critical": true,
+        "criticality_reason": "没有组成重加权；缺此项不能支持主要解释。",
+        "status": "insufficient",
+        "evidence_ids": [
+          "M02-E1",
+          "M02-E2",
+          "M02-E3"
+        ],
+        "interpretation": "没有组成重加权；缺此项不能支持主要解释。",
+        "supporting_evidence_ids": [],
+        "partially_supporting_evidence_ids": [],
+        "challenging_evidence_ids": [],
+        "non_discriminating_evidence_ids": [
+          "M02-E1",
+          "M02-E2",
+          "M02-E3"
+        ]
+      },
+      {
+        "claim_id": "M02-H3-C1",
+        "hypothesis_id": "M02-H3",
+        "hypothesis_revision_ref": "outputs/module_top5_codex_agents_20261004/explorer/M02.json#79821a44013b2538d9e7132960fac19a0e3f2a324bd4bd0ad6d336f6fd624a63",
+        "prediction_ids": [
+          "M02-H3-P1"
+        ],
+        "claim": "较低总体深度造成PHGDH/SESN2普遍漏检，是完整100富集的主要解释。",
+        "critical": false,
+        "criticality_reason": "简单低深度主导版本不获支持，但DDIT3边际与条件负背景尚未分解；残留测量因素不能排除。",
+        "status": "challenged",
+        "evidence_ids": [
+          "M02-E2",
+          "M02-E3"
+        ],
+        "interpretation": "简单低深度主导版本不获支持，但DDIT3边际与条件负背景尚未分解；残留测量因素不能排除。",
+        "supporting_evidence_ids": [],
+        "partially_supporting_evidence_ids": [],
+        "challenging_evidence_ids": [
+          "M02-E2",
+          "M02-E3"
+        ],
+        "non_discriminating_evidence_ids": []
+      },
+      {
+        "claim_id": "M02-H3-C2",
+        "hypothesis_id": "M02-H3",
+        "hypothesis_revision_ref": "outputs/module_top5_codex_agents_20261004/explorer/M02.json#79821a44013b2538d9e7132960fac19a0e3f2a324bd4bd0ad6d336f6fd624a63",
+        "prediction_ids": [
+          "M02-H3-P1"
+        ],
+        "claim": "检测/捕获差异主要造成焦点完整状态效应，而非真实RNA响应或状态组成。",
+        "critical": true,
+        "criticality_reason": "缺相似表达对照与独立测量，粗二分及边际变化不识别生物与技术来源。",
+        "status": "insufficient",
+        "evidence_ids": [
+          "M02-E2",
+          "M02-E3"
+        ],
+        "interpretation": "缺相似表达对照与独立测量，粗二分及边际变化不识别生物与技术来源。",
+        "supporting_evidence_ids": [],
+        "partially_supporting_evidence_ids": [],
+        "challenging_evidence_ids": [],
+        "non_discriminating_evidence_ids": [
+          "M02-E2",
+          "M02-E3"
+        ]
+      }
+    ],
+    "hypothesis_syntheses": [
+      {
+        "hypothesis_id": "M02-H1",
+        "status": "insufficient",
+        "reason": "聚合观察及功能背景未证明同状态细胞内完整响应。",
+        "unresolved_critical_claim_ids": [
+          "M02-H1-C1",
+          "M02-H1-C2"
+        ]
+      },
+      {
+        "hypothesis_id": "M02-H2",
+        "status": "insufficient",
+        "reason": "独立状态与组成重加权证据缺失。",
+        "unresolved_critical_claim_ids": [
+          "M02-H2-C1",
+          "M02-H2-C2"
+        ]
+      },
+      {
+        "hypothesis_id": "M02-H3",
+        "status": "insufficient",
+        "reason": "简单低深度主导版本不获支持，但DDIT3边际与条件负背景尚未分解；残留测量因素不能排除。",
+        "unresolved_critical_claim_ids": [
+          "M02-H3-C2"
+        ]
+      }
+    ],
+    "case_specific_finding": "DDIT3检测 +48.07 pp、PHGDH检测 −18.38 pp、SESN2检测 −1.61 pp。两个负号不表示两个基因被等幅抑制。总体深度不低且粗分层 +44.02 pp；尚缺DDIT3+条件下负背景的直接比较。",
+    "unresolved_gaps": [
+      {
+        "id": "M02-G1",
+        "question_id": "M02-H2-Q1",
+        "description": "没有使用独立的预存细胞状态标签，未进行组成重加权，H1/H2无法分离。",
+        "status": "OPEN"
+      },
+      {
+        "id": "M02-G2",
+        "question_id": "M02-H3-Q1",
+        "description": "缺少相似表达非焦点对照组合、精细深度匹配和独立RNA测量，粗二分不能排除检测解释。",
+        "status": "OPEN"
+      },
+      {
+        "id": "M02-G3",
+        "question_id": "M02-H1-Q1",
+        "description": "背景原始研究与当前target、K562、完整signed state尚无一一对应的机制干预/救援证据。",
+        "status": "OPEN"
+      }
+    ],
+    "comparison": "H1 vs H2 unresolved. H3 simple depth component inspected separately from broad capture mechanisms; no forced winner."
+  },
+  "acquisition_audit": {
+    "data_distinct_queries": 15,
+    "data_call_attempts": 21,
+    "duplicate_queries": 6,
+    "cache_hit_calls": 5,
+    "failed_pubmed_registry_calls": 5,
+    "count_scope": "Across all five cases, not per case. Counts read from retained acquisition audit.",
+    "independent_day6_replication_count": 0,
+    "repeat_or_cache_is_new_evidence": false,
+    "source_errors_are_negative_evidence": false
+  },
+  "failure_attributions": [
+    {
+      "type": "evidence_missing",
+      "claim_ids": [
+        "M02-H1-C1",
+        "M02-H1-C2",
+        "M02-H2-C1",
+        "M02-H2-C2",
+        "M02-H3-C2"
+      ],
+      "reason": "尚有有界、已存数据可处理的问题，先取证而非武断停止。"
+    }
+  ],
+  "routing": {
+    "next_actor": "Investigator",
+    "status": "bounded_followup_requested",
+    "requests": [
+      {
+        "request_id": "M02-IR1",
+        "question_ids": [
+          "M02-H2-Q1"
+        ],
+        "required_evidence": "仅检查已有allowed metadata/manifest是否有不由焦点基因定义的独立状态标签，以及现成guide/knockdown信息；明确可用/不可用及出处，不生成临时焦点聚类标签。",
+        "addresses_claim_ids": [
+          "M02-H1-C1",
+          "M02-H2-C1",
+          "M02-H2-C2"
+        ],
+        "actor": "Investigator",
+        "bounded": true
+      },
+      {
+        "request_id": "M02-IR2",
+        "question_ids": [
+          "M02-H1-Q1",
+          "M02-H3-Q1"
+        ],
+        "required_evidence": "从已取得八状态表计算DDIT3+条件下两个负状态的联合频率，target和batch-matched NT并列，给分母/覆盖/权重；区分DDIT3边际增加与负背景变化，不以边际乘积宣布解释。",
+        "addresses_claim_ids": [
+          "M02-H1-C2",
+          "M02-H3-C2"
+        ],
+        "actor": "Investigator",
+        "bounded": true
+      }
+    ],
+    "max_additional_rounds": 1,
+    "reason": "补查来源/能力范围与混合符号条件频率可直接缩小当前解释边界。"
+  },
+  "stop": null,
+  "final_report_ready": false,
+  "progress_snapshot": {
+    "round": 1,
+    "new_claim_audits": 7,
+    "mechanism_supported_count": 0,
+    "meaningful_progress": "完整状态计数来源核实、边际差异与粗深度证据得到分级，背景文献与exact-case证据分离；提出有限可执行缺口。",
+    "stalled": false,
+    "consecutive_stalled_rounds": 0
+  }
+}

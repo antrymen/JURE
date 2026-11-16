@@ -1,0 +1,21 @@
+{
+  "case_id": "M01_04",
+  "role": "Critic_C1",
+  "source_file": "explorer/M01_04.json",
+  "source_sha256": "153b5ec2775139c039e907f580554969b20a97c9d1d475806bb92dbb36b34135",
+  "verdict": "pass",
+  "audit": {
+    "endpoint_targeting": "pass",
+    "distinct_mechanisms": "pass",
+    "testability": "pass",
+    "unverified_intermediates_explicit": true,
+    "joint_rna_endpoint_handled": true,
+    "specific_issues": []
+  },
+  "hypothesis_notes": {
+    "M01_04_H1": "解释了联合RNA检出终点，并将TIMM23B-导入/蛋白稳态-ISR/ATF4及各目标基因边明确列为待检验；时间序列、阻断和救援可区分因果顺序。",
+    "M01_04_H2": "与H1在呼吸/膜电位/氧化还原传感路径上相互区分，预测ROS/能量读出可先于目标RNA且ISR阻断可能残留；候选中介未被写成既定事实。",
+    "M01_04_H3": "直接针对联合RNA频率的组成/检测备择，包含协变量调整、连续表达和独立扰动/救援检验。"
+  },
+  "next_action": "进入 Investigator；按预测分别测目标RNA、蛋白/活性和单细胞共现，不能把RNA检测状态升级为活化或共同转录。"
+}

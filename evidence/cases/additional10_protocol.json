@@ -1,0 +1,17 @@
+{
+  "run_id": "module_additional10_luna_20261004",
+  "backend": "Codex native subagents",
+  "requested_model": "gpt-5.6-luna",
+  "flow": [
+    "Explorer",
+    "Investigator",
+    "Critic",
+    "bounded follow-up if requested",
+    "Critic final"
+  ],
+  "execution_boundary": "Archive actual Codex role outputs separately from initial CaseFiles; do not fabricate GLM runtime or CaseStore agent events.",
+  "routing": "Investigator starts case investigation after Explorer handoff. Critic reviews completed evidence and may request one bounded follow-up; unresolved gaps remain explicit. No requirement to confirm a mechanism.",
+  "source": "outputs/module_additional10_luna_20261004/RUN_PROTOCOL.json",
+  "source_sha256": "669863966ce9982bb0f4c6eb6b8f554a5ce98d5b0648c6bdaffcf790ec1b5ab0",
+  "archive_scope": "Selected protocol fields; not a full runtime transcript."
+}

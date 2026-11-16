@@ -1,0 +1,40 @@
+{
+  "case_id": "M01_04",
+  "role": "Critic_C2",
+  "verdict": "evidence_limited_followup_requested",
+  "source_hashes": {
+    "explorer": "153b5ec2775139c039e907f580554969b20a97c9d1d475806bb92dbb36b34135",
+    "c1": "834ed808a5a54249759ed305e449c26f4c4b05c6689245ecaeb67d3fb5f38f3d",
+    "investigator": "d0c891594bfb55c938f37bf1debb88b3b6456307e179d16ea8ccac481b4a8669",
+    "acquisition_audit": "1d9eda8bd84ac0e9b07093cd88ea42ef6532dd0205296f36f69ad844c1820f5c",
+    "tool_trace": "eae7f36c9ac0e62b9a5b6aecd1dccc16ded0d363b344f93bcdc993d4281038c8",
+    "raw_joint": "bb41fb199c9d8fb9e58e180b9753f6c8833fe4c922447b81f24df61836251dc2",
+    "raw_literature_tim23": "e28c7d7a3c846abc0b80a29e3954158112f78bc7ab186ae28ab2797efd177205",
+    "raw_literature_gene_specific": "8f3f451067b7262b8fa3ef5844b9a3e58f5a889c6a4d99ee88838b8548feb8e9",
+    "raw_gene_info": "c0a1d289faba140fa5e344bf2460cbe4cb100c9a3a518a6fe775c346f19485db"
+  },
+  "evidence_audit": {
+    "data_scope": "pass_association_only",
+    "joint_result": {"condition_n": 498, "condition_hits": 285, "condition_frequency": 0.572289156626506, "matched_nt_frequency": 0.0648090364903379, "delta_pp": 50.748012013616815, "holm_p_from_frozen_input": 7.947835866117263e-174},
+    "pairwise_consistency": "pass; both tested pairs show elevated detection, but pairwise/joint RNA detection remains non-causal",
+    "identity_scope": "unresolved",
+    "literature_scope": "unavailable",
+    "target_specificity_issue": "TIMM23B must not be treated as equivalent to the TIM23 complex, TIMM23, or TIMM23A. The current failed literature and gene-identity calls do not establish a TIMM23B-specific import phenotype.",
+    "tool_failures": ["Harmonizome gene identity request failed twice", "PubMed TIMM23B/import search failed twice", "PubMed TIMM23B/knockdown search failed twice"],
+    "tool_failure_interpretation": "These are unavailable evidence, not biological null results."
+  },
+  "hypothesis_assessment": {
+    "M01_04_H1": "Not adjudicated: current data support the RNA association only; TIMM23B-specific import/proteostasis and ISR bridge are untested.",
+    "M01_04_H2": "Not adjudicated: no ROS, membrane potential, respiration, or energy measurements were acquired.",
+    "M01_04_H3": "Partially addressable: marginal and joint frequencies are available, but no cell-cycle, composition, detection-depth, or independent perturbation evidence was acquired."
+  },
+  "followup": {
+    "required": true,
+    "round": 1,
+    "question": "What target-specific identity and primary literature evidence, if any, links human TIMM23B (separately from TIMM23/TIMM23A or generic TIM23-complex context) to mitochondrial import/proteostasis or the proposed downstream stress readouts?",
+    "hypotheses": ["M01_04_H1"],
+    "action": ["Resolve TIMM23B gene identity using a stable primary gene registry or equivalent and record approved symbol/aliases/species.", "Retrieve the named Explorer primary source PMID 37344598 and any directly relevant TIMM23B-specific primary study by PMID/full-text route; preserve exact target, perturbation, species/cell context, and relevant passage or report no target-specific evidence.", "Keep generic TIM23-family evidence in a separate context bucket and do not use it as TIMM23B-specific support."],
+    "completion_standard": "A successful result must include a verifiable source record and explicit target scope showing TIMM23B (or explicitly state that only generic TIM23/TIMM23 evidence was found). No mechanism claim may be upgraded from the current day6 RNA association without matched-cell molecular evidence."
+  },
+  "stop_reason": "Do not stop at a mechanism conclusion: the only successful evidence is the current K562 association, while target identity and primary literature acquisition failed. One bounded provenance/identity followup is justified."
+}

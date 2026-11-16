@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "description": "Local-only records excluded from candidate export; files retained in preparation copy. Scientific source/configuration/evidence are not deleted or rewritten.",
+  "exclude_prefixes": [
+    ".release_review/",
+    ".git/",
+    ".venv/",
+    "runs/",
+    "build/",
+    "dist/",
+    "docs/audit/",
+    "docs/research_audits/",
+    "docs/archive/",
+    "docs/PROVENANCE.json",
+    "docs/architecture/",
+    "docs/DELIVERY_CHECKS.md",
+    "docs/DATA_AND_REPRODUCTION.md",
+    "AGENT_PROTOCOL_AUDIT.md",
+    "PAPER_CODE_AUDIT.md",
+    "RESULTS_PROVENANCE.md",
+    "REGRESSION_TESTS.md",
+    "REPOSITORY_COMPARISON.md",
+    "STRUCTURE_CHANGES.md",
+    "GITHUB_READINESS.md",
+    "scripts/check_delivery.py",
+    "stage2_validation/transfer_day8.py"
+  ],
+  "exclude_names": [
+    "__pycache__",
+    ".pytest_cache",
+    ".DS_Store"
+  ],
+  "exclude_suffixes": [
+    ".pyc",
+    ".pyo",
+    ".egg-info"
+  ],
+  "exclude_secret_names": [
+    ".env",
+    ".env.local",
+    ".env.production"
+  ],
+  "manual_review": [
+    "License and contributor permissions",
+    "Third-party material rights in evidence",
+    "Historical scientific configs and scripts with local or remote infrastructure paths"
+  ]
+}

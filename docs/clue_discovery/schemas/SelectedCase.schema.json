@@ -1,0 +1,215 @@
+{
+  "$defs": {
+    "EvidenceLevel": {
+      "enum": [
+        "REFERENCE_PATTERN",
+        "EXPLORATORY_ASSOCIATION",
+        "EXTERNALLY_VALIDATED_ASSOCIATION",
+        "MECHANISTICALLY_INVESTIGATED"
+      ],
+      "title": "EvidenceLevel",
+      "type": "string"
+    },
+    "TriageInput": {
+      "additionalProperties": false,
+      "properties": {
+        "genes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Genes",
+          "type": "array"
+        },
+        "states": {
+          "items": {
+            "enum": [
+              0,
+              1
+            ],
+            "type": "integer"
+          },
+          "title": "States",
+          "type": "array"
+        },
+        "order": {
+          "minimum": 1,
+          "title": "Order",
+          "type": "integer"
+        },
+        "schema_version": {
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "case_id": {
+          "title": "Case Id",
+          "type": "string"
+        },
+        "dataset_id": {
+          "title": "Dataset Id",
+          "type": "string"
+        },
+        "condition_id": {
+          "title": "Condition Id",
+          "type": "string"
+        },
+        "candidate_id": {
+          "title": "Candidate Id",
+          "type": "string"
+        },
+        "reference_id": {
+          "title": "Reference Id",
+          "type": "string"
+        },
+        "matched_effect": {
+          "title": "Matched Effect",
+          "type": "number"
+        },
+        "effect_units": {
+          "const": "prevalence_difference",
+          "default": "prevalence_difference",
+          "title": "Effect Units",
+          "type": "string"
+        },
+        "reference_evidence": {
+          "additionalProperties": true,
+          "title": "Reference Evidence",
+          "type": "object"
+        },
+        "association_evidence": {
+          "additionalProperties": true,
+          "title": "Association Evidence",
+          "type": "object"
+        },
+        "group_context": {
+          "additionalProperties": true,
+          "title": "Group Context",
+          "type": "object"
+        },
+        "stable_core_context": {
+          "additionalProperties": true,
+          "title": "Stable Core Context",
+          "type": "object"
+        },
+        "coresponse_context": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Coresponse Context",
+          "type": "array"
+        },
+        "signed_state_contrast_context": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Signed State Contrast Context",
+          "type": "array"
+        },
+        "support": {
+          "additionalProperties": true,
+          "title": "Support",
+          "type": "object"
+        },
+        "sample_size_context": {
+          "additionalProperties": true,
+          "title": "Sample Size Context",
+          "type": "object"
+        },
+        "external_validation_status": {
+          "title": "External Validation Status",
+          "type": "string"
+        },
+        "evidence_level": {
+          "$ref": "#/$defs/EvidenceLevel"
+        },
+        "strata": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Strata",
+          "type": "array"
+        },
+        "sampling_block_id": {
+          "title": "Sampling Block Id",
+          "type": "string"
+        },
+        "provenance": {
+          "additionalProperties": true,
+          "title": "Provenance",
+          "type": "object"
+        }
+      },
+      "required": [
+        "genes",
+        "states",
+        "order",
+        "case_id",
+        "dataset_id",
+        "condition_id",
+        "candidate_id",
+        "reference_id",
+        "matched_effect",
+        "reference_evidence",
+        "association_evidence",
+        "group_context",
+        "stable_core_context",
+        "coresponse_context",
+        "signed_state_contrast_context",
+        "support",
+        "sample_size_context",
+        "external_validation_status",
+        "evidence_level",
+        "strata",
+        "sampling_block_id",
+        "provenance"
+      ],
+      "title": "TriageInput",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Explicit downstream selection. A group alone cannot instantiate a case.",
+  "properties": {
+    "case": {
+      "$ref": "#/$defs/TriageInput"
+    },
+    "selection_method": {
+      "enum": [
+        "human",
+        "rule",
+        "model"
+      ],
+      "title": "Selection Method",
+      "type": "string"
+    },
+    "selection_reason": {
+      "minLength": 1,
+      "title": "Selection Reason",
+      "type": "string"
+    },
+    "selector": {
+      "minLength": 1,
+      "title": "Selector",
+      "type": "string"
+    },
+    "selected_at": {
+      "title": "Selected At",
+      "type": "string"
+    },
+    "selection_provenance": {
+      "additionalProperties": true,
+      "title": "Selection Provenance",
+      "type": "object"
+    }
+  },
+  "required": [
+    "case",
+    "selection_method",
+    "selection_reason",
+    "selector",
+    "selected_at",
+    "selection_provenance"
+  ],
+  "title": "SelectedCase",
+  "type": "object"
+}

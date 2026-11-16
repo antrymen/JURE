@@ -1,0 +1,97 @@
+{
+  "model_config": "configs/agent_runtime_glm53_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 5,
+    "max_retries": 1,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 18,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 1
+  },
+  "critic_rechecks_per_round": 2,
+  "registry_budgets": {
+    "total": 18,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "provider_max_calls_per_case": 80,
+  "protocol_id": "jure_case_b_same_revision_mapping_recovery",
+  "case_order": [
+    "B"
+  ],
+  "protocol_v3": true,
+  "schema_retries": 0,
+  "failed_stage_retries": 0,
+  "max_transitions": 12,
+  "provider_retry_delays_seconds": [],
+  "resume_execution_policy": "independent_existing_checkpoints",
+  "resume_sources": {
+    "B": {
+      "directory": "outputs/agent_pilot_v1_20260928/run_035_case_b_continuation/B",
+      "case_sha256": "312ba9a3872075ca9d86e5b2ede5b505a2f60e090022827a84fe5c2e644fe1a4"
+    }
+  },
+  "policy": "User-authorized B continuation only. Exactly one additional Explorer submission after legacy transition9, followed by Investigator then Critic. All hypotheses, predictions, evidence choices, acceptance and C1/C2 decisions remain JURE Agent-authored. Preserve historical STOP and all paid calls. No Mechanism Resolution Framework implementation; A/C/D paused.",
+  "continuation_authorization": {
+    "user_reply": "允许",
+    "source_case_sha256": "5f89dedb2e72794a8ddeab80f14a5fc6fd69b5b75fa1d081edc5e9c75bd9be65",
+    "legacy_completed_reframes": 1,
+    "additional_reframe_submissions": 1,
+    "max_total_completed_reframes_including_legacy": 2,
+    "current_protocol_accepted_revision_cap": 1,
+    "hypothesis_bound_reason": "Existing Critic explicitly requested an additional standalone hypothesis alongside H1-H4; allow up to five without authoring its content.",
+    "inherited_model_calls": 49,
+    "remaining_model_calls": 31,
+    "inherited_tool_calls": 9,
+    "remaining_tool_calls": 9,
+    "max_completed_investigator_rounds": 3,
+    "max_completed_critic_rounds": 3
+  },
+  "saved_investigator_prefix": {
+    "responses": [
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_035_case_b_continuation/B/model_calls/call_0001_explorer/response.json",
+        "sha256": "cb52aa6309b97da458c3b354a0e4076d2c7768c15e36514519254ae238b6ee27",
+        "role": "explorer",
+        "method": "hypothesis_changes"
+      },
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_035_case_b_continuation/B/model_calls/call_0002_explorer/response.json",
+        "sha256": "afec8e7aed4e88d22eb8371d3027116bfd2c28d218ab7359bf9bf738eb848997",
+        "role": "explorer",
+        "method": "pair_selection"
+      }
+    ],
+    "tools": [],
+    "envelopes": []
+  },
+  "engineering_recovery": {
+    "failure": "normalizer treated the handle-keyed hypothesis map as a list of record dictionaries, raising AttributeError after a valid pair_selection response",
+    "repair": "Read mapping values; collect only explicit typed IDs. Do not interpret local scientific handles as database IDs.",
+    "paid_responses_reused": 2,
+    "inherited_model_calls": 51,
+    "new_scientific_revision_allowance": 0,
+    "same_logical_transition": 10,
+    "historical_failure_preserved": true,
+    "runtime_frozen_anew": true
+  }
+}

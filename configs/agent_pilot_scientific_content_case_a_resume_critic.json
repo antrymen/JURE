@@ -1,0 +1,95 @@
+{
+  "protocol_id": "jure_scientific_content_case_a_resume_investigator",
+  "case_order": [
+    "A"
+  ],
+  "model_config": "configs/agent_runtime_glm53_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 1,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 18,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 2
+  },
+  "critic_rechecks_per_round": 2,
+  "schema_retries": 0,
+  "failed_stage_retries": 1,
+  "max_transitions": 15,
+  "provider_max_calls_per_case": 80,
+  "registry_budgets": {
+    "total": 18,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "policy": "Resume only interrupted logical Critic stage15. Reuse saved PARTIAL acceptance; no scientific verdict changed. Preserve completed Investigator, 66/80 calls and14/18 tools.",
+  "provider_retry_delays_seconds": [],
+  "protocol_v3": true,
+  "case_execution_policy": "scientific_content_critic_recovery",
+  "acceptance_criterion": {
+    "primary": "At least one A/B case commits nonempty claim-level evidence audits after passing C1. A winning mechanism is not required.",
+    "secondary": [
+      "capability IDs on all new evidence questions",
+      "Critic acceptance records for every submitted revision",
+      "Investigator predeclared comparison outcomes and advisory information updates",
+      "distinct terminal reason codes",
+      "all evidence sources REAL and initial facts unchanged"
+    ],
+    "failure_policy": "Stop at amended controller limit 15 and all unchanged scientific/model/tool limits. No further budget escalation, C1 weakening, case substitution or selective omission."
+  },
+  "technical_continuation": "preserve_all_calls_and_committed_v3_state",
+  "resume_sources": {
+    "A": {
+      "directory": "outputs/agent_pilot_v1_20260928/run_027_saved_plan_case_a/A",
+      "case_sha256": "4de542e73ab7f7fe8907ddc205aa0952ec18af59b1896314dd071058fbed25ab"
+    }
+  },
+  "per_case_retry_caps": {
+    "A": {
+      "explorer_max_retries": 1,
+      "failed_stage_retries": 0
+    }
+  },
+  "transition_amendment": {
+    "user_authorization": "\u53ef\u4ee5",
+    "authorized_scope": "Only three additional controller transitions, preserve cumulative model/tool usage and scientific round limits; B/C/D paused.",
+    "previous_limit": 12,
+    "additional_transitions": 3,
+    "source_sha256": "5106892368b91f504d5c7fb5a325315ac78abd9a69b68a1f58a05ba05de203e9"
+  },
+  "saved_investigator_prefix": {
+    "responses": [
+      {
+        "path": "outputs/agent_pilot_v1_20260928/run_027_saved_plan_case_a/A/model_calls/call_0003_critic/response.json",
+        "sha256": "c7486d9c36b91e77781a6e4223af669dcd84f70d2f4b81ad1d571d3ec6091cd7",
+        "role": "critic",
+        "method": "accept_revision"
+      }
+    ],
+    "tools": [],
+    "envelopes": []
+  },
+  "engineering_recovery_note": {
+    "source": "run_027_saved_plan_case_a",
+    "reason": "Acceptance reference catalog omitted existing evidence and disallowed unchanged objects already resolved in earlier submission. Exact saved Critic judgment is retained."
+  }
+}

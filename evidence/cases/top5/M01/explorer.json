@@ -1,0 +1,397 @@
+{
+  "schema": "codex_explorer_proposal_v1",
+  "backend": "Codex-subagent",
+  "role": "Explorer",
+  "case_id": "perturbation_scan_day6_v01_20260927:Cbcd93035957769c94880",
+  "module": "M01",
+  "source_case_file": "outputs/module_top5_cases_20261004/initial_cases/M01/case_file.json",
+  "source_case_sha256": "7851b12fbfe43a271a0c4ed5c7f5a808e15ca8b45287190d6d6c9be41322d1cb",
+  "clue_id": "CLUE_1527d948587607ab958e2354",
+  "observed_fact": {
+    "text": "Day 6 K562 中，HSPA9 标记扰动的 DDIT4+ PHGDH+ TRIB3+ 出现频率为 0.58571429（246/420）；按扰动 batch 构成加权的 NT 频率为 0.06335787，Δ = +52.23564138 个百分点。该关联属于 exploratory_perturbation_candidate，不建立机制。",
+    "target": "HSPA9",
+    "signed_pattern": "DDIT4+ PHGDH+ TRIB3+",
+    "genes": [
+      "DDIT4",
+      "PHGDH",
+      "TRIB3"
+    ],
+    "states": [
+      1,
+      1,
+      1
+    ],
+    "encoding": "1 = detected expression; 0 = undetected expression (not inferred regulatory activity)",
+    "perturbation_frequency": 0.5857142857142857,
+    "matched_nt_frequency": 0.06335787194720205,
+    "delta_pp": 52.23564137670837,
+    "target_cells": 420,
+    "perturbation_hits": 246,
+    "selected_family_holm_exploratory": 2.809358034895395e-155,
+    "inference_scope": "exploratory_only_reused_NT_no_confirmatory_error_rate_claim",
+    "replication_status": "NOT_PERFORMED"
+  },
+  "mechanistic_question": "为什么 HSPA9 扰动与 DDIT4+ PHGDH+ TRIB3+ 出现频率增加有关：细胞内响应、预存细胞状态比例变化与检测概率变化分别能解释多少？",
+  "hypotheses": [
+    {
+      "id": "M01-H1",
+      "statement": "HSPA9 扰动在可比细胞状态内诱发一个尚未定位的应激／代谢适应响应，使 DDIT4、PHGDH、TRIB3 的共同检测更常见。应激／代谢是待查解释，尚未从本 Case 取得通路证据。",
+      "structure": {
+        "type": "cell_intrinsic_response",
+        "causal_path": "HSPA9 perturbation → 未定位的细胞内过程 → DDIT4+ PHGDH+ TRIB3+ 概率变化",
+        "direct_regulatory_edges_asserted": false,
+        "specific_mediator": "未指定；需要证据后才能提出可追溯分子中介",
+        "status": "untested_hypothesis"
+      },
+      "predictions": [
+        {
+          "id": "M01-H1-P1",
+          "expected_if_supported": "在不使用这三个基因定义的细胞状态内，并考虑检测深度后，三个转录本的检测／丰度及完整 111 状态仍呈有选择性的增加；与相似表达水平的其他基因三阳性状态相比不只是普遍上移。",
+          "weakening_outcome": "在有足够样本与重叠的可比细胞状态／深度内，焦点差异接近零，且组成或普遍检测变化足以重建群体效应；仅缺少命名中介文献不构成反驳。",
+          "neutral_outcome": "只有当前聚合频率／同源 companion 结果，或缺少测量深度、独立状态标签、足够状态内重叠时，不能区分解释；未检出效应且区间很宽也不构成反证。",
+          "evidence_question": {
+            "id": "M01-H1-Q1",
+            "question": "HSPA9 的细胞内响应是否有可追溯的中介证据，且能解释 PHGDH 与 DDIT4/TRIB3 的共同检测，而非只支持其中一个基因？ 在具有重叠的可比状态和测量条件下，完整 signed-state 及三个边际检测变化是什么？",
+            "prediction_id": "M01-H1-P1"
+          }
+        }
+      ],
+      "limitations": [
+        "目前输入没有给出状态内效应、完整八状态表或可裁决中介证据。",
+        "任何调整的变量可能位于因果路径上，需要明确比较总效应与条件效应。"
+      ]
+    },
+    {
+      "id": "M01-H2",
+      "statement": "预先存在的 DDIT4+ PHGDH+ TRIB3+ 高概率细胞状态在 HSPA9 扰动后富集；群体比例变化，而非该状态内新诱导，主要解释频率升高。",
+      "structure": {
+        "type": "state_composition",
+        "causal_path": "HSPA9 perturbation → 预存细胞状态占比变化 → 群体 DDIT4+ PHGDH+ TRIB3+ 频率变化",
+        "direct_regulatory_edges_asserted": false,
+        "specific_mediator": "未指定；需要证据后才能提出可追溯分子中介",
+        "status": "untested_hypothesis"
+      },
+      "predictions": [
+        {
+          "id": "M01-H2-P1",
+          "expected_if_supported": "通过非焦点基因定义的预存高响应状态比例上升，使用 NT 状态内模式频率和扰动状态比例即可重建大部分 +52.24 pp；状态内残余效应明显较小。",
+          "weakening_outcome": "扰动与 NT 的独立状态构成相近，或重加权不能解释主要效应，而充分重叠的状态内仍有一致的 signed-state 差异。",
+          "neutral_outcome": "只有当前聚合频率／同源 companion 结果，或缺少测量深度、独立状态标签、足够状态内重叠时，不能区分解释；未检出效应且区间很宽也不构成反证。",
+          "evidence_question": {
+            "id": "M01-H2-Q1",
+            "question": "能否用不含焦点三基因的状态定义估计 NT 与扰动的组成，并比较组成重加权效应和状态内效应？",
+            "prediction_id": "M01-H2-P1"
+          }
+        }
+      ],
+      "limitations": [
+        "目前输入没有给出状态内效应、完整八状态表或可裁决中介证据。",
+        "任何调整的变量可能位于因果路径上，需要明确比较总效应与条件效应。"
+      ]
+    },
+    {
+      "id": "M01-H3",
+      "statement": "HSPA9 细胞与 NT 的 RNA 含量或捕获／检测深度差异，使原本接近检测阈值的三个基因更容易共同被检出，主要解释三阳性增加。",
+      "structure": {
+        "type": "detectability_or_marginal_explanation",
+        "causal_path": "扰动相关的检测／RNA 深度及边际分布差异 → 观测到 DDIT4+ PHGDH+ TRIB3+ 的概率变化",
+        "direct_regulatory_edges_asserted": false,
+        "specific_mediator": "未指定；需要证据后才能提出可追溯分子中介",
+        "status": "untested_hypothesis"
+      },
+      "predictions": [
+        {
+          "id": "M01-H3-P1",
+          "expected_if_supported": "三阳性增加集中在检测较深的细胞，表达水平相似的无关三阳性组合也同步增加；深度匹配或等深度抽样后焦点差异大幅减小。",
+          "weakening_outcome": "深度与计数质量可比后焦点状态仍有明显且基因选择性的变化，并被对检测阈值不敏感的独立测量支持。",
+          "neutral_outcome": "只有当前聚合频率／同源 companion 结果，或缺少测量深度、独立状态标签、足够状态内重叠时，不能区分解释；未检出效应且区间很宽也不构成反证。",
+          "evidence_question": {
+            "id": "M01-H3-Q1",
+            "question": "完整 2^3 状态分布、各基因边际检测与计数深度的关系是什么？与相近表达基因及独立测量相比，焦点效应是否仍存在？",
+            "prediction_id": "M01-H3-P1"
+          }
+        }
+      ],
+      "limitations": [
+        "目前输入没有给出状态内效应、完整八状态表或可裁决中介证据。",
+        "任何调整的变量可能位于因果路径上，需要明确比较总效应与条件效应。"
+      ]
+    }
+  ],
+  "pairwise_contrasts": [
+    {
+      "hypothesis_ids": [
+        "M01-H1",
+        "M01-H2"
+      ],
+      "distinction": "同类细胞内响应变化与预存状态比例变化",
+      "observable": "以非焦点基因定义的状态比例、状态内 signed-state 效应、按 NT 频率进行组成重加权的预测效应",
+      "favors_first": "在有重叠的多个状态内仍有方向一致的焦点效应，组成重加权不能解释主要变化。",
+      "favors_second": "状态比例显著改变且其重加权可解释主要群体变化，状态内效应小且估计精确。",
+      "neutral_outcome": "状态定义依赖焦点基因、状态重叠不足、或两种变化同时明显；不作排他裁决。",
+      "prediction_ids": [
+        "M01-H1-P1",
+        "M01-H2-P1"
+      ]
+    },
+    {
+      "hypothesis_ids": [
+        "M01-H1",
+        "M01-H3"
+      ],
+      "distinction": "有基因选择性的细胞内变化与测量／边际检测解释",
+      "observable": "深度可比的完整 signed-state 与匹配表达基因对照、独立 RNA 测量",
+      "favors_first": "深度可比后焦点变化保留且具有选择性，独立测量也支持真实转录本变化。",
+      "favors_second": "变化被检测深度与普遍漏检／检出规律解释，等深度比较衰减且独立测量不支持相应改变。",
+      "neutral_outcome": "只有通路文献或单基因效应；边际分布能解释完整状态但尚不知边际变化是生物还是测量原因。",
+      "prediction_ids": [
+        "M01-H1-P1",
+        "M01-H3-P1"
+      ]
+    },
+    {
+      "hypothesis_ids": [
+        "M01-H2",
+        "M01-H3"
+      ],
+      "distinction": "生物状态组成解释与检测差异解释",
+      "observable": "独立状态标志、状态比例与深度的联合分布、深度匹配后的组成效应",
+      "favors_first": "深度可比并有独立标志支持状态比例变化，按生物状态重加权解释效应。",
+      "favors_second": "所谓状态差异随深度控制消失，独立状态指标不支持比例变化，检测规律能解释频率差。",
+      "neutral_outcome": "状态标志本身强烈依赖 RNA 深度，或深度也是生物状态后果，无法分离两条路径。",
+      "prediction_ids": [
+        "M01-H2-P1",
+        "M01-H3-P1"
+      ]
+    }
+  ],
+  "companion_context": {
+    "count": 26,
+    "source": "outputs/module_top5_cases_20261004/initial_cases/M01/companion_summary.json",
+    "independent_validation": false,
+    "patterns": [
+      {
+        "reference_id": "Rd8b66e4fd0d29529d457",
+        "signed_pattern": "DDIT4+ PHGDH+ TRIB3+",
+        "delta_pp": 52.23564137670837,
+        "core_status": "stable_core",
+        "is_focal_case": true,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R2259b1d021ff35964e95",
+        "signed_pattern": "DDIT3+ DDIT4+ TRIB3+",
+        "delta_pp": 50.49500214728,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rbb8c003927b1dcc9bea1",
+        "signed_pattern": "DDIT4+ PHGDH+ RGS16+",
+        "delta_pp": 49.78045148013341,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rc33752b9861327ad2f70",
+        "signed_pattern": "DDIT3+ DDIT4+ GDF15+",
+        "delta_pp": 46.16313033047986,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R68c9aac1c530c9ddf5ab",
+        "signed_pattern": "DDIT4+ JUN- KLF6-",
+        "delta_pp": 44.9426022442665,
+        "core_status": "boundary",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R20f66e904e7bfe106d73",
+        "signed_pattern": "BBC3- DDIT4+ JUN-",
+        "delta_pp": 42.96031322159674,
+        "core_status": "boundary",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R092d3cf0f584eaaa5fa1",
+        "signed_pattern": "DDIT3+ DDIT4+ PPP1R15A+",
+        "delta_pp": 41.521150480735955,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R0cdf35341e1d4ee3bccd",
+        "signed_pattern": "DDIT3+ DDIT4+ IER2+",
+        "delta_pp": 40.27646524359122,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R96993f8d97cd9dcde591",
+        "signed_pattern": "DDIT4+ PHGDH+ SESN2+",
+        "delta_pp": 36.34994493672016,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R507d4c0d9ed08c607726",
+        "signed_pattern": "DDIT4+ SESN2+ TRIB3+",
+        "delta_pp": 35.89874974891793,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rcae1791331350cc04be3",
+        "signed_pattern": "DDIT4+ RGS16+ SESN2+",
+        "delta_pp": 35.090580068081415,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R2288b041a3412626a9d7",
+        "signed_pattern": "DDIT3+ DDIT4+ SESN2+",
+        "delta_pp": 33.07557080579245,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rd29c41c178cc3148be90",
+        "signed_pattern": "DDIT4+ PCK2+ PHGDH+",
+        "delta_pp": 32.565049075550704,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Re7e28e3434daf63c2391",
+        "signed_pattern": "DDIT3+ PHGDH+ SESN2+",
+        "delta_pp": 32.09333301936706,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Red058342a758ebb3d636",
+        "signed_pattern": "CEBPB+ DDIT4+ SESN2+",
+        "delta_pp": 30.620010538044795,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R9cf464d9b8c59de762d3",
+        "signed_pattern": "PCK2+ PHGDH+ TRIB3+",
+        "delta_pp": 30.61738204176432,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R16edf16a402088b1d164",
+        "signed_pattern": "CEBPB+ PHGDH+ SESN2+",
+        "delta_pp": 29.449098783675847,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "Rd091c723153ae025363f",
+        "signed_pattern": "CEBPB+ SESN2+ TRIB3+",
+        "delta_pp": 28.688125659174347,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R3a4455cfc1e4af293a5a",
+        "signed_pattern": "DDIT3+ HERPUD1+ SESN2+",
+        "delta_pp": 24.90212862538733,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R2903abe3f6e3b7b5a455",
+        "signed_pattern": "CCDC71L+ DDIT4+ SESN2+",
+        "delta_pp": 23.04795967214969,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R556a985297a63c6e0a8b",
+        "signed_pattern": "PCK2+ PHGDH+ SESN2+",
+        "delta_pp": 21.127382993527092,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": true
+      },
+      {
+        "reference_id": "R431ae4e8066bb8869107",
+        "signed_pattern": "BBC3+ DDIT3+ DDIT4+",
+        "delta_pp": 13.677270587656901,
+        "core_status": "stable_core",
+        "is_focal_case": false,
+        "passes_case_gates": false
+      },
+      {
+        "reference_id": "R0c3639abbc1fe516c18d",
+        "signed_pattern": "DDIT4+ JUN- PPP1R15A-",
+        "delta_pp": 12.954432217086609,
+        "core_status": "boundary",
+        "is_focal_case": false,
+        "passes_case_gates": false
+      },
+      {
+        "reference_id": "Rb645ead951925471d1c7",
+        "signed_pattern": "DDIT4+ KLF6- PPP1R15A-",
+        "delta_pp": 12.622708169614613,
+        "core_status": "boundary",
+        "is_focal_case": false,
+        "passes_case_gates": false
+      },
+      {
+        "reference_id": "R7638994efe5da521b11c",
+        "signed_pattern": "DDIT4+ GDF15- JUN-",
+        "delta_pp": 10.604774412048801,
+        "core_status": "boundary",
+        "is_focal_case": false,
+        "passes_case_gates": false
+      },
+      {
+        "reference_id": "R1986129d52c70a5189b5",
+        "signed_pattern": "CEBPB- DDIT4+ KLF6-",
+        "delta_pp": 10.126221827763416,
+        "core_status": "boundary",
+        "is_focal_case": false,
+        "passes_case_gates": false
+      }
+    ]
+  },
+  "limitations": [
+    "本轮为 Codex 子 Agent Explorer 提案；没有证据检索、科学裁决或既有 GLM runtime / CaseStore 提交。",
+    "+ 表示 count > 0 检测到，− 表示 count = 0 未检测到；不是上调／下调、激活／抑制或蛋白活性。",
+    "频率差异不是高阶相互作用强度变化，不能由此声称 interaction rewiring；即使单基因边际变化足以解释完整状态，也不否定真实的细胞内响应。",
+    "同 target 同 module companion patterns 来自同一数据与筛选，只作观察上下文，不是独立验证。",
+    "Day 8 / 独立重复未执行；NT 在 reference 发现与关联筛选中复用，现有统计属于 exploratory，不作 confirmatory error-rate claim。",
+    "三类解释可部分共存；组成可能是扰动作用的中介而非技术混杂，匹配后的效应属于条件效应，不能替代总效应。",
+    "效应最大候选经选择产生；不把名义点态区间解释为选择校正后的区间。"
+  ],
+  "handoff": {
+    "next_role": "Investigator",
+    "tool_order_specified": false,
+    "request": "由 Investigator 自主选择最有区分力且可取得的证据问题与工具；将确实无法取得的数据记录为缺口，不用背景文献代替完整 signed-state 证据。"
+  }
+}

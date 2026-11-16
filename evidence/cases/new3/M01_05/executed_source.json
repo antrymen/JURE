@@ -1,0 +1,16 @@
+{
+  "slot":"M01_05",
+  "round":1,
+  "source_case":"../M01_05.json",
+  "status":"followup_completed_identity_and_target_specific_literature_resolved",
+  "critic_request":"What target-specific identity and primary evidence link SAMM50 perturbation to MICOS/cristae or mitochondrial quality-control changes?",
+  "evidence_records":[
+    {"evidence_id":"ER-M01_05-FU1-identity-v1","question_ids":["M01_05_C2_FU1"],"hypothesis_ids":["M01_05_H1","M01_05_H2"],"source_kind":"gene_registry","source_file":"M01_05_web.json","supports":"Approved human SAMM50 identity, HGNC:24276, and aliases.","does_not_support":["current K562 mechanism"]},
+    {"evidence_id":"ER-M01_05-FU1-micos-v1","question_ids":["M01_05_C2_FU1"],"hypothesis_ids":["M01_05_H1"],"source_kind":"external_primary_literature","source_file":"M01_05_web.json","supports":"SAM50 interaction with MICOS components and cristae organization context.","does_not_support":["ISR/ATF4 bridge","current K562 RNA association causality"]},
+    {"evidence_id":"ER-M01_05-FU1-quality-v1","question_ids":["M01_05_C2_FU1"],"hypothesis_ids":["M01_05_H2"],"source_kind":"external_primary_literature","source_file":"M01_05_web.json","supports":"SAMM50-specific KD/quality-control context for MICOS architecture and mitophagy in reported human cell systems.","does_not_support":["current K562 three-gene RNA induction","ISR mediation"]}
+  ],
+  "source_hashes":{"web_record":"7b4f8e1cc036efe9e9f514bda1ea49dc017d25f7d4d09b1154ed8294125ec5ca","original_investigator":"cf6d9d2de0fcb9897fc011345314dab40c6716c52019e9375cce87b4eeeecca0"},
+  "correction_record":{"original_issue":"M01_05 v1 limitations repeated a TIMM23B-specific statement.","correction":"This follow-up replaces that statement with SAMM50-specific limits: external literature is contextual, and current K562 association remains non-causal.","original_preserved":true},
+  "mechanism_boundary":"SAMM50 identity and target-specific primary literature are verified; they support candidate MICOS/cristae and quality-control context, not the current K562 ISR mechanism.",
+  "tool_failure_note":"Original registry gene/literature SOURCE_ERROR remains recorded in raw/ and is unavailable evidence, not a null result."
+}

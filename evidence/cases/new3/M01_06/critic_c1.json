@@ -1,0 +1,28 @@
+{
+  "case_id": "M01_06",
+  "role": "Critic_C1",
+  "source_file": "explorer/M01_06.json",
+  "source_sha256": "932941196ac38d10b93b80a5b03c223492e1969012f79c774f212ea2e7125387",
+  "verdict": "revise",
+  "audit": {
+    "endpoint_targeting": "partial",
+    "distinct_mechanisms": "pass",
+    "testability": "pass",
+    "unverified_intermediates_explicit": true,
+    "joint_rna_endpoint_handled": "H1/H3 yes; H2 incomplete",
+    "specific_issues": [
+      {
+        "hypothesis_id": "M01_06_H2",
+        "type": "endpoint_mismatch",
+        "detail": "H2主要解释选择性翻译或蛋白稳定性造成的目标蛋白状态，但当前clue的观测终点是PCK2+ PHGDH+ SESN2+联合RNA检出；蛋白先变或RNA-蛋白脱耦本身不能解释RNA联合富集。",
+        "required_revision": "将H2改写为能直接解释RNA终点的竞争机制（例如RNA稳定性/加工、检测概率或转录后RNA积累），并保留蛋白读出作为区分性验证；或明确把它限定为‘不能由当前RNA终点支持的蛋白层备择’，不得作为同等解释。"
+      }
+    ]
+  },
+  "hypothesis_notes": {
+    "M01_06_H1": "针对联合RNA检出，区分EIF2B3功能到ISR/ATF4及各目标边，并将p-eIF2α、ATF4和翻译读出列为未测中介。",
+    "M01_06_H2": "机制层面可与H1区分且可检验，但当前表述重心是蛋白输出，未闭合联合RNA终点，需按specific_issues修订。",
+    "M01_06_H3": "直接针对代谢/存活/亚群组成导致的联合RNA富集，包含协变量调整、连续表达和救援验证。"
+  },
+  "next_action": "返回 Explorer 做一次有界假说修订，仅修订M01_06_H2的RNA终点针对性；修订后再进入 Investigator。"
+}

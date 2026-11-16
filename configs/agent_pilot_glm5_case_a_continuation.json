@@ -1,0 +1,80 @@
+{
+  "protocol_id": "jure_case_a_authorized_glm5_continuation",
+  "case_order": [
+    "A"
+  ],
+  "model_config": "configs/agent_runtime_glm5_v18.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 1,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 18,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 2
+  },
+  "critic_rechecks_per_round": 2,
+  "schema_retries": 0,
+  "failed_stage_retries": 1,
+  "max_transitions": 12,
+  "provider_max_calls_per_case": 80,
+  "registry_budgets": {
+    "total": 18,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "policy": "User-authorized model switch from GLM-4.7-Flash to GLM-5. Continue the saved Case A Investigator handoff; retain 3 hypotheses, all history, 13 cumulative model calls, all science and execution limits. No fresh Explorer proposal, no scientific content authored by Codex. B/C/D remain paused.",
+  "provider_retry_delays_seconds": [],
+  "protocol_v3": true,
+  "case_execution_policy": "authorized_provider_switch_continuation",
+  "acceptance_criterion": {
+    "primary": "At least one A/B case commits nonempty claim-level evidence audits after passing C1. A winning mechanism is not required.",
+    "secondary": [
+      "capability IDs on all new evidence questions",
+      "Critic acceptance records for every submitted revision",
+      "Investigator predeclared comparison outcomes and advisory information updates",
+      "distinct terminal reason codes",
+      "all evidence sources REAL and initial facts unchanged"
+    ],
+    "failure_policy": "Stop at frozen limits. No budget escalation, C1 weakening, case substitution or selective omission."
+  },
+  "technical_continuation": "preserve_all_calls_and_committed_v3_state",
+  "resume_sources": {
+    "A": {
+      "directory": "outputs/agent_pilot_v1_20260928/run_019_glm47_admission_v2_a/A",
+      "case_sha256": "02932109b985c7c89692193056263f9c4bb536fa0ce34e1dcdd0a34a0ece002f"
+    }
+  },
+  "per_case_retry_caps": {
+    "A": {
+      "explorer_max_retries": 1,
+      "failed_stage_retries": 0
+    }
+  },
+  "provider_switch": {
+    "user_authorization": "不行就换个模型",
+    "from_model": "glm-4.7-flash",
+    "to_model": "glm-5",
+    "inherited_model_calls": 13,
+    "probe_trace": "outputs/glm_provider_switch_20260928/glm5_probe",
+    "cross_model_continuation_not_fresh_benchmark": true
+  }
+}

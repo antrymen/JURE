@@ -1,0 +1,179 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "dataset_id": {
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "data_origin": {
+      "default": "real",
+      "enum": [
+        "real",
+        "synthetic"
+      ],
+      "title": "Data Origin",
+      "type": "string"
+    },
+    "adapter": {
+      "enum": [
+        "table",
+        "replogle_frozen"
+      ],
+      "title": "Adapter",
+      "type": "string"
+    },
+    "control_labels": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Control Labels",
+      "type": "array"
+    },
+    "condition_field": {
+      "title": "Condition Field",
+      "type": "string"
+    },
+    "cell_id_field": {
+      "title": "Cell Id Field",
+      "type": "string"
+    },
+    "batch_field": {
+      "title": "Batch Field",
+      "type": "string"
+    },
+    "replicate_field": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Replicate Field"
+    },
+    "condition_type": {
+      "title": "Condition Type",
+      "type": "string"
+    },
+    "gene_mapping": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Gene Mapping",
+      "type": "object"
+    },
+    "binarization_rule": {
+      "const": "count_gt_zero",
+      "title": "Binarization Rule",
+      "type": "string"
+    },
+    "modality": {
+      "title": "Modality",
+      "type": "string"
+    },
+    "cell_context": {
+      "title": "Cell Context",
+      "type": "string"
+    },
+    "timepoint": {
+      "title": "Timepoint",
+      "type": "string"
+    },
+    "min_cells": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Min Cells",
+      "type": "object"
+    },
+    "matching_strategy": {
+      "const": "within_batch_control",
+      "title": "Matching Strategy",
+      "type": "string"
+    },
+    "candidate_budget": {
+      "additionalProperties": true,
+      "title": "Candidate Budget",
+      "type": "object"
+    },
+    "bootstrap_config": {
+      "additionalProperties": true,
+      "title": "Bootstrap Config",
+      "type": "object"
+    },
+    "multiple_testing_config": {
+      "additionalProperties": true,
+      "title": "Multiple Testing Config",
+      "type": "object"
+    },
+    "landscape_config": {
+      "additionalProperties": true,
+      "title": "Landscape Config",
+      "type": "object"
+    },
+    "seed": {
+      "title": "Seed",
+      "type": "integer"
+    },
+    "paths": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Paths",
+      "type": "object"
+    },
+    "expected_conditions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Expected Conditions",
+      "type": "array"
+    },
+    "reference_fold_field": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reference Fold Field"
+    },
+    "transfer_compatibility": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Transfer Compatibility",
+      "type": "object"
+    }
+  },
+  "required": [
+    "dataset_id",
+    "adapter",
+    "control_labels",
+    "condition_field",
+    "cell_id_field",
+    "batch_field",
+    "replicate_field",
+    "condition_type",
+    "gene_mapping",
+    "binarization_rule",
+    "modality",
+    "cell_context",
+    "timepoint",
+    "min_cells",
+    "matching_strategy",
+    "candidate_budget",
+    "bootstrap_config",
+    "multiple_testing_config",
+    "landscape_config",
+    "seed",
+    "paths"
+  ],
+  "title": "DatasetConfig",
+  "type": "object"
+}

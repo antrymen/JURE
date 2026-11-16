@@ -1,0 +1,19 @@
+{
+  "policy_version": "explorer-admission-v1",
+  "status": "OFFLINE_VALIDATED_ONLY_DO_NOT_RUN",
+  "model_config": "configs/agent_runtime_glm47_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 0,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "initial_interface": "content_adapter",
+  "reframe_interface": "existing_typed_contract_with_three_layer_admission",
+  "case_execution": "PAUSED",
+  "budget_policy": "No model calls authorized by this configuration. No scientific budgets reset. A retains previous usage and exhausted stage attempts; live continuation needs an explicit recovery or new evaluation policy. B/C/D remain paused. No automatic expensive-model fallback.",
+  "source_model_docs": "https://docs.bigmodel.cn/cn/guide/models/free/glm-4.7-flash"
+}

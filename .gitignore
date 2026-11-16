@@ -1,0 +1,41 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+data/
+runs/
+.env
+.env.*
+*.sqlite
+.DS_Store
+
+# Local preparation evidence; review before publication
+docs/audit/
+!data/
+data/*
+!data/README.md
+
+# Local publication-review workspace and historical non-public reports
+/.release_review/
+/docs/audit/
+/docs/research_audits/
+/docs/archive/
+/docs/PROVENANCE.json
+/docs/architecture/
+/docs/DELIVERY_CHECKS.md
+/docs/DATA_AND_REPRODUCTION.md
+/AGENT_PROTOCOL_AUDIT.md
+/PAPER_CODE_AUDIT.md
+/RESULTS_PROVENANCE.md
+/REGRESSION_TESTS.md
+/REPOSITORY_COMPARISON.md
+/STRUCTURE_CHANGES.md
+/GITHUB_READINESS.md
+*.pyc
+*.pyo
+/scripts/check_delivery.py
+
+# Historical private-server transfer utility; retained locally
+/stage2_validation/transfer_day8.py

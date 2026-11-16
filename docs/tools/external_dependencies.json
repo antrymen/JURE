@@ -1,0 +1,116 @@
+{
+  "manifest_version": "0.1",
+  "dependencies": [
+    {
+      "name": "popper",
+      "url": "https://github.com/snap-stanford/POPPER",
+      "commit": "59611864e09dd15d7528e240ad87c7ddbb4a701c",
+      "license": "NOT_IDENTIFIED_BY_OFFICIAL_REPOSITORY_API",
+      "usage": "DESIGN_INSPIRATION",
+      "external_code_copied": false,
+      "credentials_required": false,
+      "citation": "https://arxiv.org/abs/2502.09858",
+      "accessed_at": "2026-09-28",
+      "availability": "NOT_INSTALLED_DESIGN_REFERENCE",
+      "resources": "External framework not installed. No POPPER execution dependency."
+    },
+    {
+      "name": "vcr",
+      "url": "https://github.com/valence-labs/VCR-Agent",
+      "commit": "00d1b3f5f0d5bfd7e20474ae17f4b36dde183f8c",
+      "license": "NOT_IDENTIFIED_BY_OFFICIAL_REPOSITORY_API",
+      "usage": "DESIGN_INSPIRATION",
+      "external_code_copied": false,
+      "credentials_required": false,
+      "citation": "https://arxiv.org/abs/2604.11661",
+      "accessed_at": "2026-09-28",
+      "availability": "NOT_INSTALLED_DESIGN_REFERENCE",
+      "resources": "PubMedFastRAG would require ~34 GB SQLite + ~2.5 GB binary index and Julia/embedding/API services; not installed."
+    },
+    {
+      "name": "primekg",
+      "url": "https://github.com/mims-harvard/PrimeKG",
+      "commit": "32a3818cf7ff981081c4887c20b2f733ad6ec0a6",
+      "license": "MIT",
+      "usage": "WRAPPED_BACKEND",
+      "external_code_copied": false,
+      "credentials_required": false,
+      "citation": "https://doi.org/10.1038/s41597-023-01960-3",
+      "accessed_at": "2026-09-28",
+      "availability": "LOCAL_INDEX_AVAILABLE",
+      "resources": "981751236 byte CSV; official checksum checked; local SQLite index; CPU only."
+    },
+    {
+      "name": "Harmonizome",
+      "url": "https://maayanlab.cloud/Harmonizome/documentation",
+      "version": "API 1.0; dynamic response snapshots",
+      "usage": "WRAPPED_BACKEND",
+      "license": "Academic/non-profit; terms page labels CC BY NA SA 4.0; commercial permission separate",
+      "license_url": "https://maayanlab.cloud/Harmonizome/terms",
+      "credentials_required": false,
+      "availability": "LIVE_API_WITH_OBSERVED_TIMEOUTS",
+      "citation": "https://doi.org/10.1093/nar/gkae1080",
+      "source_version_policy": "acquisition run + raw response SHA256",
+      "external_code_copied": false
+    },
+    {
+      "name": "PubMed E-utilities",
+      "url": "https://www.nlm.nih.gov/dataguide/eutilities/utilities.html",
+      "usage": "WRAPPED_BACKEND",
+      "version": "ESearch 0.3 + EFetch XML",
+      "license": "NCBI disclaimer and underlying publication rights",
+      "license_url": "https://www.ncbi.nlm.nih.gov/About/disclaimer.html",
+      "credentials_required": false,
+      "availability": "LIVE_API_VALIDATED",
+      "rate_limit": "<=3 calls/second without API key; serialized .36-second spacing",
+      "resource_requirements": "stdlib XML/HTTPS; bounded retrieval, no local PubMed corpus",
+      "external_code_copied": false
+    },
+    {
+      "name": "HGNC approved complete set",
+      "url": "https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt",
+      "usage": "WRAPPED_BACKEND",
+      "version": {
+        "url": "https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt",
+        "sha256": "3e5da5b757afce6cae333d3e6c97a59ff3aadfb13da1c70f89d9a8f252b9e7ec",
+        "md5": "b1e49ff9b0e9e195603b49925daa76ca",
+        "bytes": 16947244,
+        "retrieved_at": "2026-09-28T03:50:25Z"
+      },
+      "license_url": "https://hgnc.genenames.org/about/license/",
+      "credentials_required": false,
+      "availability": "LOCAL_VALIDATED",
+      "resource_requirements": "16.9 MB TSV; human gene mappings only",
+      "external_code_copied": false,
+      "license": "CC0"
+    },
+    {
+      "name": "PrimeKG data",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/6180620",
+      "dataset_doi": "10.7910/DVN/IXA7BM",
+      "usage": "WRAPPED_BACKEND",
+      "version": {
+        "url": "https://dataverse.harvard.edu/api/access/datafile/6180620",
+        "sha256": "0a5a010fcd88dcec572a573d98c26c1c244a11567092b6161d3ded611cfb5c69",
+        "md5": "aac8191d4fbc5bf09cdf8c3c78b4e75f",
+        "bytes": 981751236,
+        "retrieved_at": "2026-09-28T03:51:57Z"
+      },
+      "license": "CC0-1.0 in official Dataverse dataset metadata",
+      "credentials_required": false,
+      "availability": "LOCAL_VALIDATED",
+      "external_code_copied": false
+    }
+  ],
+  "python_dependencies_used": [
+    "stdlib",
+    "numpy",
+    "pandas",
+    "scipy",
+    "pydantic",
+    "anndata (build only)"
+  ],
+  "agent_frameworks_installed": [],
+  "llm_credentials_used": false,
+  "network_cell_matrix_transmission": false
+}

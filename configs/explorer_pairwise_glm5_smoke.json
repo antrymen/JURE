@@ -1,0 +1,34 @@
+{
+  "version": "explorer-pairwise-v1.1-glm5-smoke",
+  "interface": "initial-pairwise-v1.1",
+  "scientific_protocol": "EIC-frozen-v1",
+  "status": "PREPARED_NOT_RUN",
+  "model_config": "configs/agent_runtime_glm5_v18.json",
+  "smoke_inputs": 5,
+  "internal_stages_per_input": 2,
+  "max_model_calls": 10,
+  "schema_retries": 0,
+  "provider_retries": 0,
+  "explorer_retries": 0,
+  "selection_source": "outputs/contract_stabilization_v1_20260928/smoke/SMOKE_FROZEN.json",
+  "selection": "Reuse the exact five previously frozen S1-S5 inputs without substitution or selection by new output quality.",
+  "metrics": [
+    "machine_contract_pass",
+    "pair_coverage",
+    "no_self_alternative",
+    "outcome_consistency",
+    "scientific_content_retained"
+  ],
+  "evaluation": "Report per-stage and complete-proposal denominators separately. Provider errors are not scientific failures. Five inputs are an engineering smoke screen, not a pass-rate estimate. No automatic retries or sample expansion.",
+  "evidence_tool_calls": 0,
+  "investigator_calls": 0,
+  "critic_calls": 0,
+  "case_a": "PAUSED; this smoke runner cannot launch Case A",
+  "bcd": "PAUSED",
+  "allowed_models": [
+    "glm-5"
+  ],
+  "provider_switch_authorization": "User explicitly requested changing models after Flash service failures.",
+  "previous_smoke_requests": 11,
+  "provider_probe_requests": 1
+}

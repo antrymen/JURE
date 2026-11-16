@@ -1,0 +1,31 @@
+{
+  "case_id": "M01_06",
+  "role": "Critic_C2",
+  "verdict": "evidence_limited_no_mechanism_winner",
+  "source_hashes": {
+    "revised_explorer": "92b0055be703e16f7614dd1db45bd60721736e2bba22263616179652fac55b21",
+    "c1_recheck": "1e487906a204a51363ab6ac5be959f0e28f977b3af989ed1250dc5961cdfb44b",
+    "investigator": "dd04b450eee4326b8b2d057fd60574c20da1155ba6b181102a74d074c4b05330",
+    "web_fallback": "9e91056c518e7b114e3593f1d067ac9d6c9f89381feaab8c9855de070fc9c104",
+    "acquisition_audit": "2e02edb1a9be3a0c37207129125367eeff181f77485061de773c7e41c02ac61d",
+    "tool_trace": "35e5c1fdad8c81aafa2b918c0970216a4063d7229ba2b0c6c768f7b4d53c7be7"
+  },
+  "evidence_audit": {
+    "current_data": "EIF2B3条件联合RNA检出50/104，匹配NT差值43.02 pp；当前K562数据支持关联，不支持EIF2B3方向、ISR因果、RNA稳定性或独立重复。",
+    "web_claims": [
+      {"claim": "eIF2B assembly/conformation/activity与ISR相关", "support": "verified_context_only", "source": "PMC7990499; PMID 33688831; search excerpt; open blocked_by_recaptcha"},
+      {"claim": "EIF2B3 mutant与ER-stress/autophagy context相关", "support": "record_context_only", "source": "PMID 26625702; open without extractable lines"},
+      {"claim": "eIF2B point mutation可在其模型激活ISR", "support": "verified_context_only", "source": "PMC9132573; search excerpt; open blocked_by_recaptcha"},
+      {"claim": "EIF2B3扰动导致PCK2/PHGDH/SESN2 RNA状态", "support": "not_verified", "source": "no case-specific assay"},
+      {"claim": "EIF2B3改变目标RNA稳定性/加工", "support": "not_supported", "source": "no primary evidence retrieved; investigator explicitly records no direct assay"}
+    ],
+    "retrieval_boundary": "网页编号与PMID/PMC对应关系可核对，但多个页面只提供搜索摘要或受阻打开；模型自述supports字段不替代可见原文。",
+    "hypotheses": {
+      "M01_06_H1": "保留为eIF2B/ISR候选背景；未证明EIF2B3-specific当前case桥。",
+      "M01_06_H2": "修订后终点针对性合格，但RNA稳定性/加工仍无直接证据。",
+      "M01_06_H3": "组成/检测/代谢备择仍开放；无协变量、独立扰动或救援证据。"
+    }
+  },
+  "additional_followup": {"required": false, "reason": "网页 fallback 已完成可达文献边界核验；剩余问题要求成熟/未成熟RNA、半衰期、加工/核质分布及匹配功能实验，当前工具与一轮文献补查不能替代。"},
+  "final_boundary": "仅保留当前RNA关联和有限eIF2B/ISR文献背景；不把文献上下文升级为EIF2B3-specific机制，不把搜索摘要或模型自述当作直接证据，不指定H1/H2/H3赢家。"
+}

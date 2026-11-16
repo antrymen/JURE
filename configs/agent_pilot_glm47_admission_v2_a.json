@@ -1,0 +1,77 @@
+{
+  "protocol_id": "jure_admission_v2_case_a_handoff_continuation",
+  "case_order": [
+    "A"
+  ],
+  "model_config": "configs/agent_runtime_glm47_flash.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 1,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "validation_policy": "three_layer"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2,
+    "protocol_v3": true
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 18,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed",
+    "protocol_v3": true,
+    "max_revision_acceptance_attempts": 2
+  },
+  "critic_rechecks_per_round": 2,
+  "schema_retries": 0,
+  "failed_stage_retries": 1,
+  "max_transitions": 12,
+  "provider_max_calls_per_case": 80,
+  "registry_budgets": {
+    "total": 18,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "policy": "Case A only, explicit v1→v2 handoff migration. Preserve the already committed Explorer proposal, unchanged scientific content and all history, 12 cumulative calls and all existing budget/retry limits. Continue with Investigator then Critic(C1→C2); no pre-investigation C1. GLM-4.7-Flash only; B/C/D paused. This continuation is not a fresh independent run or isolated ablation.",
+  "provider_retry_delays_seconds": [],
+  "protocol_v3": true,
+  "case_execution_policy": "admission_v2_initial_handoff_continuation",
+  "acceptance_criterion": {
+    "primary": "At least one A/B case commits nonempty claim-level evidence audits after passing C1. A winning mechanism is not required.",
+    "secondary": [
+      "capability IDs on all new evidence questions",
+      "Critic acceptance records for every submitted revision",
+      "Investigator predeclared comparison outcomes and advisory information updates",
+      "distinct terminal reason codes",
+      "all evidence sources REAL and initial facts unchanged"
+    ],
+    "failure_policy": "Stop at frozen limits. No budget escalation, C1 weakening, case substitution or selective omission."
+  },
+  "technical_continuation": "preserve_all_calls_and_committed_v3_state",
+  "resume_sources": {
+    "A": {
+      "directory": "outputs/agent_pilot_v1_20260928/run_018_glm47_admission_v1_a/A",
+      "case_sha256": "f49fe36574cd249c8611f1abf4c127e49d9a73f6d231d94984455c42b3b93096"
+    }
+  },
+  "per_case_retry_caps": {
+    "A": {
+      "explorer_max_retries": 1,
+      "failed_stage_retries": 0
+    }
+  },
+  "handoff_migration": {
+    "inherited_model_calls": 12,
+    "reason": "User authorized Case A continuation in the restored Explorer→Investigator→Critic order. Existing Explorer output is reused; no scientific content is edited.",
+    "new_explorer_initial_attempts": 0
+  }
+}

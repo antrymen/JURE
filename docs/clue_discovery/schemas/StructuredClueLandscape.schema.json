@@ -1,0 +1,677 @@
+{
+  "$defs": {
+    "CoResponseRelation": {
+      "additionalProperties": false,
+      "properties": {
+        "relation_id": {
+          "title": "Relation Id",
+          "type": "string"
+        },
+        "reference_a": {
+          "title": "Reference A",
+          "type": "string"
+        },
+        "reference_b": {
+          "title": "Reference B",
+          "type": "string"
+        },
+        "relation_type": {
+          "enum": [
+            "GENE_DISJOINT_CORESPONSE",
+            "OVERLAPPING_GENE_CORESPONSE",
+            "SIGNED_STATE_CONTRAST"
+          ],
+          "title": "Relation Type",
+          "type": "string"
+        },
+        "shared_genes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Shared Genes",
+          "type": "array"
+        },
+        "gene_jaccard": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Gene Jaccard",
+          "type": "number"
+        },
+        "pearson_r": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": -1,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Pearson R"
+        },
+        "spearman_rho": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": -1,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Spearman Rho"
+        },
+        "shared_candidate_conditions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Shared Candidate Conditions",
+          "type": "array"
+        },
+        "direction_concordance": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Direction Concordance"
+        },
+        "evaluable_condition_count": {
+          "title": "Evaluable Condition Count",
+          "type": "integer"
+        },
+        "scope": {
+          "default": "descriptive_condition_profile_association; not_regulation",
+          "title": "Scope",
+          "type": "string"
+        },
+        "provenance": {
+          "additionalProperties": true,
+          "title": "Provenance",
+          "type": "object"
+        }
+      },
+      "required": [
+        "relation_id",
+        "reference_a",
+        "reference_b",
+        "relation_type",
+        "shared_genes",
+        "gene_jaccard",
+        "pearson_r",
+        "spearman_rho",
+        "shared_candidate_conditions",
+        "direction_concordance",
+        "evaluable_condition_count"
+      ],
+      "title": "CoResponseRelation",
+      "type": "object"
+    },
+    "ConditionProfile": {
+      "additionalProperties": false,
+      "properties": {
+        "condition_id": {
+          "title": "Condition Id",
+          "type": "string"
+        },
+        "condition_type": {
+          "title": "Condition Type",
+          "type": "string"
+        },
+        "metadata": {
+          "additionalProperties": true,
+          "title": "Metadata",
+          "type": "object"
+        },
+        "condition_cell_count": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Condition Cell Count"
+        },
+        "candidate_count": {
+          "minimum": 0,
+          "title": "Candidate Count",
+          "type": "integer"
+        },
+        "enrichment_count": {
+          "minimum": 0,
+          "title": "Enrichment Count",
+          "type": "integer"
+        },
+        "depletion_count": {
+          "minimum": 0,
+          "title": "Depletion Count",
+          "type": "integer"
+        },
+        "response_group_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Response Group Ids",
+          "type": "array"
+        },
+        "activity": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Activity",
+          "type": "object"
+        },
+        "sample_size_context": {
+          "additionalProperties": true,
+          "title": "Sample Size Context",
+          "type": "object"
+        },
+        "quality_flags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Quality Flags",
+          "type": "array"
+        }
+      },
+      "required": [
+        "condition_id",
+        "condition_type",
+        "candidate_count",
+        "enrichment_count",
+        "depletion_count",
+        "response_group_ids",
+        "activity",
+        "sample_size_context"
+      ],
+      "title": "ConditionProfile",
+      "type": "object"
+    },
+    "EvidenceLevel": {
+      "enum": [
+        "REFERENCE_PATTERN",
+        "EXPLORATORY_ASSOCIATION",
+        "EXTERNALLY_VALIDATED_ASSOCIATION",
+        "MECHANISTICALLY_INVESTIGATED"
+      ],
+      "title": "EvidenceLevel",
+      "type": "string"
+    },
+    "ResponseGroup": {
+      "additionalProperties": false,
+      "properties": {
+        "group_id": {
+          "title": "Group Id",
+          "type": "string"
+        },
+        "reference_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reference Ids",
+          "type": "array"
+        },
+        "signed_states": {
+          "items": {
+            "$ref": "#/$defs/SignedState"
+          },
+          "title": "Signed States",
+          "type": "array"
+        },
+        "representative_reference_id": {
+          "title": "Representative Reference Id",
+          "type": "string"
+        },
+        "stable_core": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Stable Core",
+          "type": "array"
+        },
+        "boundary_members": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Boundary Members",
+          "type": "array"
+        },
+        "candidate_count": {
+          "minimum": 0,
+          "title": "Candidate Count",
+          "type": "integer"
+        },
+        "condition_count": {
+          "minimum": 0,
+          "title": "Condition Count",
+          "type": "integer"
+        },
+        "direction_summary": {
+          "additionalProperties": true,
+          "title": "Direction Summary",
+          "type": "object"
+        },
+        "within_group_similarity": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Within Group Similarity"
+        },
+        "stability": {
+          "additionalProperties": true,
+          "title": "Stability",
+          "type": "object"
+        },
+        "sensitivity": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Sensitivity",
+          "type": "array"
+        },
+        "activity_definition": {
+          "title": "Activity Definition",
+          "type": "string"
+        },
+        "annotation_status": {
+          "const": "NOT_ANNOTATED",
+          "default": "NOT_ANNOTATED",
+          "title": "Annotation Status",
+          "type": "string"
+        },
+        "evidence_scope": {
+          "default": "descriptive_shared_response_structure; not_a_biological_program",
+          "title": "Evidence Scope",
+          "type": "string"
+        }
+      },
+      "required": [
+        "group_id",
+        "reference_ids",
+        "signed_states",
+        "representative_reference_id",
+        "stable_core",
+        "boundary_members",
+        "candidate_count",
+        "condition_count",
+        "direction_summary",
+        "within_group_similarity",
+        "stability",
+        "activity_definition"
+      ],
+      "title": "ResponseGroup",
+      "type": "object"
+    },
+    "SignedState": {
+      "additionalProperties": false,
+      "properties": {
+        "genes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Genes",
+          "type": "array"
+        },
+        "states": {
+          "items": {
+            "enum": [
+              0,
+              1
+            ],
+            "type": "integer"
+          },
+          "title": "States",
+          "type": "array"
+        },
+        "order": {
+          "minimum": 1,
+          "title": "Order",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "genes",
+        "states",
+        "order"
+      ],
+      "title": "SignedState",
+      "type": "object"
+    },
+    "TriageInput": {
+      "additionalProperties": false,
+      "properties": {
+        "genes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Genes",
+          "type": "array"
+        },
+        "states": {
+          "items": {
+            "enum": [
+              0,
+              1
+            ],
+            "type": "integer"
+          },
+          "title": "States",
+          "type": "array"
+        },
+        "order": {
+          "minimum": 1,
+          "title": "Order",
+          "type": "integer"
+        },
+        "schema_version": {
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "case_id": {
+          "title": "Case Id",
+          "type": "string"
+        },
+        "dataset_id": {
+          "title": "Dataset Id",
+          "type": "string"
+        },
+        "condition_id": {
+          "title": "Condition Id",
+          "type": "string"
+        },
+        "candidate_id": {
+          "title": "Candidate Id",
+          "type": "string"
+        },
+        "reference_id": {
+          "title": "Reference Id",
+          "type": "string"
+        },
+        "matched_effect": {
+          "title": "Matched Effect",
+          "type": "number"
+        },
+        "effect_units": {
+          "const": "prevalence_difference",
+          "default": "prevalence_difference",
+          "title": "Effect Units",
+          "type": "string"
+        },
+        "reference_evidence": {
+          "additionalProperties": true,
+          "title": "Reference Evidence",
+          "type": "object"
+        },
+        "association_evidence": {
+          "additionalProperties": true,
+          "title": "Association Evidence",
+          "type": "object"
+        },
+        "group_context": {
+          "additionalProperties": true,
+          "title": "Group Context",
+          "type": "object"
+        },
+        "stable_core_context": {
+          "additionalProperties": true,
+          "title": "Stable Core Context",
+          "type": "object"
+        },
+        "coresponse_context": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Coresponse Context",
+          "type": "array"
+        },
+        "signed_state_contrast_context": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Signed State Contrast Context",
+          "type": "array"
+        },
+        "support": {
+          "additionalProperties": true,
+          "title": "Support",
+          "type": "object"
+        },
+        "sample_size_context": {
+          "additionalProperties": true,
+          "title": "Sample Size Context",
+          "type": "object"
+        },
+        "external_validation_status": {
+          "title": "External Validation Status",
+          "type": "string"
+        },
+        "evidence_level": {
+          "$ref": "#/$defs/EvidenceLevel"
+        },
+        "strata": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Strata",
+          "type": "array"
+        },
+        "sampling_block_id": {
+          "title": "Sampling Block Id",
+          "type": "string"
+        },
+        "provenance": {
+          "additionalProperties": true,
+          "title": "Provenance",
+          "type": "object"
+        }
+      },
+      "required": [
+        "genes",
+        "states",
+        "order",
+        "case_id",
+        "dataset_id",
+        "condition_id",
+        "candidate_id",
+        "reference_id",
+        "matched_effect",
+        "reference_evidence",
+        "association_evidence",
+        "group_context",
+        "stable_core_context",
+        "coresponse_context",
+        "signed_state_contrast_context",
+        "support",
+        "sample_size_context",
+        "external_validation_status",
+        "evidence_level",
+        "strata",
+        "sampling_block_id",
+        "provenance"
+      ],
+      "title": "TriageInput",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "method_version": {
+      "default": "clue_discovery_three_stage_v1",
+      "title": "Method Version",
+      "type": "string"
+    },
+    "dataset_id": {
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "reference_catalogue_version": {
+      "default": "v04_validation_family_holm",
+      "title": "Reference Catalogue Version",
+      "type": "string"
+    },
+    "perturbation_scan_version": {
+      "default": "perturbation_scan_v01",
+      "title": "Perturbation Scan Version",
+      "type": "string"
+    },
+    "landscape_version": {
+      "default": "broad_screening_v01",
+      "title": "Landscape Version",
+      "type": "string"
+    },
+    "evidence_scope": {
+      "additionalProperties": true,
+      "title": "Evidence Scope",
+      "type": "object"
+    },
+    "annotation_inputs": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Annotation Inputs",
+      "type": "array"
+    },
+    "response_groups": {
+      "items": {
+        "$ref": "#/$defs/ResponseGroup"
+      },
+      "title": "Response Groups",
+      "type": "array"
+    },
+    "condition_profiles": {
+      "items": {
+        "$ref": "#/$defs/ConditionProfile"
+      },
+      "title": "Condition Profiles",
+      "type": "array"
+    },
+    "reference_state_profiles": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Reference State Profiles",
+      "type": "array"
+    },
+    "stable_cores": {
+      "additionalProperties": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "title": "Stable Cores",
+      "type": "object"
+    },
+    "boundary_members": {
+      "additionalProperties": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "title": "Boundary Members",
+      "type": "object"
+    },
+    "coresponse_relations": {
+      "items": {
+        "$ref": "#/$defs/CoResponseRelation"
+      },
+      "title": "Coresponse Relations",
+      "type": "array"
+    },
+    "signed_state_contrasts": {
+      "items": {
+        "$ref": "#/$defs/CoResponseRelation"
+      },
+      "title": "Signed State Contrasts",
+      "type": "array"
+    },
+    "case_strata": {
+      "additionalProperties": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "title": "Case Strata",
+      "type": "object"
+    },
+    "sampling_blocks": {
+      "additionalProperties": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "title": "Sampling Blocks",
+      "type": "object"
+    },
+    "quality_audits": {
+      "additionalProperties": true,
+      "title": "Quality Audits",
+      "type": "object"
+    },
+    "triage_inputs": {
+      "items": {
+        "$ref": "#/$defs/TriageInput"
+      },
+      "title": "Triage Inputs",
+      "type": "array"
+    },
+    "provenance": {
+      "additionalProperties": true,
+      "title": "Provenance",
+      "type": "object"
+    }
+  },
+  "required": [
+    "dataset_id",
+    "evidence_scope",
+    "response_groups",
+    "condition_profiles",
+    "reference_state_profiles",
+    "stable_cores",
+    "boundary_members",
+    "coresponse_relations",
+    "signed_state_contrasts",
+    "case_strata",
+    "sampling_blocks",
+    "quality_audits",
+    "triage_inputs",
+    "provenance"
+  ],
+  "title": "StructuredClueLandscape",
+  "type": "object"
+}

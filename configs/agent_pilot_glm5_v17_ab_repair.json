@@ -1,0 +1,56 @@
+{
+  "protocol_id": "jure_real_agent_pilot_glm5_v1.7",
+  "case_order": [
+    "A",
+    "B"
+  ],
+  "a_gate": "successful Explorer, Investigator and Critic commits; audited STOP; intact initial sources; real evidence and transport traces; no mock",
+  "model_config": "configs/agent_runtime_glm5_v16.json",
+  "explorer": {
+    "min_hypotheses": 3,
+    "max_hypotheses": 4,
+    "max_retries": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed"
+  },
+  "investigator": {
+    "max_questions_per_run": 2,
+    "max_tool_calls_per_run": 4,
+    "max_new_followup_questions": 2
+  },
+  "critic": {
+    "max_critic_rounds": 3,
+    "max_investigator_rounds": 3,
+    "max_explorer_reframes": 1,
+    "max_total_tool_calls": 18,
+    "max_consecutive_stalled_rounds": 2,
+    "max_context_chars": 750000,
+    "round_budget_basis": "completed"
+  },
+  "critic_rechecks_per_round": 2,
+  "schema_retries": 1,
+  "failed_stage_retries": 1,
+  "max_transitions": 12,
+  "provider_max_calls_per_case": 80,
+  "registry_budgets": {
+    "total": 18,
+    "data_experiment": 20,
+    "knowledge_graph": 15,
+    "literature": 25
+  },
+  "policy": "A/B engineering repair only. Keep all original runs. A retries Critic from its exact audited pre-Critic snapshot; its earlier STOP is preserved in the source run. B resumes its full committed state and failed-attempt history. Investigation round budgets count successful commits; failed attempts remain bounded by stage/provider/controller limits and all real tool/provider costs remain charged. No per-case round allowance. Explorer uses the canonical Case File namespace for Critic request lineage. Revision requests are design provenance, never new evidence. Both roles receive the same Explorer write contract and batch bounds. All scientific revisions, tool choices, audits and routing remain Agent-authored. No C/D run is authorized by this repair preparation. This is not an independent scientific replication.",
+  "provider_retry_delays_seconds": [
+    15
+  ],
+  "resume_sources": {
+    "A": {
+      "directory": "outputs/agent_pilot_v1_20260928/repair_v17_preparation/A",
+      "case_sha256": "b56295a173ef228d405828a4404c9280d99b033c7eb8a9e323e732498cb70410"
+    },
+    "B": {
+      "directory": "outputs/agent_pilot_v1_20260928/run_008_glm5_v16/B",
+      "case_sha256": "79f8d4c1cdf77922dd91ce5affca95d4ba1ca7610a783f7fbac156fb4608dcdb"
+    }
+  },
+  "checkpoint_failed_investigator_allowance_cap": 0
+}

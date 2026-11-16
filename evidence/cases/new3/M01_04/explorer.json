@@ -1,0 +1,41 @@
+{
+  "case_identity": {
+    "slot": "M01_04",
+    "module": "M01",
+    "target": "TIMM23B",
+    "case_id": "perturbation_scan_day6_v01_20260927:C84404688cba7806ac03a",
+    "clue_id": "C84404688cba7806ac03a",
+    "joint_state": "DDIT4+ PHGDH+ TRIB3+",
+    "input_hash": "83bcf765d7db17f2c6653c56fbe16c821ed1176c76603f80cf90ca7f5591424f",
+    "observed_fact": {"target": "TIMM23B", "genes": ["DDIT4", "PHGDH", "TRIB3"], "states": [1, 1, 1], "delta": 0.5074801201361682, "delta_pp": 50.748012013616815, "matched_NT_prevalence_pct": 6.480903649033788, "perturbation_prevalence_pct": 57.22891566265061, "perturbed_cells": 498, "state_positive_perturbed_cells": 285, "holm_p": 7.947835866117263e-174},
+    "interpretation_limit": "+表示该联合RNA检测状态，不等于目标基因上调、蛋白活性或已建立因果链。"
+  },
+  "hypotheses": [
+    {
+      "id": "M01_04_H1",
+      "statement": "TIMM23B扰动可能改变TIM23相关线粒体内膜蛋白导入与蛋白稳态，继而触发ISR/ATF4样应激并使三个基因分别进入检测状态；TIMM23B到ISR和ATF4到各基因都是待检验中介。",
+      "proposed_steps": ["确认TIMM23B RNA、蛋白和TIM23复合体/导入功能是否改变", "做时间序列测量线粒体导入、膜电位、蛋白稳态、p-eIF2α与ATF4", "分别干预ISR/ATF4并测DDIT4、PHGDH、TRIB3，而不把三基因当作一个已知转录单元"],
+      "predictions": ["导入或线粒体蛋白稳态读出应先于p-eIF2α/ATF4及联合状态变化", "ISR或ATF4干预应使三个目标的效应出现可分别检验的减弱；若只有部分目标受影响，则支持分支边而非单一三基因边", "恢复TIM23B/导入功能应部分逆转应激读出，前提是扰动确实造成该功能缺陷"],
+      "questions": ["TIMM23B扰动是否造成可重复的导入底物积累、复合体改变或内膜功能异常？", "p-eIF2α、ATF4蛋白/活性和目标RNA的时间顺序是什么？", "ATF4干预是否分别改变DDIT4、PHGDH、TRIB3，且有位点或报告实验支持直接性？"],
+      "uncertainties": ["TIMM23B基因扰动的方向、残余蛋白和等位基因效应未知", "线粒体应激不必然通过ISR，也不保证三个目标共享同一中介", "联合检测可能由细胞状态或组成变化贡献"]
+    },
+    {
+      "id": "M01_04_H2",
+      "statement": "TIMM23B扰动可能主要改变呼吸链/膜电位与氧化还原状态，经过ROS、AMPK或其他应激传感器形成与ISR不同的转录响应；这些中介仅是区分实验的候选。",
+      "proposed_steps": ["测膜电位、呼吸、ATP、ROS并与p-eIF2α/ATF4并行做早晚时间点", "用ROS清除、呼吸/AMPK通路干预与ISR干预做交叉阻断", "对三个目标逐一测RNA、蛋白及单细胞共现，比较其对各阻断的依赖"],
+      "predictions": ["若为氧化还原/能量路径，ROS、膜电位或呼吸变化应早于目标状态且可能在p-eIF2α不变时出现", "ROS/能量干预应改变部分或全部目标；纯ISR阻断不能完全消除效应", "若所有效应只随p-eIF2α/ATF4且对ROS干预不敏感，则削弱本假说"],
+      "questions": ["目标状态是否与ROS、膜电位、ATP或呼吸读出在同一细胞/同一时间窗共现？", "ROS/AMPK干预能否在不恢复TIMM23B的情况下改变目标状态？", "该路径是否能解释三个目标的不同响应强度，而不是事后假定共同转录因子？"],
+      "uncertainties": ["ROS探针和能量读出有时会受细胞死亡、密度及批次影响", "候选AMPK/ROS中介没有由本clue直接提供", "扰动效应可能同时包含导入和能量两类过程"]
+    },
+    {
+      "id": "M01_04_H3",
+      "statement": "联合状态升高可能主要来自存活、周期、线粒体含量或细胞亚群组成改变，而非TIMM23B在单细胞内直接诱导三基因；这是组成/检测备择。",
+      "proposed_steps": ["在相同细胞类型、周期和活性分层内比较三基因及联合状态", "以单细胞连续表达、UMI/检测率、线粒体比例和批次作为协变量重分析", "做独立sgRNA/救援及靶向蛋白检测，检查状态是否随真实靶向效应而非细胞比例变化"],
+      "predictions": ["调整细胞组成和检测深度后联合富集显著减弱，或主要集中于某一亚群", "目标基因的连续表达未必同步升高，且蛋白读出可能不复现RNA联合状态", "若在严格匹配的单细胞背景中仍有一致的早期目标变化，削弱本备择"],
+      "questions": ["富集是否由少数细胞亚群、细胞周期或线粒体RNA比例驱动？", "三个目标在同一细胞内的连续表达与检测概率如何？", "独立扰动、救援和蛋白验证是否复现联合状态？"],
+      "uncertainties": ["当前clue是频率差异，不能单独分辨细胞内诱导与组成效应", "检测阈值、dropout和样本量可能影响三重共现", "组成解释不判断TIMM23B是否有真实分子效应"]
+    }
+  ],
+  "source_provenance": [{"claim_scope": "TIM23复合体参与线粒体蛋白导入；仅用于提出H1候选背景，不证明本case机制", "primary_source": "https://pubmed.ncbi.nlm.nih.gov/37344598/", "citation": "Sim et al., Nature (2023), PMID 37344598"}],
+  "stage": "explorer_only"
+}
