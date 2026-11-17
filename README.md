@@ -47,7 +47,15 @@ The synthetic example reruns a small three-stage analysis. The Case File example
 | Recompute the entire paper from raw single-cell data | Not independently verified; required data and historical layout absent |
 | Re-execute historical multi-agent investigations | Not provided by the current Python runtime |
 
-Historical paper cases used Codex native subagent protocols, with batch-dependent review order. The current Python pilot uses GLM transport. It must not be presented as the executor of those historical cases. Archived roles, initial inputs and follow-up records are evidence to inspect, not simulated runtime calls.
+### Model and Execution Environment
+
+The historical Case Investigator experiments reported in the paper were conducted using **GPT-5.6 Luna** within the OpenAI Codex environment. All three agents—Mechanism Explorer, Evidence Investigator, and Mechanism Critic—used GPT-5.6 Luna through Codex native subagent execution.
+
+The historical investigations followed batch-dependent review orders, with agent interactions, evidence collection, Critic feedback, and subsequent revisions preserved in the archived case records.
+
+The current Python implementation uses GLM as an alternative language-model backend for implementation and testing. It was not used to generate the historical mechanistic investigation results reported in the paper.
+
+The archived case records document historical investigations and should not be interpreted as executions reproduced by the current Python runtime.
 
 ## Repository structure
 
