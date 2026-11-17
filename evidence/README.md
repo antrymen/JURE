@@ -19,30 +19,8 @@ python scripts/verify_paper_results.py
 
 This recomputes validation summaries/Holm from archived P values and reconstructs stable cores from archived co-clustering. It does not rerun raw-count statistical tests, 50 bootstrap iterations or historical LLM agents.
 
-## Historical model and execution environment
-
-The historical Case Investigator experiments reported in the paper were conducted using **GPT-5.6 Luna** within the OpenAI Codex environment.
-
-All three agents—Mechanism Explorer, Evidence Investigator, and Mechanism Critic—used GPT-5.6 Luna through Codex native subagent execution.
-
-The model configuration is confirmed by the researcher. The public archive does not independently verify the model identity from complete native execution logs.
-
-The historical investigations followed batch-dependent review orders. Archived case records preserve the available scientific role outputs, evidence records, Critic feedback and subsequent revisions.
-
-The current Python implementation uses GLM as an alternative language-model backend for implementation and testing. It was not used to generate the historical mechanistic investigation results reported in the paper.
-
-The archived records document historical investigations and should not be interpreted as executions reproduced by the current Python runtime.
-
-This model-provenance clarification does not modify the original scientific role outputs, evidence-feedback records, statistical results or historical execution artifacts.
-
 ## Provenance and transformations
 
-Where JSON values or keys contain the original local project root, it is replaced by `research://`. Numerical/scientific fields are unchanged. Original and exported file hashes are distinct when this transformation occurs; embedded historical hashes refer to the original sources, not automatically the sanitized export.
+Where JSON values or keys contain the original local project root, it is replaced by `research://`. Numerical/scientific fields are unchanged. Original and exported file hashes are distinct when this transformation occurs; embedded historical hashes refer to the original sources, not automatically the sanitized export. Protocol JSON files are explicitly selected-field excerpts, with the original protocol hash; native session identifiers and user authorization prose are not included there. New3 inputs are extracted per-case from the original inputs list. No missing tool transcript is synthesized.
 
-Protocol JSON files are explicitly selected-field excerpts, with the original protocol hash; native session identifiers and user authorization prose are not included there. New3 inputs are extracted per-case from the original inputs list. No missing tool transcript is synthesized.
-
-`research://` is a source identifier, not an executable path or URL. Resolve it through `source_manifest.json` where an artifact is bundled; unbundled sources still require the research archive.
-
-Targeted public-content filtering is documented in [PUBLIC_EXPORT_NOTES.md](PUBLIC_EXPORT_NOTES.md).
-
-Rights-holder approval for the software release remains pending; third-party source terms are recorded separately.
+`research://` is a source identifier, not an executable path or URL. Resolve it through source_manifest.json where an artifact is bundled; unbundled sources still require the research archive. Targeted public-content filtering is documented in PUBLIC_EXPORT_NOTES.md. Rights-holder approval for the software release remains pending; third-party source terms are recorded separately.
