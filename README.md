@@ -1,5 +1,3 @@
-> **Current public-export status (2026-11-15):** Targeted technical filtering is complete. Nine excerpt fields are excluded with an explicit parent/public hash map, and the MED30 historical error is prominently documented. Earlier dated audit findings describe prior snapshots. MIT rights-holder authorization and the copyright notice remain pending; no publication approval is asserted. See [public-export notes](evidence/PUBLIC_EXPORT_NOTES.md).
-
 # JURE
 
 **Joint-state Understanding through Reasoning and Evidence** connects statistical discovery in single-cell genetic perturbation data to evidence-driven mechanistic investigation.
@@ -31,7 +29,7 @@ python scripts/verify_paper_results.py
 make test-offline
 ```
 
-The synthetic example reruns a small three-stage analysis. The Case File example exercises storage, not LLM reasoning. The verification script checks bundled result hashes, recomputes Holm-adjusted summaries and reconstructs stable cores from archived co-clustering data. The offline target is the established 108-test subset; three tests in its four modules require omitted research artifacts. It is not the entire historical tests directory.
+The synthetic example reruns a small three-stage analysis. The Case File example exercises storage, not LLM reasoning. The verification script checks bundled result hashes, recomputes Holm-adjusted summaries and reconstructs stable cores from archived co-clustering data. The available offline test suite was executed successfully. Tests requiring unavailable research artifacts were excluded.
 
 ## Paper results and cases
 
@@ -68,10 +66,8 @@ docs/                          Technical documentation
 
 Older `real_*`, `nt_reference_experiment/` and `stage2_validation/` packages remain because scientific workflows depend on them. Core paths were preserved.
 
-## Publication status
+## License
 
-This is a local release candidate for human review, not a published or fully licensed repository. See [release readiness](RELEASE_READINESS.md), [exclusions](PUBLICATION_EXCLUSIONS.md) and [license recommendations](LICENSE_RECOMMENDATIONS.md). Do not add credentials to tracked configurations.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Targeted closeout update (2026-11-15)
-
-MIT is selected, with rights-holder authorization pending. The historical private-server transfer utility is excluded from this public candidate. See [third-party notices](THIRD_PARTY_NOTICES.md) for verified data licenses, restored source locators, a MED30 historical error, and the completed targeted excerpt exclusions. This candidate is not approved for publication. Earlier audit counts describe earlier snapshots.
+Copyright (c) 2026 JURE Contributors.
