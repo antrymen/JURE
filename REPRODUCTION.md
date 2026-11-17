@@ -32,8 +32,29 @@ These inputs are not reconstructed from manuscript numbers. Merely passing --hel
 
 ## 4. Historical Agent re-execution: not available as one command
 
-Read [the case index](evidence/CASE_INDEX.md). Records preserve three batch protocols and actual archived role outputs. The first two batches used Explorer→Investigator→Critic; the third explicitly used pre-investigation C1. Current GLM runtime is a separate implementation, not an equivalent replay of native Codex/Luna sessions. No keys or provider services are needed to inspect the archive.
+The historical Case Investigator experiments reported in the paper were conducted using **GPT-5.6 Luna** within the OpenAI Codex environment.
+
+All three agents—Mechanism Explorer, Evidence Investigator, and Mechanism Critic—used GPT-5.6 Luna through Codex native subagent execution.
+
+The model configuration is confirmed by the researcher. The public archive does not independently verify the model identity from complete native execution logs.
+
+Read [the case index](evidence/CASE_INDEX.md). Records preserve three batch protocols and actual archived scientific role outputs.
+
+The historical execution order differed across batches:
+
+- **Batches 1 and 2:** Mechanism Explorer → Evidence Investigator → Mechanism Critic.
+- **Batch 3:** Pre-investigation C1 assessment was performed before evidence investigation.
+
+The current Python implementation uses **GLM as an alternative language-model backend** for implementation and testing. It was not used to generate the historical Case Investigator results reported in the paper.
+
+The GLM-based Python runtime is a separate implementation and does not provide an equivalent replay of the historical Codex native subagent sessions.
+
+Archived role outputs, evidence records, Critic assessments and revision histories are preserved as historical research artifacts. They should not be interpreted as newly generated outputs from the current Python runtime.
+
+No keys or provider services are needed to inspect the archive.
 
 ## Environment and validation
 
-See [RELEASE_VALIDATION.md](RELEASE_VALIDATION.md) for exact commands, dependency versions and outcomes in an independent candidate directory. Empty-machine dependency resolution and live model calls remain unverified. No scientific settings were changed to make tests pass.
+See [RELEASE_VALIDATION.md](RELEASE_VALIDATION.md) for exact commands, dependency versions and outcomes in an independent candidate directory.
+
+Empty-machine dependency resolution and live model calls remain unverified. No scientific settings were changed to make tests pass.
